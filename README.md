@@ -1,4 +1,4 @@
-# 🏆 Akasha + Enka Combined Scraper
+# ENKAKASHA
 
 Ce projet est un outil d'extraction de données combinant **Akasha.cv** et **Enka.Network**. 
 Il permet de récupérer les classements (leaderboards) depuis Akasha, puis d'enrichir ces données avec les statistiques détaillées (artéfacts, armes, stats précises) via Enka, le tout exporté proprement en **CSV** et **JSON**.
