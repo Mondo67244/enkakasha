@@ -1,0 +1,27 @@
+# Environnement virtuel (NE JAMAIS PARTAGER)
+venv/
+env/
+.env
+
+# Python compilation
+__pycache__/
+*.pyc
+
+# Données générées (on ne veut pas partager les scans sur git)
+scanresult*.csv
+scanresult*.json
+*_dataset.csv
+*_dataset.json
+scan_report.md
+*.json
+*.csv
+
+# Dossiers de données Enka (générés par le script)
+_*_*/
+
+# IDE
+.vscode/
+.idea/
+
+# Mac
+.DS_Store
