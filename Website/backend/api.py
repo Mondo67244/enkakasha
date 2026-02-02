@@ -87,7 +87,7 @@ async def get_leaderboard(calc_id: str):
     """
     try:
         # fetch_leaderboard now returns the full list of dicts with stats
-        data = akasha.fetch_leaderboard(calc_id, limit=20) # Limit to 20 for context
+        data = akasha.fetch_leaderboard(calc_id, limit=20)
         if not data:
              raise HTTPException(status_code=404, detail="No data found or ID invalid")
         return {"data": data}
@@ -106,7 +106,7 @@ async def analyze_build(request: dict = Body(...)):
     context_data = request.get("context_data")
     context_data = request.get("context_data")
     target_char_name = request.get("target_char")
-    model_name = request.get("model_name", "gemini-2.0-flash") # Default
+    model_name = request.get("model_name", "gemini-2.5-flash")
     
     if not api_key or not user_data or not target_char_name:
         raise HTTPException(status_code=400, detail="Missing API Key, User Data, or Target Character")
@@ -123,26 +123,57 @@ async def analyze_build(request: dict = Body(...)):
     
     # 2. Prompt
     prompt = f"""
-    You are a Genshin Impact Theorycrafting Expert Mentor.
-    
-    OBJECTIVE:
-    Optimize the build for **{target_char_name}** using the user's available artifacts.
-    The user wants to use the set **{target_set}** (found on their profile).
-    
-    CONTEXT (Global Leaderboard Benchmarks):
+    You are a World-Class Genshin Impact Theorycrafting Engine.
+
+    ### OBJECTIVE
+    Mathematically optimize the artifact build for **{target_char_name}** using ONLY the items provided in the user's inventory.
+    The user explicitly requires the set: **{target_set}**.
+
+    ### CONTEXT & BENCHMARKS
+    Use the following Global Leaderboard data to determine the optimal stat distribution targets:
     {context_summary}
-    
-    USER INVENTORY ({pool_size} pieces of {target_set}):
-    I will list the artifacts below. Your goal is to select the BEST 5 pieces (Flower, Plume, Sands, Goblet, Circlet) to maximize damage output for {target_char_name}.
-    Consider the character's scaling (e.g. HP vs ATK, ER requirements, Elemental Mastery for reactions like Vaporize).
-    
-    INVENTORY DATA:
+
+    ### USER INVENTORY DATA
+    **Constraint:** You are strictly forbidden from hallucinating artifacts. Select 5 items exclusively from the list below.
+    **Dataset:** {pool_size} pieces of {target_set}:
     {inventory['pool']}
-    
-    OUTPUT FORMAT:
-    1. **Recommended Build**: List the 5 chosen pieces (ID or Main Stat + key substats).
-    2. **Final Estimated Stats**: predictable stats sum (approximate).
-    3. **Mentor Advice**: Why this combination? What stats are good? What is missing compared to the Leaderboard?
+
+    ### OUTPUT FORMAT
+    You must return a valid JSON object strictly following this schema. Do not include markdown code blocks or additional text.
+
+    {{
+      "recommended_build": [
+        {{
+          "slot": "Flower",
+          "name": "Artifact Name or ID",
+          "main_stat": "HP",
+          "main_value": "4780",
+          "substats": ["Crit Rate+3.9%", "Crit DMG+20%"],
+          "set": "{target_set}",
+          "reason": "Balances Crit ratio..."
+        }},
+        {{
+          "slot": "Plume",
+          "name": "...",
+          "main_stat": "ATK",
+          "main_value": "311",
+          "substats": ["..."],
+          "set": "{target_set}",
+          "reason": "..."
+        }},
+        ... (Sands, Goblet, Circlet)
+      ],
+      "final_stats": {{
+        "hp": "...",
+        "atk": "...",
+        "def": "...",
+        "em": "...",
+        "cr": "...",
+        "cd": "...",
+        "er": "..."
+      }},
+      "mentor_analysis": "Detailed explanation of why this build is optimal and how it compares to the leaderboard benchmarks."
+    }}
     """
     
     # 3. Call AI
