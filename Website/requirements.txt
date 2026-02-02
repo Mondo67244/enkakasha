@@ -1,3 +1,7 @@
 pandas
 requests
 cloudscraper
+fastapi
+uvicorn
+google-genai
+python-multipart

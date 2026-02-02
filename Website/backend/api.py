@@ -1,11 +1,15 @@
 import sys
 import os
-from fastapi import FastAPI, HTTPException, Body
+import re
+from functools import partial
+from typing import Any, Dict, List, Optional
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from google import genai
 import shutil
 from pathlib import Path
+import anyio
 
 # Add parent directory to path to import existing scripts
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -19,6 +23,10 @@ from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
 
+DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
+DATA_ROOT.mkdir(parents=True, exist_ok=True)
+SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
+
 # CORS for Frontend
 app.add_middleware(
     CORSMiddleware,
@@ -28,28 +36,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class ScanRequest(BaseModel):
-    uid: str
+class VerifyKeyRequest(BaseModel):
+    api_key: str
 
 class AnalyzeRequest(BaseModel):
     api_key: str
-    user_data: dict
-    context_data: dict
+    user_data: List[Dict[str, Any]]
+    context_data: Optional[List[Dict[str, Any]]] = None
+    target_char: str
+    model_name: Optional[str] = "gemini-2.5-flash"
 
 @app.get("/")
 def read_root():
     return {"status": "Genshin AI Mentor API is running"}
 
 @app.post("/verify_key")
-async def verify_key(request: dict = Body(...)):
-    api_key = request.get("api_key")
+async def verify_key(request: VerifyKeyRequest):
+    api_key = request.api_key.strip()
     if not api_key:
         raise HTTPException(status_code=400, detail="API Key required")
     
     try:
         client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model='gemini-2.5-flash', 
+        client.models.generate_content(
+            model="gemini-2.5-flash",
             contents="Hello"
         )
         return {"valid": True, "message": "API Key verified successfully!"}
@@ -70,7 +80,9 @@ async def scan_uid(uid: str):
         # For the MVP, let's call it and then read the generated JSON.
         # This is a bit "hacky" but safer than rewriting the whole large script right now.
         
-        api_data, error = enka.fetch_player_data(uid)
+        api_data, error = await anyio.to_thread.run_sync(
+            partial(enka.fetch_player_data, uid, output_root=DATA_ROOT)
+        )
         
         if error:
              raise HTTPException(status_code=404, detail=error)
@@ -87,7 +99,9 @@ async def get_leaderboard(calc_id: str):
     """
     try:
         # fetch_leaderboard now returns the full list of dicts with stats
-        data = akasha.fetch_leaderboard(calc_id, limit=20)
+        data = await anyio.to_thread.run_sync(
+            partial(akasha.fetch_leaderboard, calc_id, limit=20)
+        )
         if not data:
              raise HTTPException(status_code=404, detail="No data found or ID invalid")
         return {"data": data}
@@ -95,18 +109,17 @@ async def get_leaderboard(calc_id: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/analyze")
-async def analyze_build(request: dict = Body(...)):
+async def analyze_build(request: AnalyzeRequest):
     """
     1. Filters User Artifacts (based on target char).
     2. Summarizes Leaderboard Context.
     3. Sends prompt to Gemini.
     """
-    api_key = request.get("api_key")
-    user_data = request.get("user_data")
-    context_data = request.get("context_data")
-    context_data = request.get("context_data")
-    target_char_name = request.get("target_char")
-    model_name = request.get("model_name", "gemini-2.5-flash")
+    api_key = request.api_key
+    user_data = request.user_data
+    context_data = request.context_data
+    target_char_name = request.target_char
+    model_name = request.model_name or "gemini-2.5-flash"
     
     if not api_key or not user_data or not target_char_name:
         raise HTTPException(status_code=400, detail="Missing API Key, User Data, or Target Character")
@@ -172,6 +185,19 @@ async def analyze_build(request: dict = Body(...)):
         "cd": "...",
         "er": "..."
       }},
+      "priority_list": [
+        "Crit Rate until 80%+",
+        "Energy Recharge to meet burst uptime",
+        "Crit DMG as the main scaling stat"
+      ],
+      "swap_plan": [
+        {{
+          "slot": "Goblet",
+          "from": "Current: HP% Goblet (Owner: X)",
+          "to": "Recommended: Hydro DMG Goblet (Owner: Y)",
+          "reason": "Hydro DMG aligns with optimal damage scaling"
+        }}
+      ],
       "mentor_analysis": "Detailed explanation of why this build is optimal and how it compares to the leaderboard benchmarks."
     }}
     """
@@ -195,13 +221,11 @@ def list_data_folders():
     Lists all directory folders that look like scan data.
     Filters out system/project directories.
     """
-    root = Path(".")
-    ignored = {".git", ".agent", ".gemini", "venv", "__pycache__", "backend", "frontend", "origins", "node_modules"}
-    
+    root = DATA_ROOT
     folders = []
     try:
         for item in root.iterdir():
-            if item.is_dir() and item.name not in ignored and not item.name.startswith("."):
+            if item.is_dir() and not item.name.startswith("."):
                 # Simple heuristic: scan folders usually have _ or numbers, but we'll list all non-ignored dirs
                 # We can check if they contain 'raw.json' to be sure it's a scan folder
                 if (item / "raw.json").exists() or (item / "characters_v1.csv").exists():
@@ -209,7 +233,6 @@ def list_data_folders():
                     folders.append({
                         "name": item.name,
                         "created": stats.st_ctime,
-                        "path": str(item.resolve())
                     })
     except Exception as e:
          raise HTTPException(status_code=500, detail=str(e))
@@ -218,7 +241,7 @@ def list_data_folders():
 
 @app.delete("/data/delete/{folder_name}")
 def delete_data_folder(folder_name: str):
-    path = Path(".") / folder_name
+    path = resolve_data_path(folder_name)
     # Security check: prevent deleting root or outside dirs
     if not path.exists() or not path.is_dir():
         raise HTTPException(status_code=404, detail="Folder not found")
@@ -241,8 +264,8 @@ class RenameRequest(BaseModel):
 
 @app.post("/data/rename")
 def rename_data_folder(request: RenameRequest):
-    old_path = Path(".") / request.old_name
-    new_path = Path(".") / request.new_name
+    old_path = resolve_data_path(request.old_name)
+    new_path = resolve_data_path(request.new_name)
     
     if not old_path.exists():
         raise HTTPException(status_code=404, detail="Source folder not found")
@@ -255,6 +278,14 @@ def rename_data_folder(request: RenameRequest):
         return {"success": True, "message": f"Renamed to {request.new_name}"}
     except Exception as e:
          raise HTTPException(status_code=500, detail=str(e))
+
+def resolve_data_path(name: str) -> Path:
+    if not SAFE_FOLDER_RE.match(name):
+        raise HTTPException(status_code=400, detail="Invalid folder name")
+    path = (DATA_ROOT / name).resolve()
+    if DATA_ROOT not in path.parents:
+        raise HTTPException(status_code=400, detail="Invalid folder path")
+    return path
 
 if __name__ == "__main__":
     import uvicorn

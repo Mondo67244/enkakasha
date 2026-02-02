@@ -6,10 +6,12 @@ import re
 import glob
 from datetime import datetime
 import i18n
+from pathlib import Path
 
 # --- CONFIGURATION ---
 API_URL = "https://enka.network/api/uid/{uid}"
 UID = ""  # Leave empty to ask user
+REQUEST_TIMEOUT = 15
 
 # Equipment mapping
 EQUIP_TYPE_MAP = {
@@ -428,16 +430,19 @@ def extract_weapon_info(equip_list):
             }
     return None
 
-def fetch_player_data(uid):
+def fetch_player_data(uid, output_root=None):
     """Fetches and formats player data."""
     print(i18n.get("FETCHING_DATA_UID", uid=uid), flush=True)
+    output_root = Path(output_root) if output_root else Path.cwd()
+    output_root.mkdir(parents=True, exist_ok=True)
     
     try:
         response = requests.get(
             API_URL.format(uid=uid),
             headers={
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0'
-            }
+            },
+            timeout=REQUEST_TIMEOUT
         )
         
         if response.status_code == 200:
@@ -510,15 +515,16 @@ def fetch_player_data(uid):
             nickname = player.get('nickname', 'Unknown')
             safe_nickname = sanitize_filename(nickname)
             folder_name = f"{safe_nickname}_{uid}"
+            folder_path = output_root / folder_name
             
             # Create folder if it doesn't exist
-            if not os.path.exists(folder_name):
-                os.makedirs(folder_name)
+            if not folder_path.exists():
+                folder_path.mkdir(parents=True, exist_ok=True)
                 print(i18n.get("FOLDER_CREATED", folder=folder_name))
             
             # File paths in the folder
-            base_name_chars = os.path.join(folder_name, "characters")
-            base_name_artifacts = os.path.join(folder_name, "artifacts")
+            base_name_chars = str(folder_path / "characters")
+            base_name_artifacts = str(folder_path / "artifacts")
             
             # Characters - Load current version if exists
             current_char_version, current_char_file = get_current_version(base_name_chars)
@@ -567,7 +573,7 @@ def fetch_player_data(uid):
             print(i18n.get("STATS_TOTAL_PIECES", count=len(merged_artifacts)))
             
             # --- COMBINED FILE (Stats + Artifacts per character) ---
-            base_name_combined = os.path.join(folder_name, "combined")
+            base_name_combined = str(folder_path / "combined")
             
             # Create combined DataFrame
             combined_rows = []
@@ -639,7 +645,7 @@ def fetch_player_data(uid):
             print(i18n.get("COMBINED_INFO", count=len(combined_df)))
             
             # Raw JSON (always overwritten - it's a snapshot)
-            json_filename = os.path.join(folder_name, "raw.json")
+            json_filename = str(folder_path / "raw.json")
             with open(json_filename, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
             print(i18n.get("RAW_JSON", filename=json_filename))

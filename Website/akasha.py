@@ -8,6 +8,7 @@ import i18n
 BASE_URL = "https://akasha.cv/api/leaderboards"
 CALCULATION_ID = "" 
 MAX_SIZE = 50
+REQUEST_TIMEOUT = 15
 
 def get_value(obj):
     """Extracts value from object {'value': X} or returns the object directly."""
@@ -33,7 +34,7 @@ def get_calculation_id():
     
     return calc_id
 
-def fetch_leaderboard(calculation_id, limit=MAX_SIZE):
+def fetch_leaderboard(calculation_id, limit=MAX_SIZE, timeout=REQUEST_TIMEOUT):
     """Fetches leaderboard data for a given Calculation ID."""
     scraper = cloudscraper.create_scraper(
         browser={
@@ -53,7 +54,7 @@ def fetch_leaderboard(calculation_id, limit=MAX_SIZE):
     }
 
     try:
-        response = scraper.get(BASE_URL, params=params)
+        response = scraper.get(BASE_URL, params=params, timeout=timeout)
         
         if response.status_code == 200:
             data = response.json()
@@ -146,4 +147,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

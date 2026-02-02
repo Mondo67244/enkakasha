@@ -7,7 +7,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
+                sans: ['Instrument Sans', 'system-ui', 'sans-serif'],
+                display: ['Space Grotesk', 'Instrument Sans', 'system-ui', 'sans-serif'],
             },
         },
     },

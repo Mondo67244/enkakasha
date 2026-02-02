@@ -1,11 +1,37 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  --app-bg: #f6f5f2;
+  --surface: #ffffff;
+  --surface-muted: #fbfaf7;
+  --line: #e6e7eb;
+  --text-strong: #0f172a;
+  --text: #334155;
+  --text-muted: #64748b;
+  --accent: #0ea5a4;
+  --accent-strong: #0f766e;
+  --accent-soft: rgba(14, 165, 164, 0.12);
+  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
-    background-color: #0f172a;
-    /* bg-slate-900 */
-    color: #f1f5f9;
-    /* text-slate-100 */
+    background-color: var(--app-bg);
+    color: var(--text);
+    font-family: "Instrument Sans", system-ui, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--text-strong);
   }
 }
