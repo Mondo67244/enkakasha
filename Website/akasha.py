@@ -122,7 +122,8 @@ def fetch_leaderboard(calculation_id, limit=MAX_SIZE):
             print(i18n.get("DATA_PREVIEW"))
             print(df.head(20).to_string())
             
-            return leaderboard_entries
+            # Return full profiles with stats for API usage
+            return all_profiles
             
         else:
             print(i18n.get("ERROR_STATUS", status=response.status_code))
