@@ -1,3 +1,0 @@
-2026-02-03 00:45:29,370 - INFO - Fetching Character List from Ambr.top...
-2026-02-03 00:45:29,696 - ERROR - Error fetching JSON https://api.ambr.top/v2/en/avatar: Cannot connect to host api.ambr.top:443 ssl:default [Name or service not known]
-2026-02-03 00:45:29,696 - ERROR - Invalid API response.
