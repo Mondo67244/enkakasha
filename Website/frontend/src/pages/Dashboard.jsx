@@ -23,7 +23,7 @@ const buildImageMap = (files) => {
 const buildElementMap = (files) => {
     const map = {};
     Object.entries(files).forEach(([filePath, url]) => {
-        const match = filePath.match(/Element_(\\w+)\\.svg$/);
+        const match = filePath.match(/Element_(\w+)\.svg$/);
         if (match) {
             map[match[1].toLowerCase()] = url;
         }
@@ -31,12 +31,23 @@ const buildElementMap = (files) => {
     return map;
 };
 
+const ALLOWED_ELEMENTS = new Set(['Pyro', 'Hydro', 'Electro', 'Cryo', 'Dendro', 'Anemo', 'Geo']);
+
+const normalizeElement = (value) => {
+    if (!value) return '';
+    const trimmed = String(value).trim();
+    if (!trimmed || trimmed.toLowerCase() === 'n/a') return '';
+    const lower = trimmed.toLowerCase();
+    const normalized = lower.charAt(0).toUpperCase() + lower.slice(1);
+    return ALLOWED_ELEMENTS.has(normalized) ? normalized : '';
+};
+
 const ElementIcon = ({ element, elementMap }) => {
-    if (!element) return <User className="text-[var(--text-muted)]" />;
-    const key = element.toLowerCase();
-    const src = elementMap[key];
-    if (!src) return <User className="text-[var(--text-muted)]" />;
-    return <img src={src} alt={element} className="h-5 w-5" />;
+    const normalized = normalizeElement(element);
+    if (!normalized) return <User className="text-[var(--text-muted)]" />;
+    const key = normalized.toLowerCase();
+    const src = elementMap[key] || `/elements/Element_${normalized}.svg`;
+    return <img src={src} alt={normalized} className="h-5 w-5" />;
 };
 
 const SPECIAL_CHARACTER_MAP = {
@@ -113,13 +124,15 @@ const Dashboard = () => {
     const resolveDisplayNameMemo = useMemo(() => resolveDisplayName, [characterIndex]);
 
     const resolveElement = (rawName, fallback) => {
-        if (fallback) return fallback;
         if (!rawName) return '';
         const idMatch = rawName.match(/\d+/);
         if (idMatch && elementIndex[idMatch[0]]) {
             return elementIndex[idMatch[0]];
         }
-        return elementIndex[rawName] || '';
+        if (elementIndex[rawName]) {
+            return elementIndex[rawName];
+        }
+        return normalizeElement(fallback);
     };
 
     const resolveElementMemo = useMemo(() => resolveElement, [elementIndex]);
