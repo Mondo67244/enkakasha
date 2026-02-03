@@ -15,6 +15,11 @@ import {
   Gauge
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import characterList from '../../../../Characters/characters.json';
+
+const iconFiles = import.meta.glob('../../../../Characters/**/icon.png', { eager: true, import: 'default' });
+const cardFiles = import.meta.glob('../../../../Characters/**/card.png', { eager: true, import: 'default' });
+const elementFiles = import.meta.glob('../../../../elements/Element_*.svg', { eager: true, import: 'default' });
 
 const SLOT_ORDER = ['Flower', 'Plume', 'Sands', 'Goblet', 'Circlet'];
 const SLOT_FILENAME = {
@@ -30,6 +35,21 @@ const SPECIAL_SET_MAP = {
   'Finale of the Deep Galleries': 'Finale_of_the_Deep_Galleries',
 };
 
+const SPECIAL_CHARACTER_MAP = {
+  'Raiden Shogun': 'RaidenShogun',
+  'Arataki Itto': 'AratakiItto',
+  'Sangonomiya Kokomi': 'SangonomiyaKokomi',
+  'Kaedehara Kazuha': 'KaedeharaKazuha',
+  'Kuki Shinobu': 'KukiShinobu',
+  'Yun Jin': 'YunJin',
+  'Hu Tao': 'HuTao',
+  'Hu Tao (Trial)': 'HuTao(Trial)',
+  'Kamisato Ayaka': 'KamisatoAyaka',
+  'Kamisato Ayato': 'KamisatoAyato',
+  'Kujou Sara': 'KujouSara',
+  'Mavuika': 'Mavuika',
+};
+
 const LOADING_MESSAGES = [
   'Analyzing scaling...',
   'Comparing top builds...',
@@ -43,6 +63,54 @@ const MODELS = [
   { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro (Smarter)' },
   { id: 'gemini-pro-latest', name: 'Gemini Pro Latest (Experimental)' }
 ];
+
+const buildImageMap = (files) => {
+  const map = {};
+  Object.entries(files).forEach(([filePath, url]) => {
+    const parts = filePath.split('/');
+    const folder = parts[parts.length - 2];
+    if (folder) {
+      map[folder] = url;
+    }
+  });
+  return map;
+};
+
+const buildElementMap = (files) => {
+  const map = {};
+  Object.entries(files).forEach(([filePath, url]) => {
+    const match = filePath.match(/Element_(\w+)\.svg$/);
+    if (match) {
+      map[match[1].toLowerCase()] = url;
+    }
+  });
+  return map;
+};
+
+const ALLOWED_ELEMENTS = new Set(['Pyro', 'Hydro', 'Electro', 'Cryo', 'Dendro', 'Anemo', 'Geo']);
+
+const normalizeElement = (value) => {
+  if (!value) return '';
+  const trimmed = String(value).trim();
+  if (!trimmed || trimmed.toLowerCase() === 'n/a') return '';
+  const lower = trimmed.toLowerCase();
+  const normalized = lower.charAt(0).toUpperCase() + lower.slice(1);
+  return ALLOWED_ELEMENTS.has(normalized) ? normalized : '';
+};
+
+const normalizeCharacterFolder = (name) => {
+  if (!name) return '';
+  if (SPECIAL_CHARACTER_MAP[name]) return SPECIAL_CHARACTER_MAP[name];
+  return name.replace(/[^a-zA-Z0-9]/g, '');
+};
+
+const ElementIcon = ({ element, elementMap }) => {
+  const normalized = normalizeElement(element);
+  if (!normalized) return null;
+  const key = normalized.toLowerCase();
+  const src = elementMap[key] || `/elements/Element_${normalized}.svg`;
+  return <img src={src} alt={normalized} className="h-5 w-5" />;
+};
 
 const normalizeSetName = (setName) => {
   if (!setName) return 'Unknown_Set';
@@ -119,6 +187,34 @@ const Mentor = () => {
   const [loadingAI, setLoadingAI] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
   const [errorFragment, setErrorFragment] = useState(null);
+  const [buildNotes, setBuildNotes] = useState('');
+
+  const characterIndex = useMemo(() => {
+    const index = {};
+    characterList.forEach((entry) => {
+      if (entry.id && entry.name) {
+        index[String(entry.id)] = entry.name;
+      }
+    });
+    return index;
+  }, []);
+
+  const elementIndex = useMemo(() => {
+    const index = {};
+    characterList.forEach((entry) => {
+      if (entry.id && entry.element) {
+        index[String(entry.id)] = entry.element;
+      }
+      if (entry.name && entry.element) {
+        index[entry.name] = entry.element;
+      }
+    });
+    return index;
+  }, []);
+
+  const iconMap = useMemo(() => buildImageMap(iconFiles), []);
+  const cardMap = useMemo(() => buildImageMap(cardFiles), []);
+  const elementMap = useMemo(() => buildElementMap(elementFiles), []);
 
   useEffect(() => {
     const stored = sessionStorage.getItem('user_data');
@@ -157,6 +253,34 @@ const Mentor = () => {
   const currentChar = useMemo(() => {
     return userData.find(c => c.stats.Character === charName);
   }, [userData, charName]);
+
+  const resolveDisplayName = (rawName) => {
+    if (!rawName) return '';
+    if (rawName.startsWith('ID')) {
+      const idMatch = rawName.match(/\d+/);
+      if (idMatch && characterIndex[idMatch[0]]) {
+        return characterIndex[idMatch[0]];
+      }
+    }
+    return rawName;
+  };
+
+  const resolveElement = (rawName, fallback) => {
+    if (!rawName) return '';
+    const idMatch = rawName.match(/\d+/);
+    if (idMatch && elementIndex[idMatch[0]]) {
+      return elementIndex[idMatch[0]];
+    }
+    if (elementIndex[rawName]) {
+      return elementIndex[rawName];
+    }
+    return normalizeElement(fallback);
+  };
+
+  const displayName = useMemo(() => resolveDisplayName(charName), [charName, characterIndex]);
+  const resolvedElement = useMemo(() => resolveElement(charName, currentChar?.stats?.Element), [charName, currentChar, elementIndex]);
+  const folderName = useMemo(() => normalizeCharacterFolder(displayName), [displayName]);
+  const heroImage = folderName ? cardMap[folderName] || iconMap[folderName] : '';
 
   const currentBuild = useMemo(() => {
     const map = {};
@@ -332,7 +456,7 @@ const Mentor = () => {
     setLoadingAI(true);
     setErrorFragment(null);
     try {
-      const res = await analyzeBuild(apiKey, userData, contextData, charName, selectedModel);
+      const res = await analyzeBuild(apiKey, userData, contextData, charName, selectedModel, buildNotes);
       setAnalysis(res.analysis);
     } catch (err) {
       console.error(err);
@@ -394,19 +518,55 @@ const Mentor = () => {
 
   return (
     <div className="space-y-8">
-      <header className="flex flex-col gap-3">
-        <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-muted)]">Mentor mode</p>
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-          <div>
-            <h1 className="text-3xl sm:text-4xl font-semibold text-[var(--text-strong)] font-display">{charName}</h1>
-            <p className="text-[var(--text-muted)]">Comparisons, swap plan, and tailored analysis.</p>
+      <header className="flex flex-col gap-6">
+        <div className="relative overflow-hidden rounded-3xl border border-[var(--line)] bg-white">
+          {heroImage && (
+            <div className="absolute inset-0 opacity-10">
+              <img src={heroImage} alt="" className="h-full w-full object-cover" />
+            </div>
+          )}
+          <div className="relative flex flex-col gap-6 px-6 py-8 sm:px-10">
+            <div className="flex items-center justify-between">
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-muted)]">Mentor mode</p>
+              <button
+                onClick={() => navigate('/dashboard')}
+                className="text-sm font-medium text-[var(--accent-strong)] hover:text-[var(--accent)]"
+              >
+                Back to dashboard
+              </button>
+            </div>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+              <div className="h-28 w-20 sm:h-32 sm:w-24 rounded-2xl border border-[var(--line)] bg-[var(--surface-muted)] overflow-hidden shadow-sm flex items-center justify-center">
+                {heroImage ? (
+                  <img
+                    src={heroImage.replace('/card.png', '/icon.png')}
+                    alt={displayName || charName}
+                    className="h-full w-full object-cover"
+                    onError={(e) => {
+                      if (heroImage) {
+                        e.currentTarget.src = heroImage;
+                      } else {
+                        e.currentTarget.src = 'https://placehold.co/160x240/f8fafc/94a3b8?text=?';
+                      }
+                    }}
+                  />
+                ) : (
+                  <div className="h-full w-full flex items-center justify-center text-[var(--text-muted)]">?</div>
+                )}
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3">
+                  <h1 className="text-3xl sm:text-4xl font-semibold text-[var(--text-strong)] font-display">{displayName || charName}</h1>
+                  <div className="h-8 w-8 rounded-full border border-[var(--line)] bg-[var(--surface-muted)] flex items-center justify-center">
+                    <ElementIcon element={resolvedElement} elementMap={elementMap} />
+                  </div>
+                </div>
+                <p className="text-[var(--text-muted)] mt-2">Comparisons, swap plan, and tailored analysis.</p>
+              </div>
+            </div>
           </div>
-          <button
-            onClick={() => navigate('/dashboard')}
-            className="text-sm font-medium text-[var(--accent-strong)] hover:text-[var(--accent)]"
-          >
-            Back to dashboard
-          </button>
         </div>
       </header>
 
@@ -565,9 +725,21 @@ const Mentor = () => {
               </select>
             </div>
 
-            <button
-              onClick={handleAnalyze}
-              disabled={!contextData || loadingAI}
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">Build preferences</p>
+              <textarea
+                value={buildNotes}
+                onChange={(e) => setBuildNotes(e.target.value)}
+                rows={4}
+                placeholder="Example: I want 200% ER, 70% Crit Rate, prioritize ATK over EM..."
+                className="mt-2 w-full border border-[var(--line)] bg-[var(--surface-muted)] px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
+              />
+              <p className="text-xs text-[var(--text-muted)] mt-2">These notes are sent to the AI as constraints.</p>
+            </div>
+
+          <button
+            onClick={handleAnalyze}
+            disabled={!contextData || loadingAI}
               className="mt-6 w-full py-3 bg-[var(--text-strong)] text-white rounded-xl font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loadingAI ? (

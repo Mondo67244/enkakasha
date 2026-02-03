@@ -22,13 +22,14 @@ export const getLeaderboard = async (calcId) => {
     return response.data;
 };
 
-export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName) => {
+export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName, buildNotes) => {
     const response = await api.post('/analyze', {
         api_key: apiKey,
         user_data: userData,
         context_data: contextData,
         target_char: targetChar,
-        model_name: modelName
+        model_name: modelName,
+        build_notes: buildNotes
     });
     return response.data;
 };

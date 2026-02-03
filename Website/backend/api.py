@@ -45,6 +45,7 @@ class AnalyzeRequest(BaseModel):
     context_data: Optional[List[Dict[str, Any]]] = None
     target_char: str
     model_name: Optional[str] = "gemini-2.5-flash"
+    build_notes: Optional[str] = None
 
 @app.get("/")
 def read_root():
@@ -120,6 +121,7 @@ async def analyze_build(request: AnalyzeRequest):
     context_data = request.context_data
     target_char_name = request.target_char
     model_name = request.model_name or "gemini-2.5-flash"
+    build_notes = (request.build_notes or "").strip()
     
     if not api_key or not user_data or not target_char_name:
         raise HTTPException(status_code=400, detail="Missing API Key, User Data, or Target Character")
@@ -145,6 +147,10 @@ async def analyze_build(request: AnalyzeRequest):
     ### CONTEXT & BENCHMARKS
     Use the following Global Leaderboard data to determine the optimal stat distribution targets:
     {context_summary}
+
+    ### USER BUILD PREFERENCES (IMPORTANT)
+    The user provided explicit preferences or constraints. Follow them unless they conflict with the inventory.
+    {build_notes or "No additional preferences provided."}
 
     ### USER INVENTORY DATA
     **Constraint:** You are strictly forbidden from hallucinating artifacts. Select 5 items exclusively from the list below.

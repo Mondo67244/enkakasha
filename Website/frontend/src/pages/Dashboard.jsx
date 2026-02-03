@@ -50,6 +50,112 @@ const ElementIcon = ({ element, elementMap }) => {
     return <img src={src} alt={normalized} className="h-5 w-5" />;
 };
 
+const SLOT_ORDER = ['Flower', 'Plume', 'Sands', 'Goblet', 'Circlet'];
+const SLOT_FILENAME = {
+    Flower: '01_Flower',
+    Plume: '02_Plume',
+    Sands: '03_Sands',
+    Goblet: '04_Goblet',
+    Circlet: '05_Circlet',
+};
+
+const SPECIAL_SET_MAP = {
+    'Finale of the deep galeries': 'Finale_of_the_Deep_Galleries',
+    'Finale of the Deep Galleries': 'Finale_of_the_Deep_Galleries',
+};
+
+const normalizeSetName = (setName) => {
+    if (!setName) return 'Unknown_Set';
+    if (SPECIAL_SET_MAP[setName]) return SPECIAL_SET_MAP[setName];
+    let cleaned = setName.replace(/'/g, '');
+    cleaned = cleaned.replace(/[^a-zA-Z0-9- ]/g, ' ');
+    cleaned = cleaned.replace(/\s+/g, ' ').trim();
+    return cleaned.replace(/ /g, '_');
+};
+
+const buildArtifactSubstats = (art) => {
+    const stats = [];
+    for (let i = 1; i <= 4; i += 1) {
+        const name = art[`Sub${i}`];
+        const val = art[`Sub${i}_Val`];
+        if (name) {
+            const formatted = val === '' || val === undefined ? name : `${name}+${val}`;
+            stats.push(formatted);
+        }
+    }
+    return stats;
+};
+
+const ArtifactRow = ({ artifactsBySlot }) => {
+    const [hoveredSlot, setHoveredSlot] = useState(null);
+    const activeSlot = hoveredSlot || SLOT_ORDER.find((slot) => artifactsBySlot[slot]) || SLOT_ORDER[0];
+    const activeArt = activeSlot ? artifactsBySlot[activeSlot] : null;
+    const substats = activeArt ? buildArtifactSubstats(activeArt) : [];
+    const setFolder = activeArt ? normalizeSetName(activeArt.Set) : '';
+    const slotFile = activeSlot ? SLOT_FILENAME[activeSlot] : '';
+    const imgSrc = activeArt ? `/artifacts/${setFolder}/${slotFile}.png` : '';
+
+    return (
+        <div className="space-y-3">
+            <div className="flex items-center gap-2">
+                {SLOT_ORDER.map((slot) => {
+                    const art = artifactsBySlot[slot];
+                    const hasArt = Boolean(art);
+                    const isActive = slot === activeSlot;
+                    const artSetFolder = art ? normalizeSetName(art.Set) : '';
+                    const artSlotFile = SLOT_FILENAME[slot];
+                    const artImg = art ? `/artifacts/${artSetFolder}/${artSlotFile}.png` : '';
+                    return (
+                        <button
+                            key={slot}
+                            type="button"
+                            onMouseEnter={() => setHoveredSlot(slot)}
+                            onMouseLeave={() => setHoveredSlot(null)}
+                            className={`h-10 w-10 rounded-xl border flex items-center justify-center overflow-hidden transition ${
+                                isActive ? 'border-[var(--accent-strong)] bg-white shadow-sm' : 'border-[var(--line)] bg-[var(--surface-muted)]'
+                            }`}
+                        >
+                            {hasArt ? (
+                                <img
+                                    src={artImg}
+                                    alt={slot}
+                                    className="h-8 w-8 object-contain"
+                                    onError={(e) => {
+                                        e.currentTarget.src = 'https://placehold.co/64x64/f8fafc/94a3b8?text=?';
+                                    }}
+                                />
+                            ) : (
+                                <span className="text-[10px] text-[var(--text-muted)]">{slot.slice(0, 2)}</span>
+                            )}
+                        </button>
+                    );
+                })}
+            </div>
+            <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-muted)] p-3 min-h-[86px]">
+                {activeArt ? (
+                    <>
+                        <p className="text-xs font-semibold text-[var(--text-strong)]">
+                            {activeSlot} · {activeArt.Set}
+                        </p>
+                        <p className="text-xs text-[var(--text-muted)] mt-1">
+                            Main: {activeArt.Main_Stat} {activeArt.Main_Value}
+                        </p>
+                        {substats.length > 0 && (
+                            <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1">
+                                {substats.slice(0, 4).map((sub, idx) => (
+                                    <p key={idx} className="text-[11px] text-[var(--text)]">- {sub}</p>
+                                ))}
+                            </div>
+                        )}
+                    </>
+                ) : (
+                    <p className="text-xs text-[var(--text-muted)]">No artifact equipped for this slot.</p>
+                )}
+            </div>
+        </div>
+    );
+};
+
 const SPECIAL_CHARACTER_MAP = {
     'Raiden Shogun': 'RaidenShogun',
     'Arataki Itto': 'AratakiItto',
@@ -199,6 +305,10 @@ const Dashboard = () => {
                     {filtered.map((char, idx) => {
                         const stats = char.stats;
                         const artCount = char.artifacts?.length || 0;
+                        const artifactsBySlot = (char.artifacts || []).reduce((acc, art) => {
+                            if (art.Slot) acc[art.Slot] = art;
+                            return acc;
+                        }, {});
                         const displayName = resolveDisplayNameMemo(stats.Character);
                         const resolvedElement = resolveElementMemo(stats.Character, stats.Element);
                         const folderName = normalizeCharacterFolder(displayName);
@@ -243,6 +353,8 @@ const Dashboard = () => {
                                     <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
                                     <span>CR {stats['Crit_Rate%']}%</span>
                                 </div>
+
+                                <ArtifactRow artifactsBySlot={artifactsBySlot} />
 
                                 <div className="pt-4 border-t border-[var(--line)] flex justify-between items-center">
                                     <span className="text-xs text-[var(--text-muted)]">{artCount} artifacts</span>
