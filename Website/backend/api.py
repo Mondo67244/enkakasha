@@ -279,6 +279,18 @@ def rename_data_folder(request: RenameRequest):
     except Exception as e:
          raise HTTPException(status_code=500, detail=str(e))
 
+@app.delete("/data/clear")
+def clear_data_folders():
+    deleted = 0
+    try:
+        for item in DATA_ROOT.iterdir():
+            if item.is_dir() and not item.name.startswith("."):
+                shutil.rmtree(item)
+                deleted += 1
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return {"success": True, "deleted": deleted}
+
 def resolve_data_path(name: str) -> Path:
     if not SAFE_FOLDER_RE.match(name):
         raise HTTPException(status_code=400, detail="Invalid folder name")

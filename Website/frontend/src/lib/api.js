@@ -49,4 +49,9 @@ export const renameDataFolder = async (oldName, newName) => {
     return response.data;
 };
 
+export const clearDataFolders = async () => {
+    const response = await api.delete('/data/clear');
+    return response.data;
+};
+
 export default api;

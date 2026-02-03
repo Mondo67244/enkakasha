@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { listDataFolders, deleteDataFolder, renameDataFolder } from '../lib/api';
+import { listDataFolders, deleteDataFolder, renameDataFolder, clearDataFolders } from '../lib/api';
 import { Folder, Trash2, Edit2, Archive, Loader2, AlertCircle, Check } from 'lucide-react';
 
 const DataManagement = () => {
@@ -34,6 +34,23 @@ const DataManagement = () => {
             fetchFolders();
         } catch (err) {
             alert("Failed to delete folder");
+        }
+    };
+
+    const handleClearCache = () => {
+        sessionStorage.removeItem('user_data');
+        sessionStorage.removeItem('uid');
+        localStorage.removeItem('recent_scans');
+        alert('Local scan cache cleared.');
+    };
+
+    const handleDeleteAll = async () => {
+        if (!confirm('Delete all scan folders on the server? This cannot be undone.')) return;
+        try {
+            await clearDataFolders();
+            fetchFolders();
+        } catch (err) {
+            alert('Failed to delete all scans.');
         }
     };
 
@@ -140,6 +157,20 @@ const DataManagement = () => {
                         </tbody>
                     </table>
                 )}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                    onClick={handleClearCache}
+                    className="px-4 py-2 rounded-xl border border-[var(--line)] bg-white text-sm font-medium text-[var(--text-strong)] hover:bg-[var(--surface-muted)]"
+                >
+                    Clear local cache
+                </button>
+                <button
+                    onClick={handleDeleteAll}
+                    className="px-4 py-2 rounded-xl border border-red-200 bg-red-50 text-sm font-medium text-red-600 hover:bg-red-100"
+                >
+                    Delete all scans (server)
+                </button>
             </div>
             {renameTarget && !isNameValid && (
                 <p className="text-xs text-red-600">Folder names can only include letters, numbers, dots, underscores, and dashes.</p>

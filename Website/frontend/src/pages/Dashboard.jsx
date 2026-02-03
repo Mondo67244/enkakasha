@@ -1,25 +1,93 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { User, Droplets, Flame, Zap, Wind, Mountain, Snowflake, Sprout, Search } from 'lucide-react';
+import { User, Search } from 'lucide-react';
+import characterList from '../../../../Characters/characters.json';
 
-const ElementIcon = ({ element }) => {
-    switch (element) {
-        case 'Pyro': return <Flame className="text-red-500" />;
-        case 'Hydro': return <Droplets className="text-blue-500" />;
-        case 'Electro': return <Zap className="text-purple-500" />;
-        case 'Anemo': return <Wind className="text-teal-500" />;
-        case 'Geo': return <Mountain className="text-yellow-500" />;
-        case 'Cryo': return <Snowflake className="text-cyan-500" />;
-        case 'Dendro': return <Sprout className="text-green-500" />;
-        default: return <User className="text-slate-400" />;
-    }
-}
+const iconFiles = import.meta.glob('../../../../Characters/**/icon.png', { eager: true, import: 'default' });
+const cardFiles = import.meta.glob('../../../../Characters/**/card.png', { eager: true, import: 'default' });
+const elementFiles = import.meta.glob('../../../../elements/Element_*.svg', { eager: true, import: 'default' });
+
+const buildImageMap = (files) => {
+    const map = {};
+    Object.entries(files).forEach(([filePath, url]) => {
+        const parts = filePath.split('/');
+        const folder = parts[parts.length - 2];
+        if (folder) {
+            map[folder] = url;
+        }
+    });
+    return map;
+};
+
+const buildElementMap = (files) => {
+    const map = {};
+    Object.entries(files).forEach(([filePath, url]) => {
+        const match = filePath.match(/Element_(\\w+)\\.svg$/);
+        if (match) {
+            map[match[1].toLowerCase()] = url;
+        }
+    });
+    return map;
+};
+
+const ElementIcon = ({ element, elementMap }) => {
+    if (!element) return <User className="text-[var(--text-muted)]" />;
+    const key = element.toLowerCase();
+    const src = elementMap[key];
+    if (!src) return <User className="text-[var(--text-muted)]" />;
+    return <img src={src} alt={element} className="h-5 w-5" />;
+};
+
+const SPECIAL_CHARACTER_MAP = {
+    'Raiden Shogun': 'RaidenShogun',
+    'Arataki Itto': 'AratakiItto',
+    'Sangonomiya Kokomi': 'SangonomiyaKokomi',
+    'Kaedehara Kazuha': 'KaedeharaKazuha',
+    'Kuki Shinobu': 'KukiShinobu',
+    'Yun Jin': 'YunJin',
+    'Hu Tao': 'HuTao',
+    'Hu Tao (Trial)': 'HuTao(Trial)',
+    'Kamisato Ayaka': 'KamisatoAyaka',
+    'Kamisato Ayato': 'KamisatoAyato',
+    'Kujou Sara': 'KujouSara',
+    'Mavuika': 'Mavuika',
+};
+
+const normalizeCharacterFolder = (name) => {
+    if (!name) return '';
+    if (SPECIAL_CHARACTER_MAP[name]) return SPECIAL_CHARACTER_MAP[name];
+    return name.replace(/[^a-zA-Z0-9]/g, '');
+};
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
     const [search, setSearch] = useState('');
     const [elementFilter, setElementFilter] = useState('All');
+    const characterIndex = useMemo(() => {
+        const index = {};
+        characterList.forEach((entry) => {
+            if (entry.id && entry.name) {
+                index[String(entry.id)] = entry.name;
+            }
+        });
+        return index;
+    }, []);
+    const elementIndex = useMemo(() => {
+        const index = {};
+        characterList.forEach((entry) => {
+            if (entry.id && entry.element) {
+                index[String(entry.id)] = entry.element;
+            }
+            if (entry.name && entry.element) {
+                index[entry.name] = entry.element;
+            }
+        });
+        return index;
+    }, []);
+    const iconMap = useMemo(() => buildImageMap(iconFiles), []);
+    const cardMap = useMemo(() => buildImageMap(cardFiles), []);
+    const elementMap = useMemo(() => buildElementMap(elementFiles), []);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -31,19 +99,52 @@ const Dashboard = () => {
         setData(JSON.parse(stored));
     }, [navigate]);
 
+    const resolveDisplayName = (rawName) => {
+        if (!rawName) return '';
+        if (rawName.startsWith('ID')) {
+            const idMatch = rawName.match(/\d+/);
+            if (idMatch && characterIndex[idMatch[0]]) {
+                return characterIndex[idMatch[0]];
+            }
+        }
+        return rawName;
+    };
+
+    const resolveDisplayNameMemo = useMemo(() => resolveDisplayName, [characterIndex]);
+
+    const resolveElement = (rawName, fallback) => {
+        if (fallback) return fallback;
+        if (!rawName) return '';
+        const idMatch = rawName.match(/\d+/);
+        if (idMatch && elementIndex[idMatch[0]]) {
+            return elementIndex[idMatch[0]];
+        }
+        return elementIndex[rawName] || '';
+    };
+
+    const resolveElementMemo = useMemo(() => resolveElement, [elementIndex]);
+
     const handleSelect = (charName) => {
         navigate(`/mentor/${charName}`);
     };
 
     const filtered = data.filter((char) => {
         const stats = char.stats || {};
-        const name = stats.Character || '';
+        const name = resolveDisplayNameMemo(stats.Character || '');
+        const element = resolveElementMemo(stats.Character || '', stats.Element);
         const matchesSearch = name.toLowerCase().includes(search.toLowerCase());
-        const matchesElement = elementFilter === 'All' || stats.Element === elementFilter;
+        const matchesElement = elementFilter === 'All' || element === elementFilter;
         return matchesSearch && matchesElement;
     });
 
-    const elementOptions = ['All', ...new Set(data.map((c) => c.stats?.Element).filter(Boolean))];
+    const elementOptions = [
+        'All',
+        ...new Set(
+            data
+                .map((c) => resolveElementMemo(c.stats?.Character || '', c.stats?.Element))
+                .filter(Boolean)
+        )
+    ];
 
     return (
         <div className="space-y-6">
@@ -85,6 +186,11 @@ const Dashboard = () => {
                     {filtered.map((char, idx) => {
                         const stats = char.stats;
                         const artCount = char.artifacts?.length || 0;
+                        const displayName = resolveDisplayNameMemo(stats.Character);
+                        const resolvedElement = resolveElementMemo(stats.Character, stats.Element);
+                        const folderName = normalizeCharacterFolder(displayName);
+                        const imageSrc = folderName ? iconMap[folderName] : '';
+                        const fallbackSrc = folderName ? cardMap[folderName] : '';
                         return (
                             <div
                                 key={idx}
@@ -92,13 +198,33 @@ const Dashboard = () => {
                                 className="bg-white border border-[var(--line)] hover:border-[var(--accent-strong)] p-6 rounded-2xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 group"
                             >
                                 <div className="flex items-start justify-between mb-4">
-                                    <div className="p-3 bg-[var(--surface-muted)] rounded-xl group-hover:scale-110 transition-transform">
-                                        <ElementIcon element={stats.Element} />
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-12 w-12 rounded-2xl bg-[var(--surface-muted)] border border-[var(--line)] overflow-hidden flex items-center justify-center">
+                                            {imageSrc ? (
+                                                <img
+                                                    src={imageSrc}
+                                                    alt={stats.Character}
+                                                    className="h-full w-full object-cover"
+                                                    onError={(e) => {
+                                                        if (fallbackSrc && e.currentTarget.src !== fallbackSrc) {
+                                                            e.currentTarget.src = fallbackSrc;
+                                                        } else {
+                                                            e.currentTarget.src = 'https://placehold.co/96x96/f8fafc/94a3b8?text=?';
+                                                        }
+                                                    }}
+                                                />
+                                            ) : (
+                                                <User className="text-[var(--text-muted)]" />
+                                            )}
+                                        </div>
+                                        <div className="p-2 bg-[var(--surface-muted)] rounded-xl">
+                                            <ElementIcon element={resolvedElement} elementMap={elementMap} />
+                                        </div>
                                     </div>
                                     <span className="text-xs font-mono text-[var(--text-muted)] bg-[var(--surface-muted)] px-2 py-1 rounded">Lv.{stats.Level}</span>
                                 </div>
 
-                                <h3 className="text-xl font-semibold text-[var(--text-strong)] mb-1">{stats.Character}</h3>
+                                <h3 className="text-xl font-semibold text-[var(--text-strong)] mb-1">{displayName || stats.Character}</h3>
                                 <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-4">
                                     <span>ATK {stats.ATK}</span>
                                     <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
