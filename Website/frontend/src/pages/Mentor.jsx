@@ -18,11 +18,11 @@ import ReactMarkdown from 'react-markdown';
 
 const SLOT_ORDER = ['Flower', 'Plume', 'Sands', 'Goblet', 'Circlet'];
 const SLOT_FILENAME = {
-  Flower: '01_Flower',
-  Plume: '02_Plume',
+  Flower: '05_Circlet',
+  Plume: '04_Goblet',
   Sands: '03_Sands',
-  Goblet: '04_Goblet',
-  Circlet: '05_Circlet',
+  Goblet: '02_Plume',
+  Circlet: '01_Flower',
 };
 
 const SPECIAL_SET_MAP = {
@@ -60,6 +60,43 @@ const toNumber = (value) => {
   if (!cleaned) return null;
   const parsed = Number(cleaned);
   return Number.isNaN(parsed) ? null : parsed;
+};
+
+const repairJsonString = (input) => {
+  let out = '';
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < input.length; i += 1) {
+    const ch = input[i];
+    if (inString) {
+      if (escape) {
+        escape = false;
+        out += ch;
+        continue;
+      }
+      if (ch === '\\\\') {
+        escape = true;
+        out += ch;
+        continue;
+      }
+      if (ch === '"') {
+        inString = false;
+        out += ch;
+        continue;
+      }
+      if (ch === '\n' || ch === '\r') {
+        out += '\\n';
+        continue;
+      }
+      out += ch;
+    } else {
+      if (ch === '"') {
+        inString = true;
+      }
+      out += ch;
+    }
+  }
+  return out;
 };
 
 const formatStatValue = (value, isPercent = false) => {
@@ -150,7 +187,9 @@ const Mentor = () => {
       const jsonStart = cleaned.indexOf('{');
       const jsonEnd = cleaned.lastIndexOf('}');
       const slice = jsonStart !== -1 && jsonEnd !== -1 ? cleaned.slice(jsonStart, jsonEnd + 1) : cleaned;
-      return JSON.parse(slice);
+      const noTrailingCommas = slice.replace(/,\s*([}\]])/g, '$1');
+      const repaired = repairJsonString(noTrailingCommas);
+      return JSON.parse(repaired);
     } catch (e) {
       return null;
     }
@@ -308,7 +347,7 @@ const Mentor = () => {
     setErrorFragment(null);
   };
 
-  const ArtifactCard = ({ title, artifact }) => {
+  const ArtifactCard = ({ title, artifact, slotKey }) => {
     if (!artifact) {
       return (
         <div className="border border-[var(--line)] rounded-2xl p-4 bg-[var(--surface-muted)]">
@@ -319,7 +358,7 @@ const Mentor = () => {
     }
 
     const setFolder = normalizeSetName(artifact.set || artifact.Set);
-    const slotFile = SLOT_FILENAME[artifact.slot || artifact.Slot] || '01_Flower';
+    const slotFile = SLOT_FILENAME[slotKey] || SLOT_FILENAME[artifact.slot || artifact.Slot] || '01_Flower';
     const imgSrc = `/artifacts/${setFolder}/${slotFile}.png`;
     const substats = Array.isArray(artifact.substats) ? artifact.substats : [];
 
@@ -345,7 +384,7 @@ const Mentor = () => {
         {substats.length > 0 && (
           <ul className="mt-4 space-y-1 text-xs text-[var(--text)]">
             {substats.slice(0, 4).map((sub, idx) => (
-              <li key={idx}>• {sub}</li>
+              <li key={idx}>- {sub}</li>
             ))}
           </ul>
         )}
@@ -455,8 +494,8 @@ const Mentor = () => {
                 <div key={slot}>
                   <p className="text-sm font-semibold text-[var(--text-strong)] mb-3">{slot}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <ArtifactCard title="Current" artifact={currentBuild[slot]} />
-                    <ArtifactCard title="Recommended" artifact={recommendedBuild[slot]} />
+                    <ArtifactCard title="Current" artifact={currentBuild[slot]} slotKey={slot} />
+                    <ArtifactCard title="Recommended" artifact={recommendedBuild[slot]} slotKey={slot} />
                   </div>
                 </div>
               ))}
@@ -585,11 +624,20 @@ const Mentor = () => {
             {!analysis && !loadingAI ? (
               <div className="mt-6 text-sm text-[var(--text-muted)]">Generate a guide to view the AI analysis.</div>
             ) : (
-              <div className="mt-6">
-                {parsedAnalysis ? (
+              <div className="mt-6 space-y-3">
+                {parsedAnalysis && typeof parsedAnalysis.mentor_analysis === 'string' && parsedAnalysis.mentor_analysis.trim() ? (
                   <div className="prose prose-slate max-w-none">
-                    <ReactMarkdown>{parsedAnalysis.mentor_analysis || ''}</ReactMarkdown>
+                    <ReactMarkdown>{parsedAnalysis.mentor_analysis}</ReactMarkdown>
                   </div>
+                ) : parsedAnalysis ? (
+                  <>
+                    <p className="text-xs text-[var(--text-muted)]">
+                      AI returned structured JSON without a detailed analysis block. Showing raw JSON output.
+                    </p>
+                    <pre className="text-xs bg-[var(--surface-muted)] border border-[var(--line)] rounded-2xl p-4 overflow-auto text-[var(--text-strong)]">
+{JSON.stringify(parsedAnalysis, null, 2)}
+                    </pre>
+                  </>
                 ) : (
                   <div className="prose prose-slate max-w-none">
                     <ReactMarkdown>{analysis}</ReactMarkdown>

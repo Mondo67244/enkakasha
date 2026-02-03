@@ -107,7 +107,7 @@ const Dashboard = () => {
 
                                 <div className="pt-4 border-t border-[var(--line)] flex justify-between items-center">
                                     <span className="text-xs text-[var(--text-muted)]">{artCount} artifacts</span>
-                                    <span className="text-[var(--accent-strong)] text-sm font-medium group-hover:underline">Optimize -></span>
+                                    <span className="text-[var(--accent-strong)] text-sm font-medium group-hover:underline">Optimize &rarr;</span>
                                 </div>
                             </div>
                         )
