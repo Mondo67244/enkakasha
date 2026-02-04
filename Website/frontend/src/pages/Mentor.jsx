@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getLeaderboard, analyzeBuild } from '../lib/api';
+import { getLeaderboard, getLeaderboardDeep, analyzeBuild } from '../lib/api';
 import {
   Brain,
   BookOpen,
@@ -184,10 +184,12 @@ const Mentor = () => {
   const [analysis, setAnalysis] = useState('');
   const [selectedModel, setSelectedModel] = useState('gemini-2.5-flash');
   const [loadingContext, setLoadingContext] = useState(false);
+  const [loadingDeep, setLoadingDeep] = useState(false);
   const [loadingAI, setLoadingAI] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
   const [errorFragment, setErrorFragment] = useState(null);
   const [buildNotes, setBuildNotes] = useState('');
+  const [deepLimit, setDeepLimit] = useState('20');
 
   const characterIndex = useMemo(() => {
     const index = {};
@@ -439,11 +441,36 @@ const Mentor = () => {
     try {
       const res = await getLeaderboard(calcId.trim());
       setContextData(res.data);
+      sessionStorage.setItem('context_data', JSON.stringify(res.data));
     } catch (err) {
       console.error(err);
       setErrorFragment('Failed to fetch leaderboard. Check ID.');
     } finally {
       setLoadingContext(false);
+    }
+  };
+
+  const handleFetchDeepContext = async () => {
+    if (!calcIdValid) {
+      setErrorFragment('Leaderboard ID must be numeric.');
+      return;
+    }
+    const parsedLimit = Number(deepLimit);
+    const safeLimit = Number.isFinite(parsedLimit)
+      ? Math.min(Math.max(Math.round(parsedLimit), 5), 100)
+      : 20;
+    setLoadingDeep(true);
+    setErrorFragment(null);
+    try {
+      const target = displayName || charName;
+      const res = await getLeaderboardDeep(calcId.trim(), target, safeLimit);
+      setContextData(res.data);
+      sessionStorage.setItem('context_data', JSON.stringify(res.data));
+    } catch (err) {
+      console.error(err);
+      setErrorFragment('Deep scan failed. This can take time or hit rate limits.');
+    } finally {
+      setLoadingDeep(false);
     }
   };
 
@@ -458,6 +485,7 @@ const Mentor = () => {
     try {
       const res = await analyzeBuild(apiKey, userData, contextData, charName, selectedModel, buildNotes);
       setAnalysis(res.analysis);
+      localStorage.setItem('last_chat_char', charName);
     } catch (err) {
       console.error(err);
       setErrorFragment(err.response?.data?.detail || 'AI Analysis Failed. Please try again.');
@@ -703,13 +731,38 @@ const Mentor = () => {
                 }}
                 className="w-full border border-[var(--line)] bg-[var(--surface-muted)] px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
               />
-              <button
-                onClick={handleFetchContext}
-                disabled={loadingContext || !calcIdValid}
-                className="w-full py-3 rounded-xl font-semibold bg-[var(--accent-strong)] text-white hover:bg-[var(--accent)] transition disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {loadingContext ? 'Loading...' : 'Load benchmark'}
-              </button>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  onClick={handleFetchContext}
+                  disabled={loadingContext || loadingDeep || !calcIdValid}
+                  className="w-full py-3 rounded-xl font-semibold bg-[var(--accent-strong)] text-white hover:bg-[var(--accent)] transition disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loadingContext ? 'Loading...' : 'Scan rapide'}
+                </button>
+                <div className="space-y-2">
+                  <button
+                    onClick={handleFetchDeepContext}
+                    disabled={loadingContext || loadingDeep || !calcIdValid}
+                    className="w-full py-3 rounded-xl font-semibold border border-[var(--line)] text-[var(--text-strong)] bg-white hover:bg-[var(--surface-muted)] transition disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {loadingDeep ? 'Scanning...' : 'Scan profond (Pro)'}
+                  </button>
+                  <div className="flex items-center gap-2">
+                    <label className="text-xs text-[var(--text-muted)] whitespace-nowrap">Comptes</label>
+                    <input
+                      type="number"
+                      min="5"
+                      max="100"
+                      value={deepLimit}
+                      onChange={(e) => setDeepLimit(e.target.value)}
+                      className="w-full border border-[var(--line)] bg-[var(--surface-muted)] px-3 py-2 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-[var(--text-muted)]">
+                Scan profond récupère les artefacts via Enka pour chaque UID. C'est plus précis mais bien plus lent.
+              </p>
             </div>
 
             <div className="mt-6">
@@ -737,9 +790,9 @@ const Mentor = () => {
               <p className="text-xs text-[var(--text-muted)] mt-2">These notes are sent to the AI as constraints.</p>
             </div>
 
-          <button
-            onClick={handleAnalyze}
-            disabled={!contextData || loadingAI}
+            <button
+              onClick={handleAnalyze}
+              disabled={!contextData || loadingAI}
               className="mt-6 w-full py-3 bg-[var(--text-strong)] text-white rounded-xl font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loadingAI ? (
@@ -759,6 +812,18 @@ const Mentor = () => {
                 <AlertCircle size={18} />
                 {errorFragment}
               </div>
+            )}
+
+            {analysis && !loadingAI && (
+              <button
+                onClick={() => {
+                  localStorage.setItem('last_chat_char', charName);
+                  navigate(`/chat/${charName}`);
+                }}
+                className="mt-4 w-full py-3 rounded-xl font-semibold border border-[var(--line)] text-[var(--text-strong)] bg-white hover:bg-[var(--surface-muted)] transition"
+              >
+                Open chat about this build
+              </button>
             )}
           </div>
 

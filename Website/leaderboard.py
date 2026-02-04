@@ -2,7 +2,10 @@ import time
 import pandas as pd
 import akasha
 import enka
-import exportmd
+try:
+    import exportmd
+except ImportError:
+    exportmd = None
 import sys
 import os
 import json
@@ -55,14 +58,17 @@ def save_data(rows, calculation_id, errors=None):
         print(i18n.get("UNKNOWN_IDS", ids=unique_unmapped))
     
     # Generate detailed Markdown report
-    try:
-        report_md = exportmd.generate_report(csv_filename)
-        md_filename = os.path.join(folder_name, f"{base_filename}.md")
-        with open(md_filename, 'w', encoding='utf-8') as f:
-            f.write(report_md)
-        print(i18n.get("SAVED_MD", filename=md_filename))
-    except Exception as e:
-        print(i18n.get("ERROR_MD", error=e))
+    if exportmd:
+        try:
+            report_md = exportmd.generate_report(csv_filename)
+            md_filename = os.path.join(folder_name, f"{base_filename}.md")
+            with open(md_filename, 'w', encoding='utf-8') as f:
+                f.write(report_md)
+            print(i18n.get("SAVED_MD", filename=md_filename))
+        except Exception as e:
+            print(i18n.get("ERROR_MD", error=e))
+    else:
+        print(i18n.get("ERROR_MD", error="exportmd module not available"))
 
     if errors:
         print(i18n.get("ERRORS_ENCOUNTERED", count=len(errors)))
@@ -208,3 +214,62 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# --- API helper (non-interactive) ---
+def fetch_leaderboard_character(calculation_id, target_character_name, limit=50, request_delay=REQUEST_DELAY, max_retries=MAX_RETRIES):
+    """
+    Fetches leaderboard entries, then pulls Enka data per UID and returns only the target character.
+    Returns a list of dicts compatible with backend context summary.
+    """
+    leaderboard = akasha.fetch_leaderboard(calculation_id, limit=limit)
+    if not leaderboard:
+        return []
+
+    rows = []
+    for i, entry in enumerate(leaderboard, 1):
+        uid = entry.get('UID')
+        if not uid:
+            continue
+
+        char_data_list = None
+        error = None
+        for _ in range(max_retries):
+            char_data_list, error = enka.fetch_player_data(uid)
+            if char_data_list:
+                break
+            if error and "404" in str(error):
+                break
+            time.sleep(2)
+
+        if not char_data_list:
+            continue
+
+        target_char = next((c for c in char_data_list if c['stats'].get('Character') == target_character_name), None)
+        if not target_char:
+            continue
+
+        stats = target_char['stats']
+        row = {
+            'Rank': entry.get('Rank'),
+            'Player': entry.get('Player'),
+            'UID': uid,
+            'Region': entry.get('Region'),
+            'Weapon': entry.get('Weapon'),
+            'DMG_Result': entry.get('DMG_Result'),
+            'Character': stats.get('Character'),
+            'HP': stats.get('HP'),
+            'ATK': stats.get('ATK'),
+            'DEF': stats.get('DEF'),
+            'EM': stats.get('EM'),
+            'ER': stats.get('ER%') if stats.get('ER%') is not None else stats.get('ER'),
+            'Crit_Rate': stats.get('Crit_Rate%') if stats.get('Crit_Rate%') is not None else stats.get('Crit_Rate'),
+            'Crit_DMG': stats.get('Crit_DMG%') if stats.get('Crit_DMG%') is not None else stats.get('Crit_DMG'),
+            'Elem_Bonus': stats.get('Elem_Bonus%') if stats.get('Elem_Bonus%') is not None else stats.get('Elem_Bonus'),
+            'Artifacts': target_char.get('artifacts', []),
+        }
+        rows.append(row)
+
+        if i < len(leaderboard):
+            time.sleep(request_delay)
+
+    return rows

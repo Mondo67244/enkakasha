@@ -19,6 +19,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Ideally, we should refactor enka.py to have a clean "get_data" function that returns JSON without printing.
 import enka
 import akasha
+import leaderboard
 from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
@@ -46,6 +47,15 @@ class AnalyzeRequest(BaseModel):
     target_char: str
     model_name: Optional[str] = "gemini-2.5-flash"
     build_notes: Optional[str] = None
+
+class ChatRequest(BaseModel):
+    api_key: str
+    user_data: List[Dict[str, Any]]
+    context_data: Optional[List[Dict[str, Any]]] = None
+    target_char: str
+    model_name: Optional[str] = "gemini-2.5-flash"
+    message: str
+    history: Optional[List[Dict[str, str]]] = None
 
 @app.get("/")
 def read_root():
@@ -106,6 +116,32 @@ async def get_leaderboard(calc_id: str):
         if not data:
              raise HTTPException(status_code=404, detail="No data found or ID invalid")
         return {"data": data}
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/leaderboard/deep/{calc_id}")
+async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
+    """
+    Fetches leaderboard entries, then enriches with Enka data and filters to a single character.
+    """
+    if not character:
+        raise HTTPException(status_code=400, detail="Character name required")
+    try:
+        data = await anyio.to_thread.run_sync(
+            partial(
+                leaderboard.fetch_leaderboard_character,
+                calc_id,
+                character,
+                limit=limit
+            )
+        )
+        if not data:
+            raise HTTPException(status_code=404, detail="No data found or ID invalid")
+        return {"data": data}
+    except HTTPException as e:
+        raise e
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -216,6 +252,66 @@ async def analyze_build(request: AnalyzeRequest):
             contents=prompt
         )
         return {"analysis": response.text}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
+
+@app.post("/chat")
+async def chat_build(request: ChatRequest):
+    api_key = request.api_key
+    user_data = request.user_data
+    context_data = request.context_data
+    target_char_name = request.target_char
+    model_name = request.model_name or "gemini-2.5-flash"
+    message = request.message.strip()
+    history = request.history or []
+
+    if not api_key or not user_data or not target_char_name or not message:
+        raise HTTPException(status_code=400, detail="Missing API Key, User Data, Target Character, or message")
+
+    context_summary = logic.prepare_context(context_data)
+    inventory, error = logic.prepare_inventory(user_data, target_char_name)
+    if error:
+        raise HTTPException(status_code=400, detail=error)
+
+    target_set = inventory['target_set']
+    pool_size = len(inventory['pool'])
+
+    convo_lines = []
+    for item in history:
+        role = item.get("role", "user")
+        content = item.get("content", "")
+        if not content:
+            continue
+        convo_lines.append(f"{role.upper()}: {content}")
+
+    convo_lines.append(f"USER: {message}")
+    convo_text = "\n".join(convo_lines)
+
+    prompt = f"""
+    You are a Genshin Impact theorycrafting assistant. You MUST only use the provided data.
+
+    ### HARD CONSTRAINTS
+    - You can ONLY reference the leaderboard summary and the user's artifact inventory below.
+    - If the user asks for anything outside this data, respond that you cannot answer beyond the provided data.
+    - Do NOT invent artifacts, stats, or characters.
+
+    ### LEADERBOARD SUMMARY
+    {context_summary}
+
+    ### USER INVENTORY (Only {target_set}, {pool_size} pieces)
+    {inventory['pool']}
+
+    ### CONVERSATION
+    {convo_text}
+    """
+
+    try:
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt
+        )
+        return {"reply": response.text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 

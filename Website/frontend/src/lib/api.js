@@ -22,6 +22,13 @@ export const getLeaderboard = async (calcId) => {
     return response.data;
 };
 
+export const getLeaderboardDeep = async (calcId, character, limit = 20) => {
+    const response = await api.get(`/leaderboard/deep/${calcId}`, {
+        params: { character, limit },
+    });
+    return response.data;
+};
+
 export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName, buildNotes) => {
     const response = await api.post('/analyze', {
         api_key: apiKey,
@@ -30,6 +37,19 @@ export const analyzeBuild = async (apiKey, userData, contextData, targetChar, mo
         target_char: targetChar,
         model_name: modelName,
         build_notes: buildNotes
+    });
+    return response.data;
+};
+
+export const chatBuild = async (apiKey, userData, contextData, targetChar, modelName, message, history) => {
+    const response = await api.post('/chat', {
+        api_key: apiKey,
+        user_data: userData,
+        context_data: contextData,
+        target_char: targetChar,
+        model_name: modelName,
+        message,
+        history
     });
     return response.data;
 };
