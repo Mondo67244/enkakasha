@@ -37,7 +37,7 @@ This project is divided into several interconnected modules:
 
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/Mondo67244/enkakasha.git](https://github.com/Mondo67244/enkakasha.git)
+    git clone https://github.com/Mondo67244/enkakasha.git
     cd enkakasha
     ```
 
@@ -97,7 +97,7 @@ Genshin AI Mentor by [IKOLAM](https://mondo.ikouni.site)
 
 1.  **Cloner le dépôt** :
     ```bash
-    git clone [https://github.com/Mondo67244/enkakasha.git](https://github.com/Mondo67244/enkakasha.git)
+    git clone https://github.com/Mondo67244/enkakasha.git
     cd enkakasha
     ```
 
