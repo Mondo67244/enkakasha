@@ -1,9 +1,9 @@
 # 🌟 Genshin AI Mentor (Enkakasha)
 
 <p align="center">
-  <a href="#-english-version">🇺🇸 <b>English Version</b></a>
+  <a href="#-english-version"><b>🇺🇸 English Version</b></a>
   &nbsp;|&nbsp;
-  <a href="#-version-française">🇫🇷 <b>Version Française</b></a>
+  <a href="#-version-française"><b>🇫🇷 Version Française</b></a>
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 ---
 
-# 🇺🇸 English Version
+#🇺🇸 English Version
 
 **Genshin AI Mentor** is an open-source artifact optimization platform. It combines **Generative AI (Gemini)** with precise game data (scraped via Akasha/Enka) to tell you exactly *why* an artifact is good (or trash), going far beyond simple CV (Crit Value) calculations.
 
@@ -75,7 +75,7 @@ Genshin AI Mentor by [IKOLAM](https://mondo.ikouni.site)
 
 ---
 
-# 🇫🇷 Version Française
+#🇫🇷 Version Française
 
 **Genshin AI Mentor** est une plateforme d'optimisation d'artefacts Open Source. Elle combine l'**IA Générative (Gemini)** avec des données de jeu précises pour vous dire exactement *pourquoi* un artefact est bon (ou à jeter), bien au-delà des simples calculs de "Crit Value".
 
