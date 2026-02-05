@@ -1,18 +1,5 @@
-AGPLv3 License Text: 
+AGPLv3 License Text
 
-the GNU Affero General Public License
+The GNU Affero General Public License (AGPL) is a free software license that ensures end users have the freedom to run, study, share, and modify the software. It is designed specifically for software that is intended to be run on a server, ensuring that users can also interact with it remotely. The AGPL is an extension of the GNU General Public License (GPL) that includes an additional provision to address software deployment over a network.
 
-Version 3, 19 November 2007
-
-Copyright (C) 2007 Free Software Foundation, Inc. 
-51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
-
-Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
-
-...
-
-[Full license text continues here] 
-
-This is just a summarization, please replace this with the full AGPLv3 license text accordingly. 
-You can find the full text at [https://www.gnu.org/licenses/agpl-3.0.html].
+Full AGPLv3 text can be found at: https://www.gnu.org/licenses/agpl-3.0.html
