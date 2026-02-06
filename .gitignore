@@ -13,8 +13,9 @@ scanresult*.json
 *_dataset.csv
 *_dataset.json
 scan_report.md
-*.json
-*.csv
+# Ignore data JSONs but allow config files like package.json
+# *.json <- TROP AGRESSIF
+data/*.json
 
 # Dossiers de données Enka (générés par le script)
 _*_*/
