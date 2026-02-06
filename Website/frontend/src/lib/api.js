@@ -17,9 +17,8 @@ export const scanUID = async (uid) => {
     return response.data;
 };
 
-// Direct call to Akasha API from browser (bypasses Cloudflare blocking VPS IPs)
+// Direct call to Akasha API from browser via CORS proxy
 export const getLeaderboard = async (calcId) => {
-    const AKASHA_URL = 'https://akasha.cv/api/leaderboards';
     const limit = 20;
     
     // Try both API formats (Akasha changed their API structure)
@@ -31,7 +30,11 @@ export const getLeaderboard = async (calcId) => {
     for (const params of paramSets) {
         try {
             const queryString = new URLSearchParams(params).toString();
-            const response = await fetch(`${AKASHA_URL}?${queryString}`, {
+            // Use corsproxy.io - encode the full URL with params
+            const targetUrl = `https://akasha.cv/api/leaderboards?${queryString}`;
+            const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+            
+            const response = await fetch(proxyUrl, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
