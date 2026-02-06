@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "10000002",
+    "name": "Kamisato Ayaka",
+    "element": "Cryo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Ayaka",
+    "icon_path": "GenshinArtifacts2/Characters/KamisatoAyaka/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/KamisatoAyaka/card.png"
+  },
+  {
+    "id": "10000003",
+    "name": "Jean",
+    "element": "Anemo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Qin",
+    "icon_path": "GenshinArtifacts2/Characters/Jean/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Jean/card.png"
+  },
+  {
+    "id": "10000006",
+    "name": "Lisa",
+    "element": "Electro",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Lisa",
+    "icon_path": "GenshinArtifacts2/Characters/Lisa/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Lisa/card.png"
+  },
+  {
+    "id": "10000014",
+    "name": "Barbara",
+    "element": "Hydro",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Barbara",
+    "icon_path": "GenshinArtifacts2/Characters/Barbara/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Barbara/card.png"
+  },
+  {
+    "id": "10000015",
+    "name": "Kaeya",
+    "element": "Cryo",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Kaeya",
+    "icon_path": "GenshinArtifacts2/Characters/Kaeya/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Kaeya/card.png"
+  },
+  {
+    "id": "10000016",
+    "name": "Diluc",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Diluc",
+    "icon_path": "GenshinArtifacts2/Characters/Diluc/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Diluc/card.png"
+  },
+  {
+    "id": "10000020",
+    "name": "Razor",
+    "element": "Electro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Razor",
+    "icon_path": "GenshinArtifacts2/Characters/Razor/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Razor/card.png"
+  },
+  {
+    "id": "10000021",
+    "name": "Amber",
+    "element": "Pyro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Ambor",
+    "icon_path": "GenshinArtifacts2/Characters/Amber/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Amber/card.png"
+  },
+  {
+    "id": "10000022",
+    "name": "Venti",
+    "element": "Anemo",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Venti",
+    "icon_path": "GenshinArtifacts2/Characters/Venti/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Venti/card.png"
+  },
+  {
+    "id": "10000023",
+    "name": "Xiangling",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Xiangling",
+    "icon_path": "GenshinArtifacts2/Characters/Xiangling/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xiangling/card.png"
+  },
+  {
+    "id": "10000024",
+    "name": "Beidou",
+    "element": "Electro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Beidou",
+    "icon_path": "GenshinArtifacts2/Characters/Beidou/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Beidou/card.png"
+  },
+  {
+    "id": "10000025",
+    "name": "Xingqiu",
+    "element": "Hydro",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Xingqiu",
+    "icon_path": "GenshinArtifacts2/Characters/Xingqiu/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xingqiu/card.png"
+  },
+  {
+    "id": "10000026",
+    "name": "Xiao",
+    "element": "Anemo",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Xiao",
+    "icon_path": "GenshinArtifacts2/Characters/Xiao/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xiao/card.png"
+  },
+  {
+    "id": "10000027",
+    "name": "Ningguang",
+    "element": "Geo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Ningguang",
+    "icon_path": "GenshinArtifacts2/Characters/Ningguang/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ningguang/card.png"
+  },
+  {
+    "id": "10000029",
+    "name": "Klee",
+    "element": "Pyro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Klee",
+    "icon_path": "GenshinArtifacts2/Characters/Klee/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Klee/card.png"
+  },
+  {
+    "id": "10000030",
+    "name": "Zhongli",
+    "element": "Geo",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Zhongli",
+    "icon_path": "GenshinArtifacts2/Characters/Zhongli/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Zhongli/card.png"
+  },
+  {
+    "id": "10000031",
+    "name": "Fischl",
+    "element": "Electro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Fischl",
+    "icon_path": "GenshinArtifacts2/Characters/Fischl/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Fischl/card.png"
+  },
+  {
+    "id": "10000032",
+    "name": "Bennett",
+    "element": "Pyro",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Bennett",
+    "icon_path": "GenshinArtifacts2/Characters/Bennett/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Bennett/card.png"
+  },
+  {
+    "id": "10000033",
+    "name": "Tartaglia",
+    "element": "Hydro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Tartaglia",
+    "icon_path": "GenshinArtifacts2/Characters/Tartaglia/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Tartaglia/card.png"
+  },
+  {
+    "id": "10000034",
+    "name": "Noelle",
+    "element": "Geo",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Noel",
+    "icon_path": "GenshinArtifacts2/Characters/Noelle/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Noelle/card.png"
+  },
+  {
+    "id": "10000035",
+    "name": "Qiqi",
+    "element": "Cryo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Qiqi",
+    "icon_path": "GenshinArtifacts2/Characters/Qiqi/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Qiqi/card.png"
+  },
+  {
+    "id": "10000036",
+    "name": "Chongyun",
+    "element": "Cryo",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Chongyun",
+    "icon_path": "GenshinArtifacts2/Characters/Chongyun/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Chongyun/card.png"
+  },
+  {
+    "id": "10000037",
+    "name": "Ganyu",
+    "element": "Cryo",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Ganyu",
+    "icon_path": "GenshinArtifacts2/Characters/Ganyu/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ganyu/card.png"
+  },
+  {
+    "id": "10000038",
+    "name": "Albedo",
+    "element": "Geo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Albedo",
+    "icon_path": "GenshinArtifacts2/Characters/Albedo/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Albedo/card.png"
+  },
+  {
+    "id": "10000039",
+    "name": "Diona",
+    "element": "Cryo",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Diona",
+    "icon_path": "GenshinArtifacts2/Characters/Diona/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Diona/card.png"
+  },
+  {
+    "id": "10000041",
+    "name": "Mona",
+    "element": "Hydro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Mona",
+    "icon_path": "GenshinArtifacts2/Characters/Mona/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Mona/card.png"
+  },
+  {
+    "id": "10000042",
+    "name": "Keqing",
+    "element": "Electro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Keqing",
+    "icon_path": "GenshinArtifacts2/Characters/Keqing/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Keqing/card.png"
+  },
+  {
+    "id": "10000043",
+    "name": "Sucrose",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Sucrose",
+    "icon_path": "GenshinArtifacts2/Characters/Sucrose/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Sucrose/card.png"
+  },
+  {
+    "id": "10000044",
+    "name": "Xinyan",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Xinyan",
+    "icon_path": "GenshinArtifacts2/Characters/Xinyan/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xinyan/card.png"
+  },
+  {
+    "id": "10000045",
+    "name": "Rosaria",
+    "element": "Cryo",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Rosaria",
+    "icon_path": "GenshinArtifacts2/Characters/Rosaria/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Rosaria/card.png"
+  },
+  {
+    "id": "10000046",
+    "name": "Hu Tao",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Hutao",
+    "icon_path": "GenshinArtifacts2/Characters/HuTao/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/HuTao/card.png"
+  },
+  {
+    "id": "10000047",
+    "name": "Kaedehara Kazuha",
+    "element": "Anemo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Kazuha",
+    "icon_path": "GenshinArtifacts2/Characters/KaedeharaKazuha/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/KaedeharaKazuha/card.png"
+  },
+  {
+    "id": "10000048",
+    "name": "Yanfei",
+    "element": "Pyro",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Feiyan",
+    "icon_path": "GenshinArtifacts2/Characters/Yanfei/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Yanfei/card.png"
+  },
+  {
+    "id": "10000049",
+    "name": "Yoimiya",
+    "element": "Pyro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Yoimiya",
+    "icon_path": "GenshinArtifacts2/Characters/Yoimiya/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Yoimiya/card.png"
+  },
+  {
+    "id": "10000050",
+    "name": "Thoma",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Tohma",
+    "icon_path": "GenshinArtifacts2/Characters/Thoma/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Thoma/card.png"
+  },
+  {
+    "id": "10000051",
+    "name": "Eula",
+    "element": "Cryo",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Eula",
+    "icon_path": "GenshinArtifacts2/Characters/Eula/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Eula/card.png"
+  },
+  {
+    "id": "10000052",
+    "name": "Raiden Shogun",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Shougun",
+    "icon_path": "GenshinArtifacts2/Characters/RaidenShogun/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/RaidenShogun/card.png"
+  },
+  {
+    "id": "10000053",
+    "name": "Sayu",
+    "element": "Anemo",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Sayu",
+    "icon_path": "GenshinArtifacts2/Characters/Sayu/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Sayu/card.png"
+  },
+  {
+    "id": "10000054",
+    "name": "Sangonomiya Kokomi",
+    "element": "Hydro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Kokomi",
+    "icon_path": "GenshinArtifacts2/Characters/SangonomiyaKokomi/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/SangonomiyaKokomi/card.png"
+  },
+  {
+    "id": "10000055",
+    "name": "Gorou",
+    "element": "Geo",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Gorou",
+    "icon_path": "GenshinArtifacts2/Characters/Gorou/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Gorou/card.png"
+  },
+  {
+    "id": "10000056",
+    "name": "Kujou Sara",
+    "element": "Electro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Sara",
+    "icon_path": "GenshinArtifacts2/Characters/KujouSara/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/KujouSara/card.png"
+  },
+  {
+    "id": "10000057",
+    "name": "Arataki Itto",
+    "element": "Geo",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Itto",
+    "icon_path": "GenshinArtifacts2/Characters/AratakiItto/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/AratakiItto/card.png"
+  },
+  {
+    "id": "10000058",
+    "name": "Yae Miko",
+    "element": "Electro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Yae",
+    "icon_path": "GenshinArtifacts2/Characters/YaeMiko/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/YaeMiko/card.png"
+  },
+  {
+    "id": "10000059",
+    "name": "Shikanoin Heizou",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Heizo",
+    "icon_path": "GenshinArtifacts2/Characters/ShikanoinHeizou/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/ShikanoinHeizou/card.png"
+  },
+  {
+    "id": "10000060",
+    "name": "Yelan",
+    "element": "Hydro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Yelan",
+    "icon_path": "GenshinArtifacts2/Characters/Yelan/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Yelan/card.png"
+  },
+  {
+    "id": "10000061",
+    "name": "Kirara",
+    "element": "Dendro",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Momoka",
+    "icon_path": "GenshinArtifacts2/Characters/Kirara/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Kirara/card.png"
+  },
+  {
+    "id": "10000062",
+    "name": "Aloy",
+    "element": "Cryo",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Aloy",
+    "icon_path": "GenshinArtifacts2/Characters/Aloy/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Aloy/card.png"
+  },
+  {
+    "id": "10000063",
+    "name": "Shenhe",
+    "element": "Cryo",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Shenhe",
+    "icon_path": "GenshinArtifacts2/Characters/Shenhe/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Shenhe/card.png"
+  },
+  {
+    "id": "10000064",
+    "name": "Yun Jin",
+    "element": "Geo",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Yunjin",
+    "icon_path": "GenshinArtifacts2/Characters/YunJin/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/YunJin/card.png"
+  },
+  {
+    "id": "10000065",
+    "name": "Kuki Shinobu",
+    "element": "Electro",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Shinobu",
+    "icon_path": "GenshinArtifacts2/Characters/KukiShinobu/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/KukiShinobu/card.png"
+  },
+  {
+    "id": "10000066",
+    "name": "Kamisato Ayato",
+    "element": "Hydro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Ayato",
+    "icon_path": "GenshinArtifacts2/Characters/KamisatoAyato/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/KamisatoAyato/card.png"
+  },
+  {
+    "id": "10000067",
+    "name": "Collei",
+    "element": "Dendro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Collei",
+    "icon_path": "GenshinArtifacts2/Characters/Collei/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Collei/card.png"
+  },
+  {
+    "id": "10000068",
+    "name": "Dori",
+    "element": "Electro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Dori",
+    "icon_path": "GenshinArtifacts2/Characters/Dori/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Dori/card.png"
+  },
+  {
+    "id": "10000069",
+    "name": "Tighnari",
+    "element": "Dendro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Tighnari",
+    "icon_path": "GenshinArtifacts2/Characters/Tighnari/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Tighnari/card.png"
+  },
+  {
+    "id": "10000070",
+    "name": "Nilou",
+    "element": "Hydro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Nilou",
+    "icon_path": "GenshinArtifacts2/Characters/Nilou/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Nilou/card.png"
+  },
+  {
+    "id": "10000071",
+    "name": "Cyno",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Cyno",
+    "icon_path": "GenshinArtifacts2/Characters/Cyno/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Cyno/card.png"
+  },
+  {
+    "id": "10000072",
+    "name": "Candace",
+    "element": "Hydro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Candace",
+    "icon_path": "GenshinArtifacts2/Characters/Candace/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Candace/card.png"
+  },
+  {
+    "id": "10000073",
+    "name": "Nahida",
+    "element": "Dendro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Nahida",
+    "icon_path": "GenshinArtifacts2/Characters/Nahida/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Nahida/card.png"
+  },
+  {
+    "id": "10000074",
+    "name": "Layla",
+    "element": "Cryo",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Layla",
+    "icon_path": "GenshinArtifacts2/Characters/Layla/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Layla/card.png"
+  },
+  {
+    "id": "10000075",
+    "name": "Wanderer",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Wanderer",
+    "icon_path": "GenshinArtifacts2/Characters/Wanderer/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Wanderer/card.png"
+  },
+  {
+    "id": "10000076",
+    "name": "Faruzan",
+    "element": "Anemo",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Faruzan",
+    "icon_path": "GenshinArtifacts2/Characters/Faruzan/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Faruzan/card.png"
+  },
+  {
+    "id": "10000077",
+    "name": "Yaoyao",
+    "element": "Dendro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Yaoyao",
+    "icon_path": "GenshinArtifacts2/Characters/Yaoyao/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Yaoyao/card.png"
+  },
+  {
+    "id": "10000078",
+    "name": "Alhaitham",
+    "element": "Dendro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Alhatham",
+    "icon_path": "GenshinArtifacts2/Characters/Alhaitham/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Alhaitham/card.png"
+  },
+  {
+    "id": "10000079",
+    "name": "Dehya",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Dehya",
+    "icon_path": "GenshinArtifacts2/Characters/Dehya/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Dehya/card.png"
+  },
+  {
+    "id": "10000080",
+    "name": "Mika",
+    "element": "Cryo",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Mika",
+    "icon_path": "GenshinArtifacts2/Characters/Mika/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Mika/card.png"
+  },
+  {
+    "id": "10000081",
+    "name": "Kaveh",
+    "element": "Dendro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Kaveh",
+    "icon_path": "GenshinArtifacts2/Characters/Kaveh/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Kaveh/card.png"
+  },
+  {
+    "id": "10000082",
+    "name": "Baizhu",
+    "element": "Dendro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Baizhuer",
+    "icon_path": "GenshinArtifacts2/Characters/Baizhu/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Baizhu/card.png"
+  },
+  {
+    "id": "10000083",
+    "name": "Lynette",
+    "element": "Anemo",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Linette",
+    "icon_path": "GenshinArtifacts2/Characters/Lynette/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Lynette/card.png"
+  },
+  {
+    "id": "10000084",
+    "name": "Lyney",
+    "element": "Pyro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Liney",
+    "icon_path": "GenshinArtifacts2/Characters/Lyney/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Lyney/card.png"
+  },
+  {
+    "id": "10000085",
+    "name": "Freminet",
+    "element": "Cryo",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Freminet",
+    "icon_path": "GenshinArtifacts2/Characters/Freminet/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Freminet/card.png"
+  },
+  {
+    "id": "10000086",
+    "name": "Wriothesley",
+    "element": "Cryo",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Wriothesley",
+    "icon_path": "GenshinArtifacts2/Characters/Wriothesley/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Wriothesley/card.png"
+  },
+  {
+    "id": "10000087",
+    "name": "Neuvillette",
+    "element": "Hydro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Neuvillette",
+    "icon_path": "GenshinArtifacts2/Characters/Neuvillette/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Neuvillette/card.png"
+  },
+  {
+    "id": "10000088",
+    "name": "Charlotte",
+    "element": "Cryo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Charlotte",
+    "icon_path": "GenshinArtifacts2/Characters/Charlotte/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Charlotte/card.png"
+  },
+  {
+    "id": "10000089",
+    "name": "Furina",
+    "element": "Hydro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Furina",
+    "icon_path": "GenshinArtifacts2/Characters/Furina/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Furina/card.png"
+  },
+  {
+    "id": "10000090",
+    "name": "Chevreuse",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Chevreuse",
+    "icon_path": "GenshinArtifacts2/Characters/Chevreuse/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Chevreuse/card.png"
+  },
+  {
+    "id": "10000091",
+    "name": "Navia",
+    "element": "Geo",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Navia",
+    "icon_path": "GenshinArtifacts2/Characters/Navia/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Navia/card.png"
+  },
+  {
+    "id": "10000092",
+    "name": "Gaming",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Gaming",
+    "icon_path": "GenshinArtifacts2/Characters/Gaming/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Gaming/card.png"
+  },
+  {
+    "id": "10000093",
+    "name": "Xianyun",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Liuyun",
+    "icon_path": "GenshinArtifacts2/Characters/Xianyun/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xianyun/card.png"
+  },
+  {
+    "id": "10000094",
+    "name": "Chiori",
+    "element": "Geo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Chiori",
+    "icon_path": "GenshinArtifacts2/Characters/Chiori/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Chiori/card.png"
+  },
+  {
+    "id": "10000095",
+    "name": "Sigewinne",
+    "element": "Hydro",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Sigewinne",
+    "icon_path": "GenshinArtifacts2/Characters/Sigewinne/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Sigewinne/card.png"
+  },
+  {
+    "id": "10000096",
+    "name": "Arlecchino",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Arlecchino",
+    "icon_path": "GenshinArtifacts2/Characters/Arlecchino/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Arlecchino/card.png"
+  },
+  {
+    "id": "10000097",
+    "name": "Sethos",
+    "element": "Electro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Sethos",
+    "icon_path": "GenshinArtifacts2/Characters/Sethos/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Sethos/card.png"
+  },
+  {
+    "id": "10000098",
+    "name": "Clorinde",
+    "element": "Electro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Clorinde",
+    "icon_path": "GenshinArtifacts2/Characters/Clorinde/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Clorinde/card.png"
+  },
+  {
+    "id": "10000099",
+    "name": "Emilie",
+    "element": "Dendro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Emilie",
+    "icon_path": "GenshinArtifacts2/Characters/Emilie/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Emilie/card.png"
+  },
+  {
+    "id": "10000100",
+    "name": "Kachina",
+    "element": "Geo",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Kachina",
+    "icon_path": "GenshinArtifacts2/Characters/Kachina/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Kachina/card.png"
+  },
+  {
+    "id": "10000101",
+    "name": "Kinich",
+    "element": "Dendro",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Kinich",
+    "icon_path": "GenshinArtifacts2/Characters/Kinich/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Kinich/card.png"
+  },
+  {
+    "id": "10000102",
+    "name": "Mualani",
+    "element": "Hydro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Mualani",
+    "icon_path": "GenshinArtifacts2/Characters/Mualani/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Mualani/card.png"
+  },
+  {
+    "id": "10000103",
+    "name": "Xilonen",
+    "element": "Geo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Xilonen",
+    "icon_path": "GenshinArtifacts2/Characters/Xilonen/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Xilonen/card.png"
+  },
+  {
+    "id": "10000104",
+    "name": "Chasca",
+    "element": "Anemo",
+    "weapon_type": "Bow",
+    "rarity": 5,
+    "codename": "Chasca",
+    "icon_path": "GenshinArtifacts2/Characters/Chasca/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Chasca/card.png"
+  },
+  {
+    "id": "10000105",
+    "name": "Ororon",
+    "element": "Electro",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Olorun",
+    "icon_path": "GenshinArtifacts2/Characters/Ororon/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ororon/card.png"
+  },
+  {
+    "id": "10000106",
+    "name": "Mavuika",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Mavuika",
+    "icon_path": "GenshinArtifacts2/Characters/Mavuika/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Mavuika/card.png"
+  },
+  {
+    "id": "10000107",
+    "name": "Citlali",
+    "element": "Cryo",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Citlali",
+    "icon_path": "GenshinArtifacts2/Characters/Citlali/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Citlali/card.png"
+  },
+  {
+    "id": "10000108",
+    "name": "Lan Yan",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Lanyan",
+    "icon_path": "GenshinArtifacts2/Characters/LanYan/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/LanYan/card.png"
+  },
+  {
+    "id": "10000109",
+    "name": "Yumemizuki Mizuki",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Mizuki",
+    "icon_path": "GenshinArtifacts2/Characters/YumemizukiMizuki/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/YumemizukiMizuki/card.png"
+  },
+  {
+    "id": "10000110",
+    "name": "Iansan",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 4,
+    "codename": "Iansan",
+    "icon_path": "GenshinArtifacts2/Characters/Iansan/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Iansan/card.png"
+  },
+  {
+    "id": "10000111",
+    "name": "Varesa",
+    "element": "Electro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Varesa",
+    "icon_path": "GenshinArtifacts2/Characters/Varesa/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Varesa/card.png"
+  },
+  {
+    "id": "10000112",
+    "name": "Escoffier",
+    "element": "Cryo",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Escoffier",
+    "icon_path": "GenshinArtifacts2/Characters/Escoffier/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Escoffier/card.png"
+  },
+  {
+    "id": "10000113",
+    "name": "Ifa",
+    "element": "Anemo",
+    "weapon_type": "Catalyst",
+    "rarity": 4,
+    "codename": "Ifa",
+    "icon_path": "GenshinArtifacts2/Characters/Ifa/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ifa/card.png"
+  },
+  {
+    "id": "10000114",
+    "name": "Skirk",
+    "element": "Cryo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "SkirkNew",
+    "icon_path": "GenshinArtifacts2/Characters/Skirk/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Skirk/card.png"
+  },
+  {
+    "id": "10000115",
+    "name": "Dahlia",
+    "element": "Hydro",
+    "weapon_type": "Sword",
+    "rarity": 4,
+    "codename": "Dahlia",
+    "icon_path": "GenshinArtifacts2/Characters/Dahlia/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Dahlia/card.png"
+  },
+  {
+    "id": "10000116",
+    "name": "Ineffa",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Ineffa",
+    "icon_path": "GenshinArtifacts2/Characters/Ineffa/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ineffa/card.png"
+  },
+  {
+    "id": "10000119",
+    "name": "Lauma",
+    "element": "Dendro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Lauma",
+    "icon_path": "GenshinArtifacts2/Characters/Lauma/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Lauma/card.png"
+  },
+  {
+    "id": "10000120",
+    "name": "Flins",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Flins",
+    "icon_path": "GenshinArtifacts2/Characters/Flins/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Flins/card.png"
+  },
+  {
+    "id": "10000121",
+    "name": "Aino",
+    "element": "Hydro",
+    "weapon_type": "Claymore",
+    "rarity": 4,
+    "codename": "Aino",
+    "icon_path": "GenshinArtifacts2/Characters/Aino/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Aino/card.png"
+  },
+  {
+    "id": "10000122",
+    "name": "Nefer",
+    "element": "Dendro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Nefer",
+    "icon_path": "GenshinArtifacts2/Characters/Nefer/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Nefer/card.png"
+  },
+  {
+    "id": "10000123",
+    "name": "Durin",
+    "element": "Pyro",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Durin",
+    "icon_path": "GenshinArtifacts2/Characters/Durin/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Durin/card.png"
+  },
+  {
+    "id": "10000124",
+    "name": "Jahoda",
+    "element": "Anemo",
+    "weapon_type": "Bow",
+    "rarity": 4,
+    "codename": "Jahoda",
+    "icon_path": "GenshinArtifacts2/Characters/Jahoda/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Jahoda/card.png"
+  },
+  {
+    "id": "10000901",
+    "name": "Mavuika (Trial)",
+    "element": "Pyro",
+    "weapon_type": "Claymore",
+    "rarity": 5,
+    "codename": "Mavuika",
+    "icon_path": "GenshinArtifacts2/Characters/Mavuika(Trial)/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Mavuika(Trial)/card.png"
+  },
+  {
+    "id": "10000902",
+    "name": "Hu Tao (Trial)",
+    "element": "Pyro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Hutao",
+    "icon_path": "GenshinArtifacts2/Characters/HuTao(Trial)/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/HuTao(Trial)/card.png"
+  },
+  {
+    "id": "10000903",
+    "name": "Ineffa",
+    "element": "Electro",
+    "weapon_type": "Polearm",
+    "rarity": 5,
+    "codename": "Ineffa",
+    "icon_path": "GenshinArtifacts2/Characters/Ineffa/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Ineffa/card.png"
+  },
+  {
+    "id": "10000904",
+    "name": "Columbina",
+    "element": "Pyro",
+    "weapon_type": "Catalyst",
+    "rarity": 5,
+    "codename": "Columbina",
+    "icon_path": "GenshinArtifacts2/Characters/Columbina/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Columbina/card.png"
+  }
+]
