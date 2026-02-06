@@ -12,33 +12,13 @@ WORKDIR /app
 COPY Website/frontend/package.json ./
 RUN npm install
 
-<<<<<<< HEAD
-# Copier le reste du code source frontend
+# Copier le code source du Frontend
 COPY Website/frontend/ .
 
 # Copier Characters et elements à la racine du système de fichiers
 # pour que le chemin relatif ../../../../Characters fonctionne depuis /app/src/pages/
 COPY Characters /Characters
 COPY elements /elements
-=======
-# Copier le code source du Frontend
-COPY Website/frontend/ .
-
-# Copier les fichiers externes nécessaires au build (Characters.json)
-# On doit copier tout le dossier Characters dans le dossier parent (../Characters)
-# Mais Docker ne permet pas de copier en dehors du WORKDIR facilement avec un chemin relatif ".."
-# Astuce : On va copier Characters dans /Characters (racine du conteneur)
-# Et s'assurer que l'import relatif dans le code fonctionne, ou alors on le met au bon endroit relatif.
-
-# Le code cherche "../../../../Characters/characters.json" depuis "src/pages/Chat.jsx"
-# WORKDIR = /app
-# src/pages/Chat.jsx est dans /app/src/pages/Chat.jsx
-# ../../../../ = /app/src/pages/../../.. = /
-# Donc il cherche /Characters/characters.json
-# C'est parfait !
-
-COPY Characters /Characters
->>>>>>> 9be1d16e68ca70ab5276c61ffc5d44c90e5a43df
 
 # Build avec l'URL de l'API relative
 # CHARACTERS_PATH et ELEMENTS_PATH permettent aux alias Vite de trouver les dossiers
