@@ -35,15 +35,15 @@ COPY --from=build /app/dist /usr/share/caddy
 
 # Configurer Caddy interne
 RUN echo $':80 {\n\
-    root * /usr/share/caddy\n\
     encode gzip\n\
-    file_server\n\
     \n\
     handle_path /api/* {\n\
         reverse_proxy backend:8000\n\
     }\n\
     \n\
+    root * /usr/share/caddy\n\
     try_files {path} /index.html\n\
+    file_server\n\
 }' > /etc/caddy/Caddyfile
 
 EXPOSE 80
