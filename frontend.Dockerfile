@@ -7,7 +7,7 @@ WORKDIR /app
 COPY Website/frontend/package*.json ./
 
 # Installer
-RUN npm ci
+RUN npm install
 
 # Copier le code
 COPY Website/frontend/ .
