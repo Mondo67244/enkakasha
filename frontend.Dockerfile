@@ -8,16 +8,11 @@ FROM node:20-alpine as build
 
 WORKDIR /app
 
-# Copier explicitement les fichiers de dépendances en premier
+# Copier explicitement les fichiers de dépendances
 COPY Website/frontend/package.json ./
-# Copier le lockfile s'il existe (sinon la copie échouera mais on peut l'ignorer pour le install)
-# Comme le globbing ne marche pas comme on veut si le fichier n'existe pas, on copie juste package.json
-# Et on lance npm install (qui va créer un lockfile temporaire)
-
-# Installer les dépendances
-# Note: npm install est utilisé car package-lock.json peut être absent
 RUN npm install
 
+<<<<<<< HEAD
 # Copier le reste du code source frontend
 COPY Website/frontend/ .
 
@@ -25,6 +20,25 @@ COPY Website/frontend/ .
 # pour que le chemin relatif ../../../../Characters fonctionne depuis /app/src/pages/
 COPY Characters /Characters
 COPY elements /elements
+=======
+# Copier le code source du Frontend
+COPY Website/frontend/ .
+
+# Copier les fichiers externes nécessaires au build (Characters.json)
+# On doit copier tout le dossier Characters dans le dossier parent (../Characters)
+# Mais Docker ne permet pas de copier en dehors du WORKDIR facilement avec un chemin relatif ".."
+# Astuce : On va copier Characters dans /Characters (racine du conteneur)
+# Et s'assurer que l'import relatif dans le code fonctionne, ou alors on le met au bon endroit relatif.
+
+# Le code cherche "../../../../Characters/characters.json" depuis "src/pages/Chat.jsx"
+# WORKDIR = /app
+# src/pages/Chat.jsx est dans /app/src/pages/Chat.jsx
+# ../../../../ = /app/src/pages/../../.. = /
+# Donc il cherche /Characters/characters.json
+# C'est parfait !
+
+COPY Characters /Characters
+>>>>>>> 9be1d16e68ca70ab5276c61ffc5d44c90e5a43df
 
 # Build avec l'URL de l'API relative
 # CHARACTERS_PATH et ELEMENTS_PATH permettent aux alias Vite de trouver les dossiers
