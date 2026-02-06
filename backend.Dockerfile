@@ -18,8 +18,9 @@ RUN pip install --no-cache-dir -r backend/requirements.txt
 
 # Copier le code source
 COPY Website/ .
-COPY enkakasha/Artifacts /app/Artifacts
-COPY enkakasha/Characters /app/Characters
+# Note: On suppose que le contexte de build est la racine du repo
+COPY Artifacts /app/Artifacts
+COPY Characters /app/Characters
 
 # Créer le dossier data pour la persistance
 RUN mkdir -p /app/data
