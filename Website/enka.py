@@ -535,12 +535,26 @@ def fetch_player_data(uid, output_root=None):
         )
         
         if response.status_code == 200:
-            data = response.json()
+            try:
+                data = response.json()
+            except json.JSONDecodeError as e:
+                print(i18n.get("ERROR_PARSING_JSON", error=e))
+                # Log first 500 chars of response to identify if it's HTML/Cloudflare
+                snippet = response.text[:500].replace('\n', ' ')
+                print(f"Response snippet: {snippet}...")
+                return None, f"JSON Parse Error: {str(e)} (Response might be HTML)"
             
             player = data.get('playerInfo', {})
             print(i18n.get("PLAYER_INFO", nickname=player.get('nickname')))
             print(i18n.get("PLAYER_LEVEL", level=player.get('level'), world_level=player.get('worldLevel')))
             
+            if 'avatarInfoList' not in data:
+                 # Sometimes data is incomplete or hidden
+                 if not data.get('playerInfo'):
+                     return None, "Profile hidden or no data"
+                 print(i18n.get("NO_CHARACTERS"))
+                 return None, "No characters found in showcase"
+
             avatar_list = data.get('avatarInfoList', [])
             if not avatar_list:
                 print(i18n.get("NO_CHARACTERS"))

@@ -189,15 +189,20 @@ def get_with_retry(
             )
             
             # Check for Cloudflare blocks
-            if response.status_code == 403:
-                logger.warning(f"Got 403 Forbidden - possible Cloudflare block")
-                if attempt < max_retries - 1:
-                    # Exponential backoff
-                    backoff_delay = (BACKOFF_FACTOR ** attempt) * 5
-                    logger.info(f"Retrying in {backoff_delay}s...")
-                    time.sleep(backoff_delay)
-                    continue
-                    
+            if response.status_code == 403 or response.status_code == 503:
+                # Check known Cloudflare signatures
+                text = response.text.lower()
+                if "cloudflare" in text or "just a moment" in text or "challenge" in text:
+                    logger.warning(f"Got {response.status_code} - Detected Cloudflare Challenge/Block")
+                    if attempt < max_retries - 1:
+                        backoff_delay = (BACKOFF_FACTOR ** attempt) * 5
+                        logger.info(f"Cloudflare block detected, retrying in {backoff_delay}s...")
+                        time.sleep(backoff_delay)
+                        continue
+                else:
+                    # Normal 403/503 from server
+                    logger.warning(f"Got {response.status_code} - Server error (not necessarily Cloudflare)")
+            
             elif response.status_code == 429:
                 logger.warning(f"Got 429 Too Many Requests - rate limited")
                 if attempt < max_retries - 1:
@@ -206,15 +211,9 @@ def get_with_retry(
                     logger.info(f"Rate limited, retrying in {backoff_delay}s...")
                     time.sleep(backoff_delay)
                     continue
-            
-            elif response.status_code == 503:
-                logger.warning(f"Got 503 Service Unavailable - Cloudflare challenge")
-                if attempt < max_retries - 1:
-                    backoff_delay = (BACKOFF_FACTOR ** attempt) * 5
-                    logger.info(f"Cloudflare challenge, retrying in {backoff_delay}s...")
-                    time.sleep(backoff_delay)
-                    continue
-            
+
+            # Return response if successful or status code handled by caller
+            # Check content type for JSON if expected
             return response
             
         except Exception as e:

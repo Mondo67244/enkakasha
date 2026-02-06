@@ -96,12 +96,18 @@ async def scan_uid(uid: str):
         )
         
         if error:
-             raise HTTPException(status_code=404, detail=error)
+             # Return 400/500 with explicit error message from enka.py (which now includes HTML snippet)
+             print(f"Scan failed for {uid}: {error}")
+             raise HTTPException(status_code=500, detail=f"Scan failed: {error}")
              
         return {"data": api_data}
         
+    except HTTPException as e:
+        raise e
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
 
 @app.get("/leaderboard/{calc_id}")
 async def get_leaderboard(calc_id: str):
