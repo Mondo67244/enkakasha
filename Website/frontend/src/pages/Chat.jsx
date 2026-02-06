@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { chatBuild } from '../lib/api';
-import characterList from '../../../../Characters/characters.json';
+import characterList from '@characters/characters.json';
 
 const Chat = () => {
     const navigate = useNavigate();

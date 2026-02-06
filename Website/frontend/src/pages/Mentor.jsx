@@ -15,7 +15,7 @@ import {
   Gauge
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
-import characterList from '../../../../Characters/characters.json';
+import characterList from '@characters/characters.json';
 
 const iconFiles = import.meta.glob('../../../../Characters/**/icon.png', { eager: true, import: 'default' });
 const cardFiles = import.meta.glob('../../../../Characters/**/card.png', { eager: true, import: 'default' });
@@ -872,7 +872,7 @@ const Mentor = () => {
                       AI returned structured JSON without a detailed analysis block. Showing raw JSON output.
                     </p>
                     <pre className="text-xs bg-[var(--surface-muted)] border border-[var(--line)] rounded-2xl p-4 overflow-auto text-[var(--text-strong)]">
-{JSON.stringify(parsedAnalysis, null, 2)}
+                      {JSON.stringify(parsedAnalysis, null, 2)}
                     </pre>
                   </>
                 ) : (

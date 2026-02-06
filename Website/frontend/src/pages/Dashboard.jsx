@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Search } from 'lucide-react';
-import characterList from '../../../../Characters/characters.json';
+import characterList from '@characters/characters.json';
 
 const iconFiles = import.meta.glob('../../../../Characters/**/icon.png', { eager: true, import: 'default' });
 const cardFiles = import.meta.glob('../../../../Characters/**/card.png', { eager: true, import: 'default' });
@@ -111,9 +111,8 @@ const ArtifactRow = ({ artifactsBySlot }) => {
                             type="button"
                             onMouseEnter={() => setHoveredSlot(slot)}
                             onMouseLeave={() => setHoveredSlot(null)}
-                            className={`h-10 w-10 rounded-xl border flex items-center justify-center overflow-hidden transition ${
-                                isActive ? 'border-[var(--accent-strong)] bg-white shadow-sm' : 'border-[var(--line)] bg-[var(--surface-muted)]'
-                            }`}
+                            className={`h-10 w-10 rounded-xl border flex items-center justify-center overflow-hidden transition ${isActive ? 'border-[var(--accent-strong)] bg-white shadow-sm' : 'border-[var(--line)] bg-[var(--surface-muted)]'
+                                }`}
                         >
                             {hasArt ? (
                                 <img
