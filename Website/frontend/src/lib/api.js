@@ -17,9 +17,77 @@ export const scanUID = async (uid) => {
     return response.data;
 };
 
+// Direct call to Akasha API from browser (bypasses Cloudflare blocking VPS IPs)
 export const getLeaderboard = async (calcId) => {
-    const response = await api.get(`/leaderboard/${calcId}`);
-    return response.data;
+    const AKASHA_URL = 'https://akasha.cv/api/leaderboards';
+    const limit = 20;
+    
+    // Try both API formats (Akasha changed their API structure)
+    const paramSets = [
+        { sort: 'Leaderboard.result', order: '-1', size: limit, LeaderboardId: calcId },
+        { sort: 'calculation.result', order: '-1', size: limit, calculationId: calcId }
+    ];
+    
+    for (const params of paramSets) {
+        try {
+            const queryString = new URLSearchParams(params).toString();
+            const response = await fetch(`${AKASHA_URL}?${queryString}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                }
+            });
+            
+            if (!response.ok) continue;
+            
+            const payload = await response.json();
+            if (payload && payload.data && payload.data.length > 0) {
+                // Transform data to match backend format
+                return payload.data.map((entry, index) => {
+                    const stats = entry.stats || {};
+                    const calc = entry.Leaderboard || entry.calculation || entry.Calculation || {};
+                    const weapon = entry.weapon || {};
+                    const owner = entry.owner || {};
+                    const weaponInfo = weapon.weaponInfo || {};
+                    const refineObj = weaponInfo.refinementLevel || {};
+                    
+                    const getValue = (obj) => (obj && typeof obj === 'object' && 'value' in obj) ? obj.value : obj;
+                    
+                    // Find elemental bonus
+                    let elementalBonus = null;
+                    for (const key in stats) {
+                        if (key.includes('DamageBonus') && key !== 'physicalDamageBonus') {
+                            elementalBonus = Math.round(getValue(stats[key]) * 10000) / 100;
+                            break;
+                        }
+                    }
+                    
+                    return {
+                        Rank: entry.index || index + 1,
+                        Player: owner.nickname,
+                        UID: entry.uid,
+                        Region: owner.region,
+                        Weapon: weapon.name,
+                        Refine: refineObj ? getValue(refineObj) + 1 : null,
+                        HP: Math.round(getValue(stats.maxHp || 0)),
+                        ATK: Math.round(getValue(stats.atk || 0)),
+                        DEF: Math.round(getValue(stats.def || 0)),
+                        EM: Math.round(getValue(stats.elementalMastery || 0)),
+                        ER: Math.round(getValue(stats.energyRecharge || 0) * 10000) / 100,
+                        Crit_Rate: Math.round(getValue(stats.critRate || 0) * 10000) / 100,
+                        Crit_DMG: Math.round(getValue(stats.critDamage || 0) * 10000) / 100,
+                        Elem_Bonus: elementalBonus,
+                        DMG_Result: Math.round(getValue(calc.result || 0))
+                    };
+                });
+            }
+        } catch (e) {
+            console.warn('Akasha API attempt failed:', e);
+            continue;
+        }
+    }
+    
+    throw new Error('Failed to fetch leaderboard from Akasha');
 };
 
 export const getLeaderboardDeep = async (calcId, character, limit = 20) => {
