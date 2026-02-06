@@ -1,4 +1,3 @@
-import requests
 import pandas as pd
 import json
 import os
@@ -7,6 +6,7 @@ import glob
 from datetime import datetime
 import i18n
 from pathlib import Path
+import http_client
 
 # --- CONFIGURATION ---
 API_URL = "https://enka.network/api/uid/{uid}"
@@ -518,12 +518,20 @@ def fetch_player_data(uid, output_root=None):
     output_root.mkdir(parents=True, exist_ok=True)
     
     try:
-        response = requests.get(
+        # Use optimized http_client with Cloudflare bypass
+        session = http_client.create_session(
+            browser='chrome',
+            platform='windows',
+            use_nodejs=True
+        )
+        
+        response = http_client.get_with_retry(
+            session,
             API_URL.format(uid=uid),
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0'
-            },
-            timeout=REQUEST_TIMEOUT
+            timeout=REQUEST_TIMEOUT,
+            delay_min=2.0,  # Enka needs slower requests
+            delay_max=4.0,
+            max_retries=3
         )
         
         if response.status_code == 200:

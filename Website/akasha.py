@@ -1,8 +1,8 @@
-import cloudscraper
 import pandas as pd
 import json
 import re
 import i18n
+import http_client
 
 # --- CONFIGURATION ---
 BASE_URL = "https://akasha.cv/api/leaderboards"
@@ -36,12 +36,11 @@ def get_calculation_id():
 
 def fetch_leaderboard(calculation_id, limit=MAX_SIZE, timeout=REQUEST_TIMEOUT):
     """Fetches leaderboard data for a given Calculation ID."""
-    scraper = cloudscraper.create_scraper(
-        browser={
-            'browser': 'chrome',
-            'platform': 'linux',
-            'desktop': True
-        }
+    # Use optimized http_client with Cloudflare bypass
+    session = http_client.create_session(
+        browser='chrome',
+        platform='windows',  # Windows has better reputation
+        use_nodejs=True
     )
     
     print(i18n.get("FETCHING_LEADERBOARD", limit=limit), flush=True)
@@ -66,14 +65,26 @@ def fetch_leaderboard(calculation_id, limit=MAX_SIZE, timeout=REQUEST_TIMEOUT):
 
     try:
         for params in param_sets:
-            response = scraper.get(BASE_URL, params=params, timeout=timeout)
-            last_status = response.status_code
-            if response.status_code != 200:
+            try:
+                response = http_client.get_with_retry(
+                    session,
+                    BASE_URL,
+                    params=params,
+                    timeout=timeout,
+                    delay_min=1.5,
+                    delay_max=3.0,
+                    max_retries=3
+                )
+                last_status = response.status_code
+                if response.status_code != 200:
+                    continue
+                payload = response.json()
+                if payload and payload.get('data'):
+                    data = payload
+                    break
+            except Exception as e:
+                print(f"Request attempt failed: {e}")
                 continue
-            payload = response.json()
-            if payload and payload.get('data'):
-                data = payload
-                break
 
         if not data or 'data' not in data or not data['data']:
             print(i18n.get("NO_DATA_RETURNED"))
@@ -81,6 +92,7 @@ def fetch_leaderboard(calculation_id, limit=MAX_SIZE, timeout=REQUEST_TIMEOUT):
                 print(i18n.get("ERROR_STATUS", status=last_status))
                 if last_status == 403:
                     print(i18n.get("CLOUDFLARE_BLOCK"))
+                    print("TIP: If running on VPS, consider using residential proxy or FlareSolverr")
             return []
 
         # Get character name for filename

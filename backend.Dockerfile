@@ -3,9 +3,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Installer les dépendances système
+# Installer les dépendances système (incluant Node.js pour cloudscraper)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    curl \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
 # Copier les requirements
