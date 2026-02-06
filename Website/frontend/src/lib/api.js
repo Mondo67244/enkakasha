@@ -17,76 +17,83 @@ export const scanUID = async (uid) => {
     return response.data;
 };
 
-// Direct call to Akasha API from browser via CORS proxy
+// Direct call to Akasha API from browser
+// Try multiple methods: direct, then various CORS proxies
 export const getLeaderboard = async (calcId) => {
     const limit = 20;
     
-    // Try both API formats (Akasha changed their API structure)
     const paramSets = [
         { sort: 'Leaderboard.result', order: '-1', size: limit, LeaderboardId: calcId },
         { sort: 'calculation.result', order: '-1', size: limit, calculationId: calcId }
     ];
     
+    // List of proxy methods to try
+    const proxyMethods = [
+        (url) => url, // Direct (might work if Akasha allows CORS)
+        (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+        (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+    ];
+    
     for (const params of paramSets) {
-        try {
-            const queryString = new URLSearchParams(params).toString();
-            // Use corsproxy.io - encode the full URL with params
-            const targetUrl = `https://akasha.cv/api/leaderboards?${queryString}`;
-            const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
-            
-            const response = await fetch(proxyUrl, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                }
-            });
-            
-            if (!response.ok) continue;
-            
-            const payload = await response.json();
-            if (payload && payload.data && payload.data.length > 0) {
-                // Transform data to match backend format
-                return payload.data.map((entry, index) => {
-                    const stats = entry.stats || {};
-                    const calc = entry.Leaderboard || entry.calculation || entry.Calculation || {};
-                    const weapon = entry.weapon || {};
-                    const owner = entry.owner || {};
-                    const weaponInfo = weapon.weaponInfo || {};
-                    const refineObj = weaponInfo.refinementLevel || {};
-                    
-                    const getValue = (obj) => (obj && typeof obj === 'object' && 'value' in obj) ? obj.value : obj;
-                    
-                    // Find elemental bonus
-                    let elementalBonus = null;
-                    for (const key in stats) {
-                        if (key.includes('DamageBonus') && key !== 'physicalDamageBonus') {
-                            elementalBonus = Math.round(getValue(stats[key]) * 10000) / 100;
-                            break;
-                        }
-                    }
-                    
-                    return {
-                        Rank: entry.index || index + 1,
-                        Player: owner.nickname,
-                        UID: entry.uid,
-                        Region: owner.region,
-                        Weapon: weapon.name,
-                        Refine: refineObj ? getValue(refineObj) + 1 : null,
-                        HP: Math.round(getValue(stats.maxHp || 0)),
-                        ATK: Math.round(getValue(stats.atk || 0)),
-                        DEF: Math.round(getValue(stats.def || 0)),
-                        EM: Math.round(getValue(stats.elementalMastery || 0)),
-                        ER: Math.round(getValue(stats.energyRecharge || 0) * 10000) / 100,
-                        Crit_Rate: Math.round(getValue(stats.critRate || 0) * 10000) / 100,
-                        Crit_DMG: Math.round(getValue(stats.critDamage || 0) * 10000) / 100,
-                        Elem_Bonus: elementalBonus,
-                        DMG_Result: Math.round(getValue(calc.result || 0))
-                    };
+        const queryString = new URLSearchParams(params).toString();
+        const targetUrl = `https://akasha.cv/api/leaderboards?${queryString}`;
+        
+        for (const getProxyUrl of proxyMethods) {
+            try {
+                const proxyUrl = getProxyUrl(targetUrl);
+                const response = await fetch(proxyUrl, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' },
+                    signal: AbortSignal.timeout(10000) // 10s timeout
                 });
+            
+                if (!response.ok) continue;
+            
+                const payload = await response.json();
+                if (payload && payload.data && payload.data.length > 0) {
+                    // Transform data to match backend format
+                    return payload.data.map((entry, index) => {
+                        const stats = entry.stats || {};
+                        const calc = entry.Leaderboard || entry.calculation || entry.Calculation || {};
+                        const weapon = entry.weapon || {};
+                        const owner = entry.owner || {};
+                        const weaponInfo = weapon.weaponInfo || {};
+                        const refineObj = weaponInfo.refinementLevel || {};
+                        
+                        const getValue = (obj) => (obj && typeof obj === 'object' && 'value' in obj) ? obj.value : obj;
+                        
+                        // Find elemental bonus
+                        let elementalBonus = null;
+                        for (const key in stats) {
+                            if (key.includes('DamageBonus') && key !== 'physicalDamageBonus') {
+                                elementalBonus = Math.round(getValue(stats[key]) * 10000) / 100;
+                                break;
+                            }
+                        }
+                        
+                        return {
+                            Rank: entry.index || index + 1,
+                            Player: owner.nickname,
+                            UID: entry.uid,
+                            Region: owner.region,
+                            Weapon: weapon.name,
+                            Refine: refineObj ? getValue(refineObj) + 1 : null,
+                            HP: Math.round(getValue(stats.maxHp || 0)),
+                            ATK: Math.round(getValue(stats.atk || 0)),
+                            DEF: Math.round(getValue(stats.def || 0)),
+                            EM: Math.round(getValue(stats.elementalMastery || 0)),
+                            ER: Math.round(getValue(stats.energyRecharge || 0) * 10000) / 100,
+                            Crit_Rate: Math.round(getValue(stats.critRate || 0) * 10000) / 100,
+                            Crit_DMG: Math.round(getValue(stats.critDamage || 0) * 10000) / 100,
+                            Elem_Bonus: elementalBonus,
+                            DMG_Result: Math.round(getValue(calc.result || 0))
+                        };
+                    });
+                }
+            } catch (e) {
+                console.warn('Akasha API attempt failed:', e);
+                continue;
             }
-        } catch (e) {
-            console.warn('Akasha API attempt failed:', e);
-            continue;
         }
     }
     
