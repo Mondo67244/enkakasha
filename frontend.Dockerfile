@@ -37,13 +37,16 @@ COPY --from=build /app/dist /usr/share/caddy
 RUN echo $':80 {\n\
     encode gzip\n\
     \n\
-    handle_path /api/* {\n\
+    handle /api/* {\n\
+        uri strip_prefix /api\n\
         reverse_proxy backend:8000\n\
     }\n\
     \n\
-    root * /usr/share/caddy\n\
-    try_files {path} /index.html\n\
-    file_server\n\
+    handle {\n\
+        root * /usr/share/caddy\n\
+        try_files {path} /index.html\n\
+        file_server\n\
+    }\n\
 }' > /etc/caddy/Caddyfile
 
 EXPOSE 80
