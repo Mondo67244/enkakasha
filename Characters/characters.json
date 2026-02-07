@@ -1100,13 +1100,23 @@
     "card_path": "GenshinArtifacts2/Characters/Ineffa/card.png"
   },
   {
-    "id": "10000904",
+    "id": "10000125",
     "name": "Columbina",
-    "element": "Pyro",
+    "element": "Hydro",
     "weapon_type": "Catalyst",
     "rarity": 5,
     "codename": "Columbina",
     "icon_path": "GenshinArtifacts2/Characters/Columbina/icon.png",
     "card_path": "GenshinArtifacts2/Characters/Columbina/card.png"
+  },
+  {
+    "id": "10000126",
+    "name": "Zibai",
+    "element": "Geo",
+    "weapon_type": "Sword",
+    "rarity": 5,
+    "codename": "Zibai",
+    "icon_path": "GenshinArtifacts2/Characters/Zibai/icon.png",
+    "card_path": "GenshinArtifacts2/Characters/Zibai/card.png"
   }
 ]

@@ -60,8 +60,19 @@ const SLOT_FILENAME = {
 };
 
 const SPECIAL_SET_MAP = {
+    // Handle typos and variations
     'Finale of the deep galeries': 'Finale_of_the_Deep_Galleries',
     'Finale of the Deep Galleries': 'Finale_of_the_Deep_Galleries',
+    // Handle apostrophes -> folder names without apostrophes
+    "Gladiator's Finale": 'Gladiators_Finale',
+    "Wanderer's Troupe": 'Wanderers_Troupe',
+    "Shimenawa's Reminiscence": 'Shimenawas_Reminiscence',
+    "Nymph's Dream": 'Nymphs_Dream',
+    "Vourukasha's Glow": 'Vourukashas_Glow',
+    "Night of the Sky's Unveiling": 'Night_of_the_Skys_Unveiling',
+    "Silken Moon's Serenade": 'Silken_Moons_Serenade',
+    "Long Night's Oath": 'Long_Nights_Oath',
+    "Defender's Will": 'Defenders_Will',
 };
 
 const normalizeSetName = (setName) => {

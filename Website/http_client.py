@@ -42,7 +42,7 @@ USER_AGENTS = [
 BROWSER_HEADERS = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Language': 'en-US,en;q=0.9,fr;q=0.8',
-    'Accept-Encoding': 'gzip, deflate, br',
+    # Note: Accept-Encoding removed to avoid compressed responses that cloudscraper may not decompress
     'Connection': 'keep-alive',
     'Sec-Ch-Ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
     'Sec-Ch-Ua-Mobile': '?0',

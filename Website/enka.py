@@ -46,12 +46,27 @@ PROP_MAP = {
 }
 
 # Artifact sets mapping (common IDs)
+# 4-star sets (14xxx)
+# 5-star sets (15xxx)
 SET_MAP = {
+    # 4-star sets
+    14001: "Blizzard Strayer",
+    14002: "Brave Heart",
+    14003: "Defender's Will",
+    14004: "Maiden Beloved",
+    # 5-star sets
     15001: "Gladiator's Finale",
     15002: "Wanderer's Troupe",
-    15006: "Noblesse Oblige",
-    15007: "Bloodstained Chivalry",
+    15003: "Thundersoother",
+    15005: "Thundering Fury",  # Alternate ID
+    15006: "Crimson Witch of Flames",
+    15007: "Noblesse Oblige",
     15008: "Maiden Beloved",
+    15009: "Viridescent Venerer",
+    15010: "Bloodstained Chivalry",
+    15011: "Lavawalker",
+    15012: "Heart of Depth",
+    15013: "Blizzard Strayer",
     15014: "Archaic Petra",
     15015: "Retracing Bolide",
     15016: "Tenacity of the Millelith",
@@ -61,8 +76,9 @@ SET_MAP = {
     15020: "Emblem of Severed Fate",
     15021: "Viridescent Venerer",
     15022: "Crimson Witch of Flames",
+    15023: "",
     15024: "Blizzard Strayer",
-    15025: "Thundering Fury",
+    15025: "Deepwood Memories",
     15026: "Lavawalker",
     15027: "Desert Pavilion Chronicle",
     15028: "Flower of Paradise Lost",
@@ -74,9 +90,12 @@ SET_MAP = {
     15034: "Nighttime Whispers in the Echoing Woods",
     15035: "Fragment of Harmonic Whimsy",
     15036: "Unfinished Reverie",
-    15037: "Scroll of the Hero of Cinder City",  # FIXED (was Obsidian Codex)
-    15038: "Obsidian Codex",                     # FIXED (was Scroll)
-    15040: "Finale of the deep galeries",
+    15037: "Scroll of the Hero of Cinder City",
+    15038: "Obsidian Codex",
+    15039: "Long Night's Oath",
+    15040: "Finale of the Deep Galleries",
+    15041: "Night of the Sky's Unveiling",
+    15042: "Silken Moon's Serenade",
 }
 
 # Character mapping (aligned with Characters/characters.json)
@@ -188,10 +207,10 @@ CHARACTER_MAP = {
     10000122: "Nefer",
     10000123: "Durin",
     10000124: "Jahoda",
+    10000125: "Columbina",
     10000901: "Mavuika (Trial)",
     10000902: "Hu Tao (Trial)",
     10000903: "Ineffa",
-    10000904: "Columbina",
     11000046: "Pyro Archon (Test)"
 }
 
