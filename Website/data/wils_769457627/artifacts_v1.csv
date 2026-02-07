@@ -1,0 +1,41 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit DMG,32.6,Crit Rate,7.0,ATK,19.0,ATK%,5.8,46.6
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit DMG,26.4,DEF,39.0,HP,209.0,Crit Rate,6.6,39.6
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,DEF,19.0,EM,61.0,Crit DMG,13.2,Crit Rate,7.4,28.0
+Arlecchino,Goblet,Fragment of Harmonic Whimsy,+20,Pyro DMG%,46.6,Crit Rate,6.6,Crit DMG,21.8,ATK,35.0,DEF,19.0,35.0
+Arlecchino,Circlet,Gladiator's Finale,+20,Crit Rate,31.1,HP,299.0,ATK%,5.3,EM,16.0,Crit DMG,38.1,38.1
+Columbina,Flower,Finale of the Deep Galleries,+20,HP,4780.0,HP%,5.3,ER%,11.0,Crit Rate,3.9,Crit DMG,28.8,36.6
+Columbina,Plume,Silken Moon's Serenade,+20,ATK,311.0,HP,418.0,HP%,11.1,Crit DMG,14.0,Crit Rate,6.2,26.4
+Columbina,Sands,Silken Moon's Serenade,+20,ER%,51.8,Crit Rate,2.7,Crit DMG,26.4,HP%,9.3,DEF%,5.1,31.8
+Columbina,Goblet,Silken Moon's Serenade,+20,HP%,46.6,Crit DMG,13.2,Crit Rate,7.8,ER%,10.4,EM,33.0,28.8
+Columbina,Circlet,Silken Moon's Serenade,+20,Crit Rate,31.1,Crit DMG,21.0,ER%,11.7,HP,538.0,DEF%,5.1,21.0
+Yelan,Flower,Emblem of Severed Fate,+20,HP,4780.0,DEF,37.0,Crit DMG,19.4,HP%,4.7,Crit Rate,9.7,38.8
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit DMG,7.0,ER%,11.0,EM,16.0,Crit Rate,14.8,36.6
+Yelan,Sands,Emblem of Severed Fate,+20,HP%,46.6,Crit Rate,9.3,Crit DMG,11.7,ER%,11.7,HP,209.0,30.3
+Yelan,Goblet,Song of Days Past,+20,Hydro DMG%,46.6,Crit Rate,8.6,Crit DMG,26.4,DEF,21.0,ATK,14.0,43.6
+Yelan,Circlet,Emblem of Severed Fate,+20,Crit DMG,62.2,HP%,9.3,Crit Rate,7.0,ATK,35.0,ER%,12.3,14.0
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,4.1,Crit DMG,34.2,EM,23.0,ER%,10.4,34.2
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,19.4,DEF,46.0,HP,209.0,Crit Rate,10.1,39.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,Crit DMG,17.1,ER%,16.2,ATK%,4.7,HP,239.0,17.1
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,ATK,18.0,Crit DMG,7.0,DEF,16.0,Crit Rate,15.9,38.8
+Furina,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ATK,29.0,Crit Rate,7.4,ER%,5.2,HP%,16.3,14.8
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,9.7,Crit DMG,13.2,DEF%,19.0,DEF,23.0,32.6
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,8.6,EM,23.0,Crit DMG,21.8,ER%,5.8,39.0
+ID_10000126,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,ATK%,9.9,Crit Rate,12.8,Crit DMG,7.8,DEF,19.0,33.4
+ID_10000126,Goblet,Night of the Sky's Unveiling,+20,DEF%,58.3,Crit Rate,3.9,Crit DMG,27.2,HP,538.0,ATK%,11.1,35.0
+ID_10000126,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,ATK,27.0,Crit Rate,13.2,HP,538.0,DEF%,7.3,26.4
+Xilonen,Flower,Scroll of the Hero of Cinder City,+16,HP,3967.0,ATK%,14.6,DEF%,13.1,DEF,21.0,Crit DMG,5.4,5.4
+Xilonen,Plume,Scroll of the Hero of Cinder City,+8,ATK,152.0,DEF,23.0,DEF%,12.4,HP,239.0,HP%,4.1,0.0
+Xilonen,Sands,Scroll of the Hero of Cinder City,+12,DEF%,38.5,ATK,19.0,EM,23.0,ER%,17.5,DEF,35.0,0.0
+Xilonen,Goblet,Wanderer's Troupe,+12,DEF%,38.5,HP,299.0,ER%,11.0,HP%,11.1,Crit DMG,14.0,14.0
+Xilonen,Circlet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,ATK%,8.2,Crit Rate,6.2,HP,448.0,DEF,42.0,12.4
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,3.5,Crit DMG,20.2,ATK%,11.7,DEF,37.0,27.2
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,ER%,6.5,Crit Rate,3.9,Crit DMG,14.0,ATK%,19.8,21.8
+Escoffier,Sands,Golden Troupe,+20,ATK%,46.6,DEF,39.0,Crit Rate,5.8,DEF%,11.7,EM,40.0,11.6
+Escoffier,Goblet,Night of the Sky's Unveiling,+20,ATK%,46.6,ER%,11.0,EM,58.0,Crit Rate,6.2,Crit DMG,15.5,27.9
+Escoffier,Circlet,Golden Troupe,+20,Crit Rate,31.1,Crit DMG,14.8,DEF%,13.9,EM,42.0,ATK,35.0,14.8
+Citlali,Flower,Set_10007,+16,HP,3571.0,ER%,8.3,Crit DMG,5.6,ATK,25.0,EM,15.0,5.6
+Citlali,Plume,Set_10007,+16,ATK,232.0,HP,382.0,Crit Rate,2.5,Crit DMG,6.2,ER%,7.3,11.2
+Citlali,Sands,Blizzard Strayer,+20,ER%,51.8,HP,508.0,Crit DMG,27.2,DEF,23.0,ATK%,8.7,27.2
+Citlali,Goblet,Set_10007,+16,DEF%,43.5,HP%,7.0,ER%,4.7,ATK,23.0,ATK%,3.7,0.0
+Citlali,Circlet,Set_10007,+4,EM,54.0,DEF,15.0,HP,191.0,ATK,11.0,Crit Rate,3.1,6.2
