@@ -7,6 +7,10 @@ services:
       - "8000:8000"
     volumes:
       - ./data:/app/data # Persistance des données (scans)
+    environment:
+      - FLARESOLVERR_URL=http://flaresolverr:8191/v1
+    depends_on:
+      - flaresolverr
     restart: unless-stopped
 
   frontend:
@@ -18,3 +22,15 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - LOG_HTML=false
+      - CAPTCHA_SOLVER=none
+      - TZ=Europe/Paris
+    restart: unless-stopped
+    expose:
+      - "8191"

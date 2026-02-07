@@ -1,17 +1,27 @@
 """
-HTTP Client Module - Cloudflare Bypass Optimized
-=================================================
-Centralized HTTP client for all API requests with:
-- Cloudscraper with optimal configuration
-- Rotating User-Agents
-- Random delays between requests
-- Retry logic with exponential backoff
+HTTP Client Module - Cloudflare Bypass Optimized with FlareSolverr
+==================================================================
+Centralized HTTP client handling:
+1. FlareSolverr (Priority 1) - Full browser emulation via external service
+2. Cloudscraper (Priority 2) - Python-based JS solver
+3. Requests (Fallback) - Basic HTTP
+
+Auto-detects environment configuration.
 """
 
+import os
 import random
 import time
 import logging
+import json
 from typing import Optional, Dict, Any
+
+# Logging configuration
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Check for FlareSolverr configuration
+FLARESOLVERR_URL = os.environ.get('FLARESOLVERR_URL')
 
 try:
     import cloudscraper
@@ -19,30 +29,13 @@ try:
 except ImportError:
     import requests
     HAS_CLOUDSCRAPER = False
-    logging.warning("cloudscraper not installed, falling back to requests (may be blocked by Cloudflare)")
-
-# Logging configuration
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+    logging.warning("cloudscraper not installed, falling back to requests")
 
 # Modern, realistic User-Agent strings (updated 2024)
 USER_AGENTS = [
-    # Chrome on Windows
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-    # Chrome on Mac
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    # Firefox on Windows
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
-    # Chrome on Linux
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-    # Edge on Windows
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0",
-    # Safari on Mac
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15",
 ]
 
 # Standard browser headers
@@ -60,11 +53,43 @@ BROWSER_HEADERS = {
 }
 
 # Default configuration
-DEFAULT_TIMEOUT = 30
-DEFAULT_DELAY_MIN = 1.0  # seconds
-DEFAULT_DELAY_MAX = 3.0  # seconds
+DEFAULT_TIMEOUT = 60  # Higher timeout for FlareSolverr
+DEFAULT_DELAY_MIN = 1.0
+DEFAULT_DELAY_MAX = 3.0
 MAX_RETRIES = 3
-BACKOFF_FACTOR = 2  # Exponential backoff multiplier
+BACKOFF_FACTOR = 2
+
+
+class MockResponse:
+    """Mock requests.Response object for FlareSolverr compatibility."""
+    def __init__(self, json_data):
+        self.status_code = json_data.get('status', 500)
+        # FlareSolverr returns 'solution' object with 'status', 'headers', 'response' (body)
+        solution = json_data.get('solution', {})
+        self.status_code = solution.get('status', 200)
+        self.text = solution.get('response', '')
+        self.content = self.text.encode('utf-8')
+        self.headers = solution.get('headers', {})
+        self._json = None
+
+    def json(self):
+        if self._json is None:
+            # FlareSolverr returns text inside <pre> sometimes if direct JSON, or just raw text
+            # We try to parse self.text directly
+            try:
+                self._json = json.loads(self.text)
+            except json.JSONDecodeError:
+                # Sometimes returned as HTML with json inside pre tag
+                if '<pre' in self.text:
+                    import re
+                    match = re.search(r'<pre[^>]*>(.*?)</pre>', self.text, re.DOTALL)
+                    if match:
+                        self._json = json.loads(match.group(1))
+                    else:
+                        raise
+                else:
+                    raise
+        return self._json
 
 
 def get_random_user_agent() -> str:
@@ -78,45 +103,29 @@ def create_session(
     use_nodejs: bool = True
 ) -> Any:
     """
-    Creates an optimized cloudscraper session.
-    
-    Args:
-        browser: Browser to emulate ('chrome', 'firefox')
-        platform: Platform to emulate ('windows', 'linux', 'darwin')
-        use_nodejs: Use Node.js interpreter for better JS solving
-    
-    Returns:
-        A configured session object (cloudscraper or requests.Session)
+    Creates an optimized session. 
+    If FLARESOLVERR_URL is set, returns a requests.Session aimed at FlareSolverr.
+    Otherwise returns cloudscraper or standard requests.
     """
+    if FLARESOLVERR_URL:
+        logger.info(f"Using FlareSolverr at {FLARESOLVERR_URL}")
+        import requests
+        return requests.Session()
+
     if HAS_CLOUDSCRAPER:
-        # Try Node.js interpreter first (more reliable), fallback to native
         interpreter = 'nodejs' if use_nodejs else 'native'
-        
         try:
             scraper = cloudscraper.create_scraper(
-                browser={
-                    'browser': browser,
-                    'platform': platform,
-                    'desktop': True,
-                },
+                browser={'browser': browser, 'platform': platform, 'desktop': True},
                 interpreter=interpreter,
-                delay=3,  # Built-in delay for JS challenges
+                delay=3,
             )
-            logger.info(f"Created cloudscraper session (browser={browser}, platform={platform}, interpreter={interpreter})")
+            logger.info(f"Created cloudscraper session ({interpreter})")
             return scraper
         except Exception as e:
-            logger.warning(f"Failed to create cloudscraper with {interpreter}: {e}, trying fallback")
-            # Fallback to default interpreter
-            scraper = cloudscraper.create_scraper(
-                browser={
-                    'browser': browser,
-                    'platform': platform,
-                    'desktop': True,
-                }
-            )
-            return scraper
+            logger.warning(f"Failed to create cloudscraper: {e}, fallback to default")
+            return cloudscraper.create_scraper()
     else:
-        # Fallback to standard requests
         import requests
         session = requests.Session()
         session.headers.update({'User-Agent': get_random_user_agent()})
@@ -124,9 +133,7 @@ def create_session(
 
 
 def add_delay(min_delay: float = DEFAULT_DELAY_MIN, max_delay: float = DEFAULT_DELAY_MAX):
-    """Adds a random delay to appear more human-like."""
     delay = random.uniform(min_delay, max_delay)
-    logger.debug(f"Sleeping for {delay:.2f}s")
     time.sleep(delay)
 
 
@@ -143,27 +150,11 @@ def get_with_retry(
     delay_max: float = DEFAULT_DELAY_MAX,
 ) -> Any:
     """
-    Makes a GET request with retry logic and Cloudflare bypass.
-    
-    Args:
-        session: The session object (cloudscraper or requests.Session)
-        url: URL to request
-        params: Query parameters
-        headers: Additional headers
-        timeout: Request timeout in seconds
-        max_retries: Maximum number of retry attempts
-        add_browser_headers: Whether to add realistic browser headers
-        delay_before: Whether to add a delay before the request
-        delay_min: Minimum delay in seconds
-        delay_max: Maximum delay in seconds
-    
-    Returns:
-        Response object
-    
-    Raises:
-        Exception: If all retries fail
+    Makes a GET request, routing through FlareSolverr if configured.
     """
-    # Prepare headers
+    import requests
+    
+    # Prepare Headers
     request_headers = {}
     if add_browser_headers:
         request_headers.update(BROWSER_HEADERS)
@@ -171,83 +162,103 @@ def get_with_retry(
     if headers:
         request_headers.update(headers)
     
+    # Handle Query Params in URL for FlareSolverr
+    full_url = url
+    if params:
+        from urllib.parse import urlencode
+        full_url = f"{url}?{urlencode(params)}"
+
     last_exception = None
     
     for attempt in range(max_retries):
         try:
-            # Add delay before request (except first attempt if no delay_before)
             if delay_before or attempt > 0:
                 add_delay(delay_min, delay_max)
             
             logger.info(f"GET {url} (attempt {attempt + 1}/{max_retries})")
             
-            response = session.get(
-                url,
-                params=params,
-                headers=request_headers,
-                timeout=timeout
-            )
-            
-            # Check for Cloudflare blocks
-            if response.status_code == 403 or response.status_code == 503:
-                # Check known Cloudflare signatures
-                text = response.text.lower()
-                if "cloudflare" in text or "just a moment" in text or "challenge" in text:
-                    logger.warning(f"Got {response.status_code} - Detected Cloudflare Challenge/Block")
-                    if attempt < max_retries - 1:
-                        backoff_delay = (BACKOFF_FACTOR ** attempt) * 5
-                        logger.info(f"Cloudflare block detected, retrying in {backoff_delay}s...")
-                        time.sleep(backoff_delay)
-                        continue
-                else:
-                    # Normal 403/503 from server
-                    logger.warning(f"Got {response.status_code} - Server error (not necessarily Cloudflare)")
-            
-            elif response.status_code == 429:
-                logger.warning(f"Got 429 Too Many Requests - rate limited")
-                if attempt < max_retries - 1:
-                    # Longer backoff for rate limits
-                    backoff_delay = (BACKOFF_FACTOR ** attempt) * 10
-                    logger.info(f"Rate limited, retrying in {backoff_delay}s...")
-                    time.sleep(backoff_delay)
-                    continue
+            # --- STRATEGY 1: FLARESOLVERR ---
+            if FLARESOLVERR_URL:
+                try:
+                    payload = {
+                        "cmd": "request.get",
+                        "url": full_url,
+                        "maxTimeout": timeout * 1000,
+                        "headers": request_headers
+                    }
+                    fs_resp = session.post(
+                        FLARESOLVERR_URL,
+                        json=payload,
+                        headers={"Content-Type": "application/json"},
+                        timeout=timeout + 5
+                    )
+                    
+                    if fs_resp.status_code == 200:
+                        json_resp = fs_resp.json()
+                        if json_resp.get("status") == "ok":
+                            return MockResponse(json_resp)
+                        else:
+                            logger.warning(f"FlareSolverr error: {json_resp.get('message')}")
+                            # If FlareSolverr fails, we might want to fallback or retry
+                    else:
+                        logger.warning(f"FlareSolverr HTTP {fs_resp.status_code}")
 
-            # Return response if successful or status code handled by caller
-            # Check content type for JSON if expected
-            return response
+                except Exception as e:
+                    logger.error(f"FlareSolverr request failed: {e}")
+                    # Fallback to direct request logic below if you want mixed mode,
+                    # but usually if FS is configured, we rely on it.
+                    pass
+
+            # --- STRATEGY 2: DIRECT (Cloudscraper/Requests) ---
+            # If FlareSolverr is not configured OR if it failed (optional fallback)
+            # For now, if FS is set, we strictly use it to avoid leaking IP? 
+            # Actually, let's fallback only if FS is NOT configured.
             
+            if not FLARESOLVERR_URL:
+                response = session.get(
+                    url,
+                    params=params,
+                    headers=request_headers,
+                    timeout=timeout
+                )
+                
+                # Check blocks
+                if response.status_code in [403, 503, 429]:
+                    text = response.text.lower()
+                    if "cloudflare" in text or "challenge" in text:
+                        logger.warning(f"Got {response.status_code} Cloudflare Block")
+                        if attempt < max_retries - 1:
+                            time.sleep((BACKOFF_FACTOR ** attempt) * 5)
+                            continue
+                
+                return response
+            
+            # If we are here, FS was used but failed/retried.
+            if attempt < max_retries - 1:
+                logger.info("Retrying...")
+                continue
+
         except Exception as e:
             last_exception = e
             logger.error(f"Request failed: {e}")
             if attempt < max_retries - 1:
-                backoff_delay = (BACKOFF_FACTOR ** attempt) * 3
-                logger.info(f"Retrying in {backoff_delay}s...")
-                time.sleep(backoff_delay)
+                time.sleep((BACKOFF_FACTOR ** attempt) * 3)
     
-    # All retries failed
-    raise last_exception or Exception(f"All {max_retries} retries failed for {url}")
+    raise last_exception or Exception(f"All retries failed for {url}")
 
 
-# Pre-create a shared session for reuse
+# Shared session
 _shared_session = None
 
 def get_shared_session() -> Any:
-    """Returns a shared session for efficiency (reuses connections)."""
     global _shared_session
     if _shared_session is None:
         _shared_session = create_session()
     return _shared_session
 
-
 def reset_shared_session():
-    """Resets the shared session (useful if blocked)."""
     global _shared_session
     _shared_session = None
-    logger.info("Shared session reset")
 
-
-# Convenience function for simple GET requests
 def get(url: str, params: Optional[Dict] = None, **kwargs) -> Any:
-    """Simple GET request using the shared session."""
-    session = get_shared_session()
-    return get_with_retry(session, url, params=params, **kwargs)
+    return get_with_retry(get_shared_session(), url, params=params, **kwargs)

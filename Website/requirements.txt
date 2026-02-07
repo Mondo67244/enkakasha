@@ -5,3 +5,4 @@ fastapi
 uvicorn
 google-genai
 python-multipart
+brotli
