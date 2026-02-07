@@ -54,6 +54,7 @@ SET_MAP = {
     14002: "Brave Heart",
     14003: "Defender's Will",
     14004: "Maiden Beloved",
+    10007: "Instructor",
     # 5-star sets
     15001: "Gladiator's Finale",
     15002: "Wanderer's Troupe",
