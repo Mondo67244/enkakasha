@@ -1,180 +1,243 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { listDataFolders, deleteDataFolder, renameDataFolder, clearDataFolders } from '../lib/api';
-import { Folder, Trash2, Edit2, Archive, Loader2, AlertCircle, Check } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Archive, Trash2, User, MessageSquare, Package, Clock, AlertTriangle } from 'lucide-react';
 
 const DataManagement = () => {
-    const [folders, setFolders] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [renameTarget, setRenameTarget] = useState(null);
-    const [newName, setNewName] = useState('');
-    const isNameValid = /^[A-Za-z0-9._-]+$/.test(newName);
+    const [stats, setStats] = useState({
+        scans: [],
+        hasUserData: false,
+        hasChatSessions: false,
+        hasContextData: false,
+        hasApiKey: false,
+        hasProvider: false,
+    });
+    const [confirmDelete, setConfirmDelete] = useState(false);
 
-    const fetchFolders = useCallback(async () => {
+    const loadStats = () => {
+        // Recent scans from localStorage
+        let scans = [];
         try {
-            setLoading(true);
-            const res = await listDataFolders();
-            setFolders(res.folders);
-            setError(null);
-        } catch (err) {
-            setError("Failed to load data folders.");
-        } finally {
-            setLoading(false);
-        }
-    }, []);
+            const raw = localStorage.getItem('recent_scans');
+            if (raw) scans = JSON.parse(raw);
+        } catch {}
+
+        // Chat sessions
+        let chatSessions = [];
+        try {
+            const raw = localStorage.getItem('chat_sessions');
+            if (raw) chatSessions = JSON.parse(raw);
+        } catch {}
+
+        setStats({
+            scans,
+            chatSessionsCount: chatSessions.length,
+            hasUserData: !!sessionStorage.getItem('user_data'),
+            hasContextData: !!sessionStorage.getItem('context_data'),
+            hasChatSessions: chatSessions.length > 0,
+            hasApiKey: !!localStorage.getItem('gemini_key'),
+            hasProvider: !!localStorage.getItem('ai_provider'),
+            currentUid: sessionStorage.getItem('uid') || null,
+        });
+    };
 
     useEffect(() => {
-        fetchFolders();
-    }, [fetchFolders]);
+        loadStats();
+    }, []);
 
-    const handleDelete = async (name) => {
-        if (!confirm(`Are you sure you want to delete "${name}"? This cannot be undone.`)) return;
-        try {
-            await deleteDataFolder(name);
-            fetchFolders();
-        } catch (err) {
-            alert("Failed to delete folder");
-        }
-    };
-
-    const handleClearCache = () => {
+    const handleClearAll = () => {
+        // Clear sessionStorage
         sessionStorage.removeItem('user_data');
         sessionStorage.removeItem('uid');
+        sessionStorage.removeItem('context_data');
+
+        // Clear localStorage (user data only, keep API key)
         localStorage.removeItem('recent_scans');
-        alert('Local scan cache cleared.');
+        localStorage.removeItem('chat_sessions');
+        localStorage.removeItem('last_chat_char');
+
+        setConfirmDelete(false);
+        loadStats();
     };
 
-    const handleDeleteAll = async () => {
-        if (!confirm('Delete all scan folders on the server? This cannot be undone.')) return;
-        try {
-            await clearDataFolders();
-            fetchFolders();
-        } catch (err) {
-            alert('Failed to delete all scans.');
-        }
+    const handleClearEverything = () => {
+        // Clear absolutely everything
+        sessionStorage.clear();
+        localStorage.clear();
+
+        setConfirmDelete(false);
+        loadStats();
     };
 
-    const handleRename = async () => {
-        const cleaned = newName.trim();
-        if (!cleaned || !isNameValid) return;
-        try {
-            await renameDataFolder(renameTarget.name, cleaned);
-            setRenameTarget(null);
-            setNewName('');
-            fetchFolders();
-        } catch (err) {
-            alert("Failed to rename folder. Name might be taken.");
-        }
+    const handleClearApiKey = () => {
+        localStorage.removeItem('gemini_key');
+        localStorage.removeItem('ai_provider');
+        loadStats();
     };
 
-    const startRename = (folder) => {
-        setRenameTarget(folder);
-        setNewName(folder.name);
-    };
+    const totalItems = stats.scans.length + stats.chatSessionsCount + (stats.hasUserData ? 1 : 0) + (stats.hasContextData ? 1 : 0);
 
     return (
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-3xl mx-auto space-y-8">
             <div className="flex items-center gap-4">
                 <div className="p-3 bg-[var(--accent-soft)] rounded-xl">
                     <Archive className="text-[var(--accent-strong)]" size={28} />
                 </div>
                 <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-muted)]">Storage</p>
-                    <h2 className="text-3xl font-semibold text-[var(--text-strong)] font-display">Data management</h2>
-                    <p className="text-[var(--text-muted)]">Organize your scans and tidy up older runs.</p>
+                    <h2 className="text-3xl font-semibold text-[var(--text-strong)] font-display">Mes données</h2>
+                    <p className="text-[var(--text-muted)]">Gérez les données stockées sur cet appareil.</p>
                 </div>
             </div>
 
-            <div className="bg-white border border-[var(--line)] rounded-2xl overflow-hidden shadow-sm">
-                {loading ? (
-                    <div className="p-12 flex justify-center">
-                        <Loader2 className="animate-spin text-[var(--text-muted)]" size={32} />
+            {/* Info box */}
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-sm text-blue-700">
+                <p className="font-medium">🔒 Données privées</p>
+                <p className="mt-1 text-blue-600">
+                    Toutes vos données sont stockées localement sur cet appareil. 
+                    Personne d'autre ne peut y accéder.
+                </p>
+            </div>
+
+            {/* Current session */}
+            {stats.currentUid && (
+                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                        <User className="text-[var(--accent-strong)]" size={20} />
+                        <h3 className="font-semibold text-[var(--text-strong)]">Session active</h3>
                     </div>
-                ) : error ? (
-                    <div className="p-8 text-center text-red-600 flex flex-col items-center gap-2">
-                        <AlertCircle /> {error}
+                    <p className="text-[var(--text)]">
+                        UID actuel : <span className="font-mono font-medium">{stats.currentUid}</span>
+                    </p>
+                    {stats.hasUserData && (
+                        <p className="text-xs text-emerald-600 mt-1">✓ Données de personnages chargées</p>
+                    )}
+                    {stats.hasContextData && (
+                        <p className="text-xs text-emerald-600">✓ Contexte leaderboard chargé</p>
+                    )}
+                </div>
+            )}
+
+            {/* Data summary */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                        <Clock className="text-[var(--text-muted)]" size={18} />
+                        <h4 className="font-medium text-[var(--text-strong)]">Scans récents</h4>
                     </div>
-                ) : folders.length === 0 ? (
-                    <div className="p-12 text-center text-[var(--text-muted)]">
-                        No scans found. Go to Scan to fetch a UID.
+                    {stats.scans.length === 0 ? (
+                        <p className="text-sm text-[var(--text-muted)]">Aucun scan enregistré</p>
+                    ) : (
+                        <div className="space-y-2">
+                            {stats.scans.slice(0, 5).map((scan, idx) => (
+                                <div key={idx} className="flex justify-between text-sm">
+                                    <span className="font-mono text-[var(--text)]">{scan.uid}</span>
+                                    <span className="text-[var(--text-muted)]">{scan.characters} persos</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                        <MessageSquare className="text-[var(--text-muted)]" size={18} />
+                        <h4 className="font-medium text-[var(--text-strong)]">Historique chat</h4>
+                    </div>
+                    {stats.chatSessionsCount === 0 ? (
+                        <p className="text-sm text-[var(--text-muted)]">Aucune conversation</p>
+                    ) : (
+                        <p className="text-sm text-[var(--text)]">
+                            {stats.chatSessionsCount} conversation{stats.chatSessionsCount > 1 ? 's' : ''} enregistrée{stats.chatSessionsCount > 1 ? 's' : ''}
+                        </p>
+                    )}
+                </div>
+            </div>
+
+            {/* API Key status */}
+            <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-3">
+                    <Package className="text-[var(--text-muted)]" size={18} />
+                    <h4 className="font-medium text-[var(--text-strong)]">Configuration IA</h4>
+                </div>
+                <div className="flex items-center justify-between">
+                    <div>
+                        {stats.hasApiKey ? (
+                            <p className="text-sm text-emerald-600">✓ Clé API Gemini enregistrée</p>
+                        ) : (
+                            <p className="text-sm text-[var(--text-muted)]">Pas de clé API (mode local)</p>
+                        )}
+                        {stats.hasProvider && (
+                            <p className="text-xs text-[var(--text-muted)] mt-1">
+                                Provider: {localStorage.getItem('ai_provider') || 'ollama'}
+                            </p>
+                        )}
+                    </div>
+                    {stats.hasApiKey && (
+                        <button
+                            onClick={handleClearApiKey}
+                            className="text-xs px-3 py-1.5 rounded-lg border border-[var(--line)] text-[var(--text-muted)] hover:text-red-500 hover:border-red-200"
+                        >
+                            Supprimer la clé
+                        </button>
+                    )}
+                </div>
+            </div>
+
+            {/* Delete actions */}
+            <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                    <Trash2 className="text-red-500" size={20} />
+                    <h3 className="font-semibold text-[var(--text-strong)]">Supprimer les données</h3>
+                </div>
+
+                {!confirmDelete ? (
+                    <div className="space-y-3">
+                        <button
+                            onClick={() => setConfirmDelete(true)}
+                            disabled={totalItems === 0}
+                            className="w-full py-3 rounded-xl border border-red-200 bg-red-50 text-red-600 font-medium hover:bg-red-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            Effacer toutes mes données ({totalItems} élément{totalItems > 1 ? 's' : ''})
+                        </button>
+                        <p className="text-xs text-[var(--text-muted)] text-center">
+                            Supprime les scans, conversations et données de session. Garde la clé API.
+                        </p>
                     </div>
                 ) : (
-                    <table className="w-full text-left border-collapse">
-                        <thead>
-                            <tr className="bg-[var(--surface-muted)] text-[var(--text-muted)] text-xs uppercase tracking-wider">
-                                <th className="p-4 font-semibold">Name</th>
-                                <th className="p-4 font-semibold">Created</th>
-                                <th className="p-4 font-semibold text-right">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-[var(--line)]">
-                            {folders.map((folder) => (
-                                <tr key={folder.name} className="hover:bg-[var(--surface-muted)] transition-colors">
-                                    <td className="p-4 text-[var(--text-strong)] font-medium flex items-center gap-3">
-                                        <Folder size={18} className="text-[var(--text-muted)]" />
-                                        {renameTarget?.name === folder.name ? (
-                                            <div className="flex items-center gap-2">
-                                                <input
-                                                    autoFocus
-                                                    className="bg-white border border-[var(--line)] rounded px-2 py-1 text-sm focus:border-[var(--accent-strong)] outline-none"
-                                                    value={newName}
-                                                    onChange={(e) => setNewName(e.target.value)}
-                                                    onKeyDown={(e) => e.key === 'Enter' && handleRename()}
-                                                />
-                                                <button
-                                                    onClick={handleRename}
-                                                    disabled={!isNameValid}
-                                                    className="p-1 hover:text-green-600 disabled:text-slate-300"
-                                                >
-                                                    <Check size={16} />
-                                                </button>
-                                            </div>
-                                        ) : (
-                                            folder.name
-                                        )}
-                                    </td>
-                                    <td className="p-4 text-[var(--text-muted)] text-sm">
-                                        {new Date(folder.created * 1000).toLocaleDateString()}
-                                    </td>
-                                    <td className="p-4 text-right space-x-2">
-                                        <button
-                                            onClick={() => startRename(folder)}
-                                            className="p-2 hover:bg-[var(--surface-muted)] rounded-lg text-[var(--text-muted)] hover:text-[var(--accent-strong)] transition-colors"
-                                            title="Rename"
-                                        >
-                                            <Edit2 size={16} />
-                                        </button>
-                                        <button
-                                            onClick={() => handleDelete(folder.name)}
-                                            className="p-2 hover:bg-[var(--surface-muted)] rounded-lg text-[var(--text-muted)] hover:text-red-500 transition-colors"
-                                            title="Delete"
-                                        >
-                                            <Trash2 size={16} />
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <div className="space-y-4">
+                        <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                            <div className="flex items-start gap-3">
+                                <AlertTriangle className="text-red-500 flex-shrink-0 mt-0.5" size={18} />
+                                <div>
+                                    <p className="font-medium text-red-700">Êtes-vous sûr ?</p>
+                                    <p className="text-sm text-red-600 mt-1">
+                                        Cette action supprimera définitivement toutes vos données locales.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => setConfirmDelete(false)}
+                                className="flex-1 py-2.5 rounded-xl border border-[var(--line)] text-[var(--text-strong)] font-medium hover:bg-[var(--surface-muted)]"
+                            >
+                                Annuler
+                            </button>
+                            <button
+                                onClick={handleClearAll}
+                                className="flex-1 py-2.5 rounded-xl bg-red-500 text-white font-medium hover:bg-red-600"
+                            >
+                                Confirmer
+                            </button>
+                        </div>
+                        <button
+                            onClick={handleClearEverything}
+                            className="w-full text-xs text-red-400 hover:text-red-600 underline"
+                        >
+                            Tout supprimer (y compris la clé API)
+                        </button>
+                    </div>
                 )}
             </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                    onClick={handleClearCache}
-                    className="px-4 py-2 rounded-xl border border-[var(--line)] bg-white text-sm font-medium text-[var(--text-strong)] hover:bg-[var(--surface-muted)]"
-                >
-                    Clear local cache
-                </button>
-                <button
-                    onClick={handleDeleteAll}
-                    className="px-4 py-2 rounded-xl border border-red-200 bg-red-50 text-sm font-medium text-red-600 hover:bg-red-100"
-                >
-                    Delete all scans (server)
-                </button>
-            </div>
-            {renameTarget && !isNameValid && (
-                <p className="text-xs text-red-600">Folder names can only include letters, numbers, dots, underscores, and dashes.</p>
-            )}
         </div>
     );
 };
