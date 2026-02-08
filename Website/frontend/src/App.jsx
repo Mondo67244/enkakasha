@@ -12,7 +12,10 @@ import Chat from './pages/Chat';
 
 const RequireKey = ({ children }) => {
   const key = localStorage.getItem('gemini_key');
-  if (!key) {
+  const provider = localStorage.getItem('ai_provider');
+  
+  // Allow access if key exists OR if provider is set to local/ollama
+  if (!key && provider !== 'ollama') {
     return <Navigate to="/" replace />;
   }
   return children;
