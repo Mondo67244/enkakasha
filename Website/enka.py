@@ -52,7 +52,7 @@ SET_MAP = {
     # 4-star sets
     14001: "Blizzard Strayer",
     14002: "Brave Heart",
-    14003: "Defender's Will",
+    14003: "Lavawalker's Epiphany",
     14004: "Maiden Beloved",
     10007: "Instructor",
     # 5-star sets
@@ -63,9 +63,7 @@ SET_MAP = {
     15006: "Crimson Witch of Flames",
     15007: "Noblesse Oblige",
     15008: "Maiden Beloved",
-    15009: "Viridescent Venerer",
     15010: "Bloodstained Chivalry",
-    15011: "Lavawalker",
     15012: "Heart of Depth",
     15013: "Blizzard Strayer",
     15014: "Archaic Petra",
@@ -80,7 +78,6 @@ SET_MAP = {
     15023: "",
     15024: "Blizzard Strayer",
     15025: "Deepwood Memories",
-    15026: "Lavawalker",
     15027: "Desert Pavilion Chronicle",
     15028: "Flower of Paradise Lost",
     15029: "Nymph's Dream",

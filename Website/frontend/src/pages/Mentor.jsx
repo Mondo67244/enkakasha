@@ -23,11 +23,11 @@ const elementFiles = import.meta.glob('../../../../elements/Element_*.svg', { ea
 
 const SLOT_ORDER = ['Flower', 'Plume', 'Sands', 'Goblet', 'Circlet'];
 const SLOT_FILENAME = {
-  Flower: '05_Circlet',
-  Plume: '04_Goblet',
+  Flower: '01_Flower',
+  Plume: '02_Plume',
   Sands: '03_Sands',
-  Goblet: '02_Plume',
-  Circlet: '01_Flower',
+  Goblet: '04_Goblet',
+  Circlet: '05_Circlet',
 };
 
 const SPECIAL_SET_MAP = {
