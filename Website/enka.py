@@ -57,7 +57,7 @@ SET_MAP = {
     10007: "Instructor",
     # 5-star sets
     15001: "Gladiator's Finale",
-    15002: "Wanderer's Troupe",
+    15002: "Viridescent Venerer",
     15003: "Thundersoother",
     15005: "Thundering Fury",  # Alternate ID
     15006: "Crimson Witch of Flames",
@@ -75,7 +75,7 @@ SET_MAP = {
     15018: "Shimenawa's Reminiscence",
     15019: "Heart of Depth",
     15020: "Emblem of Severed Fate",
-    15021: "Viridescent Venerer",
+    15021: "Wanderer's Troupe",
     15022: "Crimson Witch of Flames",
     15023: "",
     15024: "Blizzard Strayer",

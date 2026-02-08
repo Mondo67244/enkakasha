@@ -72,7 +72,7 @@ const SPECIAL_SET_MAP = {
     "Night of the Sky's Unveiling": 'Night_of_the_Skys_Unveiling',
     "Silken Moon's Serenade": 'Silken_Moons_Serenade',
     "Long Night's Oath": 'Long_Nights_Oath',
-    "Defender's Will": 'Defenders_Will',
+    "Lavawalker's Epiphany": 'Lavawalkers_Epiphany',
 };
 
 const normalizeSetName = (setName) => {
