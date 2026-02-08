@@ -118,7 +118,9 @@ const Chat = () => {
         setSending(true);
         setError(null);
         const apiKey = localStorage.getItem('gemini_key');
-        if (!apiKey) {
+        const provider = localStorage.getItem('ai_provider') || 'ollama';
+        
+        if (provider === 'gemini' && !apiKey) {
             navigate('/');
             return;
         }
@@ -142,7 +144,8 @@ const Chat = () => {
                 charName,
                 'gemini-2.5-flash',
                 userMessage.content,
-                nextMessages
+                nextMessages,
+                provider
             );
             const assistantMessage = { role: 'assistant', content: response.reply };
             const updatedMessages = [...nextMessages, assistantMessage];

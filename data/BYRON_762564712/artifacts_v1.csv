@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Columbina,Flower,Silken Moon's Serenade,+20,HP,4780.0,DEF,23.0,Crit DMG,21.8,Crit Rate,5.8,ER%,5.8,33.4
+Columbina,Plume,Silken Moon's Serenade,+20,ATK,311.0,ER%,17.5,Crit Rate,3.5,Crit DMG,20.2,EM,21,27.2
+Columbina,Sands,Noblesse Oblige,+20,ER%,51.8,HP%,17.5,Crit DMG,17.9,DEF%,6.6,Crit Rate,2.7,23.3
+Columbina,Goblet,Silken Moon's Serenade,+20,HP%,46.6,Crit Rate,6.2,HP,538.0,Crit DMG,20.2,DEF,23,32.6
+Columbina,Circlet,Silken Moon's Serenade,+20,Crit DMG,62.2,EM,37.0,Crit Rate,6.2,ER%,16.8,ATK%,11.7,12.4
+Lauma,Flower,Deepwood Memories,+20,HP,4780.0,Crit Rate,3.5,Crit DMG,24.9,DEF%,6.6,EM,40,31.9
+Lauma,Plume,Deepwood Memories,+20,ATK,311.0,EM,63.0,HP,598.0,Crit Rate,3.1,ER%,11.7,6.2
+Lauma,Sands,Deepwood Memories,+20,EM,187.0,Crit Rate,2.7,ER%,10.4,ATK%,16.9,HP,538,5.4
+Lauma,Goblet,Silken Moon's Serenade,+20,EM,187.0,Crit DMG,20.2,HP,239.0,DEF%,12.4,ER%,9.7,20.2
+Lauma,Circlet,Deepwood Memories,+20,EM,187.0,ATK%,5.8,ER%,16.2,DEF,79.0,ATK,19,0.0
+Keqing,Flower,Thundering Fury,+20,HP,4780.0,HP%,11.1,Crit Rate,2.7,Crit DMG,20.2,ATK%,15.7,25.6
+Keqing,Plume,Thundering Fury,+20,ATK,311.0,EM,21.0,Crit Rate,13.6,DEF,44.0,ATK%,11.1,27.2
+Keqing,Sands,Thundering Fury,+12,ATK%,30.8,Crit Rate,3.9,HP%,15.8,DEF,21.0,ATK,16,7.8
+Keqing,Goblet,Marechaussee Hunter,+16,Electro DMG%,34.8,ATK%,7.9,EM,13.0,HP,191.0,HP%,7.5,0.0
+Keqing,Circlet,Thundering Fury,+16,Crit Rate,23.2,ER%,8.3,ATK,16.0,ATK%,8.4,HP,167,0.0
+Mona,Flower,Marechaussee Hunter,+20,HP,4780.0,ER%,10.4,Crit Rate,7.4,Crit DMG,12.4,DEF,39,27.2
+Mona,Plume,Emblem of Severed Fate,+0,ATK,47.0,ER%,4.5,DEF,21.0,Crit DMG,5.4,,,5.4
+Mona,Sands,Emblem of Severed Fate,+16,ER%,43.0,HP,239.0,EM,40.0,ATK,16.0,ATK%,14.6,0.0
+Mona,Goblet,Emblem of Severed Fate,+0,ATK%,7.0,EM,19.0,Crit Rate,3.1,Crit DMG,7.8,,,14.0
+Mona,Circlet,Emblem of Severed Fate,+0,Crit Rate,4.7,HP%,5.3,DEF,16.0,ATK,14.0,ATK%,4.1,0.0
+Yanfei,Flower,Maiden Beloved,+8,HP,2342.0,HP%,4.1,Crit DMG,5.4,ER%,13.0,DEF,16,5.4
+Yanfei,Plume,Maiden Beloved,+8,ATK,137.0,HP%,3.7,ER%,5.2,HP,167.0,DEF%,5.8,0.0
+Yanfei,Sands,Night of the Sky's Unveiling,+0,HP%,7.0,Crit Rate,2.7,DEF,19.0,ER%,4.5,,,5.4
+Yanfei,Goblet,Maiden Beloved,+6,HP%,18.9,HP,209.0,Crit DMG,7.8,DEF,16.0,ER%,5.8,7.8
+Yanfei,Circlet,Maiden Beloved,+20,Crit DMG,62.2,HP,538.0,ATK%,5.8,Crit Rate,5.8,DEF%,19.7,11.6
+Fischl,Flower,Golden Troupe,+20,HP,4780.0,ATK%,9.9,Crit Rate,10.1,EM,65.0,Crit DMG,5.4,25.6
+Fischl,Plume,Golden Troupe,+16,ATK,258.0,Crit DMG,13.2,HP%,8.2,EM,37.0,Crit Rate,2.7,18.6
+Fischl,Sands,Golden Troupe,+20,HP%,46.6,HP,209.0,Crit Rate,10.1,Crit DMG,18.7,DEF,19,38.9
+Fischl,Goblet,Golden Troupe,+20,Electro DMG%,46.6,ER%,11.7,Crit Rate,9.7,HP%,15.2,EM,19,19.4
+Fischl,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,DEF%,13.1,ATK%,15.2,DEF,21.0,ER%,11,0.0
+Xingqiu,Flower,Emblem of Severed Fate,+20,HP,4780.0,ATK,14.0,HP%,11.1,Crit Rate,7.4,ER%,16.2,14.8
+Xingqiu,Plume,Emblem of Severed Fate,+20,ATK,311.0,DEF,44.0,EM,37.0,ER%,10.4,Crit DMG,13.2,13.2
+Xingqiu,Sands,Emblem of Severed Fate,+20,ATK%,46.6,Crit Rate,2.7,ER%,10.4,DEF%,12.4,ATK,49,5.4
+Xingqiu,Goblet,Gladiator's Finale,+20,Hydro DMG%,46.6,Crit DMG,14.8,ER%,11.7,HP%,15.2,ATK%,9.3,14.8
+Xingqiu,Circlet,Emblem of Severed Fate,+16,Crit Rate,25.8,EM,42.0,ER%,6.5,HP,687.0,ATK,16,0.0
+Nefer,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,HP%,9.9,Crit DMG,21.0,EM,21.0,Crit Rate,9.3,39.6
+Nefer,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,6.6,Crit DMG,18.7,EM,40.0,ER%,5.8,31.9
+Nefer,Sands,Night of the Sky's Unveiling,+20,EM,187.0,Crit Rate,16.3,Crit DMG,11.7,ATK%,5.8,ATK,19,44.3
+Nefer,Goblet,Night of the Sky's Unveiling,+20,EM,187.0,ATK,35.0,Crit DMG,11.7,DEF%,5.1,Crit Rate,9.7,31.1
+Nefer,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,HP%,5.8,EM,42.0,Crit Rate,12.8,ATK,35,25.6
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,7.0,ER%,9.1,Crit DMG,12.4,DEF%,10.9,26.4
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,DEF%,5.8,Crit DMG,7.0,Crit Rate,8.6,EM,61,24.2
+Escoffier,Sands,Golden Troupe,+20,ATK%,46.6,Crit Rate,2.7,ATK,16.0,ER%,16.2,EM,61,5.4
+Escoffier,Goblet,Thundering Fury,+20,Cryo DMG%,46.6,Crit DMG,26.4,ATK%,9.9,HP%,4.7,DEF%,5.1,26.4
+Escoffier,Circlet,Golden Troupe,+20,Crit DMG,62.2,HP,508.0,ATK%,20.4,EM,21.0,DEF,19,0.0
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,13.4,Crit Rate,3.9,ATK%,5.3,Crit DMG,17.9,25.7
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP%,13.4,Crit Rate,6.6,ER%,11.7,DEF%,10.9,13.2
+Furina,Sands,Golden Troupe,+20,ER%,51.8,Crit Rate,7.0,Crit DMG,17.9,DEF,42.0,ATK%,5.3,31.9
+Furina,Goblet,Lavawalker's Epiphany,+20,HP%,46.6,Crit Rate,10.1,ER%,4.5,DEF%,11.7,Crit DMG,12.4,32.6
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,Crit Rate,3.1,HP%,9.3,DEF%,12.4,HP,807,6.2
+Hu Tao,Flower,Crimson Witch of Flames,+20,HP,4780.0,EM,63.0,ATK%,9.9,DEF%,5.1,Crit Rate,10.5,21.0
+Hu Tao,Plume,Crimson Witch of Flames,+20,ATK,311.0,Crit DMG,25.6,ER%,13.0,Crit Rate,3.1,HP,598,31.8
+Hu Tao,Sands,Crimson Witch of Flames,+20,HP%,46.6,HP,508.0,DEF,21.0,Crit Rate,10.5,Crit DMG,14,35.0
+Hu Tao,Goblet,Gladiator's Finale,+20,Pyro DMG%,46.6,Crit DMG,19.4,ATK,49.0,ER%,4.5,Crit Rate,5.8,31.0
+Hu Tao,Circlet,Crimson Witch of Flames,+20,Crit DMG,62.2,Crit Rate,10.1,EM,47.0,ER%,4.5,ATK,51,20.2
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit Rate,7.8,Crit DMG,21.0,ER%,9.1,HP%,4.1,36.6
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,ER%,6.5,Crit DMG,20.2,ATK%,11.1,Crit Rate,7.8,35.8
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,Crit Rate,10.5,Crit DMG,13.2,DEF,39.0,ATK,19,34.2
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,Crit Rate,10.5,Crit DMG,20.2,EM,42.0,DEF%,7.3,41.2
+Skirk,Circlet,Viridescent Venerer,+20,Crit DMG,62.2,ATK%,14.6,HP,209.0,Crit Rate,6.6,ATK,29,13.2

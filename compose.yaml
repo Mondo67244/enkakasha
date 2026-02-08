@@ -9,6 +9,10 @@ services:
       - ./data:/app/data # Persistance des données (scans)
     environment:
       - FLARESOLVERR_URL=http://flaresolverr:8191/v1
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - OLLAMA_MODEL=mistral:7b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       - flaresolverr
     restart: unless-stopped

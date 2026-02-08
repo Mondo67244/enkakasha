@@ -7,7 +7,12 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from google import genai
+import ollama as ollama_client
 import shutil
+
+# Ollama configuration
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "mistral:7b")
 from pathlib import Path
 import anyio
 
@@ -41,25 +46,76 @@ class VerifyKeyRequest(BaseModel):
     api_key: str
 
 class AnalyzeRequest(BaseModel):
-    api_key: str
+    api_key: Optional[str] = None
     user_data: List[Dict[str, Any]]
     context_data: Optional[List[Dict[str, Any]]] = None
     target_char: str
     model_name: Optional[str] = "gemini-2.5-flash"
     build_notes: Optional[str] = None
+    provider: Optional[str] = "ollama"  # "ollama" or "gemini"
 
 class ChatRequest(BaseModel):
-    api_key: str
+    api_key: Optional[str] = None
     user_data: List[Dict[str, Any]]
     context_data: Optional[List[Dict[str, Any]]] = None
     target_char: str
     model_name: Optional[str] = "gemini-2.5-flash"
     message: str
     history: Optional[List[Dict[str, str]]] = None
+    provider: Optional[str] = "ollama"  # "ollama" or "gemini"
+
+# --- AI Provider Helper ---
+def call_ai(prompt: str, provider: str, api_key: str = None, model_name: str = None) -> str:
+    """Unified AI call supporting both Ollama (local) and Gemini (cloud)."""
+    if provider == "ollama":
+        try:
+            # Configure Ollama client with custom host
+            client = ollama_client.Client(host=OLLAMA_HOST)
+            response = client.chat(
+                model=OLLAMA_MODEL,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response["message"]["content"]
+        except Exception as e:
+            raise Exception(f"Ollama Error: {str(e)}")
+    elif provider == "gemini":
+        if not api_key:
+            raise Exception("API Key required for Gemini")
+        try:
+            client = genai.Client(api_key=api_key)
+            response = client.models.generate_content(
+                model=model_name or "gemini-2.5-flash",
+                contents=prompt
+            )
+            return response.text
+        except Exception as e:
+            raise Exception(f"Gemini Error: {str(e)}")
+    else:
+        raise Exception(f"Unknown provider: {provider}")
 
 @app.get("/")
 def read_root():
     return {"status": "Genshin AI Mentor API is running"}
+
+@app.get("/ollama/status")
+async def ollama_status():
+    """Check if Ollama is available and return available models."""
+    try:
+        client = ollama_client.Client(host=OLLAMA_HOST)
+        models = client.list()
+        model_names = [m["name"] for m in models.get("models", [])]
+        return {
+            "available": True,
+            "host": OLLAMA_HOST,
+            "models": model_names,
+            "default_model": OLLAMA_MODEL
+        }
+    except Exception as e:
+        return {
+            "available": False,
+            "host": OLLAMA_HOST,
+            "error": str(e)
+        }
 
 @app.post("/verify_key")
 async def verify_key(request: VerifyKeyRequest):
@@ -156,7 +212,7 @@ async def analyze_build(request: AnalyzeRequest):
     """
     1. Filters User Artifacts (based on target char).
     2. Summarizes Leaderboard Context.
-    3. Sends prompt to Gemini.
+    3. Sends prompt to AI (Ollama or Gemini).
     """
     api_key = request.api_key
     user_data = request.user_data
@@ -164,9 +220,13 @@ async def analyze_build(request: AnalyzeRequest):
     target_char_name = request.target_char
     model_name = request.model_name or "gemini-2.5-flash"
     build_notes = (request.build_notes or "").strip()
+    provider = request.provider or "ollama"
     
-    if not api_key or not user_data or not target_char_name:
-        raise HTTPException(status_code=400, detail="Missing API Key, User Data, or Target Character")
+    if not user_data or not target_char_name:
+        raise HTTPException(status_code=400, detail="Missing User Data or Target Character")
+    
+    if provider == "gemini" and not api_key:
+        raise HTTPException(status_code=400, detail="API Key required for Gemini")
 
     # 1. Logic
     context_summary = logic.prepare_context(context_data)
@@ -252,12 +312,10 @@ async def analyze_build(request: AnalyzeRequest):
     
     # 3. Call AI
     try:
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt
+        result = await anyio.to_thread.run_sync(
+            partial(call_ai, prompt, provider, api_key, model_name)
         )
-        return {"analysis": response.text}
+        return {"analysis": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 
@@ -270,9 +328,13 @@ async def chat_build(request: ChatRequest):
     model_name = request.model_name or "gemini-2.5-flash"
     message = request.message.strip()
     history = request.history or []
+    provider = request.provider or "ollama"
 
-    if not api_key or not user_data or not target_char_name or not message:
-        raise HTTPException(status_code=400, detail="Missing API Key, User Data, Target Character, or message")
+    if not user_data or not target_char_name or not message:
+        raise HTTPException(status_code=400, detail="Missing User Data, Target Character, or message")
+    
+    if provider == "gemini" and not api_key:
+        raise HTTPException(status_code=400, detail="API Key required for Gemini")
 
     context_summary = logic.prepare_context(context_data)
     inventory, error = logic.prepare_inventory(user_data, target_char_name)
@@ -312,12 +374,10 @@ async def chat_build(request: ChatRequest):
     """
 
     try:
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt
+        result = await anyio.to_thread.run_sync(
+            partial(call_ai, prompt, provider, api_key, model_name)
         )
-        return {"reply": response.text}
+        return {"reply": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 

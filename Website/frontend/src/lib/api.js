@@ -30,19 +30,20 @@ export const getLeaderboardDeep = async (calcId, character, limit = 20) => {
     return response.data;
 };
 
-export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName, buildNotes) => {
+export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName, buildNotes, provider = 'ollama') => {
     const response = await api.post('/analyze', {
         api_key: apiKey,
         user_data: userData,
         context_data: contextData,
         target_char: targetChar,
         model_name: modelName,
-        build_notes: buildNotes
+        build_notes: buildNotes,
+        provider: provider
     });
     return response.data;
 };
 
-export const chatBuild = async (apiKey, userData, contextData, targetChar, modelName, message, history) => {
+export const chatBuild = async (apiKey, userData, contextData, targetChar, modelName, message, history, provider = 'ollama') => {
     const response = await api.post('/chat', {
         api_key: apiKey,
         user_data: userData,
@@ -50,8 +51,14 @@ export const chatBuild = async (apiKey, userData, contextData, targetChar, model
         target_char: targetChar,
         model_name: modelName,
         message,
-        history
+        history,
+        provider: provider
     });
+    return response.data;
+};
+
+export const getOllamaStatus = async () => {
+    const response = await api.get('/ollama/status');
     return response.data;
 };
 

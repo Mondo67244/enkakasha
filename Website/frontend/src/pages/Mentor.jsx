@@ -64,6 +64,11 @@ const MODELS = [
   { id: 'gemini-pro-latest', name: 'Gemini Pro Latest (Experimental)' }
 ];
 
+const PROVIDERS = [
+  { id: 'ollama', name: '🏠 Local (Mistral)', requiresKey: false },
+  { id: 'gemini', name: '☁️ Cloud (Gemini)', requiresKey: true }
+];
+
 const buildImageMap = (files) => {
   const map = {};
   Object.entries(files).forEach(([filePath, url]) => {
@@ -183,6 +188,9 @@ const Mentor = () => {
   const [contextData, setContextData] = useState(null);
   const [analysis, setAnalysis] = useState('');
   const [selectedModel, setSelectedModel] = useState('gemini-2.5-flash');
+  const [selectedProvider, setSelectedProvider] = useState(() => {
+    return localStorage.getItem('ai_provider') || 'ollama';
+  });
   const [loadingContext, setLoadingContext] = useState(false);
   const [loadingDeep, setLoadingDeep] = useState(false);
   const [loadingAI, setLoadingAI] = useState(false);
@@ -476,14 +484,16 @@ const Mentor = () => {
 
   const handleAnalyze = async () => {
     const apiKey = localStorage.getItem('gemini_key');
-    if (!apiKey) {
+    const requiresKey = PROVIDERS.find(p => p.id === selectedProvider)?.requiresKey;
+    
+    if (requiresKey && !apiKey) {
       navigate('/');
       return;
     }
     setLoadingAI(true);
     setErrorFragment(null);
     try {
-      const res = await analyzeBuild(apiKey, userData, contextData, charName, selectedModel, buildNotes);
+      const res = await analyzeBuild(apiKey, userData, contextData, charName, selectedModel, buildNotes, selectedProvider);
       setAnalysis(res.analysis);
       localStorage.setItem('last_chat_char', charName);
     } catch (err) {
@@ -766,16 +776,44 @@ const Mentor = () => {
             </div>
 
             <div className="mt-6">
-              <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">AI model</p>
-              <select
-                value={selectedModel}
-                onChange={(e) => setSelectedModel(e.target.value)}
-                className="mt-2 w-full border border-[var(--line)] bg-[var(--surface-muted)] px-4 py-3 rounded-xl text-sm focus:outline-none"
-              >
-                {MODELS.map((m) => (
-                  <option key={m.id} value={m.id}>{m.name}</option>
+              <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">AI Provider</p>
+              <div className="mt-2 flex gap-2">
+                {PROVIDERS.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => setSelectedProvider(p.id)}
+                    className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition ${
+                      selectedProvider === p.id
+                        ? 'bg-[var(--accent-strong)] text-white'
+                        : 'bg-[var(--surface-muted)] border border-[var(--line)] text-[var(--text)] hover:bg-[var(--surface-muted)]'
+                    }`}
+                  >
+                    {p.name}
+                  </button>
                 ))}
-              </select>
+              </div>
+              {selectedProvider === 'ollama' && (
+                <p className="text-xs text-emerald-600 mt-2">✓ Pas besoin de clé API - IA locale gratuite</p>
+              )}
+            </div>
+
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-wide text-[var(--text-muted)]">AI model</p>
+              {selectedProvider === 'gemini' ? (
+                <select
+                  value={selectedModel}
+                  onChange={(e) => setSelectedModel(e.target.value)}
+                  className="mt-2 w-full border border-[var(--line)] bg-[var(--surface-muted)] px-4 py-3 rounded-xl text-sm focus:outline-none"
+                >
+                  {MODELS.map((m) => (
+                    <option key={m.id} value={m.id}>{m.name}</option>
+                  ))}
+                </select>
+              ) : (
+                <div className="mt-2 w-full border border-[var(--line)] bg-[var(--surface-muted)] px-4 py-3 rounded-xl text-sm text-[var(--text-muted)]">
+                  Mistral 7B (Local)
+                </div>
+              )}
             </div>
 
             <div className="mt-6">
