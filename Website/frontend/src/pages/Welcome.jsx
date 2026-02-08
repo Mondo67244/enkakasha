@@ -173,7 +173,7 @@ const Welcome = () => {
 
                     <button
                         type="submit"
-                        disabled={loading || (selectedMode === 'cloud' && !isKeyValid) || (selectedMode === 'local' && !ollamaAvailable)}
+                        disabled={loading || (selectedMode === 'cloud' && !isKeyValid)}
                         className="w-full py-3 px-4 bg-[var(--accent-strong)] hover:bg-[var(--accent)] text-white font-semibold rounded-xl shadow-sm transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                         {loading ? <Loader2 className="animate-spin" /> : <>Continue <ArrowRight size={18} /></>}

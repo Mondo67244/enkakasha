@@ -13,7 +13,8 @@ export const verifyKey = async (apiKey) => {
 };
 
 export const scanUID = async (uid) => {
-    const response = await api.post(`/scan/${uid}`);
+    // FlareSolverr can take time, set a long timeout (e.g. 60s)
+    const response = await api.post(`/scan/${uid}`, {}, { timeout: 90000 });
     return response.data;
 };
 
