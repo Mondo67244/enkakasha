@@ -32,6 +32,7 @@ export const getLeaderboardDeep = async (calcId, character, limit = 20) => {
 };
 
 export const analyzeBuild = async (apiKey, userData, contextData, targetChar, modelName, buildNotes, provider = 'ollama') => {
+    // Local AI (Mistral) can take several minutes on CPU - set 10 min timeout
     const response = await api.post('/analyze', {
         api_key: apiKey,
         user_data: userData,
@@ -40,11 +41,12 @@ export const analyzeBuild = async (apiKey, userData, contextData, targetChar, mo
         model_name: modelName,
         build_notes: buildNotes,
         provider: provider
-    });
+    }, { timeout: 600000 });
     return response.data;
 };
 
 export const chatBuild = async (apiKey, userData, contextData, targetChar, modelName, message, history, provider = 'ollama') => {
+    // Local AI (Mistral) can take several minutes on CPU - set 10 min timeout
     const response = await api.post('/chat', {
         api_key: apiKey,
         user_data: userData,
@@ -54,7 +56,7 @@ export const chatBuild = async (apiKey, userData, contextData, targetChar, model
         message,
         history,
         provider: provider
-    });
+    }, { timeout: 600000 });
     return response.data;
 };
 

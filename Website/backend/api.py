@@ -69,8 +69,8 @@ def call_ai(prompt: str, provider: str, api_key: str = None, model_name: str = N
     """Unified AI call supporting both Ollama (local) and Gemini (cloud)."""
     if provider == "ollama":
         try:
-            # Configure Ollama client with custom host and long timeout for CPU inference
-            client = ollama_client.Client(host=OLLAMA_HOST, timeout=180.0)
+            # Configure Ollama client with custom host and no timeout (let it take as long as needed)
+            client = ollama_client.Client(host=OLLAMA_HOST, timeout=None)
             response = client.chat(
                 model=OLLAMA_MODEL,
                 messages=[{"role": "user", "content": prompt}]
