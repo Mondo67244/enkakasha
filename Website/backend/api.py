@@ -102,8 +102,21 @@ async def ollama_status():
     """Check if Ollama is available and return available models."""
     try:
         client = ollama_client.Client(host=OLLAMA_HOST)
-        models = client.list()
-        model_names = [m["name"] for m in models.get("models", [])]
+        models_response = client.list()
+        # Handle both dict and object response formats
+        if hasattr(models_response, 'models'):
+            models_list = models_response.models
+        else:
+            models_list = models_response.get("models", [])
+        # Extract model names (handle both dict and object formats)
+        model_names = []
+        for m in models_list:
+            if hasattr(m, 'name'):
+                model_names.append(m.name)
+            elif isinstance(m, dict) and "name" in m:
+                model_names.append(m["name"])
+            elif hasattr(m, 'model'):
+                model_names.append(m.model)
         return {
             "available": True,
             "host": OLLAMA_HOST,
@@ -111,6 +124,8 @@ async def ollama_status():
             "default_model": OLLAMA_MODEL
         }
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return {
             "available": False,
             "host": OLLAMA_HOST,
