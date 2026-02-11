@@ -154,6 +154,8 @@ async def scan_uid(uid: str):
     Wraps enka.fetch_player_data.
     Note: We need to capture the return value of fetch_player_data.
     """
+    if not uid.isdigit():
+        raise HTTPException(status_code=400, detail="Invalid UID format")
     try:
         # We invoke enka.fetch_player_data. 
         # CAUTION: The original script prints a lot and saves files. 

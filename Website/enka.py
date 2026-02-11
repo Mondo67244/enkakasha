@@ -530,6 +530,9 @@ def extract_weapon_info(equip_list):
 
 def fetch_player_data(uid, output_root=None):
     """Fetches and formats player data."""
+    if not str(uid).isdigit():
+        return None, "Invalid UID format"
+
     print(i18n.get("FETCHING_DATA_UID", uid=uid), flush=True)
     output_root = Path(output_root) if output_root else Path.cwd()
     output_root.mkdir(parents=True, exist_ok=True)
