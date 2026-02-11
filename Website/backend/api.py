@@ -32,6 +32,8 @@ app = FastAPI(title="Genshin AI Mentor API")
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
 DATA_ROOT.mkdir(parents=True, exist_ok=True)
 SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
+UID_PATTERN = re.compile(r"^\d{9,12}$")
+CALC_ID_PATTERN = re.compile(r"^[a-zA-Z0-9_-]+$")
 
 # CORS for Frontend
 app.add_middleware(
@@ -154,6 +156,9 @@ async def scan_uid(uid: str):
     Wraps enka.fetch_player_data.
     Note: We need to capture the return value of fetch_player_data.
     """
+    if not UID_PATTERN.match(uid):
+        raise HTTPException(status_code=400, detail="Invalid UID format (9-12 digits required)")
+
     try:
         # We invoke enka.fetch_player_data. 
         # CAUTION: The original script prints a lot and saves files. 
@@ -185,6 +190,9 @@ async def get_leaderboard(calc_id: str):
     """
     Fetches Akasha leaderboard context.
     """
+    if not CALC_ID_PATTERN.match(calc_id):
+        raise HTTPException(status_code=400, detail="Invalid Calculation ID format")
+
     try:
         # fetch_leaderboard now returns the full list of dicts with stats
         data = await anyio.to_thread.run_sync(
@@ -203,6 +211,9 @@ async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
     """
     Fetches leaderboard entries, then enriches with Enka data and filters to a single character.
     """
+    if not CALC_ID_PATTERN.match(calc_id):
+        raise HTTPException(status_code=400, detail="Invalid Calculation ID format")
+
     if not character:
         raise HTTPException(status_code=400, detail="Character name required")
     try:
