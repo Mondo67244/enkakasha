@@ -71,7 +71,7 @@ We welcome contributions!
 * ✅ **Allowed:** Personal use, modification, self-hosting for private use.
 * ⚠️ **Condition:** If you host this as a public service, you **MUST** share your source code.
 
-Genshin AI Mentor by [IKOLAM](https://mondo.ikouni.site)
+Genshin AI Mentor by [IKOLAM](https://ikolam.ikouni.site)
 
 ---
 
@@ -121,4 +121,4 @@ Ce projet est sous licence **GNU Affero General Public License v3.0 (AGPLv3)**.
 * ✅ **Autorisé :** Usage personnel, modification, auto-hébergement privé.
 * ⚠️ **Condition :** Si vous hébergez ce site comme un service public, vous **DEVEZ** partager votre code source modifié.
 
-Genshin AI Mentor par [IKOLAM](https://mondo.ikouni.site)
+Genshin AI Mentor par [IKOLAM](https://ikolam.ikouni.site)
