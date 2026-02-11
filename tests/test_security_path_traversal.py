@@ -44,7 +44,7 @@ class TestPathTraversal(unittest.TestCase):
         self.assertIsNone(result, "Result should be None for invalid UID")
         self.assertEqual(error, "Invalid UID format", "Error message should match")
 
-        # Verify that get_with_retry was NOT called
+        # Verify that get_with_retry was NOT called (preventing any network request)
         mock_get.assert_not_called()
 
 if __name__ == '__main__':
