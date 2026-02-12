@@ -5,8 +5,8 @@ import sys
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    print("Error: GEMINI_API_KEY environment variable not set.")
-    print("Please set it with: export GEMINI_API_KEY='your_key_here'")
+    print("Error: GEMINI_API_KEY environment variable is not set.")
+    print("Please set it before running this script: export GEMINI_API_KEY='your_key'")
     sys.exit(1)
 
 genai.configure(api_key=api_key)

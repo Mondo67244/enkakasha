@@ -3,7 +3,7 @@
 **Learning:** Even internal helper functions like scrapers can become critical vulnerabilities when exposed via API endpoints without sanitization. The assumption that `uid` is always numeric was not enforced in code.
 **Prevention:** Validate all inputs at the entry point (API) AND at the function level (Defense in Depth). Ensure file path construction uses sanitized components.
 
-## 2025-02-23 - Hardcoded API Key in Utility Script
-**Vulnerability:** A valid Google Gemini API Key was hardcoded in `Tools/Cleaners/list_models.py`.
-**Learning:** Developers often overlook security in "Tools" or "Scripts" folders, assuming they are not part of the production build. However, these files are part of the repository and expose secrets if committed.
-**Prevention:** Use environment variables for ALL secrets, even in quick utility scripts. Pre-commit hooks should scan for high-entropy strings or known key patterns.
+## 2026-02-12 - Hardcoded Secrets in Utility Scripts
+**Vulnerability:** Found a hardcoded Google Gemini API key in `Tools/Cleaners/list_models.py`. Utility scripts often bypass standard security reviews but are still part of the codebase and can leak secrets if committed.
+**Learning:** Secrets in "Tools" or "Scripts" folders are just as dangerous as in production code. Developers often use these for quick testing and forget to clean them up.
+**Prevention:** Use environment variables for ALL scripts, even temporary ones. Add pre-commit hooks to scan for secrets in all files, including non-source directories.
