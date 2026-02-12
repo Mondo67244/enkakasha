@@ -2,3 +2,8 @@
 **Vulnerability:** Found a Path Traversal vulnerability in `enka.fetch_player_data`. The `uid` argument was used directly to construct file paths (`output_root / f"{safe_nickname}_{uid}"`), allowing attackers to write files outside the intended directory using `../`.
 **Learning:** Even internal helper functions like scrapers can become critical vulnerabilities when exposed via API endpoints without sanitization. The assumption that `uid` is always numeric was not enforced in code.
 **Prevention:** Validate all inputs at the entry point (API) AND at the function level (Defense in Depth). Ensure file path construction uses sanitized components.
+
+## 2026-02-12 - Hardcoded Secrets in Utility Scripts
+**Vulnerability:** Found a hardcoded Google Gemini API key in `Tools/Cleaners/list_models.py`. Utility scripts often bypass standard security reviews but are still part of the codebase and can leak secrets if committed.
+**Learning:** Secrets in "Tools" or "Scripts" folders are just as dangerous as in production code. Developers often use these for quick testing and forget to clean them up.
+**Prevention:** Use environment variables for ALL scripts, even temporary ones. Add pre-commit hooks to scan for secrets in all files, including non-source directories.
