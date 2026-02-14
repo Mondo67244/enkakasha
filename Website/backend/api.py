@@ -3,9 +3,11 @@ import os
 import re
 from functools import partial
 from typing import Any, Dict, List, Optional
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import time
+from collections import defaultdict
 from google import genai
 import ollama as ollama_client
 import shutil
@@ -34,6 +36,33 @@ DATA_ROOT.mkdir(parents=True, exist_ok=True)
 SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 UID_PATTERN = re.compile(r"^\d{9,12}$")
 CALC_ID_PATTERN = re.compile(r"^[a-zA-Z0-9_-]+$")
+
+# --- Security: Rate Limiting ---
+class RateLimiter:
+    def __init__(self, requests_limit: int, time_window: int):
+        self.requests_limit = requests_limit
+        self.time_window = time_window
+        self.requests = defaultdict(list)
+
+    async def __call__(self, request: Request):
+        client_ip = request.client.host if request.client else "unknown"
+        current_time = time.time()
+
+        # Filter out old timestamps
+        self.requests[client_ip] = [
+            t for t in self.requests[client_ip]
+            if current_time - t < self.time_window
+        ]
+
+        if len(self.requests[client_ip]) >= self.requests_limit:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded")
+
+        self.requests[client_ip].append(current_time)
+
+# Instantiate limiters
+scan_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 scans/min
+ai_limiter = RateLimiter(requests_limit=10, time_window=60)   # 10 AI calls/min
+auth_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 auth attempts/min
 
 # CORS for Frontend
 app.add_middleware(
@@ -134,7 +163,7 @@ async def ollama_status():
             "error": str(e)
         }
 
-@app.post("/verify_key")
+@app.post("/verify_key", dependencies=[Depends(auth_limiter)])
 async def verify_key(request: VerifyKeyRequest):
     api_key = request.api_key.strip()
     if not api_key:
@@ -150,7 +179,7 @@ async def verify_key(request: VerifyKeyRequest):
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Invalid API Key: {str(e)}")
 
-@app.post("/scan/{uid}")
+@app.post("/scan/{uid}", dependencies=[Depends(scan_limiter)])
 async def scan_uid(uid: str):
     """
     Wraps enka.fetch_player_data.
@@ -232,7 +261,7 @@ async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/analyze")
+@app.post("/analyze", dependencies=[Depends(ai_limiter)])
 async def analyze_build(request: AnalyzeRequest):
     """
     1. Filters User Artifacts (based on target char).
@@ -344,7 +373,7 @@ async def analyze_build(request: AnalyzeRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 
-@app.post("/chat")
+@app.post("/chat", dependencies=[Depends(ai_limiter)])
 async def chat_build(request: ChatRequest):
     api_key = request.api_key
     user_data = request.user_data
