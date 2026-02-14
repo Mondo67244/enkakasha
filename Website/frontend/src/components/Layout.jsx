@@ -44,8 +44,8 @@ const Layout = ({ children }) => {
                             <img src={logo} alt="Enkakasha Logo" className="h-full w-full object-cover" />
                         </div>
                         <div>
-                            <h1 className="text-lg font-semibold text-[var(--text-strong)] font-display">Genshin AI Mentor</h1>
-                            <p className="text-xs text-[var(--text-muted)]">Build intelligence, refined</p>
+                            <h1 className="text-lg font-semibold text-[var(--text-strong)] font-display leading-tight">Genshin AI Mentor</h1>
+                            <p className="text-xs text-[var(--text-muted)] hidden sm:block">Build intelligence, refined</p>
                         </div>
                     </div>
                     <nav className="flex items-center gap-2">
@@ -74,8 +74,8 @@ const Layout = ({ children }) => {
                                         : 'text-[var(--text-muted)] hover:text-[var(--text-strong)] hover:bg-[var(--surface-muted)]'
                                         }`}
                                 >
-                                    <Icon size={16} />
-                                    <span className="font-medium">{item.label}</span>
+                                    <Icon size={18} />
+                                    <span className="font-medium hidden sm:block">{item.label}</span>
                                 </button>
                             );
                         })}
@@ -84,7 +84,7 @@ const Layout = ({ children }) => {
                         <button
                             onClick={toggleTheme}
                             aria-label="Toggle theme"
-                            className="ml-2 p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-muted)] transition"
+                            className="ml-1 sm:ml-2 p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-muted)] transition"
                         >
                             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                         </button>
@@ -92,7 +92,7 @@ const Layout = ({ children }) => {
                 </div>
             </header>
 
-            <main className="max-w-6xl mx-auto px-6 py-10">
+            <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
                 {children}
             </main>
         </div>

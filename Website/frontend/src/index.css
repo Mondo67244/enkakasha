@@ -66,16 +66,22 @@
    ═══════════════════════════════════════════════════════════════ */
 :root {
   --color-app-bg: #f5f3ef;
-  --color-surface: rgba(255, 255, 255, 0.75);
-  --color-surface-muted: rgba(255, 255, 255, 0.45);
-  --color-line: rgba(0, 0, 0, 0.08);
-  --color-text-strong: #1a1f2a;
-  --color-text: #4a5060;
-  --color-text-muted: #8a90a0;
-  --color-accent: #c4942e;
-  --color-accent-strong: #a57a20;
-  --color-accent-soft: rgba(196, 148, 46, 0.12);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  --color-surface: rgba(255, 255, 255, 0.9);
+  --color-surface-muted: rgba(255, 255, 255, 0.6);
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-text-strong: #111827;
+  /* Very dark gray for sharp text */
+  --color-text: #374151;
+  /* Dark gray for body text */
+  --color-text-muted: #6b7280;
+  --color-accent: #c0971a;
+  /* Yellow-500: Lighter, vivid gold */
+  --color-accent-strong: #ce9313;
+  /* Yellow-600: Strong gold */
+  --color-accent-soft: rgba(234, 179, 8, 0.12);
+  /* Soft gold background */
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  /* Lighter, cleaner shadow */
   --app-bg-image: url('/BG_Light.png');
   --app-bg-overlay: linear-gradient(rgba(245, 243, 239, 0.82), rgba(245, 243, 239, 0.82));
 }

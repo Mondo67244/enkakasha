@@ -1031,13 +1031,13 @@ const Mentor = () => {
                   <input
                     value={calcId}
                     onChange={(e) => setCalcId(e.target.value)}
-                    className="flex-1 p-2 bg-black/10 rounded-md"
+                    className="flex-1 p-2 bg-[var(--color-surface-muted)] rounded-md text-[var(--color-text-strong)]"
                     placeholder="Enter leaderboard ID"
                   />
                   <button
                     onClick={handleFetchContext}
                     disabled={loadingContext || !calcIdValid}
-                    className="px-3 py-2 rounded-md border disabled:opacity-50"
+                    className="px-3 py-2 rounded-md border border-[var(--color-line)] text-[var(--color-text-strong)] disabled:opacity-50"
                   >
                     {loadingContext ? (
                       <Loader2 className="w-4 h-4 animate-spin" />
@@ -1133,7 +1133,7 @@ const Mentor = () => {
                     <button
                       key={p.id}
                       onClick={() => setSelectedProvider(p.id)}
-                      className={`px-2 py-1 rounded-md ${selectedProvider === p.id ? "bg-[var(--color-accent-strong)] text-black" : "bg-black/10"}`}
+                      className={`px-2 py-1 rounded-md ${selectedProvider === p.id ? "bg-[var(--color-accent-strong)] text-black" : "bg-[var(--color-surface-muted)] text-[var(--color-text)]"}`}
                     >
                       {p.name}
                     </button>
@@ -1148,7 +1148,7 @@ const Mentor = () => {
                     <button
                       key={m.id}
                       onClick={() => setSelectedModel(m.id)}
-                      className={`px-2 py-1 rounded-md ${selectedModel === m.id ? "bg-[var(--color-accent-strong)] text-black" : "bg-black/10"}`}
+                      className={`px-2 py-1 rounded-md ${selectedModel === m.id ? "bg-[var(--color-accent-strong)] text-black" : "bg-[var(--color-surface-muted)] text-[var(--color-text)]"}`}
                     >
                       {m.name}
                     </button>
@@ -1161,7 +1161,7 @@ const Mentor = () => {
                 <textarea
                   value={buildNotes}
                   onChange={(e) => setBuildNotes(e.target.value)}
-                  className="w-full p-2 bg-black/10 rounded-md"
+                  className="w-full p-2 bg-[var(--color-surface-muted)] rounded-md text-[var(--color-text-strong)]"
                   placeholder="e.g. 140% ER, 4pc Gilded"
                 />
               </div>
@@ -1177,7 +1177,7 @@ const Mentor = () => {
               </button>
               <button
                 onClick={handleReset}
-                className="px-4 py-2 border rounded-md"
+                className="px-4 py-2 border border-[var(--color-line)] text-[var(--color-text-strong)] rounded-md"
               >
                 Reset
               </button>
@@ -1194,7 +1194,7 @@ const Mentor = () => {
                     <Loader2 className="animate-spin" /> {loadingMessage}
                   </div>
                 ) : analysis ? (
-                  <div className="prose prose-invert prose-sm max-w-none leading-relaxed">
+                  <div className="prose prose-sm max-w-none leading-relaxed dark:prose-invert">
                     <ReactMarkdown>{analysis}</ReactMarkdown>
                   </div>
                 ) : (

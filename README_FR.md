@@ -83,3 +83,9 @@ Ce code est **Open Source** pour une utilisation éducative et personnelle.
 *   Monétiser l'accès à une instance hébergée de ce projet sans l'accord explicite de l'auteur.
 
 Pour toute demande commerciale, veuillez contacter l'auteur principal.
+
+## Crédits & Contributions
+
+* **Mondo** : Créateur original, architecture frontend, Backend et algorithmes d'analyse.
+
+* **Byron voldigoad** : Refonte UI/UX, implémentation du système de thèmes (Light/Dark).
