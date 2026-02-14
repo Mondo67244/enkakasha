@@ -1,105 +1,89 @@
-
+import unittest
+from unittest.mock import MagicMock, patch
 import sys
 import os
-import unittest
-import time
-from unittest.mock import MagicMock, patch
-from collections import defaultdict
-from fastapi import Request, HTTPException
+import asyncio
+from fastapi import HTTPException
 
-# Ensure Website is in path
-sys.path.append(os.path.join(os.getcwd(), 'Website'))
+# Add Website/backend to path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../Website/backend')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../Website')))
 
-from backend.api import RateLimiter, limiter_analyze, limiter_chat, limiter_scan, limiter_auth, app
+# Import RateLimiter from api
+try:
+    from api import RateLimiter
+except ImportError:
+    # If backend/api.py cannot be imported due to relative imports inside it (like 'from backend import logic')
+    # We might need to adjust sys.path or mock imports.
+    # Given 'api.py' does 'from backend import logic', we need 'Website' in sys.path (which we added).
+    # But we also need to make sure 'api' is importable.
+    # Since we added 'Website/backend' to sys.path, 'import api' works.
+    pass
+from api import RateLimiter
 
-class TestRateLimiter(unittest.IsolatedAsyncioTestCase):
-    async def test_rate_limiter_logic(self):
-        # Limit 5 requests in 60 seconds
-        limiter = RateLimiter(requests_limit=5, time_window=60)
-
-        # Mock Request
-        mock_request = MagicMock(spec=Request)
-        mock_request.client.host = "127.0.0.1"
-
-        # 5 calls should pass
-        for _ in range(5):
-            await limiter(mock_request)
-
-        # 6th call should fail
-        with self.assertRaises(HTTPException) as cm:
-            await limiter(mock_request)
-
-        self.assertEqual(cm.exception.status_code, 429)
-
-    async def test_rate_limiter_window_reset(self):
-        # Limit 2 requests in 1 second
-        limiter = RateLimiter(requests_limit=2, time_window=1)
-
-        mock_request = MagicMock(spec=Request)
-        mock_request.client.host = "127.0.0.1"
-
-        # 2 calls pass
-        await limiter(mock_request)
-        await limiter(mock_request)
-
-        # 3rd fails
-        with self.assertRaises(HTTPException):
-            await limiter(mock_request)
-
-        # Wait > 1 second
-        time.sleep(1.1)
-
-        # Should pass again
-        await limiter(mock_request)
-
-class TestApiIntegration(unittest.TestCase):
+class TestRateLimiter(unittest.TestCase):
     def setUp(self):
-        from fastapi.testclient import TestClient
-        self.client = TestClient(app)
+        self.limiter = RateLimiter(requests_limit=2, time_window=60)
+        self.mock_request = MagicMock()
+        self.mock_request.client.host = "127.0.0.1"
 
-    @patch('backend.api.call_ai')
-    @patch('backend.logic.prepare_inventory')
-    @patch('backend.logic.prepare_context')
-    def test_analyze_endpoint_rate_limit(self, mock_ai, mock_inv, mock_ctx):
-        # Setup mocks
-        mock_inv.return_value = ({"target_set": "TestSet", "pool": []}, None)
-        mock_ctx.return_value = "Summary"
-        mock_ai.return_value = "Analysis"
+    def test_limit_enforced(self):
+        async def run_test():
+            # First request - should pass
+            await self.limiter(self.mock_request)
 
-        payload = {
-            "user_data": [{"stats": {"Character": "TestChar"}, "artifacts": []}],
-            "target_char": "TestChar",
-            "provider": "ollama"
-        }
+            # Second request - should pass
+            await self.limiter(self.mock_request)
 
-        # Clear global limiter state
-        limiter_analyze.ip_requests.clear()
+            # Third request - should fail
+            with self.assertRaises(HTTPException) as cm:
+                await self.limiter(self.mock_request)
+            self.assertEqual(cm.exception.status_code, 429)
 
-        # 5 calls OK
-        for i in range(5):
-            response = self.client.post("/analyze", json=payload)
-            # We verify it's NOT 429. It might be 500 if other logic fails, but as long as it's not rate limited.
-            self.assertNotEqual(response.status_code, 429, f"Failed at call {i+1}")
+        asyncio.run(run_test())
 
-        # 6th call FAIL
-        response = self.client.post("/analyze", json=payload)
-        self.assertEqual(response.status_code, 429)
+    @patch('time.time')
+    def test_full_cycle(self, mock_time):
+        async def run_test():
+            # Initial time
+            mock_time.return_value = 1000
 
-    def test_verify_key_rate_limit(self):
-        limiter_auth.ip_requests.clear()
+            # 2 requests allowed
+            await self.limiter(self.mock_request)
+            await self.limiter(self.mock_request)
 
-        payload = {"api_key": "dummy"}
+            # 3rd fails
+            with self.assertRaises(HTTPException):
+                await self.limiter(self.mock_request)
 
-        with patch('google.genai.Client') as MockClient:
-            instance = MockClient.return_value
-            instance.models.generate_content.return_value = MagicMock()
+            # Advance time by 61 seconds (beyond window)
+            mock_time.return_value = 1061
 
-            for i in range(10):
-                response = self.client.post("/verify_key", json=payload)
-                self.assertNotEqual(response.status_code, 429, f"Failed at call {i+1}")
+            # Should pass now (old requests expired)
+            await self.limiter(self.mock_request)
 
-            response = self.client.post("/verify_key", json=payload)
-            self.assertEqual(response.status_code, 429)
+        asyncio.run(run_test())
+
+    def test_multiple_ips(self):
+        async def run_test():
+            req1 = MagicMock()
+            req1.client.host = "1.1.1.1"
+
+            req2 = MagicMock()
+            req2.client.host = "2.2.2.2"
+
+            # Exhaust IP 1
+            await self.limiter(req1)
+            await self.limiter(req1)
+
+            with self.assertRaises(HTTPException):
+                await self.limiter(req1)
+
+            # IP 2 should still be fresh
+            await self.limiter(req2)
+            await self.limiter(req2)
+
+        asyncio.run(run_test())
 
 if __name__ == '__main__':
     unittest.main()

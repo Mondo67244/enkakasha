@@ -8,7 +8,7 @@
 **Learning:** Secrets in "Tools" or "Scripts" folders are just as dangerous as in production code. Developers often use these for quick testing and forget to clean them up.
 **Prevention:** Use environment variables for ALL scripts, even temporary ones. Add pre-commit hooks to scan for secrets in all files, including non-source directories.
 
-## 2026-06-25 - Memory Leak in In-Memory Rate Limiter
-**Vulnerability:** The initial implementation of an in-memory Rate Limiter used a `defaultdict(list)` that grew indefinitely with every new client IP, leading to a potential Denial of Service (DoS) via Out-Of-Memory (OOM) crash.
-**Learning:** Simple "security fixes" like rate limiting can introduce new vulnerabilities (DoS) if resource consumption (memory) is not bounded. Security code must itself be secure and resource-efficient.
-**Prevention:** Always implement cleanup mechanisms or bounds (e.g., LRU cache, fixed size, periodic purge) for any in-memory state tracking user data.
+## 2026-03-01 - Second-Order Path Traversal in Akasha Scraper
+**Vulnerability:** Found a Second-Order Path Traversal vulnerability in `akasha.fetch_leaderboard`. The character name returned by the external API was used directly to create a filename (`f"{char_name}_dataset.csv"`), allowing an attacker controlling the upstream API (or a malicious proxy) to write files to arbitrary locations.
+**Learning:** Data from external APIs should be treated as untrusted, just like user input. "Trusted" sources can be compromised or return unexpected data.
+**Prevention:** Always sanitize data from external sources before using it in sensitive operations like file system access. Use strict allow-lists (e.g., alphanumeric only) for filenames.
