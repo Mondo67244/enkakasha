@@ -1,9 +1,11 @@
 import sys
 import os
 import re
+import time
 from functools import partial
 from typing import Any, Dict, List, Optional
-from fastapi import FastAPI, HTTPException
+from collections import defaultdict
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from google import genai
@@ -28,6 +30,46 @@ import leaderboard
 from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
+
+# --- Security: Rate Limiter ---
+class RateLimiter:
+    """
+    Simple in-memory rate limiter using a fixed window algorithm.
+    """
+    def __init__(self, requests_limit: int, time_window: int):
+        self.requests_limit = requests_limit
+        self.time_window = time_window # in seconds
+        self.ip_requests = defaultdict(list)
+
+    async def __call__(self, request: Request):
+        client_ip = request.client.host
+        current_time = time.time()
+
+        # Filter out requests older than the time window
+        self.ip_requests[client_ip] = [
+            timestamp for timestamp in self.ip_requests[client_ip]
+            if current_time - timestamp < self.time_window
+        ]
+
+        # Check if limit is reached
+        if len(self.ip_requests[client_ip]) >= self.requests_limit:
+            raise HTTPException(
+                status_code=429,
+                detail=f"Rate limit exceeded. Try again in {self.time_window} seconds."
+            )
+
+        # Add current request
+        self.ip_requests[client_ip].append(current_time)
+
+        # Simple cleanup to prevent memory leaks
+        if len(self.ip_requests) > 5000:
+            self.ip_requests.clear()
+
+# Rate Limiters
+limiter_analyze = RateLimiter(requests_limit=5, time_window=60)
+limiter_chat = RateLimiter(requests_limit=10, time_window=60)
+limiter_scan = RateLimiter(requests_limit=10, time_window=60)
+limiter_auth = RateLimiter(requests_limit=10, time_window=60)
 
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
 DATA_ROOT.mkdir(parents=True, exist_ok=True)
@@ -134,7 +176,7 @@ async def ollama_status():
             "error": str(e)
         }
 
-@app.post("/verify_key")
+@app.post("/verify_key", dependencies=[Depends(limiter_auth)])
 async def verify_key(request: VerifyKeyRequest):
     api_key = request.api_key.strip()
     if not api_key:
@@ -150,7 +192,7 @@ async def verify_key(request: VerifyKeyRequest):
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Invalid API Key: {str(e)}")
 
-@app.post("/scan/{uid}")
+@app.post("/scan/{uid}", dependencies=[Depends(limiter_scan)])
 async def scan_uid(uid: str):
     """
     Wraps enka.fetch_player_data.
@@ -232,7 +274,7 @@ async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/analyze")
+@app.post("/analyze", dependencies=[Depends(limiter_analyze)])
 async def analyze_build(request: AnalyzeRequest):
     """
     1. Filters User Artifacts (based on target char).
@@ -344,7 +386,7 @@ async def analyze_build(request: AnalyzeRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 
-@app.post("/chat")
+@app.post("/chat", dependencies=[Depends(limiter_chat)])
 async def chat_build(request: ChatRequest):
     api_key = request.api_key
     user_data = request.user_data
