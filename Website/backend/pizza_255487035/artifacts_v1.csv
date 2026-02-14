@@ -1,0 +1,11 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,ATK%,8.2,Crit DMG,25.7,ATK,19.0,Crit Rate,5.8,37.3
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,Crit Rate,14.4,ATK%,9.3,Crit DMG,11.7,EM,21.0,40.5
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,EM,75.0,HP%,5.3,Crit DMG,14.0,Crit Rate,5.4,24.8
+Mavuika,Goblet,Silken Moon's Serenade,+20,Pyro DMG%,46.6,Crit Rate,9.7,Crit DMG,20.2,HP,239.0,ATK,16.0,39.6
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ATK%,15.2,ER%,6.5,Crit Rate,6.2,ATK,35.0,12.4
+Columbina,Flower,Silken Moon's Serenade,+20,HP,4780.0,Crit Rate,10.9,HP%,15.2,EM,16.0,Crit DMG,11.7,33.5
+Columbina,Plume,Silken Moon's Serenade,+20,ATK,311.0,HP%,4.1,ER%,10.4,Crit Rate,10.5,Crit DMG,13.2,34.2
+Columbina,Sands,Marechaussee Hunter,+20,HP%,46.6,DEF,21.0,ER%,9.1,Crit Rate,8.9,Crit DMG,20.2,38.0
+Columbina,Goblet,Silken Moon's Serenade,+20,HP%,46.6,Crit Rate,6.6,HP,239.0,Crit DMG,28.7,ATK%,4.1,41.9
+Columbina,Circlet,Silken Moon's Serenade,+20,Crit DMG,62.2,DEF,19.0,Crit Rate,8.9,ER%,9.1,HP,568.0,17.8

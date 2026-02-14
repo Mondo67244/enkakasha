@@ -1,0 +1,3 @@
+Character,Level,HP,ATK,DEF,EM,ER%,Crit_Rate%,Crit_DMG%,Element,Elem_Bonus%,Total_CV,Weapon_Refine
+Mavuika,100,19169,2496,848,96,106.5,57.6,222.1,Pyro,46.6,154.6,5
+Columbina,100,41857,997,591,16,148.5,70.1,274.2,N/A,0.0,165.4,5

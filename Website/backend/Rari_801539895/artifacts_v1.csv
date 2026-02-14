@@ -1,0 +1,11 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit DMG,21.0,Crit Rate,11.3,ATK%,11.1,DEF,16.0,43.6
+Keqing,Plume,Thundering Fury,+20,ATK,311.0,Crit DMG,20.2,Crit Rate,14.8,HP%,5.8,ATK%,4.1,49.8
+Keqing,Sands,Gladiator's Finale,+20,ATK%,46.6,DEF%,6.6,Crit Rate,13.6,Crit DMG,21.0,DEF,16.0,48.2
+Keqing,Goblet,Thundering Fury,+20,Electro DMG%,46.6,Crit Rate,10.1,Crit DMG,19.4,EM,16.0,ATK%,4.1,39.6
+Keqing,Circlet,Gladiator's Finale,+20,Crit Rate,31.1,ATK%,20.4,HP,269.0,Crit DMG,22.5,EM,16.0,22.5
+Arlecchino,Flower,Thundering Fury,+20,HP,4780.0,Crit Rate,7.4,ATK%,9.3,Crit DMG,26.4,EM,21.0,41.2
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit Rate,12.1,Crit DMG,21.0,EM,19.0,ATK%,5.3,45.2
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,DEF%,7.3,Crit DMG,19.4,Crit Rate,12.8,HP,269.0,45.0
+Arlecchino,Goblet,Fragment of Harmonic Whimsy,+20,Pyro DMG%,46.6,Crit Rate,14.0,Crit DMG,13.2,ATK%,10.5,EM,23.0,41.2
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,DEF,23.0,HP%,11.7,Crit Rate,10.5,ATK%,14.6,21.0

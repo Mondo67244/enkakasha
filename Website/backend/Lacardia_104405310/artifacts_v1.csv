@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,11.1,Crit DMG,34.2,Crit Rate,3.1,ER%,5.2,40.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP%,5.8,Crit Rate,9.3,Crit DMG,25.7,HP,299.0,44.3
+Furina,Sands,Set_15026,+20,HP%,46.6,HP,209.0,DEF,21.0,Crit DMG,7.8,Crit Rate,22.2,52.2
+Furina,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,Crit Rate,6.6,Crit DMG,22.5,HP%,10.5,ER%,5.8,35.7
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,14.0,Crit DMG,27.2,HP,299.0,ER%,6.5,27.2
+Keqing,Flower,Marechaussee Hunter,+20,HP,4780.0,EM,40.0,Crit DMG,13.2,Crit Rate,13.2,ATK,14.0,39.6
+Keqing,Plume,Marechaussee Hunter,+20,ATK,311.0,EM,21.0,ATK%,11.1,Crit DMG,21.0,Crit Rate,7.4,35.8
+Keqing,Sands,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,3.1,Crit DMG,28.8,DEF,37.0,EM,40.0,35.0
+Keqing,Goblet,Marechaussee Hunter,+20,ATK%,46.6,HP,209.0,Crit DMG,12.4,Crit Rate,11.3,ER%,11.7,35.0
+Keqing,Circlet,Blizzard Strayer,+20,Crit DMG,62.2,Crit Rate,3.1,ATK%,21.6,DEF,16.0,ATK,53.0,6.2
+Chiori,Flower,Wanderer's Troupe,+20,HP,4780.0,DEF%,11.7,EM,23.0,Crit DMG,21.0,Crit Rate,8.6,38.2
+Chiori,Plume,Wanderer's Troupe,+20,ATK,311.0,DEF%,13.9,Crit Rate,7.4,DEF,44.0,Crit DMG,21.0,35.8
+Chiori,Sands,Marechaussee Hunter,+20,DEF%,58.3,ATK%,11.7,Crit Rate,15.2,HP,209.0,Crit DMG,5.4,35.8
+Chiori,Goblet,Wanderer's Troupe,+20,Geo DMG%,46.6,Crit DMG,20.2,EM,19.0,Crit Rate,14.0,ATK,18.0,48.2
+Chiori,Circlet,Wanderer's Troupe,+20,Crit DMG,62.2,ATK,19.0,HP,269.0,Crit Rate,9.3,ER%,19.4,18.6
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit DMG,19.4,Crit Rate,5.4,HP%,10.5,ER%,4.5,30.2
+Columbina,Plume,Set_15043,+20,ATK,311.0,HP%,19.8,Crit DMG,6.2,Crit Rate,5.4,DEF,23.0,17.0
+Columbina,Sands,Set_15043,+20,HP%,46.6,Crit Rate,6.6,Crit DMG,13.2,HP,807.0,DEF,37.0,26.4
+Columbina,Goblet,Golden Troupe,+20,HP%,46.6,Crit DMG,13.2,ATK%,5.8,Crit Rate,13.2,EM,16.0,39.6
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,HP%,4.7,Crit Rate,12.1,DEF,37.0,EM,35.0,24.2
+Wanderer,Flower,Desert Pavilion Chronicle,+20,HP,4780.0,ATK,14.0,Crit Rate,16.7,ATK%,8.7,Crit DMG,7.0,40.4
+Wanderer,Plume,Desert Pavilion Chronicle,+20,ATK,311.0,Crit DMG,5.4,ATK%,9.9,Crit Rate,15.9,EM,21.0,37.2
+Wanderer,Sands,Emblem of Severed Fate,+20,ATK%,46.6,DEF%,5.8,Crit DMG,26.4,Crit Rate,7.8,ATK,37.0,42.0
+Wanderer,Goblet,Desert Pavilion Chronicle,+20,Anemo DMG%,46.6,HP%,10.5,Crit DMG,26.4,ATK,14.0,Crit Rate,3.1,32.6
+Wanderer,Circlet,Desert Pavilion Chronicle,+20,Crit DMG,62.2,HP,239.0,Crit Rate,13.2,EM,23.0,ATK%,9.9,26.4
+Nahida,Flower,Deepwood Memories,+20,HP,4780.0,ATK%,16.9,Crit DMG,14.8,EM,21.0,Crit Rate,9.3,33.4
+Nahida,Plume,Deepwood Memories,+20,ATK,311.0,HP,239.0,Crit Rate,6.2,Crit DMG,14.0,EM,77.0,26.4
+Nahida,Sands,Gladiator's Finale,+20,EM,187.0,HP,269.0,Crit DMG,5.4,Crit Rate,15.9,ER%,5.8,37.2
+Nahida,Goblet,Deepwood Memories,+20,Dendro DMG%,46.6,HP,209.0,Crit DMG,29.5,EM,23.0,ER%,11.0,29.5
+Nahida,Circlet,Deepwood Memories,+20,Crit Rate,31.1,ATK%,5.3,Crit DMG,21.8,ER%,19.4,ATK,14.0,21.8
+Qiqi,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit DMG,13.2,ER%,4.5,Crit Rate,11.3,DEF,19.0,35.8
+Qiqi,Plume,Marechaussee Hunter,+20,ATK,311.0,ATK%,20.4,Crit DMG,7.8,Crit Rate,6.2,HP%,4.1,20.2
+Qiqi,Sands,Tenacity of the Millelith,+20,ATK%,46.6,Crit DMG,22.5,HP%,4.7,ATK,35.0,Crit Rate,7.0,36.5
+Qiqi,Goblet,Marechaussee Hunter,+20,Physical DMG%,58.3,ER%,11.7,Crit DMG,15.5,ATK,39.0,DEF,39.0,15.5
+Qiqi,Circlet,Marechaussee Hunter,+20,Crit Rate,31.1,ER%,5.2,DEF,23.0,ATK,47.0,Crit DMG,21.0,21.0
+Zhongli,Flower,Pale Flame,+20,HP,4780.0,Crit DMG,20.2,Crit Rate,3.5,ATK%,5.3,HP%,16.3,27.2
+Zhongli,Plume,Pale Flame,+20,ATK,311.0,HP%,24.5,ATK%,4.1,Crit Rate,3.5,DEF,19.0,7.0
+Zhongli,Sands,Pale Flame,+20,HP%,46.6,Crit Rate,6.2,Crit DMG,21.0,ATK,33.0,HP,209.0,33.4
+Zhongli,Goblet,Pale Flame,+20,HP%,46.6,HP,657.0,DEF,32.0,Crit Rate,3.9,Crit DMG,22.5,30.3
+Zhongli,Circlet,Marechaussee Hunter,+20,HP%,46.6,Crit Rate,13.2,HP,538.0,ER%,12.3,Crit DMG,6.2,32.6
+Yelan,Flower,Vourukasha's Glow,+20,HP,4780.0,Crit Rate,9.7,HP%,5.8,Crit DMG,26.4,DEF,23.0,45.8
+Yelan,Plume,Tenacity of the Millelith,+20,ATK,311.0,Crit DMG,18.7,ER%,4.5,Crit Rate,14.0,HP,299.0,46.7
+Yelan,Sands,Tenacity of the Millelith,+20,HP%,46.6,Crit DMG,6.2,ER%,21.4,EM,23.0,Crit Rate,8.9,24.0
+Yelan,Goblet,Vourukasha's Glow,+20,Hydro DMG%,46.6,Crit DMG,24.9,ER%,11.0,Crit Rate,3.1,HP%,8.7,31.1
+Yelan,Circlet,Golden Troupe,+20,Crit Rate,31.1,ER%,19.4,HP,269.0,HP%,5.8,Crit DMG,19.4,19.4
+Jean,Flower,Heart of Depth,+20,HP,4780.0,Crit DMG,5.4,ER%,13.0,ATK%,15.7,DEF,44.0,5.4
+Jean,Plume,Gladiator's Finale,+20,ATK,311.0,Crit DMG,6.2,ER%,5.2,Crit Rate,10.1,ATK%,20.4,26.4
+Jean,Sands,Set_15026,+20,ER%,51.8,Crit Rate,6.2,Crit DMG,13.2,ATK%,10.5,ATK,35.0,25.6
+Jean,Goblet,Thundersoother,+20,ATK%,46.6,Crit Rate,3.1,HP,538.0,Crit DMG,21.0,ER%,16.2,27.2
+Jean,Circlet,Gladiator's Finale,+20,ATK%,46.6,Crit DMG,14.8,ATK,19.0,ER%,10.4,EM,61.0,14.8
+Xilonen,Flower,Instructor,+16,HP,3571.0,ER%,4.1,EM,52.0,Crit Rate,5.6,DEF,17.0,11.2
+Xilonen,Plume,Instructor,+16,ATK,232.0,ATK%,4.7,HP,335.0,EM,28.0,DEF%,9.3,0.0
+Xilonen,Sands,Golden Troupe,+20,DEF%,58.3,Crit DMG,7.0,ATK%,10.5,Crit Rate,7.0,ER%,17.5,21.0
+Xilonen,Goblet,Instructor,+16,DEF%,43.5,HP,215.0,HP%,8.9,EM,28.0,ATK,28.0,0.0
+Xilonen,Circlet,Instructor,+16,DEF%,43.5,HP%,8.9,HP,239.0,ATK%,7.9,Crit DMG,5.6,5.6
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit DMG,25.7,Crit Rate,3.5,EM,42.0,ATK%,5.8,32.7
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,Crit DMG,31.1,Crit Rate,3.5,ER%,11.0,ATK%,5.8,38.1
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,ATK,19.0,EM,40.0,Crit DMG,12.4,Crit Rate,8.6,29.6
+Mavuika,Goblet,Scroll of the Hero of Cinder City,+20,Pyro DMG%,46.6,ER%,5.2,Crit DMG,11.7,Crit Rate,5.4,EM,63.0,22.5
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,EM,37.0,HP,478.0,ER%,9.7,Crit Rate,8.9,17.8

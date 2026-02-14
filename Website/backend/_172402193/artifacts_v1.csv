@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,ATK,19.0,Crit DMG,24.1,Crit Rate,10.9,ATK%,5.8,45.9
+Keqing,Plume,Brave Heart,+20,ATK,311.0,EM,16.0,ATK%,5.8,Crit Rate,14.0,Crit DMG,18.7,46.7
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,HP%,8.2,EM,23.0,Crit DMG,29.5,Crit Rate,5.8,41.1
+Keqing,Goblet,Noblesse Oblige,+20,Electro DMG%,46.6,ATK%,5.3,ATK,39.0,Crit Rate,3.9,Crit DMG,35.0,42.8
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,ATK%,15.2,Crit DMG,21.8,HP%,5.8,ATK,14.0,21.8
+Xilonen,Flower,Marechaussee Hunter,+20,HP,4780.0,ER%,14.2,DEF%,24.1,EM,21.0,ATK%,5.8,0.0
+Xilonen,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,EM,23.0,HP,299.0,ER%,19.4,DEF%,21.1,0.0
+Xilonen,Sands,Scroll of the Hero of Cinder City,+20,DEF%,58.3,HP,299.0,ER%,12.3,ATK%,20.4,ATK,19.0,0.0
+Xilonen,Goblet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,HP%,5.8,ER%,4.5,DEF,83.0,Crit Rate,5.8,11.6
+Xilonen,Circlet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,DEF,35.0,HP%,5.8,Crit DMG,27.2,Crit Rate,6.6,40.4
+Furina,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,16.7,HP%,11.1,EM,21.0,DEF,23.0,33.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,7.0,Crit Rate,11.7,ER%,5.8,HP%,14.6,30.4
+Furina,Sands,Golden Troupe,+20,ER%,51.8,DEF,21.0,HP,269.0,Crit Rate,7.4,Crit DMG,32.6,47.4
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,Crit DMG,21.0,Crit Rate,7.0,EM,44.0,DEF%,13.9,35.0
+Furina,Circlet,Retracing Bolide,+20,Crit DMG,62.2,Crit Rate,10.1,DEF,16.0,EM,23.0,HP%,22.7,20.2
+Durin,Flower,Set_15044,+20,HP,4780.0,ER%,5.2,Crit Rate,9.7,ATK%,16.9,ATK,19.0,19.4
+Durin,Plume,Set_15044,+20,ATK,311.0,ER%,9.1,ATK%,21.6,Crit Rate,3.5,HP%,11.7,7.0
+Durin,Sands,Set_15044,+20,ATK%,46.6,ATK,56.0,EM,33.0,ER%,11.7,DEF%,5.1,0.0
+Durin,Goblet,Gladiator's Finale,+20,ATK%,46.6,ER%,16.8,Crit DMG,6.2,ATK,35.0,Crit Rate,9.7,25.6
+Durin,Circlet,Set_15044,+20,ATK%,46.6,HP,448.0,Crit Rate,3.5,ER%,11.7,ATK,45.0,7.0
+Ineffa,Flower,Gladiator's Finale,+20,HP,4780.0,Crit Rate,9.3,Crit DMG,14.0,ATK%,11.1,EM,23.0,32.6
+Ineffa,Plume,,+20,ATK,311.0,Crit Rate,9.7,ATK%,10.5,Crit DMG,13.2,EM,23.0,32.6
+Ineffa,Sands,,+20,ATK%,46.6,ER%,11.0,Crit Rate,6.6,Crit DMG,28.0,HP,269.0,41.2
+Ineffa,Goblet,Thundering Fury,+20,ATK%,46.6,HP,478.0,EM,21.0,Crit Rate,7.4,Crit DMG,26.4,41.2
+Ineffa,Circlet,Gladiator's Finale,+20,Crit DMG,62.2,DEF,21.0,ER%,5.8,ATK%,10.5,Crit Rate,17.1,34.2
+Nahida,Flower,Deepwood Memories,+20,HP,4780.0,Crit Rate,10.5,ER%,4.5,ATK%,11.1,Crit DMG,14.8,35.8
+Nahida,Plume,Deepwood Memories,+20,ATK,311.0,HP%,4.7,Crit Rate,10.9,EM,47.0,Crit DMG,14.8,36.6
+Nahida,Sands,Deepwood Memories,+20,EM,187.0,Crit Rate,8.9,Crit DMG,27.2,HP,239.0,HP%,4.7,45.0
+Nahida,Goblet,Brave Heart,+20,Dendro DMG%,46.6,ATK%,11.7,Crit Rate,9.3,ER%,4.5,Crit DMG,21.8,40.4
+Nahida,Circlet,Deepwood Memories,+20,Crit DMG,62.2,Crit Rate,6.2,EM,68.0,ER%,16.2,ATK%,5.8,12.4
+Fischl,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,25.6,Crit Rate,6.2,ATK%,11.1,ER%,5.2,38.0
+Fischl,Plume,Golden Troupe,+20,ATK,311.0,HP,299.0,Crit Rate,10.1,ATK%,4.7,Crit DMG,21.0,41.2
+Fischl,Sands,Golden Troupe,+20,ATK%,46.6,Crit Rate,11.3,Crit DMG,20.2,DEF,16.0,ATK,16.0,42.8
+Fischl,Goblet,Brave Heart,+20,Electro DMG%,46.6,ATK%,4.1,ATK,33.0,Crit DMG,21.0,Crit Rate,9.7,40.4
+Fischl,Circlet,Golden Troupe,+20,Crit Rate,31.1,DEF,32.0,Crit DMG,14.8,ATK%,14.0,ATK,33.0,14.8
+Chevreuse,Flower,Noblesse Oblige,+20,HP,4780.0,HP%,5.3,ATK,35.0,DEF,37.0,ER%,17.5,0.0
+Chevreuse,Plume,Crimson Witch of Flames,+20,ATK,311.0,HP,239.0,Crit DMG,7.8,HP%,20.4,Crit Rate,7.0,21.8
+Chevreuse,Sands,Noblesse Oblige,+20,HP%,46.6,EM,37.0,HP,538.0,ER%,12.3,ATK,31.0,0.0
+Chevreuse,Goblet,Noblesse Oblige,+20,HP%,46.6,HP,448.0,ER%,18.8,ATK,37.0,DEF,42.0,0.0
+Chevreuse,Circlet,Noblesse Oblige,+20,HP%,46.6,Crit DMG,27.2,HP,538.0,ER%,5.2,ATK%,5.8,27.2
+Yelan,Flower,Pale Flame,+20,HP,4780.0,ATK,16.0,DEF%,7.3,Crit DMG,35.0,Crit Rate,5.8,46.6
+Yelan,Plume,Tenacity of the Millelith,+20,ATK,311.0,Crit DMG,7.0,ER%,12.3,EM,21.0,Crit Rate,13.6,34.2
+Yelan,Sands,Tenacity of the Millelith,+20,HP%,46.6,Crit Rate,5.8,Crit DMG,26.4,DEF,37.0,ATK%,4.7,38.0
+Yelan,Goblet,Brave Heart,+20,Hydro DMG%,46.6,Crit DMG,20.2,Crit Rate,3.5,HP%,15.2,DEF,46.0,27.2
+Yelan,Circlet,Pale Flame,+20,Crit Rate,31.1,ATK,51.0,Crit DMG,20.2,HP,239.0,HP%,5.8,20.2
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit Rate,9.3,ATK%,11.1,HP%,5.3,Crit DMG,14.0,32.6
+Columbina,Plume,Set_15043,+20,ATK,311.0,HP%,11.7,Crit DMG,14.0,ER%,6.5,Crit Rate,9.7,33.4
+Columbina,Sands,Brave Heart,+20,HP%,46.6,ER%,16.2,Crit DMG,21.0,ATK%,4.1,Crit Rate,5.8,32.6
+Columbina,Goblet,Brave Heart,+20,HP%,46.6,HP,568.0,ER%,4.5,Crit DMG,20.2,Crit Rate,9.3,38.8
+Columbina,Circlet,Golden Troupe,+20,Crit DMG,62.2,ER%,15.5,HP%,9.9,DEF,42.0,Crit Rate,3.5,7.0
+Diluc,Flower,Brave Heart,+20,HP,4780.0,ATK%,19.2,ATK,18.0,Crit Rate,9.7,Crit DMG,7.0,26.4
+Diluc,Plume,Brave Heart,+20,ATK,311.0,ATK%,16.3,DEF,44.0,Crit Rate,3.5,Crit DMG,21.8,28.8
+Diluc,Sands,Brave Heart,+20,ATK%,46.6,Crit DMG,18.7,Crit Rate,7.4,DEF,53.0,ER%,5.8,33.5
+Diluc,Goblet,Thundering Fury,+20,Electro DMG%,46.6,Crit Rate,3.9,ATK,18.0,DEF%,18.2,Crit DMG,28.0,35.8
+Diluc,Circlet,Brave Heart,+20,Crit DMG,62.2,HP,538.0,ATK,16.0,ATK%,15.2,Crit Rate,10.5,21.0
+Klee,Flower,Set_15044,+20,HP,4780.0,EM,23.0,Crit Rate,3.5,DEF,44.0,Crit DMG,28.0,35.0
+Klee,Plume,Set_15044,+20,ATK,311.0,HP%,4.1,HP,478.0,Crit Rate,10.5,Crit DMG,14.0,35.0
+Klee,Sands,Set_15044,+20,ATK%,46.6,HP,209.0,EM,23.0,Crit Rate,6.2,Crit DMG,24.1,36.5
+Klee,Goblet,Golden Troupe,+20,Pyro DMG%,46.6,DEF%,10.9,ATK%,4.1,Crit DMG,5.4,Crit Rate,12.8,31.0
+Klee,Circlet,Set_15044,+20,Crit Rate,31.1,ATK,33.0,DEF,23.0,Crit DMG,18.7,HP,478.0,18.7

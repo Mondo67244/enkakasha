@@ -1,0 +1,41 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,9.3,Crit DMG,15.5,DEF%,5.8,Crit Rate,14.0,43.5
+Furina,Plume,Finale of the Deep Galleries,+20,ATK,311.0,Crit DMG,13.2,HP%,9.9,ER%,4.5,Crit Rate,15.2,43.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,EM,21.0,ER%,5.2,Crit DMG,21.8,Crit Rate,14.0,49.8
+Furina,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,Crit Rate,10.1,Crit DMG,10.9,ATK%,4.7,HP%,15.2,31.1
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,HP%,4.1,Crit Rate,21.0,HP,209.0,ATK,14.0,42.0
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,19.4,ATK%,8.7,DEF%,6.6,32.6
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,ATK%,11.1,ER%,6.5,Crit Rate,12.8,Crit DMG,11.7,37.3
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,ER%,10.4,Crit Rate,5.8,EM,23.0,Crit DMG,23.3,34.9
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,ER%,5.2,Crit Rate,6.2,Crit DMG,21.0,ATK%,9.3,33.4
+Skirk,Circlet,Emblem of Severed Fate,+20,Crit DMG,62.2,EM,37.0,Crit Rate,12.8,DEF,19.0,ATK%,11.7,25.6
+Ineffa,Flower,Silken Moon's Serenade,+20,HP,4780.0,EM,19.0,Crit DMG,13.2,Crit Rate,12.1,DEF%,5.1,37.4
+Ineffa,Plume,Silken Moon's Serenade,+20,ATK,311.0,Crit DMG,28.0,EM,44.0,ER%,10.4,Crit Rate,3.1,34.2
+Ineffa,Sands,Silken Moon's Serenade,+20,ATK%,46.6,Crit Rate,6.2,ER%,4.5,HP%,4.1,Crit DMG,24.1,36.5
+Ineffa,Goblet,Fragment of Harmonic Whimsy,+20,ATK%,46.6,ATK,18.0,Crit Rate,15.9,HP%,4.7,Crit DMG,14.0,45.8
+Ineffa,Circlet,Silken Moon's Serenade,+20,Crit Rate,31.1,Crit DMG,20.2,ER%,10.4,ATK,27.0,ATK%,5.8,20.2
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit Rate,10.1,DEF%,13.1,ER%,4.5,Crit DMG,21.0,41.2
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,DEF,21.0,Crit DMG,28.8,HP,269.0,Crit Rate,10.5,49.8
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,EM,42.0,Crit DMG,21.0,Crit Rate,9.3,DEF,23.0,39.6
+Arlecchino,Goblet,Long Night's Oath,+20,Pyro DMG%,46.6,ATK%,15.2,ATK,18.0,Crit Rate,7.4,Crit DMG,19.4,34.2
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit Rate,31.1,ATK%,16.3,Crit DMG,15.5,EM,63.0,ATK,16.0,15.5
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit DMG,14.0,ATK,37.0,Crit Rate,7.0,HP%,14.6,28.0
+Columbina,Plume,Set_15043,+20,ATK,311.0,Crit Rate,14.0,DEF%,5.8,ER%,9.7,Crit DMG,14.8,42.8
+Columbina,Sands,Set_15043,+20,HP%,46.6,Crit DMG,19.4,DEF,51.0,ATK%,5.8,Crit Rate,7.0,33.4
+Columbina,Goblet,Set_15043,+20,HP%,46.6,ATK%,4.7,HP,807.0,Crit Rate,7.8,Crit DMG,14.0,29.6
+Columbina,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,HP%,13.4,DEF%,5.1,Crit Rate,14.0,ER%,5.2,28.0
+Citlali,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ATK,18.0,ER%,16.8,EM,37.0,ATK%,10.5,0.0
+Citlali,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit Rate,3.9,HP%,10.5,HP,299.0,ER%,27.9,7.8
+Citlali,Sands,Scroll of the Hero of Cinder City,+20,EM,187.0,Crit Rate,2.7,ATK,31.0,ER%,13.0,DEF,83.0,5.4
+Citlali,Goblet,Golden Troupe,+20,EM,187.0,ATK%,11.1,Crit DMG,15.5,ER%,23.3,Crit Rate,3.9,23.3
+Citlali,Circlet,Scroll of the Hero of Cinder City,+20,EM,187.0,Crit DMG,7.8,ATK,49.0,DEF,46.0,HP,508.0,7.8
+Clorinde,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,ATK%,9.9,ER%,5.2,Crit DMG,31.9,DEF%,7.3,31.9
+Clorinde,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,ER%,10.4,ATK%,14.0,Crit Rate,6.2,Crit DMG,13.2,25.6
+Clorinde,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,DEF,42.0,Crit Rate,8.9,HP,239.0,Crit DMG,20.2,38.0
+Clorinde,Goblet,Fragment of Harmonic Whimsy,+20,Electro DMG%,46.6,Crit Rate,7.4,DEF,42.0,DEF%,7.3,Crit DMG,21.8,36.6
+Clorinde,Circlet,Heart of Depth,+20,Crit Rate,31.1,HP,299.0,ATK%,5.8,Crit DMG,35.0,DEF,16.0,35.0
+Durin,Flower,Instructor,+16,HP,3571.0,ATK,25.0,DEF,35.0,Crit Rate,3.1,ER%,9.8,6.2
+Durin,Plume,Instructor,+16,ATK,232.0,HP%,4.7,HP,454.0,EM,19.0,ER%,8.8,0.0
+Durin,Sands,Instructor,+16,ER%,38.7,Crit Rate,2.5,HP,406.0,ATK%,9.3,ATK,16.0,5.0
+Durin,Goblet,Instructor,+16,ATK%,34.8,HP%,8.4,DEF,33.0,Crit Rate,2.8,EM,30.0,5.6
+Durin,Circlet,Silken Moon's Serenade,+20,Crit Rate,31.1,HP%,15.2,Crit DMG,12.4,ATK,16.0,ER%,11.0,12.4

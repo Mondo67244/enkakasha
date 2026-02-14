@@ -1,19 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Instrument+Sans:wght@400;700&display=swap");
+@import "./genshin-cards.css";
 
-:root {
-  --app-bg: #f6f5f2;
-  --surface: #ffffff;
-  --surface-muted: #fbfaf7;
-  --line: #e6e7eb;
-  --text-strong: #0f172a;
-  --text: #334155;
-  --text-muted: #64748b;
-  --accent: #0ea5a4;
-  --accent-strong: #0f766e;
-  --accent-soft: rgba(14, 165, 164, 0.12);
-  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+@theme {
+  /* ── Fonts ── */
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Instrument Sans", system-ui, sans-serif;
+
+  /* ── Genshin Dark Theme ── */
+  --color-app-bg: #0b0e14;
+  --color-surface: rgba(17, 24, 39, 0.7);
+  --color-surface-muted: rgba(17, 24, 39, 0.45);
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-text-strong: #e8e4dc;
+  --color-text: #9fa5b4;
+  --color-text-muted: #5a6272;
+  --color-accent: #e8c66a;
+  --color-accent-strong: #d4a444;
+  --color-accent-soft: rgba(212, 164, 68, 0.12);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  /* ── Rarity ── */
+  --color-rarity-5: #d4a444;
+  --color-rarity-4: #a472c7;
+  --color-rarity-3: #53a9ff;
+  --color-rarity-border: rgba(255, 255, 255, 0.1);
+
+  /* ── Element Colors ── */
+  --color-pyro: #ef7a35;
+  --color-hydro: #4cc2f1;
+  --color-anemo: #75c2a8;
+  --color-electro: #b08fc2;
+  --color-dendro: #a5c83b;
+  --color-cryo: #9fd6e3;
+  --color-geo: #fab632;
+  --color-phys: #ffffff;
+
+  /* Element glow variables (used for radial backgrounds) */
+  --pyro-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(239, 122, 53, 0.18),
+    transparent 30%
+  );
+  --hydro-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(76, 194, 241, 0.12),
+    transparent 30%
+  );
+  --electro-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(176, 143, 194, 0.12),
+    transparent 30%
+  );
+  --dendro-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(165, 200, 59, 0.12),
+    transparent 30%
+  );
+  --cryo-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(159, 214, 227, 0.12),
+    transparent 30%
+  );
+  --anemo-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(117, 194, 168, 0.08),
+    transparent 30%
+  );
+  --geo-glow: radial-gradient(
+    600px 300px at 10% 20%,
+    rgba(250, 182, 50, 0.08),
+    transparent 30%
+  );
+}
+
+body {
+  background-color: var(--color-app-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Small helpers to use theme fonts in JSX via classes */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Glass panel for AI insight */
+.glass-ai {
+  background: rgba(17, 24, 39, 0.35);
+  border: 1px solid rgba(212, 164, 68, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+/* Ensure surfaces follow theme variables */
+.surface {
+  background: var(--color-surface);
+}
+.surface-muted {
+  background: var(--color-surface-muted);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Visual Consistency Enforcement */
+* {
+  border-color: var(--color-line) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-app-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-muted);
+  border-radius: 4px;
+  border: 1px solid var(--color-app-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Utility Override for Text Contrast */
+.text-gray-50,
+.text-gray-100,
+.text-white {
+  color: var(--color-text-strong);
+}
+
+.text-gray-500,
+.text-gray-400 {
+  color: var(--color-text-muted);
 }
 
 @layer base {
@@ -22,16 +155,13 @@
   }
 
   body {
-    background-color: var(--app-bg);
-    color: var(--text);
-    font-family: "Instrument Sans", system-ui, sans-serif;
     letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: var(--accent-soft);
-    color: var(--text-strong);
+    background: var(--color-accent-soft);
+    color: var(--color-text-strong);
   }
 }

@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Thundering Fury,+20,HP,4780.0,Crit Rate,13.2,ATK%,5.3,ATK,18.0,Crit DMG,20.2,46.6
+Keqing,Plume,Heart of Depth,+20,ATK,311.0,EM,16.0,Crit DMG,21.8,Crit Rate,14.0,ATK%,5.8,49.8
+Keqing,Sands,Thundering Fury,+20,ATK%,46.6,ER%,4.5,Crit Rate,11.3,EM,19.0,Crit DMG,28.8,51.4
+Keqing,Goblet,Heart of Depth,+20,Electro DMG%,46.6,Crit DMG,23.3,Crit Rate,7.0,ATK%,14.6,ATK,18.0,37.3
+Keqing,Circlet,Tenacity of the Millelith,+20,Crit Rate,31.1,DEF%,5.8,ATK%,21.6,ATK,19.0,Crit DMG,21.0,21.0
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit DMG,31.1,ATK%,4.1,Crit Rate,3.9,DEF%,5.1,38.9
+Skirk,Plume,Thundering Fury,+20,ATK,311.0,Crit DMG,27.2,HP%,5.8,Crit Rate,11.3,ATK%,4.7,49.8
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,EM,21.0,Crit DMG,21.0,DEF,42.0,Crit Rate,7.4,35.8
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,Crit Rate,9.7,Crit DMG,17.9,ATK,14.0,ATK%,11.1,37.3
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,ATK%,5.3,Crit Rate,13.6,HP%,11.7,HP,269.0,27.2
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit Rate,3.9,ATK,14.0,ATK%,14.0,Crit DMG,29.5,37.3
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,EM,23.0,Crit DMG,38.9,Crit Rate,3.5,DEF,23.0,45.9
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,ATK,16.0,EM,56.0,Crit DMG,21.8,Crit Rate,7.8,37.4
+Mavuika,Goblet,Obsidian Codex,+20,Pyro DMG%,46.6,ATK%,21.0,ATK,14.0,Crit Rate,7.4,EM,44.0,14.8
+Mavuika,Circlet,Emblem of Severed Fate,+20,Crit DMG,62.2,ATK%,9.9,EM,40.0,DEF,23.0,Crit Rate,12.1,24.2
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,ATK,16.0,Crit DMG,12.4,Crit Rate,14.4,DEF%,6.6,41.2
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,EM,54.0,Crit DMG,7.8,DEF%,11.7,Crit Rate,9.3,26.4
+ID_10000126,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,ATK%,5.3,Crit DMG,13.2,Crit Rate,10.9,HP,687.0,35.0
+ID_10000126,Goblet,Tenacity of the Millelith,+20,DEF%,58.3,Crit Rate,15.6,ATK,19.0,ATK%,4.1,Crit DMG,21.0,52.2
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,DEF%,13.1,HP,478.0,Crit Rate,7.0,ATK,31.0,14.0
+Tartaglia,Flower,Nymph's Dream,+20,HP,4780.0,ATK%,10.5,EM,19.0,Crit DMG,18.7,Crit Rate,7.4,33.5
+Tartaglia,Plume,Nymph's Dream,+20,ATK,311.0,Crit DMG,14.0,Crit Rate,17.1,DEF,19.0,HP,239.0,48.2
+Tartaglia,Sands,Nymph's Dream,+20,ATK%,46.6,Crit Rate,12.8,ATK,16.0,HP,538.0,Crit DMG,12.4,38.0
+Tartaglia,Goblet,Nymph's Dream,+20,Hydro DMG%,46.6,Crit DMG,20.2,Crit Rate,3.1,ATK%,5.8,EM,61.0,26.4
+Tartaglia,Circlet,Scroll of the Hero of Cinder City,+20,Crit DMG,62.2,EM,23.0,ER%,10.4,Crit Rate,18.3,ATK,18.0,36.6
+Zhongli,Flower,Gladiator's Finale,+20,HP,4780.0,HP%,5.3,ER%,12.3,Crit Rate,6.6,Crit DMG,28.0,41.2
+Zhongli,Plume,Archaic Petra,+20,ATK,311.0,Crit Rate,11.7,ER%,6.5,HP%,5.8,Crit DMG,27.2,50.6
+Zhongli,Sands,Gladiator's Finale,+20,HP%,46.6,HP,508.0,Crit Rate,10.1,ER%,5.2,Crit DMG,17.1,37.3
+Zhongli,Goblet,Tenacity of the Millelith,+20,Geo DMG%,46.6,Crit Rate,15.2,HP%,8.7,Crit DMG,6.2,ATK,18.0,36.6
+Zhongli,Circlet,Archaic Petra,+20,Crit Rate,31.1,ATK,18.0,HP,508.0,Crit DMG,23.3,ER%,9.1,23.3
+Kamisato Ayato,Flower,Blizzard Strayer,+20,HP,4780.0,EM,21.0,DEF,19.0,Crit DMG,33.4,Crit Rate,2.7,38.8
+Kamisato Ayato,Plume,Blizzard Strayer,+20,ATK,311.0,Crit DMG,14.0,ATK%,5.3,EM,35.0,Crit Rate,10.9,35.8
+Kamisato Ayato,Sands,Blizzard Strayer,+20,ATK%,46.6,Crit Rate,17.5,ATK,18.0,DEF%,5.1,EM,42.0,35.0
+Kamisato Ayato,Goblet,Blizzard Strayer,+20,Hydro DMG%,46.6,Crit Rate,3.5,ATK,16.0,Crit DMG,31.1,HP,299.0,38.1
+Kamisato Ayato,Circlet,Blizzard Strayer,+20,Crit DMG,62.2,ATK,47.0,HP%,4.1,Crit Rate,14.4,DEF,23.0,28.8
+Flins,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,19.4,ATK%,15.2,EM,19.0,32.6
+Flins,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,10.5,Crit DMG,19.4,ATK%,4.1,ER%,9.7,40.4
+Flins,Sands,Night of the Sky's Unveiling,+20,ATK%,46.6,Crit Rate,3.5,DEF%,5.1,Crit DMG,11.7,EM,86.0,18.7
+Flins,Goblet,Night of the Sky's Unveiling,+20,ATK%,46.6,ATK,14.0,ER%,17.5,Crit DMG,7.0,Crit Rate,10.1,27.2
+Flins,Circlet,Obsidian Codex,+20,Crit DMG,62.2,EM,44.0,ATK%,16.9,HP%,4.7,Crit Rate,7.4,14.8
+Columbina,Flower,Set_15043,+20,HP,4780.0,DEF%,5.8,Crit DMG,13.2,Crit Rate,10.5,HP%,9.3,34.2
+Columbina,Plume,Set_15043,+20,ATK,311.0,HP%,14.6,Crit DMG,19.4,Crit Rate,3.1,ER%,6.5,25.6
+Columbina,Sands,Blizzard Strayer,+20,HP%,46.6,HP,269.0,DEF%,12.4,Crit DMG,33.4,Crit Rate,3.5,40.4
+Columbina,Goblet,Set_15043,+20,HP%,46.6,EM,40.0,HP,837.0,ER%,5.2,Crit Rate,6.2,12.4
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,DEF,42.0,ATK,19.0,ATK%,9.3,Crit Rate,10.1,20.2
+Yelan,Flower,Vourukasha's Glow,+20,HP,4780.0,Crit Rate,2.7,ATK,14.0,HP%,22.2,Crit DMG,21.8,27.2
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit Rate,8.9,Crit DMG,28.8,ER%,5.8,HP%,5.8,46.6
+Yelan,Sands,Vourukasha's Glow,+20,HP%,46.6,ER%,9.7,DEF%,6.6,Crit DMG,12.4,Crit Rate,14.0,40.4
+Yelan,Goblet,Emblem of Severed Fate,+20,Hydro DMG%,46.6,HP,239.0,Crit DMG,20.2,EM,42.0,Crit Rate,9.3,38.8
+Yelan,Circlet,Emblem of Severed Fate,+20,Crit DMG,62.2,Crit Rate,5.4,HP%,11.1,ER%,23.3,DEF,23.0,10.8
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,ER%,15.5,Crit Rate,3.9,EM,23.0,Crit DMG,25.6,33.4
+Raiden Shogun,Plume,Noblesse Oblige,+20,ATK,311.0,ATK%,9.3,Crit DMG,14.0,Crit Rate,14.0,ER%,5.8,42.0
+Raiden Shogun,Sands,Emblem of Severed Fate,+20,ATK%,46.6,Crit DMG,20.2,DEF%,5.8,ER%,22.0,Crit Rate,2.7,25.6
+Raiden Shogun,Goblet,Emblem of Severed Fate,+20,ATK%,46.6,Crit Rate,12.8,ATK,14.0,EM,21.0,Crit DMG,21.0,46.6
+Raiden Shogun,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,EM,16.0,ER%,15.5,ATK%,14.0,Crit DMG,13.2,13.2
+Furina,Flower,Golden Troupe,+20,HP,4780.0,ER%,13.0,Crit Rate,2.7,HP%,15.2,Crit DMG,19.4,24.8
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit Rate,3.9,Crit DMG,26.4,HP,209.0,HP%,10.5,34.2
+Furina,Sands,Golden Troupe,+20,HP%,46.6,EM,19.0,Crit Rate,10.1,Crit DMG,10.9,ATK,29.0,31.1
+Furina,Goblet,Thundersoother,+20,HP%,46.6,ATK%,5.3,Crit Rate,5.4,Crit DMG,27.2,ER%,12.3,38.0
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,HP,478.0,Crit Rate,12.8,HP%,4.7,ER%,5.8,25.6

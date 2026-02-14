@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Jean,Flower,Viridescent Venerer,+20,HP,4780.0,Crit Rate,10.1,ER%,10.4,ATK%,5.3,Crit DMG,13.2,33.4
+Jean,Plume,Viridescent Venerer,+20,ATK,311.0,ATK%,19.8,DEF,23.0,Crit Rate,3.5,Crit DMG,13.2,20.2
+Jean,Sands,Viridescent Venerer,+20,ATK%,46.6,Crit Rate,7.0,HP,209.0,Crit DMG,7.0,ER%,21.4,21.0
+Jean,Goblet,Golden Troupe,+20,ATK%,46.6,HP%,5.3,Crit DMG,20.2,Crit Rate,2.7,ER%,17.5,25.6
+Jean,Circlet,Viridescent Venerer,+20,Crit DMG,62.2,ER%,11.0,Crit Rate,12.4,HP,299.0,DEF,23.0,24.8
+Hu Tao,Flower,Crimson Witch of Flames,+20,HP,4780.0,DEF,19.0,EM,40.0,Crit Rate,13.2,Crit DMG,12.4,38.8
+Hu Tao,Plume,Crimson Witch of Flames,+20,ATK,311.0,ATK%,4.7,DEF,16.0,Crit Rate,19.4,Crit DMG,7.0,45.8
+Hu Tao,Sands,Crimson Witch of Flames,+20,EM,187.0,HP%,9.3,ER%,6.5,Crit DMG,14.0,Crit Rate,10.9,35.8
+Hu Tao,Goblet,Tenacity of the Millelith,+20,Pyro DMG%,46.6,Crit Rate,10.1,DEF,19.0,HP,508.0,Crit DMG,20.2,40.4
+Hu Tao,Circlet,Crimson Witch of Flames,+20,Crit DMG,62.2,ATK,16.0,HP%,9.9,Crit Rate,17.1,HP,209.0,34.2
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit Rate,10.9,Crit DMG,5.4,ATK%,19.8,HP%,5.3,27.2
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,ATK%,9.9,Crit Rate,10.5,ER%,4.5,Crit DMG,14.8,35.8
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,Crit DMG,20.2,ATK,37.0,ER%,9.7,Crit Rate,6.6,33.4
+Skirk,Goblet,Golden Troupe,+20,Cryo DMG%,46.6,ATK%,4.1,Crit Rate,10.5,HP%,4.1,Crit DMG,25.7,46.7
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,DEF,35.0,HP%,9.3,Crit Rate,11.3,ER%,5.8,22.6
+Kaedehara Kazuha,Flower,Tenacity of the Millelith,+20,HP,4780.0,EM,105.0,ATK%,5.3,Crit Rate,3.9,ATK,37.0,7.8
+Kaedehara Kazuha,Plume,Viridescent Venerer,+20,ATK,311.0,HP,538.0,EM,91.0,ER%,4.5,DEF%,12.4,0.0
+Kaedehara Kazuha,Sands,Viridescent Venerer,+20,EM,187.0,ER%,18.1,DEF%,13.1,DEF,37.0,ATK,14.0,0.0
+Kaedehara Kazuha,Goblet,Viridescent Venerer,+20,EM,187.0,Crit Rate,2.7,HP%,4.1,HP,687.0,ATK%,12.8,5.4
+Kaedehara Kazuha,Circlet,Viridescent Venerer,+20,EM,187.0,ER%,6.5,ATK%,4.1,Crit DMG,12.4,HP%,19.2,12.4
+Citlali,Flower,Instructor,+16,HP,3571.0,DEF%,5.3,ATK,11.0,EM,50.0,ER%,8.8,0.0
+Citlali,Plume,Instructor,+16,ATK,232.0,DEF%,5.8,ER%,15.0,HP,215.0,DEF,15.0,0.0
+Citlali,Sands,Pale Flame,+20,ER%,51.8,Crit Rate,10.1,Crit DMG,12.4,HP,269.0,EM,63.0,32.6
+Citlali,Goblet,Instructor,+16,EM,139.0,ER%,8.3,HP%,3.7,Crit DMG,9.9,DEF,19.0,9.9
+Citlali,Circlet,Instructor,+16,EM,139.0,DEF%,9.3,ATK,14.0,Crit Rate,2.2,HP,526.0,4.4
+Xilonen,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ER%,14.2,ATK,14.0,DEF%,19.0,HP%,10.5,0.0
+Xilonen,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit DMG,6.2,DEF%,23.3,Crit Rate,6.6,ER%,4.5,19.4
+Xilonen,Sands,Scroll of the Hero of Cinder City,+20,ER%,51.8,DEF%,24.8,ATK,14.0,HP,478.0,ATK%,11.7,0.0
+Xilonen,Goblet,Viridescent Venerer,+20,DEF%,58.3,Crit DMG,5.4,Crit Rate,5.8,ATK%,5.3,ER%,25.3,17.0
+Xilonen,Circlet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,Crit DMG,10.9,ATK,18.0,ER%,20.1,EM,42.0,10.9
+Xiao,Flower,Marechaussee Hunter,+20,HP,4780.0,ATK%,9.9,Crit DMG,19.4,Crit Rate,11.7,ATK,16.0,42.8
+Xiao,Plume,Marechaussee Hunter,+20,ATK,311.0,ER%,19.4,Crit Rate,10.1,Crit DMG,14.0,DEF%,5.1,34.2
+Xiao,Sands,Marechaussee Hunter,+20,ATK%,46.6,ER%,16.2,HP,269.0,Crit DMG,18.7,Crit Rate,6.6,31.9
+Xiao,Goblet,Golden Troupe,+20,Anemo DMG%,46.6,Crit DMG,19.4,HP,239.0,ATK%,21.0,ATK,19.0,19.4
+Xiao,Circlet,Deepwood Memories,+20,Crit DMG,62.2,ATK%,5.3,ER%,17.5,Crit Rate,10.9,DEF%,13.9,21.8
+Mavuika,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,27.2,ATK%,4.7,Crit Rate,10.1,EM,21.0,47.4
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,HP,209.0,ATK%,8.2,Crit DMG,10.9,Crit Rate,14.8,40.5
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,Crit Rate,5.4,Crit DMG,12.4,EM,79.0,ATK,16.0,23.2
+Mavuika,Goblet,Obsidian Codex,+20,Pyro DMG%,46.6,ATK,14.0,EM,65.0,DEF%,6.6,Crit DMG,21.8,21.8
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ATK%,5.3,ER%,6.5,Crit Rate,13.6,EM,44.0,27.2
+Wanderer,Flower,Heart of Depth,+20,HP,4780.0,Crit DMG,14.0,Crit Rate,13.6,HP%,5.3,ER%,5.8,41.2
+Wanderer,Plume,Heart of Depth,+20,ATK,311.0,ATK%,5.8,Crit Rate,14.4,ER%,5.8,Crit DMG,12.4,41.2
+Wanderer,Sands,Heart of Depth,+20,ATK%,46.6,DEF,23.0,HP,299.0,Crit DMG,21.0,Crit Rate,8.9,38.8
+Wanderer,Goblet,Emblem of Severed Fate,+20,Anemo DMG%,46.6,ER%,9.7,Crit DMG,6.2,DEF,19.0,Crit Rate,12.8,31.8
+Wanderer,Circlet,Heart of Depth,+20,Crit DMG,62.2,ATK,18.0,Crit Rate,6.6,ER%,16.8,ATK%,11.1,13.2
+Columbina,Flower,Silken Moon's Serenade,+20,HP,4780.0,HP%,14.6,DEF%,6.6,Crit Rate,5.4,Crit DMG,14.8,25.6
+Columbina,Plume,Silken Moon's Serenade,+20,ATK,311.0,ER%,10.4,HP%,5.3,Crit Rate,3.1,Crit DMG,31.9,38.1
+Columbina,Sands,Vourukasha's Glow,+20,HP%,46.6,Crit DMG,21.0,DEF%,5.1,ER%,14.2,Crit Rate,2.7,26.4
+Columbina,Goblet,Pale Flame,+20,HP%,46.6,HP,209.0,Crit Rate,7.4,Crit DMG,29.5,DEF%,6.6,44.3
+Columbina,Circlet,Pale Flame,+20,Crit Rate,31.1,HP%,10.5,ER%,18.8,EM,16.0,Crit DMG,18.7,18.7
+Ineffa,Flower,Emblem of Severed Fate,+20,HP,4780.0,ER%,5.2,EM,35.0,Crit DMG,6.2,Crit Rate,14.4,35.0
+Ineffa,Plume,Thundersoother,+20,ATK,311.0,Crit DMG,25.7,EM,42.0,HP%,5.8,Crit Rate,7.4,40.5
+Ineffa,Sands,Thundersoother,+20,ATK%,46.6,EM,61.0,ER%,6.5,Crit DMG,19.4,Crit Rate,7.8,35.0
+Ineffa,Goblet,Obsidian Codex,+20,ATK%,46.6,ATK,14.0,Crit DMG,30.3,Crit Rate,5.8,ER%,6.5,41.9
+Ineffa,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,ATK%,11.1,Crit DMG,26.4,HP%,4.1,EM,35.0,26.4
+Neuvillette,Flower,Marechaussee Hunter,+20,HP,4780.0,ER%,4.5,HP%,15.2,Crit Rate,3.9,Crit DMG,27.2,35.0
+Neuvillette,Plume,Marechaussee Hunter,+20,ATK,311.0,HP%,5.8,DEF,16.0,Crit Rate,14.0,Crit DMG,23.3,51.3
+Neuvillette,Sands,Marechaussee Hunter,+20,HP%,46.6,Crit Rate,6.6,HP,239.0,ER%,5.2,Crit DMG,27.2,40.4
+Neuvillette,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,Crit Rate,9.7,Crit DMG,21.0,ATK%,4.7,HP%,10.5,40.4
+Neuvillette,Circlet,Marechaussee Hunter,+20,HP%,46.6,Crit DMG,34.2,Crit Rate,3.1,ER%,13.0,DEF,21.0,40.4

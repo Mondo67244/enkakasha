@@ -16,10 +16,10 @@ const Layout = ({ children }) => {
     ];
     return (
         <div className="min-h-screen bg-[var(--app-bg)] text-[var(--text)] font-sans">
-            <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[color:var(--surface)]/90 backdrop-blur">
+            <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[var(--surface)] backdrop-blur-lg">
                 <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <div className="h-9 w-9 rounded-full overflow-hidden border border-slate-200 bg-white">
+                        <div className="h-9 w-9 rounded-full overflow-hidden border border-[rgba(255,255,255,0.08)] bg-[var(--surface-muted)]">
                             <img src={logo} alt="Enkakasha Logo" className="h-full w-full object-cover" />
                         </div>
                         <div>
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
                                     }}
                                     className={`flex items-center gap-2 px-3 py-2 rounded-full text-sm transition ${isActive
                                         ? 'bg-[var(--accent-soft)] text-[var(--accent-strong)]'
-                                        : 'text-[var(--text-muted)] hover:text-[var(--text-strong)] hover:bg-white'
+                                        : 'text-[var(--text-muted)] hover:text-[var(--text-strong)] hover:bg-[var(--surface-muted)]'
                                         }`}
                                 >
                                     <Icon size={16} />

@@ -19,7 +19,7 @@ const Welcome = () => {
         if (stored) {
             setKey(stored);
         }
-        
+
         // Check Ollama status on mount
         getOllamaStatus()
             .then(status => {
@@ -36,14 +36,14 @@ const Welcome = () => {
 
     const handleConnect = async (e) => {
         e.preventDefault();
-        
+
         if (selectedMode === 'local') {
             // Skip key verification for local mode
             localStorage.setItem('ai_provider', 'ollama');
             navigate('/home');
             return;
         }
-        
+
         if (!isKeyValid) return;
 
         setLoading(true);
@@ -73,17 +73,17 @@ const Welcome = () => {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="bg-white border border-[var(--line)] rounded-2xl p-4 shadow-sm">
+                    <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-4 shadow-sm">
                         <ShieldCheck className="text-[var(--accent-strong)]" size={20} />
                         <p className="mt-3 text-sm font-medium text-[var(--text-strong)]">Private by default</p>
                         <p className="text-xs text-[var(--text-muted)]">Data stays on server.</p>
                     </div>
-                    <div className="bg-white border border-[var(--line)] rounded-2xl p-4 shadow-sm">
+                    <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-4 shadow-sm">
                         <Sparkles className="text-[var(--accent-strong)]" size={20} />
                         <p className="mt-3 text-sm font-medium text-[var(--text-strong)]">Clean insights</p>
                         <p className="text-xs text-[var(--text-muted)]">No noise, only priorities.</p>
                     </div>
-                    <div className="bg-white border border-[var(--line)] rounded-2xl p-4 shadow-sm">
+                    <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-4 shadow-sm">
                         <Cpu className="text-[var(--accent-strong)]" size={20} />
                         <p className="mt-3 text-sm font-medium text-[var(--text-strong)]">Local AI option</p>
                         <p className="text-xs text-[var(--text-muted)]">Free, no API key needed.</p>
@@ -91,7 +91,7 @@ const Welcome = () => {
                 </div>
             </div>
 
-            <div className="bg-white border border-[var(--line)] rounded-3xl p-8 shadow-[var(--shadow)]">
+            <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-3xl p-8 shadow-[var(--shadow)]">
                 <div className="flex items-center gap-3 mb-6">
                     <div className="h-11 w-11 rounded-2xl bg-[var(--accent-soft)] flex items-center justify-center">
                         {selectedMode === 'local' ? <Cpu className="text-[var(--accent-strong)]" size={20} /> : <Key className="text-[var(--accent-strong)]" size={20} />}
@@ -109,11 +109,10 @@ const Welcome = () => {
                             type="button"
                             onClick={() => setSelectedMode('local')}
                             disabled={ollamaAvailable === false}
-                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 ${
-                                selectedMode === 'local'
+                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 ${selectedMode === 'local'
                                     ? 'bg-emerald-500 text-white'
                                     : 'bg-[var(--surface-muted)] border border-[var(--line)] text-[var(--text)] hover:bg-[var(--surface-muted)]'
-                            } ${ollamaAvailable === false ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                } ${ollamaAvailable === false ? 'opacity-50 cursor-not-allowed' : ''}`}
                         >
                             <Cpu size={16} />
                             Local (Mistral)
@@ -121,21 +120,20 @@ const Welcome = () => {
                         <button
                             type="button"
                             onClick={() => setSelectedMode('cloud')}
-                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 ${
-                                selectedMode === 'cloud'
+                            className={`flex-1 py-3 px-4 rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 ${selectedMode === 'cloud'
                                     ? 'bg-[var(--accent-strong)] text-white'
                                     : 'bg-[var(--surface-muted)] border border-[var(--line)] text-[var(--text)] hover:bg-[var(--surface-muted)]'
-                            }`}
+                                }`}
                         >
                             <Cloud size={16} />
                             Cloud (Gemini)
                         </button>
                     </div>
-                    
+
                     {ollamaAvailable === false && (
                         <p className="text-xs text-amber-600">⚠️ Local AI is currently unavailable. Please use cloud mode.</p>
                     )}
-                    
+
                     {selectedMode === 'local' && ollamaAvailable && (
                         <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
                             <p className="text-sm text-emerald-700 font-medium">✓ Local AI Ready</p>

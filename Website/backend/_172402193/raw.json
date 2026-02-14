@@ -1,0 +1,4600 @@
+{
+  "playerInfo": {
+    "nickname": "却问愁",
+    "level": 60,
+    "signature": "42根羽毛提了3.2分双暴",
+    "worldLevel": 9,
+    "nameCardId": 210020,
+    "finishAchievementNum": 1639,
+    "towerFloorIndex": 12,
+    "towerLevelIndex": 3,
+    "showAvatarInfoList": [
+      {
+        "avatarId": 10000042,
+        "level": 100,
+        "costumeId": 204201,
+        "talentLevel": 6,
+        "energyType": 4
+      },
+      {
+        "avatarId": 10000103,
+        "level": 90,
+        "talentLevel": 3,
+        "energyType": 8
+      },
+      {
+        "avatarId": 10000089,
+        "level": 90,
+        "talentLevel": 6,
+        "energyType": 2
+      },
+      {
+        "avatarId": 10000123,
+        "level": 90,
+        "costumeId": 212301,
+        "talentLevel": 2,
+        "energyType": 1
+      },
+      {
+        "avatarId": 10000116,
+        "level": 90,
+        "energyType": 4
+      },
+      {
+        "avatarId": 10000073,
+        "level": 90,
+        "talentLevel": 3,
+        "energyType": 3
+      },
+      {
+        "avatarId": 10000031,
+        "level": 90,
+        "costumeId": 203101,
+        "talentLevel": 6,
+        "energyType": 4
+      },
+      {
+        "avatarId": 10000090,
+        "level": 80,
+        "talentLevel": 6,
+        "energyType": 1
+      },
+      {
+        "avatarId": 10000060,
+        "level": 90,
+        "talentLevel": 6,
+        "energyType": 2
+      },
+      {
+        "avatarId": 10000125,
+        "level": 90,
+        "energyType": 2
+      },
+      {
+        "avatarId": 10000016,
+        "level": 90,
+        "talentLevel": 6,
+        "energyType": 1
+      },
+      {
+        "avatarId": 10000029,
+        "level": 80,
+        "energyType": 1
+      }
+    ],
+    "showNameCardIdList": [
+      210020
+    ],
+    "profilePicture": {
+      "avatarId": 10000042,
+      "costumeId": 204201
+    },
+    "theaterActIndex": 10,
+    "theaterModeIndex": 84,
+    "theaterStarIndex": 12,
+    "isShowAvatarTalent": true,
+    "fetterCount": 72,
+    "towerStarIndex": 36,
+    "stygianIndex": 5,
+    "stygianSeconds": 317,
+    "stygianId": 5269006
+  },
+  "avatarInfoList": [
+    {
+      "avatarId": 10000042,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "100",
+          "val": "100"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        421,
+        422,
+        423,
+        424,
+        425,
+        426
+      ],
+      "fightPropMap": {
+        "1": 14034.43359375,
+        "2": 4780,
+        "3": 0.13989999890327454,
+        "4": 1069.8712158203125,
+        "5": 382.9700012207031,
+        "6": 0.7867000102996826,
+        "7": 856.1063842773438,
+        "20": 0.707099974155426,
+        "21": 0,
+        "22": 2.6149239540100098,
+        "23": 1,
+        "26": 0,
+        "27": 0,
+        "28": 39.62999725341797,
+        "29": 0,
+        "30": 0,
+        "40": 0.48,
+        "41": 0.9459999907016754,
+        "42": 0.48,
+        "43": 0.48,
+        "44": 0.48,
+        "45": 0.48,
+        "46": 0.48,
+        "50": 0,
+        "51": 0.4000000059604645,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "71": 40,
+        "1001": 28.450000762939453,
+        "1010": 19481.44140625,
+        "2000": 20777.8515625,
+        "2001": 2294.509033203125,
+        "2002": 856.1063842773438,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3008": 0,
+        "3009": 0,
+        "3010": 0,
+        "3011": 0,
+        "3012": 0,
+        "3013": 0,
+        "3014": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 4201,
+      "inherentProudSkillList": [
+        422101,
+        422201,
+        422301
+      ],
+      "skillLevelMap": {
+        "10421": 10,
+        "10422": 10,
+        "10425": 10
+      },
+      "proudSkillExtraLevelMap": {
+        "4232": 3,
+        "4239": 3
+      },
+      "equipList": [
+        {
+          "itemId": 72544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501054,
+              501222,
+              501202,
+              501064,
+              501222,
+              501204,
+              501204,
+              501221,
+              501222
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3861448244",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 19
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 24.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 72524,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501241,
+              501064,
+              501204,
+              501221,
+              501223,
+              501204,
+              501222,
+              501203,
+              501201
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3721180620",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 16
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 14
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 18.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 72554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501031,
+              501244,
+              501223,
+              501202,
+              501224,
+              501224,
+              501031,
+              501201,
+              501223
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3239844884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 8.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 29.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 81514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15009,
+            "appendPropIdList": [
+              501063,
+              501054,
+              501204,
+              501224,
+              501224,
+              501221,
+              501222,
+              501224,
+              501054
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "688784652",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15007_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15007,
+            "setNameTextMapHash": "1751039235",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 39
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 35
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ELEC_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 72533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13007,
+            "appendPropIdList": [
+              501063,
+              501224,
+              501034,
+              501051,
+              501061,
+              501064,
+              501223,
+              501223
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2359972852",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 15.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 14
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL",
+              "statValue": 31.1
+            }
+          }
+        },
+        {
+          "itemId": 11509,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "111509": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "4124851547",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Sword_Narukami",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 674
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 44.1
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "costumeId": 204201
+    },
+    {
+      "avatarId": 10000103,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        1031,
+        1032,
+        1033
+      ],
+      "fightPropMap": {
+        "1": 12405.107421875,
+        "2": 5377.5,
+        "3": 0.11659999936819077,
+        "4": 816.8848876953125,
+        "5": 330.45001220703125,
+        "6": 0.2624000012874603,
+        "7": 929.9508056640625,
+        "8": 118.05000305175781,
+        "9": 3.387819766998291,
+        "20": 0.17440000176429749,
+        "21": 0,
+        "22": 0.7719999551773071,
+        "23": 1.5049999952316284,
+        "26": 0,
+        "27": 0,
+        "28": 44.290000915527344,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "76": 60,
+        "1006": 60,
+        "1010": 19229.04296875,
+        "2000": 19229.04296875,
+        "2001": 1361.685546875,
+        "2002": 4198.50634765625,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 10301,
+      "inherentProudSkillList": [
+        1032101,
+        1032201,
+        1032301,
+        1032501
+      ],
+      "skillLevelMap": {
+        "11031": 6,
+        "11032": 10,
+        "11035": 9
+      },
+      "proudSkillExtraLevelMap": {
+        "10332": 3
+      },
+      "equipList": [
+        {
+          "itemId": 31544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501231,
+              501094,
+              501243,
+              501064,
+              501231,
+              501232,
+              501091,
+              501091,
+              501093
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "4282744340",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15031_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15031,
+            "setNameTextMapHash": "1249831867",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 14.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 24.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 37524,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501244,
+              501024,
+              501233,
+              501094,
+              501093,
+              501094,
+              501231,
+              501231,
+              501231
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2726177916",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15037_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15037,
+            "setNameTextMapHash": "2949388203",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 299
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 19.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 21.1
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 37553,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10006,
+            "appendPropIdList": [
+              501024,
+              501234,
+              501063,
+              501054,
+              501063,
+              501064,
+              501061,
+              501233
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3049806572",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15037_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15037,
+            "setNameTextMapHash": "2949388203",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 299
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 12.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 20.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 19
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+              "statValue": 58.3
+            }
+          }
+        },
+        {
+          "itemId": 37513,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15006,
+            "appendPropIdList": [
+              501034,
+              501231,
+              501084,
+              501201,
+              501083,
+              501202,
+              501084,
+              501081
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2795560012",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15037_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15037,
+            "setNameTextMapHash": "2949388203",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 4.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 83
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+              "statValue": 58.3
+            }
+          }
+        },
+        {
+          "itemId": 37534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13006,
+            "appendPropIdList": [
+              501081,
+              501034,
+              501224,
+              501202,
+              501223,
+              501082,
+              501203,
+              501222,
+              501222
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2653546948",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15037_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15037,
+            "setNameTextMapHash": "2949388203",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 35
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 27.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 6.6
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+              "statValue": 58.3
+            }
+          }
+        },
+        {
+          "itemId": 11516,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "111516": 0
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "3432339555",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Sword_XochitlsTube",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 542
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 82.7
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000089,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        891,
+        892,
+        893,
+        894,
+        895,
+        896
+      ],
+      "fightPropMap": {
+        "1": 15307.388671875,
+        "2": 5048.8798828125,
+        "3": 0.9498999714851379,
+        "4": 785.791748046875,
+        "5": 311,
+        "7": 695.5416870117188,
+        "8": 60.18000030517578,
+        "9": 0.13850000500679016,
+        "20": 0.7709000110626221,
+        "21": 0,
+        "22": 2.6100478172302246,
+        "23": 1.576300024986267,
+        "26": 0,
+        "27": 0,
+        "28": 88.58000183105469,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "72": 60,
+        "1002": 41.93964767456055,
+        "1010": 27079.875,
+        "2000": 34896.75390625,
+        "2001": 1096.791748046875,
+        "2002": 852.05419921875,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 8901,
+      "inherentProudSkillList": [
+        892101,
+        892201,
+        892301
+      ],
+      "skillLevelMap": {
+        "10891": 10,
+        "10892": 10,
+        "10895": 10
+      },
+      "proudSkillExtraLevelMap": {
+        "8932": 3,
+        "8939": 3
+      },
+      "equipList": [
+        {
+          "itemId": 32544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501203,
+              501034,
+              501243,
+              501084,
+              501201,
+              501201,
+              501204,
+              501204,
+              501033
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "900967452",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 16.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 11.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 23
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 32523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501223,
+              501204,
+              501233,
+              501031,
+              501204,
+              501204,
+              501032,
+              501034
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1556848372",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 11.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 14.6
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 32554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10007,
+            "appendPropIdList": [
+              501083,
+              501023,
+              501204,
+              501221,
+              501224,
+              501221,
+              501223,
+              501223,
+              501203
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2760204756",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 269
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 7.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 32.6
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+              "statValue": 51.8
+            }
+          }
+        },
+        {
+          "itemId": 32514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15002,
+            "appendPropIdList": [
+              501224,
+              501203,
+              501243,
+              501093,
+              501224,
+              501221,
+              501094,
+              501203,
+              501244
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2881964492",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 44
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 13.9
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 89534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13008,
+            "appendPropIdList": [
+              501202,
+              501081,
+              501244,
+              501034,
+              501034,
+              501203,
+              501203,
+              501033,
+              501034
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3643383972",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15015_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15015,
+            "setNameTextMapHash": "1438974835",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 16
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 22.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 62.2
+            }
+          }
+        },
+        {
+          "itemId": 11513,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "111513": 0
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "1473399443",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Sword_Regalis",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 542
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 88.2
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000123,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        1231,
+        1232
+      ],
+      "fightPropMap": {
+        "1": 12429.6005859375,
+        "2": 5228.1298828125,
+        "3": 0.11659999936819077,
+        "4": 856.4146118164062,
+        "5": 466.6200256347656,
+        "6": 2.3762600421905518,
+        "7": 822.3531494140625,
+        "9": 0.050999999046325684,
+        "20": 0.3144000172615051,
+        "21": 0,
+        "22": 0.9462000131607056,
+        "23": 1.5440000295639038,
+        "26": 0,
+        "27": 0,
+        "28": 32.63999938964844,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "70": 70,
+        "1000": 35.82079315185547,
+        "1010": 19107.0234375,
+        "2000": 19107.0234375,
+        "2001": 3358.0986328125,
+        "2002": 864.2931518554688,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 12301,
+      "inherentProudSkillList": [
+        1232101,
+        1232201,
+        1232301
+      ],
+      "skillLevelMap": {
+        "11231": 1,
+        "11232": 10,
+        "11235": 9
+      },
+      "equipList": [
+        {
+          "itemId": 44543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501232,
+              501201,
+              501064,
+              501054,
+              501203,
+              501064,
+              501063,
+              501203
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1675773740",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 16.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 19
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 44524,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501231,
+              501064,
+              501203,
+              501034,
+              501061,
+              501034,
+              501064,
+              501231,
+              501064
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1189027556",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 9.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 21.6
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 11.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 44553,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501053,
+              501241,
+              501234,
+              501091,
+              501241,
+              501054,
+              501054,
+              501232
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2583081740",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 56
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 33
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 11.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 5.1
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 75514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15004,
+            "appendPropIdList": [
+              501233,
+              501222,
+              501052,
+              501202,
+              501232,
+              501054,
+              501201,
+              501204,
+              501233
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3804138820",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15001_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15001,
+            "setNameTextMapHash": "1212345779",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 16.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 6.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 35
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 44533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13004,
+            "appendPropIdList": [
+              501022,
+              501203,
+              501232,
+              501051,
+              501053,
+              501234,
+              501021,
+              501051
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1638796108",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 448
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 11.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 45
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 11405,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "111405": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "1321135667",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Sword_Rockkiller",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 510
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 41.3
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "costumeId": 212301
+    },
+    {
+      "avatarId": 10000116,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "fightPropMap": {
+        "1": 12613.2890625,
+        "2": 5526.8896484375,
+        "4": 938.1408081054688,
+        "5": 311,
+        "6": 1.6126999855041504,
+        "7": 827.7330932617188,
+        "8": 20.829999923706055,
+        "20": 0.7436000108718872,
+        "21": 0,
+        "22": 2.599435806274414,
+        "23": 1.1684000492095947,
+        "26": 0,
+        "27": 0,
+        "28": 67.5999984741211,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "71": 60,
+        "1001": 60,
+        "1010": 17233.16796875,
+        "2000": 18140.1796875,
+        "2001": 2762.08056640625,
+        "2002": 848.5631103515625,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 11601,
+      "inherentProudSkillList": [
+        1162101,
+        1162201,
+        1162301,
+        1162501
+      ],
+      "skillLevelMap": {
+        "11161": 1,
+        "11162": 10,
+        "11165": 10
+      },
+      "equipList": [
+        {
+          "itemId": 75543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501202,
+              501222,
+              501064,
+              501244,
+              501201,
+              501203,
+              501224,
+              501063
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2229209884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15001_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15001,
+            "setNameTextMapHash": "1212345779",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 11.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 97523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501203,
+              501063,
+              501221,
+              501244,
+              501201,
+              501063,
+              501203,
+              501224
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "115004804",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15023_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15023,
+            "setNameTextMapHash": "1558036915",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 10.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 13.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 97554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501233,
+              501201,
+              501222,
+              501023,
+              501232,
+              501204,
+              501224,
+              501223,
+              501223
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3997965196",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15023_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15023,
+            "setNameTextMapHash": "1558036915",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 11
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 6.6
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 28
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 269
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 79514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15004,
+            "appendPropIdList": [
+              501023,
+              501243,
+              501204,
+              501222,
+              501224,
+              501221,
+              501203,
+              501223,
+              501021
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3898592532",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15005_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15005,
+            "setNameTextMapHash": "2512309395",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 478
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 7.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 26.4
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 75534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13008,
+            "appendPropIdList": [
+              501083,
+              501233,
+              501064,
+              501204,
+              501201,
+              501204,
+              501201,
+              501204,
+              501062
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1855279292",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15001_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15001,
+            "setNameTextMapHash": "1212345779",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 10.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 17.1
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 62.2
+            }
+          }
+        },
+        {
+          "itemId": 13515,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "113515": 0
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "2878068027",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Pole_Perdix",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 608
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 66.2
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000073,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        731,
+        732,
+        733
+      ],
+      "fightPropMap": {
+        "1": 10360.041015625,
+        "2": 5019,
+        "3": 0.09319999814033508,
+        "4": 840.802734375,
+        "5": 311,
+        "6": 0.2856999933719635,
+        "7": 630.214599609375,
+        "20": 0.5088000297546387,
+        "21": 0,
+        "22": 1.9067999124526978,
+        "23": 1.252500057220459,
+        "26": 0,
+        "27": 0,
+        "28": 680.5343627929688,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0.6159999966621399,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "73": 50,
+        "1003": 50,
+        "1010": 12421.892578125,
+        "2000": 16344.5966796875,
+        "2001": 1392.02001953125,
+        "2002": 630.214599609375,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 7301,
+      "inherentProudSkillList": [
+        732101,
+        732201,
+        732301
+      ],
+      "skillLevelMap": {
+        "10731": 10,
+        "10732": 10,
+        "10735": 10
+      },
+      "proudSkillExtraLevelMap": {
+        "7332": 3
+      },
+      "equipList": [
+        {
+          "itemId": 20543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501204,
+              501231,
+              501063,
+              501223,
+              501064,
+              501202,
+              501224,
+              501203
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2547354684",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15025_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15025,
+            "setNameTextMapHash": "1675079283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 4.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 11.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 20523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501032,
+              501204,
+              501244,
+              501224,
+              501223,
+              501244,
+              501202,
+              501204
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3864622772",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15025_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15025,
+            "setNameTextMapHash": "1675079283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 4.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 47
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 20554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10008,
+            "appendPropIdList": [
+              501201,
+              501224,
+              501022,
+              501032,
+              501223,
+              501201,
+              501203,
+              501222,
+              501222
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1476546916",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15025_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15025,
+            "setNameTextMapHash": "1675079283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 8.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 27.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 239
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 4.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+              "statValue": 187
+            }
+          }
+        },
+        {
+          "itemId": 72514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15014,
+            "appendPropIdList": [
+              501064,
+              501203,
+              501231,
+              501224,
+              501064,
+              501201,
+              501224,
+              501222,
+              501202
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "314628340",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_1",
+            "equipType": "EQUIP_RING",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 11.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 4.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_GRASS_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 20534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13008,
+            "appendPropIdList": [
+              501202,
+              501244,
+              501233,
+              501064,
+              501243,
+              501232,
+              501232,
+              501244,
+              501202
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3847174900",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15025_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15025,
+            "setNameTextMapHash": "1675079283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 6.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 68
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 16.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 62.2
+            }
+          }
+        },
+        {
+          "itemId": 14511,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "114511": 0
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "1201790667",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Catalyst_Ayus",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 542
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 265
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000031,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "fightPropMap": {
+        "1": 9189.302734375,
+        "2": 5078.75,
+        "4": 753.8627319335938,
+        "5": 392.70001220703125,
+        "6": 1.0440999269485474,
+        "7": 593.7937622070312,
+        "8": 48.60000228881836,
+        "20": 0.7343000173568726,
+        "21": 0,
+        "22": 1.5255999565124512,
+        "23": 1.051800012588501,
+        "26": 0,
+        "27": 0,
+        "28": 165.38400268554688,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0.4659999907016754,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "71": 60,
+        "1001": 23.981040954589844,
+        "1010": 14268.052734375,
+        "2000": 14268.052734375,
+        "2001": 1933.670654296875,
+        "2002": 642.3937377929688,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 3101,
+      "inherentProudSkillList": [
+        312101,
+        312201,
+        312301
+      ],
+      "skillLevelMap": {
+        "10311": 6,
+        "10312": 10,
+        "10313": 10
+      },
+      "proudSkillExtraLevelMap": {
+        "3132": 3,
+        "3139": 3
+      },
+      "equipList": [
+        {
+          "itemId": 32544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501221,
+              501201,
+              501064,
+              501232,
+              501223,
+              501203,
+              501221,
+              501224,
+              501063
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "900967452",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 25.6
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 6.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 11.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.2
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 32523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501024,
+              501202,
+              501062,
+              501224,
+              501204,
+              501224,
+              501221,
+              501202
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1556848372",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 299
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 4.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 32553,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501203,
+              501223,
+              501081,
+              501052,
+              501221,
+              501204,
+              501204,
+              501224
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3990528740",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 11.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 20.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 16
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 16
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 72514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15009,
+            "appendPropIdList": [
+              501061,
+              501052,
+              501224,
+              501202,
+              501224,
+              501053,
+              501203,
+              501202,
+              501221
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "314628340",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_1",
+            "equipType": "EQUIP_RING",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 4.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 33
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ELEC_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 32534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13007,
+            "appendPropIdList": [
+              501081,
+              501223,
+              501061,
+              501052,
+              501224,
+              501081,
+              501064,
+              501053,
+              501061
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "643777884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 32
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 14
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 33
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL",
+              "statValue": 31.1
+            }
+          }
+        },
+        {
+          "itemId": 15402,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "115402": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "2556914683",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Bow_Troupe",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 510
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 165
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      },
+      "costumeId": 203101
+    },
+    {
+      "avatarId": 10000090,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "5",
+          "val": "5"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "80",
+          "val": "80"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        901,
+        902,
+        903,
+        904,
+        905,
+        906
+      ],
+      "fightPropMap": {
+        "1": 10601.576171875,
+        "2": 6542.6396484375,
+        "3": 2.1752400398254395,
+        "4": 558.9534301757812,
+        "5": 414.1000061035156,
+        "6": 0.05829999968409538,
+        "7": 535.9224853515625,
+        "8": 78.69000244140625,
+        "20": 0.12000000476837158,
+        "21": 0,
+        "22": 0.8496999740600586,
+        "23": 1.5376999378204346,
+        "26": 0,
+        "27": 0,
+        "28": 37.29999923706055,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "70": 60,
+        "1000": 60,
+        "1010": 40205.19140625,
+        "2000": 40205.19140625,
+        "2001": 1005.640380859375,
+        "2002": 614.6124877929688,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 9001,
+      "inherentProudSkillList": [
+        902101,
+        902201,
+        902301
+      ],
+      "skillLevelMap": {
+        "10901": 1,
+        "10902": 7,
+        "10905": 5
+      },
+      "proudSkillExtraLevelMap": {
+        "9032": 3,
+        "9039": 3
+      },
+      "equipList": [
+        {
+          "itemId": 81543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501033,
+              501052,
+              501083,
+              501234,
+              501054,
+              501081,
+              501231,
+              501234
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3120588556",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15007_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15007,
+            "setNameTextMapHash": "1751039235",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 35
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 37
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 17.5
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 80523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501022,
+              501224,
+              501032,
+              501202,
+              501034,
+              501032,
+              501033,
+              501204
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3216935684",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15006_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15006,
+            "setNameTextMapHash": "1524173875",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 239
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 7.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 20.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 81553,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10002,
+            "appendPropIdList": [
+              501242,
+              501022,
+              501233,
+              501053,
+              501051,
+              501234,
+              501024,
+              501242
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "514109556",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15007_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15007,
+            "setNameTextMapHash": "1751039235",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 37
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 538
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 12.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 31
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 81514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15002,
+            "appendPropIdList": [
+              501022,
+              501234,
+              501054,
+              501083,
+              501233,
+              501053,
+              501234,
+              501021,
+              501083
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "688784652",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15007_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15007,
+            "setNameTextMapHash": "1751039235",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 448
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 18.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 37
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 42
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 81533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13002,
+            "appendPropIdList": [
+              501224,
+              501023,
+              501232,
+              501064,
+              501221,
+              501224,
+              501023,
+              501222
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "73409068",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15007_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15007,
+            "setNameTextMapHash": "1751039235",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 27.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 538
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 13426,
+          "weapon": {
+            "level": 70,
+            "promoteLevel": 4,
+            "affixMap": {
+              "113426": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "2847771107",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Pole_Caduceus",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 388
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 34.1
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000060,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        601,
+        602,
+        603,
+        604,
+        605,
+        606
+      ],
+      "fightPropMap": {
+        "1": 14450.17578125,
+        "2": 5019,
+        "3": 0.8758999705314636,
+        "4": 698.3250732421875,
+        "5": 377.1400146484375,
+        "6": 0.04659999907016754,
+        "7": 547.9793090820312,
+        "8": 83.33000183105469,
+        "9": 0.07289999723434448,
+        "20": 0.8406999707221985,
+        "21": 0,
+        "22": 1.5878000259399414,
+        "23": 1.7356317043304443,
+        "26": 0,
+        "27": 0,
+        "28": 20.979999542236328,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0.6159999966621399,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "72": 70,
+        "1002": 34.34016799926758,
+        "1010": 31817.681640625,
+        "2000": 32126.0859375,
+        "2001": 1108.007080078125,
+        "2002": 671.2570190429688,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 6001,
+      "inherentProudSkillList": [
+        602101,
+        602201,
+        602301
+      ],
+      "skillLevelMap": {
+        "10606": 10,
+        "10607": 10,
+        "10610": 10
+      },
+      "proudSkillExtraLevelMap": {
+        "6032": 3,
+        "6039": 3
+      },
+      "equipList": [
+        {
+          "itemId": 91544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501052,
+              501094,
+              501224,
+              501201,
+              501222,
+              501221,
+              501224,
+              501202,
+              501224
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "481512444",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15017_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15017,
+            "setNameTextMapHash": "1337666507",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 16
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 7.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 35
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 90523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501223,
+              501233,
+              501243,
+              501203,
+              501204,
+              501202,
+              501234,
+              501202
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2636448828",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15016_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15016,
+            "setNameTextMapHash": "156294403",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 12.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 13.6
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 90554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10002,
+            "appendPropIdList": [
+              501201,
+              501223,
+              501081,
+              501062,
+              501223,
+              501221,
+              501223,
+              501202,
+              501083
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1004220228",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15016_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15016,
+            "setNameTextMapHash": "156294403",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 5.8
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 26.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 37
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 4.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 72514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15011,
+            "appendPropIdList": [
+              501223,
+              501203,
+              501031,
+              501084,
+              501033,
+              501034,
+              501223,
+              501222,
+              501084
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "314628340",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_1",
+            "equipType": "EQUIP_RING",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 20.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 15.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 46
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_WATER_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 91533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13007,
+            "appendPropIdList": [
+              501052,
+              501222,
+              501022,
+              501034,
+              501224,
+              501222,
+              501053,
+              501053
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3587145716",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15017_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15017,
+            "setNameTextMapHash": "1337666507",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 51
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 20.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 239
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL",
+              "statValue": 31.1
+            }
+          }
+        },
+        {
+          "itemId": 15401,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "115401": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "1240067179",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Bow_Zephyrus",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 454
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 61.3
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000125,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "fightPropMap": {
+        "1": 14695.09375,
+        "2": 5347.6298828125,
+        "3": 1.2001999616622925,
+        "4": 550.0345458984375,
+        "5": 311,
+        "6": 0.15160000324249268,
+        "7": 514.9314575195312,
+        "8": 41.65999984741211,
+        "20": 0.9866199493408203,
+        "21": 0,
+        "22": 1.8134000301361084,
+        "23": 1.42739999294281,
+        "26": 0,
+        "27": 0,
+        "28": 80,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0.4000000059604645,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "72": 60,
+        "1002": 60,
+        "1010": 35795.80078125,
+        "2000": 37679.77734375,
+        "2001": 944.4197998046875,
+        "2002": 556.5914306640625,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 12501,
+      "inherentProudSkillList": [
+        1252101,
+        1252201,
+        1252301,
+        1252501
+      ],
+      "skillLevelMap": {
+        "11251": 1,
+        "11252": 9,
+        "11255": 8
+      },
+      "equipList": [
+        {
+          "itemId": 43543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501204,
+              501064,
+              501033,
+              501223,
+              501201,
+              501063,
+              501201,
+              501223
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1850577508",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15043_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15043,
+            "setNameTextMapHash": "894629371",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 11.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 5.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 43523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501034,
+              501223,
+              501234,
+              501204,
+              501202,
+              501223,
+              501201,
+              501034
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "4068316764",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15043_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15043,
+            "setNameTextMapHash": "894629371",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 11.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 6.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 72554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10002,
+            "appendPropIdList": [
+              501234,
+              501221,
+              501061,
+              501202,
+              501201,
+              501224,
+              501232,
+              501231,
+              501224
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3239844884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 16.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 4.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 72514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15002,
+            "appendPropIdList": [
+              501024,
+              501231,
+              501223,
+              501203,
+              501202,
+              501023,
+              501221,
+              501201,
+              501224
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "314628340",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_1",
+            "equipType": "EQUIP_RING",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 568
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 4.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 20.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.3
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 32533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13008,
+            "appendPropIdList": [
+              501233,
+              501031,
+              501083,
+              501203,
+              501034,
+              501231,
+              501083,
+              501232
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "882455012",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 15.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 9.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 42
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 62.2
+            }
+          }
+        },
+        {
+          "itemId": 14424,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "114424": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "2275710883",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Catalyst_Yue",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 454
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 36.8
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 5
+      }
+    },
+    {
+      "avatarId": 10000016,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "6",
+          "val": "6"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "90",
+          "val": "90"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "talentIdList": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166
+      ],
+      "fightPropMap": {
+        "1": 12980.666015625,
+        "2": 5317.75,
+        "4": 831.5730590820312,
+        "5": 361.58001708984375,
+        "6": 0.9732999801635742,
+        "7": 783.9254760742188,
+        "8": 97.20999908447266,
+        "9": 0.18219999969005585,
+        "20": 0.7595999836921692,
+        "21": 0,
+        "22": 1.875599980354309,
+        "23": 1.0583000183105469,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0,
+        "40": 0,
+        "41": 0.4659999907016754,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0.4000000059604645,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "70": 40,
+        "1000": 20.52320098876953,
+        "1010": 14309.904296875,
+        "2000": 18298.416015625,
+        "2001": 2002.523193359375,
+        "2002": 1023.9666748046875,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 1601,
+      "inherentProudSkillList": [
+        162101,
+        162201,
+        162301
+      ],
+      "skillLevelMap": {
+        "10160": 8,
+        "10161": 9,
+        "10165": 8
+      },
+      "proudSkillExtraLevelMap": {
+        "1632": 3,
+        "1639": 3
+      },
+      "equipList": [
+        {
+          "itemId": 72544,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501063,
+              501053,
+              501204,
+              501223,
+              501061,
+              501061,
+              501201,
+              501064,
+              501202
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3861448244",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 19.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 18
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 9.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 7
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 72524,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501064,
+              501083,
+              501203,
+              501223,
+              501084,
+              501223,
+              501063,
+              501224,
+              501063
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3721180620",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 16.3
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 44
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 21.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 72554,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501224,
+              501204,
+              501081,
+              501233,
+              501203,
+              501083,
+              501221,
+              501081,
+              501221
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3239844884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 18.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 7.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 53
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CHARGE_EFFICIENCY",
+                "statValue": 5.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 79514,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15009,
+            "appendPropIdList": [
+              501204,
+              501053,
+              501093,
+              501224,
+              501223,
+              501223,
+              501093,
+              501091,
+              501222
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3898592532",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15005_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15005,
+            "setNameTextMapHash": "2512309395",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 18
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 18.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 28
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ELEC_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 72534,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13008,
+            "appendPropIdList": [
+              501022,
+              501052,
+              501063,
+              501204,
+              501204,
+              501201,
+              501064,
+              501061,
+              501024
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "758112556",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_14002_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 14002,
+            "setNameTextMapHash": "1873342283",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 538
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 16
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 15.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.5
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL_HURT",
+              "statValue": 62.2
+            }
+          }
+        },
+        {
+          "itemId": 12424,
+          "weapon": {
+            "level": 80,
+            "promoteLevel": 5,
+            "affixMap": {
+              "112424": 4
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "3459616011",
+            "rankLevel": 4,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Claymore_BeastTamer",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 497
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 16.8
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    },
+    {
+      "avatarId": 10000029,
+      "propMap": {
+        "1001": {
+          "type": 1001,
+          "ival": "0"
+        },
+        "1002": {
+          "type": 1002,
+          "ival": "5",
+          "val": "5"
+        },
+        "1003": {
+          "type": 1003,
+          "ival": "0"
+        },
+        "1004": {
+          "type": 1004,
+          "ival": "0"
+        },
+        "4001": {
+          "type": 4001,
+          "ival": "80",
+          "val": "80"
+        },
+        "10010": {
+          "type": 10010,
+          "ival": "24000",
+          "val": "24000"
+        },
+        "10049": {
+          "type": 10049,
+          "ival": "12000",
+          "val": "12000"
+        }
+      },
+      "fightPropMap": {
+        "1": 9075.603515625,
+        "2": 5945.1396484375,
+        "3": 0.040800001472234726,
+        "4": 882.4030151367188,
+        "5": 344.07000732421875,
+        "6": 0.6868000030517578,
+        "7": 542.4622802734375,
+        "8": 67.12999725341797,
+        "9": 0.10930000245571136,
+        "20": 0.6915000081062317,
+        "21": 0,
+        "22": 2.0629360675811768,
+        "23": 1,
+        "26": 0,
+        "27": 0,
+        "28": 46.619998931884766,
+        "29": 0,
+        "30": 0,
+        "40": 0.6819999814033508,
+        "41": 0,
+        "42": 0,
+        "43": 0,
+        "44": 0,
+        "45": 0,
+        "46": 0,
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "70": 60,
+        "1000": 47.24995803833008,
+        "1010": 15391.02734375,
+        "2000": 15391.02734375,
+        "2001": 1832.50732421875,
+        "2002": 668.8834228515625,
+        "2003": 0,
+        "2004": 0,
+        "2020": 0,
+        "3045": 0,
+        "3046": 1
+      },
+      "skillDepotId": 2901,
+      "inherentProudSkillList": [
+        292101,
+        292201,
+        292301
+      ],
+      "skillLevelMap": {
+        "10291": 8,
+        "10292": 4,
+        "10295": 4
+      },
+      "equipList": [
+        {
+          "itemId": 44543,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 14001,
+            "appendPropIdList": [
+              501244,
+              501203,
+              501083,
+              501223,
+              501084,
+              501224,
+              501224,
+              501221
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1675773740",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_4",
+            "equipType": "EQUIP_BRACER",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 3.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 44
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 28
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_HP",
+              "statValue": 4780
+            }
+          }
+        },
+        {
+          "itemId": 44523,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 12001,
+            "appendPropIdList": [
+              501031,
+              501022,
+              501204,
+              501224,
+              501222,
+              501022,
+              501201,
+              501204
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3809481884",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_2",
+            "equipType": "EQUIP_NECKLACE",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP_PERCENT",
+                "statValue": 4.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 478
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 10.5
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 14
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK",
+              "statValue": 311
+            }
+          }
+        },
+        {
+          "itemId": 44553,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 10004,
+            "appendPropIdList": [
+              501021,
+              501244,
+              501202,
+              501223,
+              501221,
+              501202,
+              501222,
+              501221
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "2583081740",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_5",
+            "equipType": "EQUIP_SHOES",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 209
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ELEMENT_MASTERY",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 6.2
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 24.1
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_ATTACK_PERCENT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 32513,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 15008,
+            "appendPropIdList": [
+              501092,
+              501061,
+              501221,
+              501204,
+              501201,
+              501202,
+              501202,
+              501091
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "3386315228",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15032_1",
+            "equipType": "EQUIP_RING",
+            "setId": 15032,
+            "setNameTextMapHash": "3410220315",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE_PERCENT",
+                "statValue": 10.9
+              },
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK_PERCENT",
+                "statValue": 4.1
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 5.4
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL",
+                "statValue": 12.8
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_FIRE_ADD_HURT",
+              "statValue": 46.6
+            }
+          }
+        },
+        {
+          "itemId": 44533,
+          "reliquary": {
+            "level": 21,
+            "mainPropId": 13007,
+            "appendPropIdList": [
+              501052,
+              501084,
+              501221,
+              501021,
+              501023,
+              501221,
+              501224,
+              501053
+            ]
+          },
+          "flat": {
+            "nameTextMapHash": "1638796108",
+            "rankLevel": 5,
+            "itemType": "ITEM_RELIQUARY",
+            "icon": "UI_RelicIcon_15044_3",
+            "equipType": "EQUIP_DRESS",
+            "setId": 15044,
+            "setNameTextMapHash": "3721836931",
+            "reliquarySubstats": [
+              {
+                "appendPropId": "FIGHT_PROP_ATTACK",
+                "statValue": 33
+              },
+              {
+                "appendPropId": "FIGHT_PROP_DEFENSE",
+                "statValue": 23
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 18.7
+              },
+              {
+                "appendPropId": "FIGHT_PROP_HP",
+                "statValue": 478
+              }
+            ],
+            "reliquaryMainstat": {
+              "mainPropId": "FIGHT_PROP_CRITICAL",
+              "statValue": 31.1
+            }
+          }
+        },
+        {
+          "itemId": 14509,
+          "weapon": {
+            "level": 90,
+            "promoteLevel": 6,
+            "affixMap": {
+              "114509": 1
+            }
+          },
+          "flat": {
+            "nameTextMapHash": "310247243",
+            "rankLevel": 5,
+            "itemType": "ITEM_WEAPON",
+            "icon": "UI_EquipIcon_Catalyst_Narukami",
+            "weaponStats": [
+              {
+                "appendPropId": "FIGHT_PROP_BASE_ATTACK",
+                "statValue": 608
+              },
+              {
+                "appendPropId": "FIGHT_PROP_CRITICAL_HURT",
+                "statValue": 66.2
+              }
+            ]
+          }
+        }
+      ],
+      "fetterInfo": {
+        "expLevel": 10
+      }
+    }
+  ],
+  "ttl": 56,
+  "uid": "172402193",
+  "region": "CN"
+}

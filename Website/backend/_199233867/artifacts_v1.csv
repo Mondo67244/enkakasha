@@ -1,0 +1,6 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Thundersoother,+20,HP,4780.0,ATK%,4.7,Crit DMG,30.3,HP%,11.1,Crit Rate,6.6,43.5
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit Rate,10.9,Crit DMG,7.8,HP%,21.0,HP,299.0,29.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,Crit Rate,14.0,Crit DMG,18.7,EM,21.0,ATK,14.0,46.7
+Furina,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,ATK,18.0,HP%,19.8,Crit Rate,7.4,Crit DMG,13.2,28.0
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,9.3,Crit DMG,35.7,EM,16.0,HP,269.0,35.7

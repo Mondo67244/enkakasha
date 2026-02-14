@@ -21,6 +21,7 @@ export const scanUID = async (uid) => {
 // Call backend API which uses cloudscraper to bypass Cloudflare
 export const getLeaderboard = async (calcId) => {
     const response = await api.get(`/leaderboard/${calcId}`);
+    console.debug('API getLeaderboard response:', response?.data);
     return response.data;
 };
 
@@ -28,6 +29,7 @@ export const getLeaderboardDeep = async (calcId, character, limit = 20) => {
     const response = await api.get(`/leaderboard/deep/${calcId}`, {
         params: { character, limit },
     });
+    console.debug('API getLeaderboardDeep response:', response?.data);
     return response.data;
 };
 

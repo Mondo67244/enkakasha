@@ -9,6 +9,7 @@ from pydantic import BaseModel
 from google import genai
 import ollama as ollama_client
 import shutil
+import logging
 
 # Ollama configuration
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
@@ -29,6 +30,9 @@ from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
 
+# Basic logging
+logging.basicConfig(level=logging.INFO)
+
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
 DATA_ROOT.mkdir(parents=True, exist_ok=True)
 SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
@@ -36,7 +40,7 @@ SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 # CORS for Frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For local dev
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],  # Dev Vite origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -190,7 +194,13 @@ async def get_leaderboard(calc_id: str):
         data = await anyio.to_thread.run_sync(
             partial(akasha.fetch_leaderboard, calc_id, limit=20)
         )
+        try:
+            ln = len(data) if data is not None and hasattr(data, '__len__') else 'unknown'
+        except Exception:
+            ln = 'unknown'
+        logging.info(f"GET /leaderboard/{calc_id} -> fetched length={ln}")
         if not data:
+             logging.warning(f"No leaderboard data for id={calc_id}")
              raise HTTPException(status_code=404, detail="No data found or ID invalid")
         return {"data": data}
     except HTTPException as e:
@@ -214,7 +224,13 @@ async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
                 limit=limit
             )
         )
+        try:
+            ln = len(data) if data is not None and hasattr(data, '__len__') else 'unknown'
+        except Exception:
+            ln = 'unknown'
+        logging.info(f"GET /leaderboard/deep/{calc_id}?character={character}&limit={limit} -> fetched length={ln}")
         if not data:
+            logging.warning(f"No deep leaderboard data for id={calc_id}, character={character}")
             raise HTTPException(status_code=404, detail="No data found or ID invalid")
         return {"data": data}
     except HTTPException as e:

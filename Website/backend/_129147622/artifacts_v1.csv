@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,ATK%,11.1,HP%,4.7,Crit DMG,19.4,Crit Rate,11.3,42.0
+Keqing,Plume,Brave Heart,+20,ATK,311.0,DEF%,5.8,ATK%,5.3,Crit Rate,14.4,Crit DMG,19.4,48.2
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,16.7,Crit DMG,7.8,ER%,4.5,ATK,37.0,41.2
+Keqing,Goblet,Tenacity of the Millelith,+20,Electro DMG%,46.6,ATK,18.0,Crit DMG,7.8,Crit Rate,10.5,ATK%,16.9,28.8
+Keqing,Circlet,Brave Heart,+20,Crit DMG,62.2,HP,299.0,Crit Rate,14.4,ATK%,10.5,ATK,18.0,28.8
+Clorinde,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit Rate,11.3,ER%,9.7,Crit DMG,15.5,ATK,31.0,38.1
+Clorinde,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit Rate,9.7,ATK%,5.8,HP,209.0,Crit DMG,17.9,37.3
+Clorinde,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,Crit DMG,28.0,ER%,5.2,Crit Rate,7.4,EM,40.0,42.8
+Clorinde,Goblet,Crimson Witch of Flames,+20,Electro DMG%,46.6,EM,16.0,Crit DMG,25.7,ATK%,8.7,Crit Rate,6.6,38.9
+Clorinde,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,HP%,5.3,ER%,11.0,ATK%,15.2,Crit Rate,10.1,20.2
+Nahida,Flower,Deepwood Memories,+20,HP,4780.0,ER%,6.5,Crit Rate,10.5,Crit DMG,17.9,ATK,14.0,38.9
+Nahida,Plume,Deepwood Memories,+20,ATK,311.0,Crit DMG,12.4,Crit Rate,12.8,ER%,6.5,EM,16.0,38.0
+Nahida,Sands,Deepwood Memories,+20,EM,187.0,Crit Rate,5.8,Crit DMG,19.4,ATK,29.0,HP,269.0,31.0
+Nahida,Goblet,Scroll of the Hero of Cinder City,+20,Dendro DMG%,46.6,Crit DMG,23.3,Crit Rate,6.2,EM,40.0,ATK,33.0,35.7
+Nahida,Circlet,Deepwood Memories,+20,Crit Rate,31.1,ATK%,11.1,HP,299.0,Crit DMG,26.4,ATK,16.0,26.4
+Kamisato Ayaka,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit Rate,10.1,Crit DMG,21.0,ATK%,9.9,ATK,16.0,41.2
+Kamisato Ayaka,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit Rate,8.9,EM,16.0,Crit DMG,21.8,ATK%,8.7,39.6
+Kamisato Ayaka,Sands,Marechaussee Hunter,+20,ATK%,46.6,ER%,11.7,ATK,18.0,Crit DMG,14.8,Crit Rate,9.3,33.4
+Kamisato Ayaka,Goblet,Fragment of Harmonic Whimsy,+20,Cryo DMG%,46.6,Crit Rate,9.7,ATK,16.0,ER%,5.8,Crit DMG,20.2,39.6
+Kamisato Ayaka,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,ATK%,11.1,DEF,42.0,ER%,11.0,Crit Rate,7.0,14.0
+Yelan,Flower,Thundersoother,+20,HP,4780.0,Crit Rate,13.2,DEF,19.0,HP%,9.9,Crit DMG,14.0,40.4
+Yelan,Plume,Tenacity of the Millelith,+20,ATK,311.0,Crit DMG,29.5,Crit Rate,7.4,ER%,12.3,DEF,16.0,44.3
+Yelan,Sands,Tenacity of the Millelith,+20,HP%,46.6,Crit DMG,14.8,HP,209.0,ER%,5.2,Crit Rate,15.2,45.2
+Yelan,Goblet,Obsidian Codex,+20,Hydro DMG%,46.6,Crit Rate,9.3,Crit DMG,20.2,ER%,11.7,HP,239.0,38.8
+Yelan,Circlet,Thundersoother,+20,Crit DMG,62.2,ATK,18.0,EM,16.0,Crit Rate,14.4,HP%,14.6,28.8
+Ganyu,Flower,Thundersoother,+20,HP,4780.0,Crit DMG,21.8,Crit Rate,8.9,ER%,6.5,DEF,19.0,39.6
+Ganyu,Plume,Thundersoother,+20,ATK,311.0,ATK%,5.3,Crit Rate,16.3,Crit DMG,5.4,EM,44.0,38.0
+Ganyu,Sands,Thundersoother,+20,ATK%,46.6,Crit Rate,9.3,ER%,4.5,Crit DMG,27.2,DEF,16.0,45.8
+Ganyu,Goblet,Maiden Beloved,+20,Cryo DMG%,46.6,EM,16.0,Crit DMG,30.3,ATK,19.0,Crit Rate,6.2,42.7
+Ganyu,Circlet,Thundersoother,+20,Crit DMG,62.2,Crit Rate,11.3,ATK,29.0,ATK%,5.8,HP%,8.7,22.6
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,ATK%,9.3,Crit Rate,6.2,Crit DMG,19.4,EM,40.0,31.8
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,ATK%,11.1,DEF,16.0,Crit Rate,10.1,Crit DMG,21.8,42.0
+Mavuika,Sands,Brave Heart,+20,EM,187.0,Crit Rate,2.7,ATK%,9.9,Crit DMG,34.2,HP%,4.7,39.6
+Mavuika,Goblet,Obsidian Codex,+20,Pyro DMG%,46.6,DEF,23.0,ATK%,16.3,Crit DMG,6.2,Crit Rate,13.6,33.4
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,EM,58.0,ATK,29.0,ATK%,5.8,Crit Rate,7.8,15.6
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,DEF,21.0,ER%,11.7,Crit Rate,13.6,Crit DMG,13.2,40.4
+Raiden Shogun,Plume,Emblem of Severed Fate,+20,ATK,311.0,DEF,23.0,ER%,6.5,Crit DMG,19.4,Crit Rate,14.0,47.4
+Raiden Shogun,Sands,Emblem of Severed Fate,+20,ATK%,46.6,Crit DMG,24.1,EM,23.0,DEF%,7.3,Crit Rate,7.8,39.7
+Raiden Shogun,Goblet,Obsidian Codex,+20,ATK%,46.6,ER%,10.4,HP%,5.8,Crit DMG,20.2,Crit Rate,10.1,40.4
+Raiden Shogun,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,EM,16.0,HP,478.0,Crit DMG,27.2,ATK%,5.3,27.2
+Columbina,Flower,Silken Moon's Serenade,+20,HP,4780.0,ATK,19.0,Crit Rate,12.8,ATK%,9.9,Crit DMG,7.8,33.4
+Columbina,Plume,Silken Moon's Serenade,+20,ATK,311.0,Crit Rate,5.8,HP,508.0,HP%,9.9,Crit DMG,18.7,30.3
+Columbina,Sands,Thundering Fury,+20,HP%,46.6,Crit Rate,5.8,ER%,11.7,Crit DMG,28.7,DEF%,5.1,40.3
+Columbina,Goblet,Silken Moon's Serenade,+20,HP%,46.6,DEF,19.0,HP,269.0,Crit Rate,12.4,Crit DMG,13.2,38.0
+Columbina,Circlet,Silken Moon's Serenade,+20,Crit DMG,62.2,ER%,9.7,HP%,9.9,Crit Rate,9.3,HP,209.0,18.6
+Nefer,Flower,Maiden Beloved,+20,HP,4780.0,ER%,4.5,EM,42.0,Crit Rate,10.1,Crit DMG,21.0,41.2
+Nefer,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,23.3,EM,40.0,Crit Rate,8.9,HP,269.0,41.1
+Nefer,Sands,Night of the Sky's Unveiling,+20,EM,187.0,HP%,4.1,Crit DMG,21.8,DEF%,20.4,Crit Rate,7.8,37.4
+Nefer,Goblet,Night of the Sky's Unveiling,+20,EM,187.0,Crit DMG,17.9,Crit Rate,6.6,ER%,10.4,DEF,19.0,31.1
+Nefer,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,EM,84.0,DEF,42.0,Crit Rate,2.7,ER%,4.5,5.4
+Flins,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,EM,40.0,Crit Rate,10.1,HP%,11.1,Crit DMG,14.0,34.2
+Flins,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,12.4,Crit Rate,14.0,ATK%,5.8,EM,19.0,40.4
+Flins,Sands,Night of the Sky's Unveiling,+20,ATK%,46.6,ATK,14.0,Crit DMG,5.4,EM,35.0,Crit Rate,12.1,29.6
+Flins,Goblet,Wanderer's Troupe,+20,ATK%,46.6,Crit DMG,35.7,ER%,5.2,Crit Rate,6.6,DEF%,5.8,48.9
+Flins,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,ATK,72.0,Crit Rate,6.6,ATK%,4.7,EM,21.0,13.2
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,9.7,Crit DMG,11.7,DEF,67.0,ATK,19.0,31.1
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,21.8,ER%,5.2,Crit Rate,6.6,DEF%,16.8,35.0
+ID_10000126,Sands,Heart of Depth,+20,DEF%,58.3,DEF,42.0,Crit Rate,7.4,Crit DMG,28.0,HP%,4.1,42.8
+ID_10000126,Goblet,Night of the Sky's Unveiling,+20,DEF%,58.3,HP%,5.3,Crit Rate,13.2,EM,40.0,Crit DMG,7.8,34.2
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,HP%,5.3,Crit Rate,10.9,DEF%,14.6,DEF,35.0,21.8

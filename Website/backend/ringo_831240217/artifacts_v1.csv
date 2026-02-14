@@ -1,0 +1,56 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Yelan,Flower,Emblem of Severed Fate,+20,HP,4780.0,Crit DMG,11.7,ER%,9.1,Crit Rate,13.6,EM,21.0,38.9
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit DMG,21.0,HP,299.0,Crit Rate,10.1,DEF,35.0,41.2
+Yelan,Sands,Emblem of Severed Fate,+20,HP%,46.6,Crit DMG,27.2,EM,23.0,Crit Rate,6.6,ATK,16.0,40.4
+Yelan,Goblet,Marechaussee Hunter,+20,Hydro DMG%,46.6,EM,21.0,HP%,11.1,Crit DMG,12.4,Crit Rate,10.5,33.4
+Yelan,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,ER%,10.4,ATK,27.0,Crit DMG,14.0,EM,56.0,14.0
+Furina,Flower,Marechaussee Hunter,+20,HP,4780.0,ER%,6.5,Crit DMG,21.0,Crit Rate,10.5,HP%,10.5,42.0
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP,299.0,Crit Rate,10.9,HP%,8.7,Crit DMG,23.3,45.1
+Furina,Sands,Golden Troupe,+20,HP%,46.6,Crit Rate,10.5,ATK,18.0,HP,299.0,Crit DMG,29.5,50.5
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,HP,269.0,Crit DMG,21.0,EM,19.0,Crit Rate,13.2,47.4
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,21.6,Crit DMG,14.8,ER%,5.8,ATK,18.0,14.8
+Varesa,Flower,Long Night's Oath,+20,HP,4780.0,Crit Rate,10.5,Crit DMG,21.0,ER%,6.5,ATK%,8.7,42.0
+Varesa,Plume,Long Night's Oath,+20,ATK,311.0,HP%,5.3,Crit DMG,21.0,Crit Rate,10.1,EM,16.0,41.2
+Varesa,Sands,Long Night's Oath,+20,ATK%,46.6,Crit Rate,11.3,Crit DMG,14.0,DEF,35.0,ATK,35.0,36.6
+Varesa,Goblet,Emblem of Severed Fate,+20,Electro DMG%,46.6,Crit Rate,14.0,Crit DMG,7.8,ATK%,9.3,HP,568.0,35.8
+Varesa,Circlet,Long Night's Oath,+20,Crit Rate,31.1,DEF,21.0,Crit DMG,19.4,ATK%,16.3,ATK,18.0,19.4
+Sayu,Flower,Viridescent Venerer,+20,HP,4780.0,EM,54.0,DEF%,5.8,ER%,11.7,ATK,33.0,0.0
+Sayu,Plume,Viridescent Venerer,+20,ATK,311.0,EM,21.0,ER%,23.3,HP,478.0,DEF,19.0,0.0
+Sayu,Sands,Viridescent Venerer,+20,EM,187.0,ER%,14.9,Crit DMG,13.2,DEF,44.0,ATK%,4.7,13.2
+Sayu,Goblet,Viridescent Venerer,+20,EM,187.0,DEF,37.0,ER%,16.2,HP,299.0,Crit DMG,11.7,11.7
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,14.8,HP%,10.5,EM,70.0,28.0
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,ER%,4.5,Crit Rate,5.8,Crit DMG,22.5,EM,37.0,34.1
+Mavuika,Sands,Obsidian Codex,+20,EM,187.0,ATK%,9.9,Crit DMG,20.2,HP,299.0,Crit Rate,7.0,34.2
+Mavuika,Goblet,Set_15026,+20,Pyro DMG%,46.6,Crit Rate,3.9,DEF,46.0,Crit DMG,27.2,EM,23.0,35.0
+Mavuika,Circlet,Obsidian Codex,+20,Crit Rate,31.1,ATK%,16.3,Crit DMG,6.2,EM,33.0,HP%,8.7,6.2
+Hu Tao,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit Rate,3.1,Crit DMG,28.0,HP%,4.7,EM,56.0,34.2
+Hu Tao,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit DMG,19.4,HP%,14.0,Crit Rate,3.5,EM,37.0,26.4
+Hu Tao,Sands,Marechaussee Hunter,+20,EM,187.0,ATK%,10.5,DEF%,7.3,HP%,15.2,Crit Rate,10.1,20.2
+Hu Tao,Goblet,Tenacity of the Millelith,+20,Pyro DMG%,46.6,Crit DMG,7.0,ATK,37.0,HP%,15.7,Crit Rate,11.3,29.6
+Hu Tao,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,EM,19.0,ER%,11.0,HP,299.0,HP%,25.7,0.0
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,14.0,ER%,4.5,ATK%,4.7,Crit DMG,13.2,41.2
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,21.8,Crit Rate,3.9,ER%,9.7,ATK%,14.0,29.6
+Escoffier,Sands,Golden Troupe,+20,ATK%,46.6,Crit Rate,7.4,HP%,9.3,ER%,11.7,Crit DMG,20.2,35.0
+Escoffier,Goblet,Golden Troupe,+20,ATK%,46.6,Crit DMG,10.9,ER%,16.2,HP,777.0,Crit Rate,3.9,18.7
+Escoffier,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,Crit DMG,6.2,ATK%,11.7,ATK,14.0,ER%,24.0,6.2
+Citlali,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ATK,18.0,ER%,11.0,EM,63.0,HP%,15.2,0.0
+Citlali,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,ER%,13.0,EM,61.0,Crit Rate,7.0,DEF,42.0,14.0
+Citlali,Sands,Gladiator's Finale,+20,EM,187.0,DEF%,5.8,HP,508.0,ER%,21.4,Crit Rate,3.1,6.2
+Citlali,Goblet,Scroll of the Hero of Cinder City,+20,EM,187.0,Crit Rate,6.2,DEF,16.0,ATK,62.0,ER%,11.0,12.4
+Citlali,Circlet,Scroll of the Hero of Cinder City,+20,EM,187.0,ER%,11.0,Crit Rate,6.6,ATK%,11.7,Crit DMG,14.0,27.2
+Raiden Shogun,Flower,Set_15026,+20,HP,4780.0,Crit DMG,12.4,Crit Rate,14.0,ER%,10.4,ATK%,5.3,40.4
+Raiden Shogun,Plume,Set_15026,+20,ATK,311.0,HP,538.0,DEF,21.0,Crit Rate,14.0,Crit DMG,14.8,42.8
+Raiden Shogun,Sands,Set_15026,+20,EM,187.0,Crit Rate,3.9,Crit DMG,21.0,ATK,35.0,DEF%,10.9,28.8
+Raiden Shogun,Goblet,Wanderer's Troupe,+20,EM,187.0,Crit Rate,10.1,Crit DMG,18.7,DEF,19.0,ER%,5.2,38.9
+Raiden Shogun,Circlet,Set_15026,+20,Crit DMG,62.2,DEF,42.0,HP%,4.7,EM,21.0,Crit Rate,13.2,26.4
+Columbina,Flower,Set_15043,+20,HP,4780.0,ER%,11.0,Crit Rate,6.2,ATK,39.0,Crit DMG,10.9,23.3
+Columbina,Plume,Set_15043,+20,ATK,311.0,Crit DMG,25.6,HP,508.0,Crit Rate,3.9,ER%,6.5,33.4
+Columbina,Sands,Set_15043,+20,HP%,46.6,ATK,19.0,Crit DMG,12.4,Crit Rate,5.8,ER%,17.5,24.0
+Columbina,Goblet,Golden Troupe,+20,HP%,46.6,ATK,16.0,Crit Rate,6.6,ER%,16.8,Crit DMG,21.8,35.0
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,HP,508.0,EM,40.0,HP%,10.5,DEF%,13.1,0.0
+Xilonen,Sands,Scroll of the Hero of Cinder City,+20,DEF%,58.3,EM,42.0,Crit DMG,12.4,Crit Rate,7.0,ER%,11.0,26.4
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,7.4,Crit DMG,17.9,DEF%,7.3,EM,40.0,32.7
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,DEF%,7.3,ER%,5.2,ATK%,5.3,Crit Rate,19.8,39.6
+ID_10000126,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,Crit Rate,9.7,Crit DMG,13.2,DEF,19.0,HP%,14.6,32.6
+ID_10000126,Goblet,Emblem of Severed Fate,+20,DEF%,58.3,DEF,19.0,Crit DMG,11.7,ER%,9.7,Crit Rate,14.8,41.3
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,DEF%,18.2,Crit Rate,7.8,HP,239.0,ER%,10.4,15.6

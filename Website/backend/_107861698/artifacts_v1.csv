@@ -1,0 +1,21 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit Rate,10.5,ER%,5.2,Crit DMG,20.2,HP%,4.7,41.2
+Columbina,Plume,Set_15043,+20,ATK,311.0,HP,239.0,Crit Rate,10.5,HP%,5.8,Crit DMG,22.5,43.5
+Columbina,Sands,Set_15043,+20,HP%,46.6,ATK%,4.7,Crit Rate,10.5,Crit DMG,21.8,DEF,16.0,42.8
+Columbina,Goblet,Set_15043,+20,HP%,46.6,Crit Rate,9.7,Crit DMG,18.7,ATK,16.0,EM,37.0,38.1
+Columbina,Circlet,Finale of the Deep Galleries,+20,HP%,46.6,DEF,19.0,Crit Rate,11.3,Crit DMG,28.0,ER%,5.2,50.6
+Keqing,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ATK%,10.5,Crit DMG,13.2,Crit Rate,15.6,ATK,14.0,44.4
+Keqing,Plume,Brave Heart,+20,ATK,311.0,ATK%,15.2,HP,209.0,Crit DMG,14.0,Crit Rate,10.1,34.2
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,9.7,ER%,5.2,DEF,37.0,Crit DMG,21.0,40.4
+Keqing,Goblet,Brave Heart,+20,Electro DMG%,46.6,Crit DMG,23.3,Crit Rate,8.9,HP,269.0,ATK,18.0,41.1
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,ATK,16.0,DEF,21.0,ATK%,14.0,Crit DMG,24.9,24.9
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit DMG,14.8,DEF%,12.4,DEF,16.0,Crit Rate,14.8,44.4
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,ATK%,5.3,Crit DMG,7.8,DEF%,21.1,Crit Rate,14.4,36.6
+ID_10000126,Sands,Brave Heart,+20,DEF%,58.3,Crit DMG,42.0,DEF,23.0,HP%,4.7,Crit Rate,3.9,49.8
+ID_10000126,Goblet,Night of the Sky's Unveiling,+20,DEF%,58.3,Crit Rate,17.9,Crit DMG,7.0,ER%,4.5,DEF,35.0,42.8
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,DEF%,16.0,Crit Rate,6.2,ER%,4.5,DEF,44.0,12.4
+Skirk,Flower,Shimenawa's Reminiscence,+20,HP,4780.0,ATK%,5.8,Crit DMG,20.2,Crit Rate,14.4,DEF%,7.3,49.0
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,Crit DMG,20.2,DEF,16.0,Crit Rate,7.0,ATK%,15.7,34.2
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,Crit Rate,14.4,Crit DMG,13.2,DEF%,7.3,DEF,39.0,42.0
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,Crit Rate,11.3,Crit DMG,13.2,DEF%,11.7,ATK%,11.7,35.8
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,ER%,10.4,Crit Rate,10.9,ATK%,10.5,DEF,16.0,21.8

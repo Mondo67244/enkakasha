@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,Crit DMG,20.2,EM,42.0,Crit Rate,6.2,ATK%,11.7,32.6
+Keqing,Plume,Brave Heart,+20,ATK,311.0,ER%,5.8,Crit DMG,20.2,ATK%,10.5,Crit Rate,10.9,42.0
+Keqing,Sands,Emblem of Severed Fate,+20,ATK%,46.6,ATK,16.0,EM,21.0,Crit DMG,14.0,Crit Rate,14.0,42.0
+Keqing,Goblet,Brave Heart,+20,Electro DMG%,46.6,HP,239.0,Crit Rate,13.6,DEF,21.0,Crit DMG,13.2,40.4
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,ER%,5.8,ATK%,11.7,Crit DMG,27.2,EM,23.0,27.2
+Columbina,Flower,Thundersoother,+20,HP,4780.0,DEF,16.0,EM,19.0,Crit Rate,10.5,Crit DMG,27.2,48.2
+Columbina,Plume,Flower of Paradise Lost,+20,ATK,311.0,ATK%,9.3,ER%,4.5,Crit Rate,13.2,Crit DMG,13.2,39.6
+Columbina,Sands,Thundersoother,+20,HP%,46.6,Crit DMG,22.5,ER%,17.5,Crit Rate,7.4,ATK%,5.3,37.3
+Columbina,Goblet,Noblesse Oblige,+20,HP%,46.6,EM,40.0,Crit DMG,15.5,ATK%,4.7,Crit Rate,13.6,42.7
+Columbina,Circlet,Flower of Paradise Lost,+20,Crit DMG,62.2,EM,44.0,HP%,11.7,Crit Rate,10.1,HP,209.0,20.2
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit DMG,26.4,EM,35.0,ATK%,4.1,Crit Rate,7.0,40.4
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,Crit Rate,7.0,DEF%,6.6,Crit DMG,25.7,ATK%,11.1,39.7
+Skirk,Sands,Silken Moon's Serenade,+20,ATK%,46.6,DEF,21.0,Crit Rate,10.5,EM,21.0,Crit DMG,27.2,48.2
+Skirk,Goblet,Finale of the Deep Galleries,+20,ATK%,46.6,Crit Rate,9.3,DEF,42.0,ATK,19.0,Crit DMG,21.8,40.4
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,HP%,10.5,ATK%,14.0,DEF,16.0,Crit Rate,9.7,19.4
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,ATK%,5.3,Crit Rate,6.6,ATK,19.0,Crit DMG,27.2,40.4
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,Crit Rate,6.2,Crit DMG,26.4,ATK%,9.9,HP,209.0,38.8
+Escoffier,Sands,Brave Heart,+20,ER%,51.8,Crit DMG,29.5,Crit Rate,6.6,DEF,21.0,ATK%,5.8,42.7
+Escoffier,Goblet,Golden Troupe,+20,ATK%,46.6,Crit Rate,9.7,Crit DMG,27.2,DEF,23.0,HP,299.0,46.6
+Escoffier,Circlet,Golden Troupe,+20,Crit Rate,31.1,ATK,18.0,Crit DMG,14.0,ER%,10.4,ATK%,16.9,14.0
+Chiori,Flower,Golden Troupe,+20,HP,4780.0,ATK%,4.1,Crit DMG,18.7,HP%,9.9,Crit Rate,10.9,40.5
+Chiori,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,13.2,DEF%,11.7,ATK%,9.9,Crit Rate,10.1,33.4
+Chiori,Sands,Golden Troupe,+20,DEF%,58.3,DEF,16.0,Crit Rate,10.1,HP,209.0,Crit DMG,28.8,49.0
+Chiori,Goblet,Emblem of Severed Fate,+20,DEF%,58.3,Crit Rate,8.6,DEF,19.0,ATK%,4.7,Crit DMG,25.6,42.8
+Chiori,Circlet,Golden Troupe,+20,Crit Rate,31.1,DEF%,6.6,ATK,39.0,Crit DMG,28.0,ER%,4.5,28.0
+Nilou,Flower,Pale Flame,+20,HP,4780.0,HP%,19.8,ATK,14.0,DEF%,12.4,ER%,11.0,0.0
+Nilou,Plume,Flower of Paradise Lost,+20,ATK,311.0,HP%,15.2,ER%,18.8,DEF,42.0,EM,23.0,0.0
+Nilou,Sands,Flower of Paradise Lost,+20,HP%,46.6,HP,478.0,ER%,11.0,ATK,19.0,EM,61.0,0.0
+Nilou,Goblet,Pale Flame,+20,HP%,46.6,ATK,16.0,ATK%,4.1,HP,508.0,ER%,21.4,0.0
+Nilou,Circlet,Viridescent Venerer,+20,HP%,46.6,HP,1016.0,ER%,12.3,ATK,18.0,EM,21.0,0.0
+Yumemizuki Mizuki,Flower,Viridescent Venerer,+20,HP,4780.0,Crit Rate,3.9,DEF,44.0,EM,100.0,ER%,6.5,7.8
+Yumemizuki Mizuki,Plume,Viridescent Venerer,+20,ATK,311.0,ER%,4.5,Crit DMG,11.7,ATK%,14.6,EM,44.0,11.7
+Yumemizuki Mizuki,Sands,Viridescent Venerer,+20,EM,187.0,DEF%,5.1,Crit Rate,6.6,ER%,22.0,DEF,35.0,13.2
+Yumemizuki Mizuki,Goblet,Finale of the Deep Galleries,+20,EM,187.0,Crit Rate,9.7,ER%,11.7,Crit DMG,14.0,DEF%,5.8,33.4
+Yumemizuki Mizuki,Circlet,Viridescent Venerer,+20,EM,187.0,Crit Rate,3.5,DEF%,10.9,ATK,43.0,ER%,15.5,7.0
+Sangonomiya Kokomi,Flower,Crimson Witch of Flames,+20,HP,4780.0,ER%,23.3,EM,40.0,Crit DMG,15.5,Crit Rate,3.9,23.3
+Sangonomiya Kokomi,Plume,Crimson Witch of Flames,+20,ATK,311.0,DEF,16.0,ATK%,14.6,HP%,4.7,ER%,16.8,0.0
+Sangonomiya Kokomi,Sands,Crimson Witch of Flames,+20,HP%,46.6,HP,239.0,ER%,16.8,DEF,19.0,EM,89.0,0.0
+Sangonomiya Kokomi,Goblet,Emblem of Severed Fate,+20,HP%,46.6,Crit DMG,14.0,ATK,18.0,ER%,21.4,HP,299.0,14.0
+Sangonomiya Kokomi,Circlet,Crimson Witch of Flames,+20,Healing%,35.9,DEF%,13.1,EM,56.0,Crit DMG,6.2,ER%,10.4,6.2
+Ineffa,Flower,Thundersoother,+20,HP,4780.0,Crit DMG,28.0,ATK,18.0,Crit Rate,5.4,ATK%,9.3,38.8
+Ineffa,Plume,Thundersoother,+20,ATK,311.0,Crit Rate,12.8,EM,19.0,ER%,9.1,Crit DMG,15.5,41.1
+Ineffa,Sands,Wanderer's Troupe,+20,ATK%,46.6,ER%,12.3,Crit Rate,3.1,ATK,16.0,Crit DMG,29.5,35.7
+Ineffa,Goblet,Heart of Depth,+20,ATK%,46.6,DEF,16.0,EM,61.0,Crit Rate,3.5,Crit DMG,27.2,34.2
+Ineffa,Circlet,Heart of Depth,+20,Crit Rate,31.1,ATK,33.0,ER%,5.8,ATK%,15.8,Crit DMG,20.2,20.2
+Furina,Flower,Golden Troupe,+20,HP,4780.0,DEF,21.0,ER%,12.3,Crit DMG,14.0,Crit Rate,14.0,42.0
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,5.4,ER%,22.7,Crit Rate,5.4,ATK%,5.3,16.2
+Furina,Sands,Golden Troupe,+20,HP%,46.6,DEF%,6.6,ER%,4.5,Crit DMG,35.0,Crit Rate,3.9,42.8
+Furina,Goblet,Obsidian Codex,+20,HP%,46.6,DEF%,5.8,EM,16.0,Crit Rate,7.8,Crit DMG,27.2,42.8
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP,239.0,Crit DMG,35.0,HP%,4.1,ATK,14.0,35.0
+Clorinde,Flower,Gladiator's Finale,+20,HP,4780.0,ER%,11.7,ATK%,4.7,Crit Rate,7.4,Crit DMG,21.8,36.6
+Clorinde,Plume,Gladiator's Finale,+20,ATK,311.0,ER%,13.0,Crit DMG,27.2,Crit Rate,7.4,DEF%,5.1,42.0
+Clorinde,Sands,Viridescent Venerer,+20,ATK%,46.6,Crit Rate,7.4,ER%,12.3,Crit DMG,26.4,HP%,5.8,41.2
+Clorinde,Goblet,Gladiator's Finale,+20,Electro DMG%,46.6,Crit Rate,5.8,ATK%,21.0,Crit DMG,14.8,ATK,16.0,26.4
+Clorinde,Circlet,Gladiator's Finale,+20,Crit DMG,62.2,EM,21.0,ATK%,12.8,HP,209.0,Crit Rate,12.8,25.6
+Chasca,Flower,Obsidian Codex,+20,HP,4780.0,Crit Rate,6.2,Crit DMG,19.4,ATK%,14.0,EM,21.0,31.8
+Chasca,Plume,Obsidian Codex,+20,ATK,311.0,Crit Rate,7.8,EM,40.0,Crit DMG,22.5,ATK%,4.7,38.1
+Chasca,Sands,Obsidian Codex,+20,ATK%,46.6,Crit Rate,7.8,Crit DMG,22.5,EM,54.0,HP,299.0,38.1
+Chasca,Goblet,Thundering Fury,+20,ATK%,46.6,Crit Rate,5.8,Crit DMG,36.5,ER%,4.5,DEF,23.0,48.1
+Chasca,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ER%,9.1,EM,40.0,Crit Rate,8.9,HP%,5.3,17.8

@@ -1,0 +1,21 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,5.3,Crit Rate,6.6,Crit DMG,33.4,ER%,6.5,46.6
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP,209.0,Crit Rate,10.9,Crit DMG,7.8,HP%,21.6,29.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,DEF,16.0,Crit DMG,21.0,Crit Rate,10.5,ATK%,4.7,42.0
+Furina,Goblet,Scroll of the Hero of Cinder City,+20,Hydro DMG%,46.6,HP%,11.1,Crit DMG,11.7,HP,269.0,Crit Rate,15.2,42.1
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,Crit DMG,32.6,DEF,21.0,DEF%,5.1,HP%,10.5,32.6
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit DMG,11.7,ATK%,9.9,HP%,4.1,Crit Rate,10.1,31.9
+Columbina,Plume,Set_15043,+20,ATK,311.0,ER%,19.4,HP%,4.1,Crit Rate,5.8,EM,16.0,11.6
+Columbina,Sands,Set_15043,+20,HP%,46.6,ER%,16.8,Crit Rate,5.8,DEF%,6.6,DEF,46.0,11.6
+Columbina,Goblet,Finale of the Deep Galleries,+20,HP%,46.6,HP,209.0,Crit Rate,6.6,Crit DMG,13.2,ER%,14.2,26.4
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,ATK%,4.1,HP,807.0,Crit Rate,11.7,DEF,16.0,23.4
+Nilou,Flower,Vourukasha's Glow,+20,HP,4780.0,ER%,11.0,Crit Rate,7.4,ATK,37.0,DEF,39.0,14.8
+Nilou,Plume,Tenacity of the Millelith,+20,ATK,311.0,HP,299.0,HP%,14.0,Crit Rate,7.0,Crit DMG,19.4,33.4
+Nilou,Sands,Pale Flame,+20,HP%,46.6,Crit Rate,7.4,ATK,14.0,Crit DMG,14.8,EM,54.0,29.6
+Nilou,Goblet,Pale Flame,+20,HP%,46.6,Crit DMG,23.3,ATK,37.0,EM,65.0,ATK%,5.8,23.3
+Nilou,Circlet,Vourukasha's Glow,+20,HP%,46.6,ATK%,5.8,DEF,42.0,ATK,51.0,ER%,11.0,0.0
+Barbara,Flower,Crimson Witch of Flames,+20,HP,4780.0,HP%,16.9,ATK,35.0,Crit Rate,3.9,Crit DMG,17.9,25.7
+Barbara,Plume,Crimson Witch of Flames,+20,ATK,311.0,DEF%,13.1,DEF,44.0,ATK%,11.1,EM,40.0,0.0
+Barbara,Sands,Crimson Witch of Flames,+20,HP%,46.6,DEF,56.0,ATK,33.0,DEF%,5.1,Crit Rate,9.3,18.6
+Barbara,Goblet,Crimson Witch of Flames,+20,HP%,46.6,Crit Rate,15.6,HP,269.0,ATK%,5.8,ATK,14.0,31.2
+Barbara,Circlet,Golden Troupe,+20,Healing%,35.9,DEF,21.0,HP,478.0,Crit Rate,10.5,Crit DMG,20.2,41.2
