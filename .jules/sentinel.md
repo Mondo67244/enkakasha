@@ -7,3 +7,8 @@
 **Vulnerability:** Found a hardcoded Google Gemini API key in `Tools/Cleaners/list_models.py`. Utility scripts often bypass standard security reviews but are still part of the codebase and can leak secrets if committed.
 **Learning:** Secrets in "Tools" or "Scripts" folders are just as dangerous as in production code. Developers often use these for quick testing and forget to clean them up.
 **Prevention:** Use environment variables for ALL scripts, even temporary ones. Add pre-commit hooks to scan for secrets in all files, including non-source directories.
+
+## 2026-03-01 - Second-Order Path Traversal in Akasha Scraper
+**Vulnerability:** Found a Second-Order Path Traversal vulnerability in `akasha.fetch_leaderboard`. The character name returned by the external API was used directly to create a filename (`f"{char_name}_dataset.csv"`), allowing an attacker controlling the upstream API (or a malicious proxy) to write files to arbitrary locations.
+**Learning:** Data from external APIs should be treated as untrusted, just like user input. "Trusted" sources can be compromised or return unexpected data.
+**Prevention:** Always sanitize data from external sources before using it in sensitive operations like file system access. Use strict allow-lists (e.g., alphanumeric only) for filenames.

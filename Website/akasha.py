@@ -10,6 +10,15 @@ CALCULATION_ID = ""
 MAX_SIZE = 50
 REQUEST_TIMEOUT = 15
 
+def sanitize_filename(name):
+    """Cleans a name for use in a filename."""
+    # Replace special characters with underscores
+    sanitized = re.sub(r'[^a-zA-Z0-9_-]', '_', name)
+    # Remove multiple underscores
+    sanitized = re.sub(r'_+', '_', sanitized)
+    # Remove leading/trailing underscores
+    return sanitized.strip('_')
+
 def get_value(obj):
     """Extracts value from object {'value': X} or returns the object directly."""
     if isinstance(obj, dict) and 'value' in obj:
@@ -97,7 +106,8 @@ def fetch_leaderboard(calculation_id, limit=MAX_SIZE, timeout=REQUEST_TIMEOUT):
 
         # Get character name for filename
         char_name = data['data'][0].get('name', 'character').lower()
-        filename = f"{char_name}_dataset.csv"
+        safe_char_name = sanitize_filename(char_name)
+        filename = f"{safe_char_name}_dataset.csv"
 
         all_profiles = []
 
