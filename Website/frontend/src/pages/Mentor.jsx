@@ -526,7 +526,7 @@ const Mentor = () => {
       console.error("getLeaderboardDeep error", err, err.response?.data);
       setErrorFragment(
         err.response?.data?.detail ||
-          "Deep scan failed. This can take time or hit rate limits.",
+        "Deep scan failed. This can take time or hit rate limits.",
       );
     } finally {
       setLoadingDeep(false);
@@ -624,189 +624,189 @@ const Mentor = () => {
   };
 
   const StatDelta = ({ rows }) => (
-  <div className="p-3 bg-[var(--color-surface)] rounded-xl">
-    <h3 className="text-lg font-display text-[var(--color-text-strong)] flex items-center gap-2">
-      <Target size={16} /> Stat Delta → Target
-    </h3>
-    <div className="mt-3 space-y-2 text-sm">
-      {rows.map((row) => (
-        <div
-          key={row.key}
-          className="flex justify-between text-[var(--color-text)]"
-        >
-          <div className="text-[var(--color-text-muted)]">{row.label}</div>
-          <div className="font-sans font-semibold">
-            <span
-              className={
-                row.delta > 0
-                  ? "text-green-400"
-                  : row.delta < 0
-                    ? "text-red-400"
-                    : ""
-              }
-            >
-              {row.delta
-                ? `${row.delta > 0 ? "+" : ""}${formatStatValue(row.delta.toFixed(1), row.isPercent)}`
-                : ""}
-            </span>{" "}
-            → {formatStatValue(row.target, row.isPercent)}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-const SwapPlan = ({ items, recommendedBuild }) => {
-  if (!items || items.length === 0) {
-    return (
-      <div className="text-[var(--color-text-muted)]">
-        Run analysis to generate a swap plan.
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-3">
-      {items.map((item, i) => {
-        const recommended = recommendedBuild[item.slot];
-        return (
+    <div className="p-3 bg-[var(--color-surface)] rounded-xl">
+      <h3 className="text-lg font-display text-[var(--color-text-strong)] flex items-center gap-2">
+        <Target size={16} /> Stat Delta → Target
+      </h3>
+      <div className="mt-3 space-y-2 text-sm">
+        {rows.map((row) => (
           <div
-            key={i}
-            className="p-3 bg-[var(--color-surface-muted)] rounded-lg flex gap-4 items-center"
+            key={row.key}
+            className="flex justify-between text-[var(--color-text)]"
           >
-            {/* Left side: Artifact Icon */}
-            <div className="flex-shrink-0">
-              <ArtifactCard
-                artifact={recommended}
-                slotKey={item.slot}
-                isMini
-              />
-            </div>
-
-            {/* Right side: Details */}
-            <div className="flex-1 text-sm overflow-hidden">
-              <p className="font-bold text-[var(--color-text-strong)] truncate">
-                {recommended?.set || "Unknown Set"}
-              </p>
-              <p className="text-xs text-[var(--color-text-muted)]">
-                {item.slot} →{" "}
-                <span className="font-semibold text-[var(--color-text-strong)]">
-                  {recommended?.main_stat || "N/A"}{" "}
-                  {recommended?.main_value
-                    ? `+${recommended.main_value}`
-                    : ""}
-                </span>
-              </p>
-
+            <div className="text-[var(--color-text-muted)]">{row.label}</div>
+            <div className="font-sans font-semibold">
+              <span
+                className={
+                  row.delta > 0
+                    ? "text-green-400"
+                    : row.delta < 0
+                      ? "text-red-400"
+                      : ""
+                }
+              >
+                {row.delta
+                  ? `${row.delta > 0 ? "+" : ""}${formatStatValue(row.delta.toFixed(1), row.isPercent)}`
+                  : ""}
+              </span>{" "}
+              → {formatStatValue(row.target, row.isPercent)}
             </div>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
-};
-const ArtifactCard = ({ title, artifact, slotKey, isMini = false }) => {
-  // --- No Artifact State ---
-  if (!artifact) {
-    const cardSize = isMini ? "h-14 w-14" : "h-28 w-28";
-    const textSize = isMini ? "text-[10px]" : "text-xs";
+
+  const SwapPlan = ({ items, recommendedBuild }) => {
+    if (!items || items.length === 0) {
+      return (
+        <div className="text-[var(--color-text-muted)]">
+          Run analysis to generate a swap plan.
+        </div>
+      );
+    }
+
     return (
-      <div
-        className={`border border-[var(--line)] rounded-xl p-2 flex flex-col items-center justify-center bg-[var(--surface-muted)] ${cardSize}`}
-      >
-        <p
-          className={`uppercase tracking-wide text-center text-[var(--text-muted)] ${textSize}`}
-        >
-          {title || slotKey}
-        </p>
-        <p className={`mt-1 text-center ${textSize} text-[var(--text-muted)]`}>
-          None
-        </p>
+      <div className="space-y-3">
+        {items.map((item, i) => {
+          const recommended = recommendedBuild[item.slot];
+          return (
+            <div
+              key={i}
+              className="p-3 bg-[var(--color-surface-muted)] rounded-lg flex gap-4 items-center"
+            >
+              {/* Left side: Artifact Icon */}
+              <div className="flex-shrink-0">
+                <ArtifactCard
+                  artifact={recommended}
+                  slotKey={item.slot}
+                  isMini
+                />
+              </div>
+
+              {/* Right side: Details */}
+              <div className="flex-1 text-sm overflow-hidden">
+                <p className="font-bold text-[var(--color-text-strong)] truncate">
+                  {recommended?.set || "Unknown Set"}
+                </p>
+                <p className="text-xs text-[var(--color-text-muted)]">
+                  {item.slot} →{" "}
+                  <span className="font-semibold text-[var(--color-text-strong)]">
+                    {recommended?.main_stat || "N/A"}{" "}
+                    {recommended?.main_value
+                      ? `+${recommended.main_value}`
+                      : ""}
+                  </span>
+                </p>
+
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
-  }
-  // --- Image Source Logic ---
-  const slotFile =
-    SLOT_FILENAME[slotKey] ||
-    SLOT_FILENAME[artifact.slot] ||
-    "01_Flower";
-  const setName =
-    artifact.set ||
-    artifact.set_name ||
-    "";
-  const setFolder = normalizeSetName(setName);
-
-  // Prioritize direct icon URLs, then construct path
-  const imgSrc =
-    artifact.artifact_icon ||
-    artifact.image_url ||
-    `/artifacts/${setFolder}/${slotFile}.png`;
-
-  const handleError = (e) => {
-    // 1. Try the base folder path (in case the slot filename was wrong)
-    e.currentTarget.src = `/artifacts/${setFolder}/01_Flower.png`;
-    // 2. If that also fails, use a placeholder
-    e.currentTarget.onerror = () => {
-      e.currentTarget.src = `https://placehold.co/96x96/1a1f2c/a0a5b1?text=${(slotKey || "ART").slice(0, 3)}`;
-    };
   };
+  const ArtifactCard = ({ title, artifact, slotKey, isMini = false }) => {
+    // --- No Artifact State ---
+    if (!artifact) {
+      const cardSize = isMini ? "h-14 w-14" : "h-28 w-28";
+      const textSize = isMini ? "text-[10px]" : "text-xs";
+      return (
+        <div
+          className={`border border-[var(--line)] rounded-xl p-2 flex flex-col items-center justify-center bg-[var(--surface-muted)] ${cardSize}`}
+        >
+          <p
+            className={`uppercase tracking-wide text-center text-[var(--text-muted)] ${textSize}`}
+          >
+            {title || slotKey}
+          </p>
+          <p className={`mt-1 text-center ${textSize} text-[var(--text-muted)]`}>
+            None
+          </p>
+        </div>
+      );
+    }
+    // --- Image Source Logic ---
+    const slotFile =
+      SLOT_FILENAME[slotKey] ||
+      SLOT_FILENAME[artifact.slot] ||
+      "01_Flower";
+    const setName =
+      artifact.set ||
+      artifact.set_name ||
+      "";
+    const setFolder = normalizeSetName(setName);
 
-  // --- Substats ---
-  const substats = artifact.substats || artifact.subs || [];
+    // Prioritize direct icon URLs, then construct path
+    const imgSrc =
+      artifact.artifact_icon ||
+      artifact.image_url ||
+      `/artifacts/${setFolder}/${slotFile}.png`;
 
-  // --- Mini Variant ---
-  if (isMini) {
-    return (
-      <div className="h-14 w-14 rounded-lg bg-[var(--surface-muted)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
-        <img
-          src={imgSrc}
-          alt={setName}
-          className="h-12 w-12 object-contain"
-          onError={handleError}
-        />
-      </div>
-    );
-  }
-  // --- Full Card Variant ---
-  return (
-    <div className="border border-[var(--line)] rounded-2xl p-3 bg-[var(--surface)] glass-ai h-full flex flex-col">
-      <p className="text-xs uppercase tracking-wide font-bold text-center text-[var(--text-muted)] mb-2">
-        {title || slotKey}
-      </p>
-      <div className="flex flex-col items-center gap-2 flex-1">
-        <div className="h-16 w-16 rounded-2xl bg-[var(--surface-muted)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
+    const handleError = (e) => {
+      // 1. Try the base folder path (in case the slot filename was wrong)
+      e.currentTarget.src = `/artifacts/${setFolder}/01_Flower.png`;
+      // 2. If that also fails, use a placeholder
+      e.currentTarget.onerror = () => {
+        e.currentTarget.src = `https://placehold.co/96x96/1a1f2c/a0a5b1?text=${(slotKey || "ART").slice(0, 3)}`;
+      };
+    };
+
+    // --- Substats ---
+    const substats = artifact.substats || artifact.subs || [];
+
+    // --- Mini Variant ---
+    if (isMini) {
+      return (
+        <div className="h-14 w-14 rounded-lg bg-[var(--surface-muted)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
           <img
             src={imgSrc}
             alt={setName}
-            className="h-14 w-14 object-contain"
+            className="h-12 w-12 object-contain"
             onError={handleError}
           />
         </div>
-        <div className="text-center flex-1">
-          <p className="text-sm font-semibold text-[var(--color-text-strong)] leading-tight">
-            {setName}
-          </p>
-          <p className="text-xs text-[var(--color-text-muted)]">
-            {artifact.main_stat}{" "}
-            <span className="font-bold text-[var(--color-text-strong)]">
-              {`+${artifact.main_value}`}
-            </span>
-          </p>
+      );
+    }
+    // --- Full Card Variant ---
+    return (
+      <div className="border border-[var(--line)] rounded-2xl p-3 bg-[var(--surface)] glass-ai h-full flex flex-col">
+        <p className="text-xs uppercase tracking-wide font-bold text-center text-[var(--text-muted)] mb-2">
+          {title || slotKey}
+        </p>
+        <div className="flex flex-col items-center gap-2 flex-1">
+          <div className="h-16 w-16 rounded-2xl bg-[var(--surface-muted)] border border-[var(--line)] flex items-center justify-center overflow-hidden">
+            <img
+              src={imgSrc}
+              alt={setName}
+              className="h-14 w-14 object-contain"
+              onError={handleError}
+            />
+          </div>
+          <div className="text-center flex-1">
+            <p className="text-sm font-semibold text-[var(--color-text-strong)] leading-tight">
+              {setName}
+            </p>
+            <p className="text-xs text-[var(--color-text-muted)]">
+              {artifact.main_stat}{" "}
+              <span className="font-bold text-[var(--color-text-strong)]">
+                {`+${artifact.main_value}`}
+              </span>
+            </p>
+          </div>
         </div>
+        {substats.length > 0 && (
+          <ul className="mt-2 pt-2 border-t border-[var(--line)] space-y-0.5 text-xs text-[var(--color-text)]">
+            {substats.slice(0, 4).map((sub, idx) => (
+              <li key={idx} className="truncate">
+                + {sub}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-      {substats.length > 0 && (
-        <ul className="mt-2 pt-2 border-t border-[var(--line)] space-y-0.5 text-xs text-[var(--color-text)]">
-          {substats.slice(0, 4).map((sub, idx) => (
-            <li key={idx} className="truncate">
-              + {sub}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-};
+    );
+  };
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 w-full max-w-7xl mx-auto">
@@ -816,17 +816,14 @@ const ArtifactCard = ({ title, artifact, slotKey, isMini = false }) => {
           {/* Left (Portrait) - full-height aura */}
           <div
             className="md:w-1/3 flex-shrink-0 relative overflow-visible"
-            style={{
-              backgroundImage: `var(--${resolvedElement?.toLowerCase()}-glow, transparent)`,
-            }}
           >
             <div className="h-full flex flex-col items-center justify-center p-4 md:p-6">
-              <div className="w-full h-72 md:h-[340px] rounded-xl overflow-visible flex items-center justify-center">
+              <div className="w-full h-72 md:h-[340px] rounded-2xl overflow-hidden flex items-center justify-center border border-[var(--color-accent-soft)] ring-1 ring-[var(--color-accent-soft)]" style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,164,68,0.1), inset 0 1px 0 rgba(255,255,255,0.05)' }}>
                 {heroImage ? (
                   <img
                     src={heroImage}
                     alt={displayName}
-                    className="object-cover w-full h-full rounded-xl shadow-2xl"
+                    className="object-cover w-full h-full"
                     onError={(e) => {
                       if (heroImage && e.currentTarget.src !== heroImage)
                         e.currentTarget.src = heroImage;

@@ -1,19 +1,40 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Database, Home, LayoutDashboard, MessageCircle } from 'lucide-react';
+import { Database, Home, LayoutDashboard, MessageCircle, Sun, Moon } from 'lucide-react';
 
 import logo from '../assets/logo.jpg';
 
 const Layout = ({ children }) => {
     const navigate = useNavigate();
     const location = useLocation();
+
+    /* ── Theme toggle (persisted in localStorage) ── */
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem('theme') || 'dark';
+    });
+
+    useEffect(() => {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+    };
+
     const navItems = [
         { to: '/home', label: 'Scan', icon: Home },
         { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
         { to: '/chat', label: 'Chat', icon: MessageCircle },
         { to: '/data', label: 'Data', icon: Database },
     ];
+
     return (
         <div className="min-h-screen bg-[var(--app-bg)] text-[var(--text)] font-sans">
             <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-[var(--surface)] backdrop-blur-lg">
@@ -58,6 +79,15 @@ const Layout = ({ children }) => {
                                 </button>
                             );
                         })}
+
+                        {/* ── Theme Toggle ── */}
+                        <button
+                            onClick={toggleTheme}
+                            aria-label="Toggle theme"
+                            className="ml-2 p-2 rounded-full text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--surface-muted)] transition"
+                        >
+                            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                        </button>
                     </nav>
                 </div>
             </header>
@@ -70,3 +100,4 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
