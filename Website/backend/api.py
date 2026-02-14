@@ -37,6 +37,33 @@ SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 UID_PATTERN = re.compile(r"^\d{9,12}$")
 CALC_ID_PATTERN = re.compile(r"^[a-zA-Z0-9_-]+$")
 
+# --- Security: Rate Limiting ---
+class RateLimiter:
+    def __init__(self, requests_limit: int, time_window: int):
+        self.requests_limit = requests_limit
+        self.time_window = time_window
+        self.requests = defaultdict(list)
+
+    async def __call__(self, request: Request):
+        client_ip = request.client.host if request.client else "unknown"
+        current_time = time.time()
+
+        # Filter out old timestamps
+        self.requests[client_ip] = [
+            t for t in self.requests[client_ip]
+            if current_time - t < self.time_window
+        ]
+
+        if len(self.requests[client_ip]) >= self.requests_limit:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded")
+
+        self.requests[client_ip].append(current_time)
+
+# Instantiate limiters
+scan_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 scans/min
+ai_limiter = RateLimiter(requests_limit=10, time_window=60)   # 10 AI calls/min
+auth_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 auth attempts/min
+
 # CORS for Frontend
 app.add_middleware(
     CORSMiddleware,
