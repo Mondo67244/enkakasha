@@ -3,9 +3,11 @@ import os
 import re
 from functools import partial
 from typing import Any, Dict, List, Optional
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import time
+from collections import defaultdict
 from google import genai
 import ollama as ollama_client
 import shutil
@@ -43,6 +45,38 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# --- Security: Rate Limiting ---
+class RateLimiter:
+    """
+    Simple in-memory rate limiter to protect sensitive endpoints.
+    Tracks request timestamps per IP address.
+    """
+    def __init__(self, limit: int, window: int = 60):
+        self.limit = limit
+        self.window = window
+        self.clients = defaultdict(list)
+
+    async def __call__(self, request: Request):
+        client_ip = request.client.host
+        current_time = time.time()
+
+        # Clean up old timestamps
+        self.clients[client_ip] = [
+            timestamp for timestamp in self.clients[client_ip]
+            if current_time - timestamp < self.window
+        ]
+
+        if len(self.clients[client_ip]) >= self.limit:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+        self.clients[client_ip].append(current_time)
+
+# Define rate limiters
+scan_limiter = RateLimiter(limit=5, window=60)      # 5 scans per minute
+analyze_limiter = RateLimiter(limit=10, window=60)  # 10 analysis per minute
+chat_limiter = RateLimiter(limit=20, window=60)     # 20 chat messages per minute
+verify_limiter = RateLimiter(limit=5, window=60)    # 5 key verifications per minute
 
 class VerifyKeyRequest(BaseModel):
     api_key: str
@@ -134,7 +168,7 @@ async def ollama_status():
             "error": str(e)
         }
 
-@app.post("/verify_key")
+@app.post("/verify_key", dependencies=[Depends(verify_limiter)])
 async def verify_key(request: VerifyKeyRequest):
     api_key = request.api_key.strip()
     if not api_key:
@@ -150,7 +184,7 @@ async def verify_key(request: VerifyKeyRequest):
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Invalid API Key: {str(e)}")
 
-@app.post("/scan/{uid}")
+@app.post("/scan/{uid}", dependencies=[Depends(scan_limiter)])
 async def scan_uid(uid: str):
     """
     Wraps enka.fetch_player_data.
@@ -232,7 +266,7 @@ async def get_leaderboard_deep(calc_id: str, character: str, limit: int = 20):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/analyze")
+@app.post("/analyze", dependencies=[Depends(analyze_limiter)])
 async def analyze_build(request: AnalyzeRequest):
     """
     1. Filters User Artifacts (based on target char).
@@ -344,7 +378,7 @@ async def analyze_build(request: AnalyzeRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"AI Error: {str(e)}")
 
-@app.post("/chat")
+@app.post("/chat", dependencies=[Depends(chat_limiter)])
 async def chat_build(request: ChatRequest):
     api_key = request.api_key
     user_data = request.user_data
