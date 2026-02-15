@@ -12,3 +12,8 @@
 **Vulnerability:** Found a Second-Order Path Traversal vulnerability in `akasha.fetch_leaderboard`. The character name returned by the external API was used directly to create a filename (`f"{char_name}_dataset.csv"`), allowing an attacker controlling the upstream API (or a malicious proxy) to write files to arbitrary locations.
 **Learning:** Data from external APIs should be treated as untrusted, just like user input. "Trusted" sources can be compromised or return unexpected data.
 **Prevention:** Always sanitize data from external sources before using it in sensitive operations like file system access. Use strict allow-lists (e.g., alphanumeric only) for filenames.
+
+## 2026-03-02 - Memory Exhaustion and DoS in Rate Limiter
+**Vulnerability:** The in-memory `RateLimiter` lacked a cleanup mechanism (or had a naive `clear()` one), allowing an attacker to exhaust server memory by spoofing thousands of IP addresses, or bypass rate limits by triggering a full cache clear.
+**Learning:** Simple in-memory caches must have a robust eviction policy (like removing the oldest entry) rather than unbounded growth or "clearing all". "Clearing all" creates a vulnerability where attackers can reset their own limits.
+**Prevention:** Always implement a size cap on in-memory storage. Use established LRU/TTL cache libraries instead of custom implementations where possible. If custom, prefer "remove oldest" over "clear all".

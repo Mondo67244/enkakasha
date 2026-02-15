@@ -32,78 +32,11 @@ from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
 
-# --- Security: Rate Limiter ---
-class RateLimiter:
-    """
-    Simple in-memory rate limiter using a fixed window algorithm.
-    """
-    def __init__(self, requests_limit: int, time_window: int):
-        self.requests_limit = requests_limit
-        self.time_window = time_window # in seconds
-        self.ip_requests = defaultdict(list)
-
-    async def __call__(self, request: Request):
-        client_ip = request.client.host
-        current_time = time.time()
-
-        # Filter out requests older than the time window
-        self.ip_requests[client_ip] = [
-            timestamp for timestamp in self.ip_requests[client_ip]
-            if current_time - timestamp < self.time_window
-        ]
-
-        # Check if limit is reached
-        if len(self.ip_requests[client_ip]) >= self.requests_limit:
-            raise HTTPException(
-                status_code=429,
-                detail=f"Rate limit exceeded. Try again in {self.time_window} seconds."
-            )
-
-        # Add current request
-        self.ip_requests[client_ip].append(current_time)
-
-        # Simple cleanup to prevent memory leaks
-        if len(self.ip_requests) > 5000:
-            self.ip_requests.clear()
-
-# Rate Limiters
-limiter_analyze = RateLimiter(requests_limit=5, time_window=60)
-limiter_chat = RateLimiter(requests_limit=10, time_window=60)
-limiter_scan = RateLimiter(requests_limit=10, time_window=60)
-limiter_auth = RateLimiter(requests_limit=10, time_window=60)
-
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
 DATA_ROOT.mkdir(parents=True, exist_ok=True)
 SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 UID_PATTERN = re.compile(r"^\d{9,12}$")
 CALC_ID_PATTERN = re.compile(r"^[a-zA-Z0-9_-]+$")
-
-# --- Security: Rate Limiting ---
-class RateLimiter:
-    def __init__(self, requests_limit: int, time_window: int):
-        self.requests_limit = requests_limit
-        self.time_window = time_window
-        self.requests = defaultdict(list)
-
-    async def __call__(self, request: Request):
-        client_ip = request.client.host if request.client else "unknown"
-        current_time = time.time()
-
-        # Filter out old timestamps
-        self.requests[client_ip] = [
-            t for t in self.requests[client_ip]
-            if current_time - t < self.time_window
-        ]
-
-        if len(self.requests[client_ip]) >= self.requests_limit:
-            raise HTTPException(status_code=429, detail="Rate limit exceeded")
-
-        self.requests[client_ip].append(current_time)
-
-# Instantiate limiters
-scan_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 scans/min
-ai_limiter = RateLimiter(requests_limit=10, time_window=60)   # 10 AI calls/min
-auth_limiter = RateLimiter(requests_limit=5, time_window=60)  # 5 auth attempts/min
 
 # CORS for Frontend
 app.add_middleware(
@@ -114,7 +47,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Security: Rate Limiting ---
+# --- Security: Rate Limiter ---
 class RateLimiter:
     """
     Simple in-memory rate limiter to protect sensitive endpoints.
@@ -126,7 +59,8 @@ class RateLimiter:
         self.clients = defaultdict(list)
 
     async def __call__(self, request: Request):
-        client_ip = request.client.host
+        # Handle cases where client is None (e.g. tests or proxies)
+        client_ip = request.client.host if request.client else "unknown"
         current_time = time.time()
 
         # Clean up old timestamps
@@ -139,6 +73,11 @@ class RateLimiter:
             raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
         self.clients[client_ip].append(current_time)
+
+        # Simple cleanup to prevent memory leaks
+        # We remove the oldest entry (first inserted key) to keep size in check
+        if len(self.clients) > 5000:
+            self.clients.pop(next(iter(self.clients)))
 
 # Define rate limiters
 scan_limiter = RateLimiter(limit=5, window=60)      # 5 scans per minute
