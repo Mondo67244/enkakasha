@@ -23,7 +23,7 @@ from api import RateLimiter
 
 class TestRateLimiter(unittest.TestCase):
     def setUp(self):
-        self.limiter = RateLimiter(requests_limit=2, time_window=60)
+        self.limiter = RateLimiter(limit=2, window=60)
         self.mock_request = MagicMock()
         self.mock_request.client.host = "127.0.0.1"
 
