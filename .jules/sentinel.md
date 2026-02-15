@@ -13,7 +13,7 @@
 **Learning:** Data from external APIs should be treated as untrusted, just like user input. "Trusted" sources can be compromised or return unexpected data.
 **Prevention:** Always sanitize data from external sources before using it in sensitive operations like file system access. Use strict allow-lists (e.g., alphanumeric only) for filenames.
 
-## 2025-02-18 - RateLimiter Memory Leak & Duplicate Definitions
-**Vulnerability:** Found 3 duplicate definitions of `RateLimiter` in `api.py`. The active definition lacked a memory cleanup mechanism (present in the first unused definition), creating a potential Memory Exhaustion (DoS) vulnerability.
-**Learning:** Copy-pasting code blocks without removing the old ones can lead to silent regressions where security features are lost in the active version.
-**Prevention:** Use linters to detect redefined classes/variables. Refactor common logic into a single source of truth.
+## 2026-03-02 - Memory Exhaustion and DoS in Rate Limiter
+**Vulnerability:** The in-memory `RateLimiter` lacked a cleanup mechanism (or had a naive `clear()` one), allowing an attacker to exhaust server memory by spoofing thousands of IP addresses, or bypass rate limits by triggering a full cache clear.
+**Learning:** Simple in-memory caches must have a robust eviction policy (like removing the oldest entry) rather than unbounded growth or "clearing all". "Clearing all" creates a vulnerability where attackers can reset their own limits.
+**Prevention:** Always implement a size cap on in-memory storage. Use established LRU/TTL cache libraries instead of custom implementations where possible. If custom, prefer "remove oldest" over "clear all".

@@ -93,5 +93,56 @@ class TestRateLimiter(unittest.TestCase):
 
         loop.close()
 
+    def test_client_none_handling(self):
+        """Test that RateLimiter handles request.client being None gracefully."""
+        # Use a fresh limiter
+        limiter = RateLimiter(limit=2, window=1)
+
+        request = MagicMock()
+        request.client = None # Simulate no client (e.g. proxy or test)
+
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+
+        # Should not crash, treats as "unknown"
+        loop.run_until_complete(limiter(request))
+        loop.run_until_complete(limiter(request))
+
+        # Should be rate limited as "unknown"
+        with self.assertRaises(HTTPException):
+            loop.run_until_complete(limiter(request))
+
+        loop.close()
+
+    def test_memory_cleanup(self):
+        """Test that memory is cleaned up when limit is reached."""
+        # Use a fresh limiter
+        limiter = RateLimiter(limit=10, window=60)
+
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+
+        # Fill up with 5000 unique IPs
+        # We manually populate the dictionary to test cleanup logic
+        # Insert oldest first
+        limiter.clients["oldest_ip"] = [time.time()]
+        for i in range(4999):
+            limiter.clients[f"1.1.1.{i}"] = [time.time()]
+
+        self.assertEqual(len(limiter.clients), 5000)
+
+        # Trigger cleanup with one more request
+        req = MagicMock()
+        req.client.host = "newest_ip"
+
+        loop.run_until_complete(limiter(req))
+
+        # Check if cleanup happened (should remove oldest, keep newest)
+        self.assertEqual(len(limiter.clients), 5000)
+        self.assertIn("newest_ip", limiter.clients)
+        self.assertNotIn("oldest_ip", limiter.clients)
+
+        loop.close()
+
 if __name__ == '__main__':
     unittest.main()

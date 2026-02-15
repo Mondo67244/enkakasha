@@ -32,13 +32,11 @@ from backend import logic
 
 app = FastAPI(title="Genshin AI Mentor API")
 
-
 DATA_ROOT = Path(__file__).resolve().parent.parent / "data"
 DATA_ROOT.mkdir(parents=True, exist_ok=True)
 SAFE_FOLDER_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 UID_PATTERN = re.compile(r"^\d{9,12}$")
 CALC_ID_PATTERN = re.compile(r"^[a-zA-Z0-9_-]+$")
-
 
 # CORS for Frontend
 app.add_middleware(
@@ -49,7 +47,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Security: Rate Limiting ---
+# --- Security: Rate Limiter ---
 class RateLimiter:
     """
     Simple in-memory rate limiter to protect sensitive endpoints.
@@ -61,7 +59,8 @@ class RateLimiter:
         self.clients = defaultdict(list)
 
     async def __call__(self, request: Request):
-        client_ip = request.client.host
+        # Handle cases where client is None (e.g. tests or proxies)
+        client_ip = request.client.host if request.client else "unknown"
         current_time = time.time()
 
         # Clean up old timestamps
@@ -76,8 +75,9 @@ class RateLimiter:
         self.clients[client_ip].append(current_time)
 
         # Simple cleanup to prevent memory leaks
+        # We remove the oldest entry (first inserted key) to keep size in check
         if len(self.clients) > 5000:
-            self.clients.clear()
+            self.clients.pop(next(iter(self.clients)))
 
 # Define rate limiters
 scan_limiter = RateLimiter(limit=5, window=60)      # 5 scans per minute
