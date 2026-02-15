@@ -18,14 +18,14 @@ const DataManagement = () => {
         try {
             const raw = localStorage.getItem('recent_scans');
             if (raw) scans = JSON.parse(raw);
-        } catch {}
+        } catch { }
 
         // Chat sessions
         let chatSessions = [];
         try {
             const raw = localStorage.getItem('chat_sessions');
             if (raw) chatSessions = JSON.parse(raw);
-        } catch {}
+        } catch { }
 
         setStats({
             scans,
@@ -92,14 +92,14 @@ const DataManagement = () => {
             <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-sm text-blue-700">
                 <p className="font-medium">🔒 Données privées</p>
                 <p className="mt-1 text-blue-600">
-                    Toutes vos données sont stockées localement sur cet appareil. 
+                    Toutes vos données sont stockées localement sur cet appareil.
                     Personne d'autre ne peut y accéder.
                 </p>
             </div>
 
             {/* Current session */}
             {stats.currentUid && (
-                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-5 shadow-sm">
                     <div className="flex items-center gap-3 mb-3">
                         <User className="text-[var(--accent-strong)]" size={20} />
                         <h3 className="font-semibold text-[var(--text-strong)]">Session active</h3>
@@ -118,7 +118,7 @@ const DataManagement = () => {
 
             {/* Data summary */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-5 shadow-sm">
                     <div className="flex items-center gap-3 mb-3">
                         <Clock className="text-[var(--text-muted)]" size={18} />
                         <h4 className="font-medium text-[var(--text-strong)]">Scans récents</h4>
@@ -137,7 +137,7 @@ const DataManagement = () => {
                     )}
                 </div>
 
-                <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+                <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-5 shadow-sm">
                     <div className="flex items-center gap-3 mb-3">
                         <MessageSquare className="text-[var(--text-muted)]" size={18} />
                         <h4 className="font-medium text-[var(--text-strong)]">Historique chat</h4>
@@ -153,7 +153,7 @@ const DataManagement = () => {
             </div>
 
             {/* API Key status */}
-            <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+            <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-5 shadow-sm">
                 <div className="flex items-center gap-3 mb-3">
                     <Package className="text-[var(--text-muted)]" size={18} />
                     <h4 className="font-medium text-[var(--text-strong)]">Configuration IA</h4>
@@ -183,7 +183,7 @@ const DataManagement = () => {
             </div>
 
             {/* Delete actions */}
-            <div className="bg-white border border-[var(--line)] rounded-2xl p-5 shadow-sm">
+            <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-2xl p-5 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                     <Trash2 className="text-red-500" size={20} />
                     <h3 className="font-semibold text-[var(--text-strong)]">Supprimer les données</h3>

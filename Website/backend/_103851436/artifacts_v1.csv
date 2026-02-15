@@ -1,0 +1,56 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,ER%,6.5,ATK%,8.7,Crit DMG,21.8,Crit Rate,10.9,43.6
+Keqing,Plume,Thundersoother,+20,ATK,311.0,ATK%,5.3,Crit Rate,13.6,Crit DMG,21.8,HP,269.0,49.0
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,10.9,Crit DMG,27.2,HP,239.0,ER%,6.5,49.0
+Keqing,Goblet,Brave Heart,+20,Electro DMG%,46.6,HP,239.0,Crit Rate,10.5,Crit DMG,14.0,ATK%,15.2,35.0
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,HP%,4.7,Crit DMG,19.4,ATK%,16.9,ATK,33.0,19.4
+Citlali,Flower,Lavawalker's Epiphany,+20,HP,4780.0,Crit DMG,14.0,ER%,5.8,ATK%,4.1,EM,107.0,14.0
+Citlali,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,DEF,44.0,ATK%,5.3,EM,40.0,ER%,17.5,0.0
+Citlali,Sands,Scroll of the Hero of Cinder City,+20,EM,187.0,HP,1255.0,ER%,6.5,Crit Rate,7.0,HP%,4.1,14.0
+Citlali,Goblet,Scroll of the Hero of Cinder City,+20,EM,187.0,HP%,5.8,DEF%,19.0,ATK,31.0,ER%,9.1,0.0
+Citlali,Circlet,Scroll of the Hero of Cinder City,+20,EM,187.0,HP%,5.3,DEF,42.0,Crit Rate,8.9,ATK,31.0,17.8
+ID_10000007,Flower,Deepwood Memories,+20,HP,4780.0,ER%,11.0,EM,44.0,ATK,16.0,ATK%,19.2,0.0
+ID_10000007,Plume,Deepwood Memories,+20,ATK,311.0,Crit Rate,9.3,Crit DMG,20.2,ATK%,5.3,DEF,21.0,38.8
+ID_10000007,Sands,Deepwood Memories,+20,ER%,51.8,DEF%,13.1,HP,568.0,Crit DMG,14.8,ATK,37.0,14.8
+ID_10000007,Goblet,Brave Heart,+20,Dendro DMG%,46.6,ATK%,4.7,Crit Rate,9.7,Crit DMG,19.4,ATK,39.0,38.8
+ID_10000007,Circlet,Deepwood Memories,+20,EM,187.0,DEF,39.0,Crit DMG,12.4,HP,508.0,ER%,11.0,12.4
+Nilou,Flower,Set_15026,+20,HP,4780.0,Crit DMG,27.2,HP%,11.1,DEF,23.0,ATK,31.0,27.2
+Nilou,Plume,Set_15026,+20,ATK,311.0,Crit DMG,14.8,HP%,11.7,EM,75.0,Crit Rate,2.7,20.2
+Nilou,Sands,Thundersoother,+20,HP%,46.6,Crit DMG,21.0,ATK%,9.9,ATK,14.0,ER%,12.3,21.0
+Nilou,Goblet,Set_15026,+20,HP%,46.6,ATK,27.0,Crit DMG,17.1,Crit Rate,9.7,ER%,5.8,36.5
+Nilou,Circlet,Set_15026,+20,HP%,46.6,ER%,12.3,HP,777.0,EM,35.0,ATK,35.0,0.0
+Fischl,Flower,Golden Troupe,+20,HP,4780.0,EM,40.0,HP%,5.3,Crit Rate,2.7,Crit DMG,35.0,40.4
+Fischl,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,14.0,DEF,21.0,Crit Rate,10.1,ER%,9.7,34.2
+Fischl,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,9.7,HP,478.0,EM,19.0,Crit DMG,20.2,39.6
+Fischl,Goblet,Thundering Fury,+20,Electro DMG%,46.6,DEF%,5.1,Crit DMG,21.0,Crit Rate,10.1,ATK%,5.8,41.2
+Fischl,Circlet,Thundering Fury,+20,Crit Rate,31.1,EM,23.0,Crit DMG,18.7,HP,209.0,ATK%,21.0,18.7
+Ganyu,Flower,Noblesse Oblige,+20,HP,4780.0,Crit DMG,6.2,ATK,49.0,ER%,11.0,ATK%,10.5,6.2
+Ganyu,Plume,Emblem of Severed Fate,+20,ATK,311.0,ER%,23.3,DEF%,7.3,HP%,5.8,Crit DMG,11.7,11.7
+Ganyu,Sands,Noblesse Oblige,+20,ER%,51.8,ATK,53.0,EM,23.0,HP%,9.9,DEF,39.0,0.0
+Ganyu,Goblet,Emblem of Severed Fate,+20,ATK%,46.6,Crit Rate,6.2,Crit DMG,17.9,EM,35.0,ATK,16.0,30.3
+Ganyu,Circlet,Thundersoother,+20,Crit DMG,62.2,EM,44.0,Crit Rate,10.1,ATK%,5.3,DEF%,11.7,20.2
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,Crit Rate,6.2,ATK,35.0,Crit DMG,14.0,ER%,13.0,26.4
+Raiden Shogun,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit Rate,3.1,ER%,11.7,DEF%,12.4,Crit DMG,21.0,27.2
+Raiden Shogun,Sands,Thundering Fury,+20,ER%,51.8,Crit Rate,5.8,ATK%,14.0,Crit DMG,20.2,ATK,14.0,31.8
+Raiden Shogun,Goblet,Emblem of Severed Fate,+20,Electro DMG%,46.6,HP,448.0,Crit DMG,15.5,ER%,13.0,Crit Rate,6.6,28.7
+Raiden Shogun,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,ER%,5.2,HP%,14.0,HP,209.0,ATK%,13.4,0.0
+Hu Tao,Flower,Crimson Witch of Flames,+20,HP,4780.0,Crit Rate,9.3,ER%,10.4,Crit DMG,13.2,HP%,5.8,31.8
+Hu Tao,Plume,Crimson Witch of Flames,+20,ATK,311.0,Crit Rate,2.7,HP,299.0,HP%,15.7,Crit DMG,26.4,31.8
+Hu Tao,Sands,Thundering Fury,+20,HP%,46.6,Crit Rate,8.6,EM,23.0,Crit DMG,24.1,HP,209.0,41.3
+Hu Tao,Goblet,Marechaussee Hunter,+20,Pyro DMG%,46.6,DEF,39.0,ATK,18.0,Crit Rate,10.9,EM,40.0,21.8
+Hu Tao,Circlet,Marechaussee Hunter,+20,Crit Rate,31.1,HP%,9.9,Crit DMG,21.0,EM,44.0,HP,269.0,21.0
+Nahida,Flower,Set_15026,+20,HP,4780.0,Crit DMG,25.6,DEF,39.0,EM,21.0,Crit Rate,6.6,38.8
+Nahida,Plume,Set_15026,+20,ATK,311.0,DEF%,12.4,Crit DMG,11.7,EM,56.0,Crit Rate,2.7,17.1
+Nahida,Sands,Thundersoother,+20,EM,187.0,Crit Rate,10.1,Crit DMG,5.4,HP%,4.1,ATK%,18.7,25.6
+Nahida,Goblet,Thundering Fury,+20,Dendro DMG%,46.6,ATK%,11.1,Crit Rate,9.7,EM,54.0,DEF,21.0,19.4
+Nahida,Circlet,Thundersoother,+20,Crit DMG,62.2,EM,63.0,ER%,10.4,ATK,18.0,Crit Rate,6.6,13.2
+Shenhe,Flower,Noblesse Oblige,+20,HP,4780.0,Crit DMG,7.8,ATK,19.0,Crit Rate,12.4,ER%,16.2,32.6
+Shenhe,Plume,Noblesse Oblige,+20,ATK,311.0,DEF,16.0,ER%,18.1,Crit DMG,14.0,Crit Rate,10.5,35.0
+Shenhe,Sands,Noblesse Oblige,+20,ER%,51.8,EM,42.0,ATK%,8.7,Crit DMG,28.8,ATK,16.0,28.8
+Shenhe,Goblet,Noblesse Oblige,+20,ATK%,46.6,Crit Rate,10.1,EM,16.0,HP%,11.1,Crit DMG,13.2,33.4
+Shenhe,Circlet,Viridescent Venerer,+20,ATK%,46.6,HP,538.0,ER%,9.7,ATK,16.0,HP%,15.2,0.0
+Furina,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,14.4,HP%,10.5,Crit DMG,7.0,DEF%,7.3,35.8
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit Rate,6.2,ATK%,11.7,Crit DMG,10.9,ER%,12.3,23.3
+Furina,Sands,Golden Troupe,+20,ATK%,46.6,HP%,8.7,EM,40.0,Crit DMG,19.4,HP,299.0,19.4
+Furina,Goblet,Brave Heart,+20,HP%,46.6,Crit Rate,6.6,Crit DMG,26.4,DEF,23.0,HP,299.0,39.6
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,ATK,33.0,Crit DMG,5.4,HP,478.0,HP%,14.6,5.4

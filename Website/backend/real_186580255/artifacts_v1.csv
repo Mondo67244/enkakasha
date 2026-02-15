@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Wriothesley,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit DMG,28.0,ATK%,10.5,EM,23.0,Crit Rate,5.8,39.6
+Wriothesley,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit DMG,20.2,ATK%,9.3,Crit Rate,3.5,EM,35.0,27.2
+Wriothesley,Sands,Scroll of the Hero of Cinder City,+20,ATK%,46.6,Crit Rate,3.9,Crit DMG,34.2,ER%,5.8,HP%,9.9,42.0
+Wriothesley,Goblet,Marechaussee Hunter,+20,ATK%,46.6,DEF,23.0,DEF%,12.4,Crit Rate,10.5,Crit DMG,21.8,42.8
+Wriothesley,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,HP%,4.7,Crit Rate,5.8,ATK,18.0,ATK%,24.5,11.6
+Columbina,Flower,Thundersoother,+20,HP,4780.0,ATK%,5.3,HP%,15.2,Crit Rate,10.5,Crit DMG,12.4,33.4
+Columbina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,25.7,HP%,4.7,ER%,6.5,Crit Rate,9.3,44.3
+Columbina,Sands,Thundersoother,+20,HP%,46.6,DEF,21.0,Crit Rate,14.4,ATK%,4.1,Crit DMG,17.1,45.9
+Columbina,Goblet,Golden Troupe,+20,HP%,46.6,ER%,11.7,Crit DMG,6.2,DEF%,5.1,Crit Rate,14.4,35.0
+Columbina,Circlet,Thundersoother,+20,Crit DMG,62.2,HP,269.0,ER%,11.0,Crit Rate,13.2,HP%,4.1,26.4
+Chiori,Flower,Wanderer's Troupe,+20,HP,4780.0,ATK,37.0,Crit DMG,22.5,Crit Rate,9.7,DEF%,5.8,41.9
+Chiori,Plume,Wanderer's Troupe,+20,ATK,311.0,Crit DMG,12.4,Crit Rate,10.1,ATK%,5.3,DEF%,12.4,32.6
+Chiori,Sands,Obsidian Codex,+20,DEF%,58.3,Crit Rate,16.3,ATK%,9.9,Crit DMG,7.8,DEF,21.0,40.4
+Chiori,Goblet,Wanderer's Troupe,+20,Geo DMG%,46.6,Crit Rate,9.7,Crit DMG,5.4,DEF%,13.9,ATK%,11.7,24.8
+Chiori,Circlet,Wanderer's Troupe,+20,Crit Rate,31.1,DEF,37.0,DEF%,14.6,EM,19.0,Crit DMG,28.8,28.8
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,ATK%,11.1,ATK,16.0,Crit Rate,9.3,Crit DMG,18.7,37.3
+Raiden Shogun,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit Rate,7.4,ATK%,11.1,HP%,5.8,Crit DMG,27.2,42.0
+Raiden Shogun,Sands,Emblem of Severed Fate,+20,ER%,51.8,Crit DMG,7.0,ATK,14.0,ATK%,13.4,Crit Rate,13.6,34.2
+Raiden Shogun,Goblet,Emblem of Severed Fate,+20,Electro DMG%,46.6,Crit DMG,20.2,Crit Rate,13.6,ATK,18.0,ER%,4.5,47.4
+Raiden Shogun,Circlet,Desert Pavilion Chronicle,+20,Crit Rate,31.1,ER%,11.0,ATK%,15.7,EM,19.0,Crit DMG,19.4,19.4
+Yae Miko,Flower,Set_15026,+20,HP,4780.0,Crit DMG,28.0,ATK,19.0,Crit Rate,9.3,ATK%,4.1,46.6
+Yae Miko,Plume,Nymph's Dream,+20,ATK,311.0,HP,209.0,Crit Rate,19.1,ATK%,5.3,Crit DMG,13.2,51.4
+Yae Miko,Sands,Thundersoother,+20,ATK%,46.6,Crit Rate,10.5,ATK,16.0,Crit DMG,22.5,EM,35.0,43.5
+Yae Miko,Goblet,Thundersoother,+20,ATK%,46.6,Crit DMG,14.0,ATK,18.0,Crit Rate,17.1,HP,269.0,48.2
+Yae Miko,Circlet,Flower of Paradise Lost,+20,Crit DMG,62.2,DEF,16.0,ATK%,4.7,Crit Rate,20.2,ATK,16.0,40.4
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit DMG,7.8,ER%,6.5,EM,16.0,Crit Rate,17.1,42.0
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,ATK%,10.5,DEF%,6.6,Crit DMG,5.4,Crit Rate,13.6,32.6
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,DEF,23.0,Crit DMG,23.3,Crit Rate,3.5,EM,58.0,30.3
+Arlecchino,Goblet,Fragment of Harmonic Whimsy,+20,Pyro DMG%,46.6,Crit Rate,13.2,ATK,29.0,HP,239.0,Crit DMG,5.4,31.8
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,ATK,18.0,ER%,11.7,DEF,19.0,Crit Rate,12.8,25.6
+Xianyun,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,Crit DMG,43.5,Crit Rate,3.9,ATK,19.0,ER%,6.5,51.3
+Xianyun,Plume,Marechaussee Hunter,+20,ATK,311.0,ATK%,14.6,Crit Rate,7.8,Crit DMG,11.7,HP%,5.8,27.3
+Xianyun,Sands,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,13.6,Crit DMG,20.2,HP,209.0,EM,21.0,47.4
+Xianyun,Goblet,Marechaussee Hunter,+20,Anemo DMG%,46.6,Crit DMG,17.9,ATK,18.0,DEF,21.0,Crit Rate,13.2,44.3
+Xianyun,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,Crit Rate,10.9,ATK,18.0,ATK%,15.2,DEF,23.0,21.8
+Neuvillette,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit Rate,10.9,Crit DMG,12.4,ATK%,5.8,HP%,9.9,34.2
+Neuvillette,Plume,Marechaussee Hunter,+20,ATK,311.0,HP%,9.3,HP,269.0,Crit DMG,12.4,Crit Rate,15.2,42.8
+Neuvillette,Sands,Marechaussee Hunter,+20,HP%,46.6,EM,19.0,ATK,14.0,Crit DMG,22.5,Crit Rate,9.3,41.1
+Neuvillette,Goblet,Emblem of Severed Fate,+20,HP%,46.6,Crit Rate,16.7,Crit DMG,12.4,ATK,16.0,EM,19.0,45.8
+Neuvillette,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,HP%,19.8,Crit Rate,7.0,DEF,16.0,ER%,5.8,14.0
+Mualani,Flower,Obsidian Codex,+20,HP,4780.0,HP%,5.8,EM,21.0,Crit Rate,7.0,Crit DMG,28.0,42.0
+Mualani,Plume,Obsidian Codex,+20,ATK,311.0,Crit DMG,19.4,EM,42.0,HP,209.0,Crit Rate,9.3,38.0
+Mualani,Sands,Obsidian Codex,+20,HP%,46.6,ER%,5.8,Crit DMG,11.7,Crit Rate,7.0,EM,72.0,25.7
+Mualani,Goblet,Wanderer's Troupe,+20,HP%,46.6,DEF,19.0,Crit Rate,7.0,Crit DMG,32.6,ATK,18.0,46.6
+Mualani,Circlet,Obsidian Codex,+20,Crit DMG,62.2,HP,538.0,HP%,4.1,Crit Rate,5.8,EM,54.0,11.6
+Ganyu,Flower,Thundersoother,+20,HP,4780.0,EM,40.0,DEF%,5.8,Crit Rate,11.7,Crit DMG,20.2,43.6
+Ganyu,Plume,Thundersoother,+20,ATK,311.0,EM,44.0,DEF%,6.6,Crit DMG,32.6,Crit Rate,3.5,39.6
+Ganyu,Sands,Thundersoother,+20,ATK%,46.6,Crit DMG,21.0,Crit Rate,6.2,EM,47.0,DEF,19.0,33.4
+Ganyu,Goblet,Shimenawa's Reminiscence,+20,Cryo DMG%,46.6,Crit DMG,20.2,ATK,14.0,Crit Rate,9.3,EM,42.0,38.8
+Ganyu,Circlet,Thundersoother,+20,Crit Rate,31.1,Crit DMG,17.9,EM,56.0,ATK,19.0,ATK%,4.7,17.9
+Arataki Itto,Flower,Wanderer's Troupe,+20,HP,4780.0,Crit DMG,17.9,Crit Rate,9.7,DEF,32.0,DEF%,5.8,37.3
+Arataki Itto,Plume,Wanderer's Troupe,+20,ATK,311.0,DEF%,11.7,ATK%,4.1,Crit DMG,22.5,Crit Rate,7.8,38.1
+Arataki Itto,Sands,Wanderer's Troupe,+20,DEF%,58.3,Crit Rate,3.5,ATK%,5.3,Crit DMG,33.4,ATK,14.0,40.4
+Arataki Itto,Goblet,Fragment of Harmonic Whimsy,+20,Geo DMG%,46.6,ER%,5.2,Crit DMG,14.8,DEF,23.0,Crit Rate,14.4,43.6
+Arataki Itto,Circlet,Wanderer's Troupe,+20,Crit Rate,31.1,Crit DMG,28.0,DEF,23.0,DEF%,5.1,ER%,13.0,28.0
+Nilou,Flower,Vourukasha's Glow,+20,HP,4780.0,EM,58.0,ER%,9.1,HP%,15.8,DEF%,6.6,0.0
+Nilou,Plume,Vourukasha's Glow,+20,ATK,311.0,Crit DMG,7.0,Crit Rate,9.7,HP%,14.6,DEF,23.0,26.4
+Nilou,Sands,Vourukasha's Glow,+20,HP%,46.6,ER%,10.4,DEF,42.0,HP,1046.0,Crit DMG,7.8,7.8
+Nilou,Goblet,Scroll of the Hero of Cinder City,+20,HP%,46.6,EM,23.0,Crit DMG,21.8,DEF%,5.8,Crit Rate,12.4,46.6
+Nilou,Circlet,Vourukasha's Glow,+20,HP%,46.6,DEF,39.0,ER%,22.0,ATK%,5.8,HP,508.0,0.0

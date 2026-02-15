@@ -1,0 +1,11 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,Crit Rate,18.3,Crit DMG,11.7,ATK%,4.1,EM,19.0,48.3
+Keqing,Plume,Brave Heart,+20,ATK,311.0,ATK%,4.1,Crit Rate,10.9,Crit DMG,23.3,EM,40.0,45.1
+Keqing,Sands,Scroll of the Hero of Cinder City,+20,ATK%,46.6,ATK,18.0,EM,47.0,Crit DMG,21.8,Crit Rate,9.7,41.2
+Keqing,Goblet,Brave Heart,+20,Electro DMG%,46.6,Crit Rate,10.9,ATK%,9.9,Crit DMG,21.0,DEF,19.0,42.8
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,EM,40.0,ATK%,4.7,HP,209.0,Crit DMG,33.4,33.4
+Kujou Sara,Flower,Brave Heart,+20,HP,4780.0,ATK,14.0,Crit Rate,10.1,ER%,5.8,Crit DMG,26.4,46.6
+Kujou Sara,Plume,Brave Heart,+20,ATK,311.0,Crit DMG,28.0,Crit Rate,10.5,ATK%,5.3,DEF,23.0,49.0
+Kujou Sara,Sands,Thundering Fury,+20,ATK%,46.6,DEF,21.0,ER%,12.3,Crit DMG,7.8,Crit Rate,17.1,42.0
+Kujou Sara,Goblet,Brave Heart,+20,Electro DMG%,46.6,ER%,12.3,EM,23.0,Crit DMG,13.2,Crit Rate,13.6,40.4
+Kujou Sara,Circlet,Brave Heart,+20,Crit Rate,31.1,Crit DMG,37.3,ER%,5.2,DEF%,5.1,HP,239.0,37.3

@@ -1,0 +1,4 @@
+Character,Level,HP,ATK,DEF,EM,ER%,Crit_Rate%,Crit_DMG%,Element,Elem_Bonus%,Total_CV,Weapon_Refine
+Furina,90,32667,1195,696,23,104.5,99.6,264.1,Hydro,46.6,214.5,5
+Neuvillette,90,42431,1188,652,21,100.0,56.3,249.6,Hydro,46.6,175.6,2
+Xilonen,90,19532,1208,3233,68,129.8,62.9,130.8,N/A,0.0,134.2,1

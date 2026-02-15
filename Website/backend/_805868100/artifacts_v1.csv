@@ -1,0 +1,16 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,ATK,14.0,Crit Rate,13.6,HP%,10.5,Crit DMG,13.2,40.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP%,16.3,Crit Rate,7.8,ER%,4.5,Crit DMG,21.0,36.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,EM,23.0,Crit Rate,9.3,HP,239.0,Crit DMG,29.5,48.1
+Furina,Goblet,Thundersoother,+20,Hydro DMG%,46.6,Crit Rate,13.6,ATK,19.0,ATK%,5.8,Crit DMG,20.2,47.4
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP,209.0,Crit DMG,42.0,HP%,5.8,ATK,19.0,42.0
+Neuvillette,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit DMG,14.0,DEF%,6.6,ATK%,4.1,Crit Rate,15.9,45.8
+Neuvillette,Plume,Marechaussee Hunter,+20,ATK,311.0,ATK%,5.3,Crit Rate,7.4,Crit DMG,5.4,HP%,26.2,20.2
+Neuvillette,Sands,Blizzard Strayer,+20,HP%,46.6,Crit DMG,21.8,Crit Rate,11.3,ATK%,5.3,HP,239.0,44.4
+Neuvillette,Goblet,Marechaussee Hunter,+20,Hydro DMG%,46.6,Crit DMG,12.4,Crit Rate,7.4,HP%,15.2,DEF%,6.6,27.2
+Neuvillette,Circlet,Marechaussee Hunter,+20,HP%,46.6,Crit Rate,9.3,Crit DMG,19.4,EM,21.0,ATK,18.0,38.0
+Xilonen,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,Crit Rate,6.2,Crit DMG,20.2,ATK,35.0,DEF%,7.3,32.6
+Xilonen,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit Rate,5.8,ER%,20.7,DEF%,5.1,Crit DMG,7.0,18.6
+Xilonen,Sands,Scroll of the Hero of Cinder City,+20,DEF%,58.3,Crit Rate,8.9,Crit DMG,21.0,EM,44.0,ATK,18.0,38.8
+Xilonen,Goblet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,HP,538.0,ATK,27.0,Crit Rate,5.8,HP%,10.5,11.6
+Xilonen,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,4.1,EM,23.0,Crit DMG,32.6,ER%,9.1,32.6

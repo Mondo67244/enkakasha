@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,24.9,HP%,11.1,Crit Rate,7.8,ATK,18.0,40.5
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP%,9.3,Crit Rate,15.2,DEF%,5.8,Crit DMG,15.5,45.9
+Furina,Sands,Golden Troupe,+20,HP%,46.6,Crit Rate,14.0,Crit DMG,21.8,ER%,4.5,ATK%,4.7,49.8
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,DEF,23.0,HP,239.0,Crit Rate,7.4,Crit DMG,33.4,48.2
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,5.8,Crit DMG,34.2,DEF%,5.8,HP,478.0,34.2
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,ATK%,9.9,ER%,4.5,Crit DMG,11.7,Crit Rate,14.4,40.5
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit Rate,10.5,Crit DMG,7.0,EM,21.0,ATK%,16.9,28.0
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,ATK,18.0,Crit Rate,10.1,Crit DMG,17.9,DEF,21.0,38.1
+Arlecchino,Goblet,Scroll of the Hero of Cinder City,+20,Pyro DMG%,46.6,ATK,19.0,Crit DMG,21.0,DEF,21.0,Crit Rate,12.8,46.6
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,ATK%,11.1,Crit Rate,13.6,DEF,23.0,DEF%,5.1,27.2
+Ineffa,Flower,Silken Moon's Serenade,+20,HP,4780.0,HP%,4.7,Crit Rate,12.1,Crit DMG,13.2,EM,21.0,37.4
+Ineffa,Plume,Silken Moon's Serenade,+20,ATK,311.0,ATK%,5.3,EM,35.0,Crit DMG,18.7,Crit Rate,7.0,32.7
+Ineffa,Sands,Silken Moon's Serenade,+20,ATK%,46.6,Crit Rate,7.4,EM,44.0,HP,598.0,Crit DMG,13.2,28.0
+Ineffa,Goblet,Golden Troupe,+20,ATK%,46.6,DEF%,7.3,Crit Rate,13.6,Crit DMG,12.4,HP,209.0,39.6
+Ineffa,Circlet,Silken Moon's Serenade,+20,Crit Rate,31.1,DEF,19.0,ATK%,11.7,Crit DMG,12.4,EM,63.0,12.4
+Navia,Flower,Nighttime Whispers in the Echoing Woods,+20,HP,4780.0,Crit DMG,27.2,ATK%,5.8,Crit Rate,6.2,ER%,5.2,39.6
+Navia,Plume,Nighttime Whispers in the Echoing Woods,+20,ATK,311.0,Crit Rate,12.8,DEF,16.0,ATK%,9.9,Crit DMG,13.2,38.8
+Navia,Sands,Nighttime Whispers in the Echoing Woods,+20,ATK%,46.6,Crit Rate,9.3,Crit DMG,10.9,EM,19.0,HP,448.0,29.5
+Navia,Goblet,Pale Flame,+20,Geo DMG%,46.6,Crit DMG,21.0,Crit Rate,13.6,ER%,5.2,EM,23.0,48.2
+Navia,Circlet,Nighttime Whispers in the Echoing Woods,+20,Crit Rate,31.1,HP%,4.7,HP,538.0,ATK%,9.9,Crit DMG,20.2,20.2
+Clorinde,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit DMG,21.0,ATK%,4.1,Crit Rate,13.2,HP%,4.1,47.4
+Clorinde,Plume,Emblem of Severed Fate,+20,ATK,311.0,ATK%,5.3,Crit Rate,6.6,Crit DMG,31.9,DEF%,6.6,45.1
+Clorinde,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,HP%,5.8,Crit DMG,12.4,Crit Rate,9.7,DEF,58.0,31.8
+Clorinde,Goblet,Fragment of Harmonic Whimsy,+20,Electro DMG%,46.6,Crit DMG,19.4,ATK,16.0,EM,37.0,Crit Rate,7.8,35.0
+Clorinde,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,ATK,18.0,EM,19.0,Crit Rate,15.6,DEF%,5.1,31.2
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit DMG,15.5,ER%,13.0,Crit Rate,6.6,HP%,9.9,28.7
+Columbina,Plume,Set_15043,+20,ATK,311.0,Crit Rate,13.6,Crit DMG,7.8,EM,21.0,HP%,9.3,35.0
+Columbina,Sands,Emblem of Severed Fate,+20,ER%,51.8,HP,269.0,Crit DMG,13.2,HP%,9.9,Crit Rate,12.4,38.0
+Columbina,Goblet,Set_15043,+20,HP%,46.6,Crit Rate,10.5,Crit DMG,17.1,DEF%,13.1,ER%,4.5,38.1
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,HP%,15.2,DEF%,5.8,HP,448.0,Crit Rate,10.1,20.2
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,ER%,11.0,ATK,18.0,Crit Rate,3.9,Crit DMG,28.8,36.6
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,7.0,Crit DMG,24.9,DEF,23.0,DEF%,7.3,38.9
+ID_10000126,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,HP,538.0,HP%,4.7,Crit Rate,7.4,Crit DMG,20.2,35.0
+ID_10000126,Goblet,Fragment of Harmonic Whimsy,+20,DEF%,58.3,Crit Rate,14.4,Crit DMG,14.0,ATK%,4.7,ER%,9.7,42.8
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit Rate,31.1,DEF%,30.6,HP%,5.3,ATK%,4.1,Crit DMG,7.0,7.0
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,DEF,23.0,Crit Rate,13.6,Crit DMG,14.0,ATK%,10.5,41.2
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,ATK%,9.9,HP%,4.7,Crit DMG,14.0,Crit Rate,14.0,42.0
+Skirk,Sands,Finale of the Deep Galleries,+20,ATK%,46.6,DEF,35.0,Crit Rate,7.4,Crit DMG,28.0,ATK,19.0,42.8
+Skirk,Goblet,Marechaussee Hunter,+20,Cryo DMG%,46.6,HP%,5.8,ER%,5.8,Crit Rate,10.5,Crit DMG,19.4,40.4
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,DEF,35.0,DEF%,13.1,Crit Rate,14.0,ATK%,4.1,28.0
+Varesa,Flower,Long Night's Oath,+20,HP,4780.0,Crit Rate,7.0,Crit DMG,14.0,ER%,20.7,ATK,14.0,28.0
+Varesa,Plume,Long Night's Oath,+20,ATK,311.0,Crit Rate,7.0,HP,299.0,ATK%,9.9,Crit DMG,19.4,33.4
+Varesa,Sands,Long Night's Oath,+20,ATK%,46.6,Crit DMG,20.2,Crit Rate,7.8,ER%,11.0,HP,269.0,35.8
+Varesa,Goblet,Finale of the Deep Galleries,+20,Electro DMG%,46.6,Crit DMG,26.4,Crit Rate,3.9,HP,299.0,ATK%,8.7,34.2
+Varesa,Circlet,Long Night's Oath,+20,Crit DMG,62.2,EM,40.0,DEF,19.0,ATK%,16.9,Crit Rate,10.5,21.0
+Mualani,Flower,Obsidian Codex,+20,HP,4780.0,Crit DMG,14.0,DEF,39.0,Crit Rate,7.4,HP%,15.2,28.8
+Mualani,Plume,Obsidian Codex,+20,ATK,311.0,HP,209.0,Crit DMG,28.0,HP%,10.5,Crit Rate,6.6,41.2
+Mualani,Sands,Obsidian Codex,+20,HP%,46.6,EM,40.0,Crit Rate,14.0,HP,209.0,Crit DMG,11.7,39.7
+Mualani,Goblet,Obsidian Codex,+20,Hydro DMG%,46.6,Crit DMG,21.0,HP,508.0,ATK,29.0,EM,21.0,21.0
+Mualani,Circlet,Long Night's Oath,+20,Crit DMG,62.2,Crit Rate,7.4,EM,19.0,ER%,12.3,HP%,19.8,14.8
+Chiori,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,11.7,ATK,16.0,Crit Rate,9.7,DEF%,20.4,31.1
+Chiori,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,18.7,HP%,5.3,DEF%,7.3,Crit Rate,13.6,45.9
+Chiori,Sands,Golden Troupe,+20,DEF%,58.3,Crit DMG,13.2,ATK%,5.3,Crit Rate,14.8,ATK,14.0,42.8
+Chiori,Goblet,Golden Troupe,+20,Geo DMG%,46.6,HP%,4.1,Crit Rate,6.2,Crit DMG,25.6,DEF,16.0,38.0
+Chiori,Circlet,Scroll of the Hero of Cinder City,+20,Crit Rate,31.1,DEF%,5.8,DEF,16.0,Crit DMG,34.2,EM,21.0,34.2
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,ATK%,14.6,ATK,18.0,Crit DMG,13.2,Crit Rate,11.7,36.6
+Escoffier,Plume,Long Night's Oath,+20,ATK,311.0,EM,21.0,Crit Rate,14.4,Crit DMG,18.7,ATK%,5.3,47.5
+Escoffier,Sands,Golden Troupe,+20,ATK%,46.6,Crit Rate,5.8,ATK,14.0,Crit DMG,30.3,DEF%,13.1,41.9
+Escoffier,Goblet,Golden Troupe,+20,ATK%,46.6,EM,21.0,ATK,14.0,Crit Rate,13.6,Crit DMG,18.7,45.9
+Escoffier,Circlet,Golden Troupe,+20,Crit DMG,62.2,ATK%,11.1,HP%,5.3,EM,16.0,Crit Rate,17.5,35.0

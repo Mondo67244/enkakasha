@@ -42,11 +42,18 @@ const normalizeElement = (value) => {
     return ALLOWED_ELEMENTS.has(normalized) ? normalized : '';
 };
 
-const ElementIcon = ({ element, elementMap }) => {
+const ElementIcon = ({ element, elementMap, overlay }) => {
     const normalized = normalizeElement(element);
-    if (!normalized) return <User className="text-[var(--text-muted)]" />;
+    if (!normalized) return overlay ? null : <User className="text-[var(--text-muted)]" />;
     const key = normalized.toLowerCase();
     const src = elementMap[key] || `/elements/Element_${normalized}.svg`;
+    if (overlay) {
+        return (
+            <div className="gi-avatar__element">
+                <img src={src} alt={normalized} />
+            </div>
+        );
+    }
     return <img src={src} alt={normalized} className="h-5 w-5" />;
 };
 
@@ -108,7 +115,7 @@ const ArtifactRow = ({ artifactsBySlot }) => {
 
     return (
         <div className="space-y-3">
-            <div className="flex items-center gap-2">
+            <div className="gi-artifact-slots">
                 {SLOT_ORDER.map((slot) => {
                     const art = artifactsBySlot[slot];
                     const hasArt = Boolean(art);
@@ -122,44 +129,42 @@ const ArtifactRow = ({ artifactsBySlot }) => {
                             type="button"
                             onMouseEnter={() => setHoveredSlot(slot)}
                             onMouseLeave={() => setHoveredSlot(null)}
-                            className={`h-10 w-10 rounded-xl border flex items-center justify-center overflow-hidden transition ${isActive ? 'border-[var(--accent-strong)] bg-white shadow-sm' : 'border-[var(--line)] bg-[var(--surface-muted)]'
-                                }`}
+                            className={`gi-artifact-slot ${isActive ? 'gi-artifact-slot--active' : ''}`}
                         >
                             {hasArt ? (
                                 <img
                                     src={artImg}
                                     alt={slot}
-                                    className="h-8 w-8 object-contain"
                                     onError={(e) => {
-                                        e.currentTarget.src = 'https://placehold.co/64x64/f8fafc/94a3b8?text=?';
+                                        e.currentTarget.src = 'https://placehold.co/64x64/1a1f2a/5a6272?text=?';
                                     }}
                                 />
                             ) : (
-                                <span className="text-[10px] text-[var(--text-muted)]">{slot.slice(0, 2)}</span>
+                                <span className="gi-artifact-slot__placeholder">{slot.slice(0, 2)}</span>
                             )}
                         </button>
                     );
                 })}
             </div>
-            <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-muted)] p-3 min-h-[86px]">
+            <div className="gi-artifact-detail">
                 {activeArt ? (
                     <>
-                        <p className="text-xs font-semibold text-[var(--text-strong)]">
+                        <p className="gi-artifact-detail__title">
                             {activeSlot} · {activeArt.Set}
                         </p>
-                        <p className="text-xs text-[var(--text-muted)] mt-1">
-                            Main: {activeArt.Main_Stat} {activeArt.Main_Value}
+                        <p className="gi-artifact-detail__main">
+                            <span className="gi-stat-label">Main:</span> <span className="gi-stat-value">{activeArt.Main_Stat} {activeArt.Main_Value}</span>
                         </p>
                         {substats.length > 0 && (
-                            <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1">
+                            <div className="gi-artifact-detail__subs">
                                 {substats.slice(0, 4).map((sub, idx) => (
-                                    <p key={idx} className="text-[11px] text-[var(--text)]">- {sub}</p>
+                                    <p key={idx} className="gi-artifact-detail__sub">- {sub}</p>
                                 ))}
                             </div>
                         )}
                     </>
                 ) : (
-                    <p className="text-xs text-[var(--text-muted)]">No artifact equipped for this slot.</p>
+                    <p className="gi-artifact-detail__empty">No artifact equipped for this slot.</p>
                 )}
             </div>
         </div>
@@ -197,6 +202,14 @@ const Dashboard = () => {
             if (entry.id && entry.name) {
                 index[String(entry.id)] = entry.name;
             }
+        });
+        return index;
+    }, []);
+    const rarityIndex = useMemo(() => {
+        const index = {};
+        characterList.forEach((entry) => {
+            if (entry.name) index[entry.name] = entry.rarity || 4;
+            if (entry.id) index[String(entry.id)] = entry.rarity || 4;
         });
         return index;
     }, []);
@@ -277,30 +290,28 @@ const Dashboard = () => {
 
     return (
         <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="gi-page-header">
                 <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-muted)]">Showcase</p>
-                    <h2 className="text-3xl font-semibold text-[var(--text-strong)] font-display">Your characters</h2>
+                    <p className="gi-page-header__subtitle">Showcase</p>
+                    <h2 className="gi-page-header__title">Your characters</h2>
                 </div>
-                <button onClick={() => navigate('/home')} className="text-sm font-medium text-[var(--accent-strong)] hover:text-[var(--accent)]">
+                <button onClick={() => navigate('/home')} className="gi-page-header__action">
                     New scan
                 </button>
             </div>
 
-            <div className="bg-white border border-[var(--line)] rounded-2xl p-4 flex flex-col md:flex-row md:items-center gap-3">
+            <div className="gi-search-bar">
                 <div className="relative flex-1">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" size={16} />
                     <input
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search character"
-                        className="w-full border border-[var(--line)] bg-[var(--surface-muted)] pl-9 pr-3 py-2.5 rounded-xl text-sm text-[var(--text-strong)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
                     />
                 </div>
                 <select
                     value={elementFilter}
                     onChange={(e) => setElementFilter(e.target.value)}
-                    className="border border-[var(--line)] bg-[var(--surface-muted)] px-3 py-2.5 rounded-xl text-sm text-[var(--text-strong)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
                 >
                     {elementOptions.map((el) => (
                         <option key={el} value={el}>{el}</option>
@@ -311,7 +322,7 @@ const Dashboard = () => {
             {filtered.length === 0 ? (
                 <div className="text-sm text-[var(--text-muted)]">No characters match your filters.</div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="gi-grid">
                     {filtered.map((char, idx) => {
                         const stats = char.stats;
                         const artCount = char.artifacts?.length || 0;
@@ -324,51 +335,89 @@ const Dashboard = () => {
                         const folderName = normalizeCharacterFolder(displayName);
                         const imageSrc = folderName ? iconMap[folderName] : '';
                         const fallbackSrc = folderName ? cardMap[folderName] : '';
+                        const rarity = rarityIndex[displayName] || rarityIndex[stats.Character] || 4;
                         return (
                             <div
                                 key={idx}
                                 onClick={() => handleSelect(stats.Character)}
-                                className="bg-white border border-[var(--line)] hover:border-[var(--accent-strong)] p-6 rounded-2xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1 group"
+                                className={`gi-card gi-card--rarity-${rarity}`}
                             >
-                                <div className="flex items-start justify-between mb-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="h-12 w-12 rounded-2xl bg-[var(--surface-muted)] border border-[var(--line)] overflow-hidden flex items-center justify-center">
+                                <div className="gi-card-content">
+                                    <div className="gi-card-left">
+                                        <div className={`gi-avatar gi-avatar--rarity-${rarity}`}>
                                             {imageSrc ? (
                                                 <img
                                                     src={imageSrc}
                                                     alt={stats.Character}
-                                                    className="h-full w-full object-cover"
                                                     onError={(e) => {
                                                         if (fallbackSrc && e.currentTarget.src !== fallbackSrc) {
                                                             e.currentTarget.src = fallbackSrc;
                                                         } else {
-                                                            e.currentTarget.src = 'https://placehold.co/96x96/f8fafc/94a3b8?text=?';
+                                                            e.currentTarget.src = 'https://placehold.co/96x96/1a1f2a/5a6272?text=?';
                                                         }
                                                     }}
                                                 />
                                             ) : (
                                                 <User className="text-[var(--text-muted)]" />
                                             )}
+                                            <ElementIcon element={resolvedElement} elementMap={elementMap} overlay />
                                         </div>
-                                        <div className="p-2 bg-[var(--surface-muted)] rounded-xl">
-                                            <ElementIcon element={resolvedElement} elementMap={elementMap} />
+                                        <div className="gi-stars">
+                                            {Array.from({ length: rarity }).map((_, i) => (
+                                                <div key={i} className={`gi-stars__star ${rarity === 5 ? 'gi-stars__star--gold' : 'gi-stars__star--purple'}`} />
+                                            ))}
                                         </div>
                                     </div>
-                                    <span className="text-xs font-mono text-[var(--text-muted)] bg-[var(--surface-muted)] px-2 py-1 rounded">Lv.{stats.Level}</span>
-                                </div>
 
-                                <h3 className="text-xl font-semibold text-[var(--text-strong)] mb-1">{displayName || stats.Character}</h3>
-                                <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-4">
-                                    <span>ATK {stats.ATK}</span>
-                                    <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                    <span>CR {stats['Crit_Rate%']}%</span>
+                                    <div className="gi-card-right">
+                                        <div className="gi-card-header">
+                                            <h3 className="gi-char-name">{displayName || stats.Character}</h3>
+                                            <span className="gi-level-badge">Lv.{stats.Level}</span>
+                                        </div>
+
+                                        {/* Primary Stats Block (CR, CD, ER) */}
+                                        <div className="gi-stats-primary">
+                                            <div className="gi-stat-primary-item">
+                                                <span className="gi-stat-primary-label">CR</span>
+                                                <span className="gi-stat-primary-value">{stats['Crit_Rate%']}%</span>
+                                            </div>
+                                            <div className="gi-stat-primary-item">
+                                                <span className="gi-stat-primary-label">CD</span>
+                                                <span className="gi-stat-primary-value">{stats['Crit_DMG%']}%</span>
+                                            </div>
+                                            <div className="gi-stat-primary-item">
+                                                <span className="gi-stat-primary-label">ER</span>
+                                                <span className="gi-stat-primary-value">{stats['ER%']}%</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Secondary Stats Column (HP, ATK, DEF, EM) */}
+                                        <div className="gi-stats-secondary">
+                                            <div className="gi-stat-row">
+                                                <span className="gi-stat-label">HP</span>
+                                                <span className="gi-stat-value">{stats.HP || stats.Max_HP || 0}</span>
+                                            </div>
+                                            <div className="gi-stat-row">
+                                                <span className="gi-stat-label">ATK</span>
+                                                <span className="gi-stat-value">{stats.ATK}</span>
+                                            </div>
+                                            <div className="gi-stat-row">
+                                                <span className="gi-stat-label">DEF</span>
+                                                <span className="gi-stat-value">{stats.DEF}</span>
+                                            </div>
+                                            <div className="gi-stat-row">
+                                                <span className="gi-stat-label">EM</span>
+                                                <span className="gi-stat-value">{stats.EM || stats.Elemental_Mastery || 0}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <ArtifactRow artifactsBySlot={artifactsBySlot} />
 
-                                <div className="pt-4 border-t border-[var(--line)] flex justify-between items-center">
-                                    <span className="text-xs text-[var(--text-muted)]">{artCount} artifacts</span>
-                                    <span className="text-[var(--accent-strong)] text-sm font-medium group-hover:underline">Optimize &rarr;</span>
+                                <div className="gi-card__footer">
+                                    <span className="gi-card__footer-count">{artCount} artifacts</span>
+                                    <span className="gi-card__footer-link">Optimize &rarr;</span>
                                 </div>
                             </div>
                         )

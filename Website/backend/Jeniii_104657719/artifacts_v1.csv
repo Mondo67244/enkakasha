@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Thundering Fury,+20,HP,4780.0,Crit DMG,30.3,Crit Rate,7.0,EM,21.0,ATK%,4.7,44.3
+Keqing,Plume,Thundering Fury,+20,ATK,311.0,Crit Rate,9.7,ATK%,4.7,EM,35.0,Crit DMG,18.7,38.1
+Keqing,Sands,Thundering Fury,+20,ATK%,46.6,ER%,5.8,Crit Rate,9.7,EM,16.0,Crit DMG,27.2,46.6
+Keqing,Goblet,Thundering Fury,+20,Electro DMG%,46.6,EM,21.0,Crit Rate,11.7,ATK%,9.3,Crit DMG,17.9,41.3
+Keqing,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,EM,21.0,Crit Rate,12.8,ATK%,10.5,ATK,18.0,25.6
+Columbina,Flower,Silken Moon's Serenade,+20,HP,4780.0,ER%,6.5,HP%,15.2,Crit Rate,3.9,Crit DMG,29.5,37.3
+Columbina,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,3.5,Crit DMG,28.8,HP%,9.9,ER%,12.3,35.8
+Columbina,Sands,Night of the Sky's Unveiling,+20,HP%,46.6,Crit Rate,5.4,Crit DMG,19.4,ER%,15.5,HP,209.0,30.2
+Columbina,Goblet,Night of the Sky's Unveiling,+20,HP%,46.6,Crit Rate,14.4,Crit DMG,7.0,DEF%,5.1,HP,807.0,35.8
+Columbina,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,HP%,19.2,Crit Rate,3.5,HP,269.0,DEF,42.0,7.0
+Ineffa,Flower,Silken Moon's Serenade,+20,HP,4780.0,EM,16.0,Crit Rate,10.9,Crit DMG,20.2,ATK%,5.8,42.0
+Ineffa,Plume,Silken Moon's Serenade,+20,ATK,311.0,Crit DMG,19.4,Crit Rate,9.7,EM,42.0,DEF%,7.3,38.8
+Ineffa,Sands,Silken Moon's Serenade,+20,ATK%,46.6,Crit Rate,8.9,Crit DMG,27.2,EM,23.0,ER%,5.2,45.0
+Ineffa,Goblet,Thundering Fury,+20,ATK%,46.6,Crit DMG,21.8,Crit Rate,7.4,ATK,14.0,EM,68.0,36.6
+Ineffa,Circlet,Silken Moon's Serenade,+20,Crit Rate,31.1,Crit DMG,25.6,DEF,23.0,EM,33.0,ATK%,9.9,25.6
+Durin,Flower,Set_15044,+20,HP,4780.0,Crit Rate,6.2,Crit DMG,20.2,DEF,16.0,ATK%,9.9,32.6
+Durin,Plume,Set_15044,+20,ATK,311.0,HP,209.0,Crit DMG,6.2,ATK%,9.9,Crit Rate,11.7,29.6
+Durin,Sands,Set_15044,+20,ATK%,46.6,EM,19.0,DEF,37.0,Crit DMG,7.0,Crit Rate,16.7,40.4
+Durin,Goblet,Set_15044,+20,ATK%,46.6,ATK,35.0,Crit Rate,3.9,HP%,5.8,Crit DMG,26.4,34.2
+Durin,Circlet,Silken Moon's Serenade,+20,ATK%,46.6,Crit Rate,7.0,HP,239.0,Crit DMG,33.4,EM,21.0,47.4
+Clorinde,Flower,Thundering Fury,+20,HP,4780.0,Crit DMG,21.8,Crit Rate,7.0,ER%,5.8,ATK%,15.8,35.8
+Clorinde,Plume,Gladiator's Finale,+20,ATK,311.0,ER%,5.2,Crit DMG,21.0,Crit Rate,11.3,DEF%,6.6,43.6
+Clorinde,Sands,Thundering Fury,+20,ATK%,46.6,Crit DMG,23.3,HP,299.0,HP%,9.9,Crit Rate,10.9,45.1
+Clorinde,Goblet,Thundering Fury,+20,Electro DMG%,46.6,ATK%,11.1,DEF,16.0,HP,478.0,Crit DMG,30.3,30.3
+Clorinde,Circlet,Thundering Fury,+20,Crit DMG,62.2,ATK%,4.1,HP,538.0,Crit Rate,17.1,EM,19.0,34.2
+Furina,Flower,Golden Troupe,+20,HP,4780.0,ER%,9.7,Crit DMG,13.2,Crit Rate,8.6,HP%,4.1,30.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,DEF%,12.4,Crit Rate,10.5,HP%,4.7,Crit DMG,20.2,41.2
+Furina,Sands,Golden Troupe,+20,ER%,51.8,HP,299.0,Crit DMG,14.8,Crit Rate,15.6,DEF%,5.8,46.0
+Furina,Goblet,Unfinished Reverie,+20,Hydro DMG%,46.6,ATK%,5.8,Crit DMG,27.2,HP%,15.7,HP,269.0,27.2
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,4.1,DEF%,13.1,Crit DMG,27.2,HP,269.0,27.2
+Yelan,Flower,Emblem of Severed Fate,+20,HP,4780.0,HP%,8.7,Crit DMG,17.1,ER%,16.8,Crit Rate,3.5,24.1
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,DEF,21.0,ER%,17.5,EM,21.0,Crit Rate,9.3,18.6
+Yelan,Sands,Emblem of Severed Fate,+20,ER%,51.8,HP%,14.6,DEF,23.0,Crit Rate,11.3,HP,209.0,22.6
+Yelan,Goblet,Emblem of Severed Fate,+20,Hydro DMG%,46.6,Crit Rate,12.4,ATK%,4.7,Crit DMG,7.0,HP,478.0,31.8
+Yelan,Circlet,Thundersoother,+20,Crit Rate,31.1,HP%,10.5,ER%,9.7,Crit DMG,28.8,DEF%,7.3,28.8
+Noelle,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,DEF%,6.6,Crit DMG,25.6,EM,19.0,Crit Rate,8.9,43.4
+Noelle,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,DEF%,5.1,Crit Rate,14.0,DEF,16.0,Crit DMG,18.7,46.7
+Noelle,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,Crit DMG,22.5,DEF,23.0,EM,44.0,Crit Rate,6.2,34.9
+Noelle,Goblet,Brave Heart,+20,Geo DMG%,46.6,DEF,23.0,Crit DMG,14.8,Crit Rate,10.5,DEF%,21.1,35.8
+Noelle,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,Crit Rate,13.2,EM,16.0,HP,299.0,ATK,39.0,26.4
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,Crit Rate,14.0,ATK%,5.8,Crit DMG,14.0,DEF,19.0,42.0
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit DMG,19.4,Crit Rate,11.7,ATK%,11.1,ER%,6.5,42.8
+Arlecchino,Sands,Thundering Fury,+20,ATK%,46.6,HP,239.0,Crit DMG,7.0,Crit Rate,15.9,ER%,9.7,38.8
+Arlecchino,Goblet,Fragment of Harmonic Whimsy,+20,ATK%,46.6,Crit Rate,9.3,ER%,6.5,Crit DMG,20.2,ATK,19.0,38.8
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,HP%,5.8,HP,568.0,DEF%,5.8,Crit Rate,14.0,28.0
+Wanderer,Flower,Desert Pavilion Chronicle,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,26.4,ATK%,4.1,ATK,18.0,39.6
+Wanderer,Plume,Desert Pavilion Chronicle,+20,ATK,311.0,Crit Rate,10.1,Crit DMG,12.4,DEF,39.0,DEF%,5.8,32.6
+Wanderer,Sands,Desert Pavilion Chronicle,+20,ATK%,46.6,Crit Rate,8.9,HP,209.0,Crit DMG,19.4,HP%,4.1,37.2
+Wanderer,Goblet,Desert Pavilion Chronicle,+20,Anemo DMG%,46.6,Crit DMG,28.0,HP%,4.7,EM,40.0,ATK%,5.3,28.0
+Wanderer,Circlet,Brave Heart,+20,Crit Rate,31.1,Crit DMG,35.7,DEF,23.0,ATK,39.0,ER%,6.5,35.7
+Baizhu,Flower,Crimson Witch of Flames,+20,HP,4780.0,EM,65.0,ER%,5.2,DEF%,5.8,HP%,21.6,0.0
+Baizhu,Plume,Crimson Witch of Flames,+20,ATK,311.0,HP%,15.7,HP,538.0,ER%,12.3,DEF%,6.6,0.0
+Baizhu,Sands,Crimson Witch of Flames,+20,HP%,46.6,HP,777.0,ER%,11.7,Crit Rate,5.8,DEF,16.0,11.6
+Baizhu,Goblet,Crimson Witch of Flames,+20,HP%,46.6,Crit DMG,10.9,ATK%,5.8,Crit Rate,7.4,HP,777.0,25.7
+Baizhu,Circlet,Desert Pavilion Chronicle,+20,Healing%,35.9,HP%,19.8,HP,598.0,DEF,39.0,EM,19.0,0.0
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,ATK%,9.9,HP%,5.3,Crit DMG,18.7,Crit Rate,6.2,31.1
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,Crit Rate,5.4,ATK%,8.7,Crit DMG,24.9,HP%,4.7,35.7
+Skirk,Sands,Maiden Beloved,+20,ATK%,46.6,Crit DMG,20.2,Crit Rate,10.5,ATK,29.0,DEF,19.0,41.2
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,DEF%,6.6,Crit Rate,3.5,Crit DMG,32.6,HP,239.0,39.6
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit Rate,31.1,ATK%,10.5,Crit DMG,20.2,EM,19.0,ATK,31.0,20.2

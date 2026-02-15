@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,11.7,HP%,5.3,Crit DMG,28.0,EM,19.0,51.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP,299.0,Crit Rate,7.4,HP%,10.5,Crit DMG,28.8,43.6
+Furina,Sands,Golden Troupe,+20,HP%,46.6,Crit Rate,17.1,Crit DMG,7.0,ER%,10.4,HP,209.0,41.2
+Furina,Goblet,Emblem of Severed Fate,+20,Hydro DMG%,46.6,HP%,15.7,Crit DMG,29.5,Crit Rate,3.9,DEF%,5.8,37.3
+Furina,Circlet,Golden Troupe,+20,Crit Rate,31.1,HP%,9.9,Crit DMG,28.7,HP,598.0,ATK,18.0,28.7
+Columbina,Flower,Set_15043,+20,HP,4780.0,Crit Rate,10.9,Crit DMG,6.2,DEF,16.0,EM,65.0,28.0
+Columbina,Plume,Set_15043,+20,ATK,311.0,Crit DMG,34.2,DEF,21.0,ATK%,5.3,Crit Rate,5.4,45.0
+Columbina,Sands,Golden Troupe,+20,HP%,46.6,Crit Rate,6.2,ER%,6.5,HP,239.0,Crit DMG,25.6,38.0
+Columbina,Goblet,Set_15043,+20,HP%,46.6,Crit Rate,9.3,DEF,16.0,DEF%,13.9,Crit DMG,10.9,29.5
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,HP%,15.7,Crit Rate,6.6,DEF%,11.7,EM,23.0,13.2
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,ATK%,4.1,ATK,14.0,Crit DMG,28.0,Crit Rate,9.3,46.6
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,22.5,ATK%,10.5,Crit Rate,9.7,EM,21.0,41.9
+Escoffier,Sands,Gladiator's Finale,+20,ATK%,46.6,DEF,16.0,Crit Rate,10.1,Crit DMG,17.9,ATK,18.0,38.1
+Escoffier,Goblet,Golden Troupe,+20,Cryo DMG%,46.6,EM,16.0,Crit DMG,14.0,HP%,5.3,Crit Rate,15.9,45.8
+Escoffier,Circlet,Golden Troupe,+20,Crit DMG,62.2,Crit Rate,9.7,DEF,21.0,HP,448.0,ATK%,9.9,19.4
+Arlecchino,Flower,Marechaussee Hunter,+20,HP,4780.0,ATK,16.0,Crit Rate,5.8,Crit DMG,18.7,ATK%,17.5,30.3
+Arlecchino,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit DMG,13.2,ATK%,11.7,Crit Rate,10.5,DEF,21.0,34.2
+Arlecchino,Sands,Thundersoother,+20,ATK%,46.6,ATK,33.0,Crit Rate,3.1,Crit DMG,28.0,DEF,19.0,34.2
+Arlecchino,Goblet,Marechaussee Hunter,+20,Pyro DMG%,46.6,Crit Rate,7.4,HP,747.0,ATK%,11.1,Crit DMG,7.0,21.8
+Arlecchino,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,EM,42.0,ATK%,19.2,ATK,33.0,Crit Rate,3.9,7.8
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit Rate,5.4,Crit DMG,21.0,DEF,19.0,ATK%,14.0,31.8
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,HP,239.0,EM,21.0,Crit DMG,26.4,Crit Rate,10.5,47.4
+Mavuika,Sands,Golden Troupe,+20,EM,187.0,Crit Rate,9.7,DEF,19.0,ATK,19.0,Crit DMG,25.7,45.1
+Mavuika,Goblet,Obsidian Codex,+20,Pyro DMG%,46.6,Crit Rate,6.6,Crit DMG,18.7,HP,269.0,DEF%,12.4,31.9
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,EM,37.0,Crit Rate,10.1,HP%,5.3,DEF,42.0,20.2
+Varesa,Flower,Golden Troupe,+20,HP,4780.0,EM,16.0,Crit DMG,23.3,Crit Rate,13.2,ATK%,5.3,49.7
+Varesa,Plume,Obsidian Codex,+20,ATK,311.0,Crit DMG,14.8,Crit Rate,7.8,ATK%,10.5,ER%,13.0,30.4
+Varesa,Sands,Obsidian Codex,+20,ATK%,46.6,Crit Rate,8.6,Crit DMG,13.2,ATK,29.0,DEF,21.0,30.4
+Varesa,Goblet,Silken Moon's Serenade,+20,Electro DMG%,46.6,ER%,5.2,Crit DMG,21.0,DEF%,6.6,Crit Rate,10.1,41.2
+Varesa,Circlet,Obsidian Codex,+20,Crit DMG,62.2,Crit Rate,5.8,ATK%,14.6,EM,23.0,ATK,33.0,11.6
+Skirk,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit Rate,7.0,Crit DMG,27.2,DEF%,6.6,HP%,4.1,41.2
+Skirk,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit DMG,7.0,Crit Rate,18.3,ATK%,4.1,HP,299.0,43.6
+Skirk,Sands,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,2.7,Crit DMG,32.6,DEF,23.0,DEF%,12.4,38.0
+Skirk,Goblet,Heart of Depth,+20,Cryo DMG%,46.6,Crit DMG,31.1,HP,239.0,ATK%,5.3,Crit Rate,5.8,42.7
+Skirk,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,HP%,14.0,Crit Rate,10.5,DEF%,5.1,ATK%,11.7,21.0
+Nefer,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,DEF,35.0,EM,47.0,Crit DMG,20.2,Crit Rate,7.0,34.2
+Nefer,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit DMG,26.4,Crit Rate,7.8,ER%,6.5,EM,33.0,42.0
+Nefer,Sands,Night of the Sky's Unveiling,+20,EM,187.0,Crit DMG,12.4,HP,747.0,Crit Rate,11.3,DEF%,5.8,35.0
+Nefer,Goblet,Night of the Sky's Unveiling,+20,EM,187.0,Crit Rate,9.3,Crit DMG,19.4,HP,239.0,ER%,6.5,38.0
+Nefer,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,HP%,5.3,DEF,35.0,EM,79.0,Crit Rate,3.1,6.2
+Ineffa,Flower,Emblem of Severed Fate,+20,HP,4780.0,DEF%,12.4,Crit Rate,7.4,Crit DMG,29.5,EM,23.0,44.3
+Ineffa,Plume,Set_15043,+20,ATK,311.0,EM,16.0,Crit DMG,20.2,ATK%,4.7,Crit Rate,11.3,42.8
+Ineffa,Sands,Silken Moon's Serenade,+20,ATK%,46.6,Crit DMG,6.2,DEF,21.0,HP,508.0,Crit Rate,17.1,40.4
+Ineffa,Goblet,Golden Troupe,+20,ATK%,46.6,Crit Rate,10.5,ATK,35.0,ER%,5.2,Crit DMG,19.4,40.4
+Ineffa,Circlet,Golden Troupe,+20,Crit DMG,62.2,ATK%,13.4,Crit Rate,6.2,EM,40.0,DEF%,12.4,12.4
+Lauma,Flower,Silken Moon's Serenade,+20,HP,4780.0,EM,86.0,DEF%,7.3,Crit DMG,20.2,Crit Rate,3.5,27.2
+Lauma,Plume,Silken Moon's Serenade,+20,ATK,311.0,Crit Rate,3.9,DEF,21.0,Crit DMG,12.4,ER%,22.0,20.2
+Lauma,Sands,Silken Moon's Serenade,+20,EM,187.0,HP%,4.7,Crit Rate,6.6,HP,478.0,DEF,60.0,13.2
+Lauma,Goblet,Silken Moon's Serenade,+20,EM,187.0,ATK%,4.1,Crit Rate,14.0,HP%,10.5,DEF%,7.3,28.0
+Lauma,Circlet,Thundersoother,+20,EM,187.0,Crit Rate,7.8,ER%,11.7,ATK%,13.4,Crit DMG,11.7,27.3
+Flins,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,7.0,ATK%,4.7,HP%,14.0,Crit DMG,10.9,24.9
+Flins,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit Rate,2.7,Crit DMG,25.6,HP,538.0,ER%,6.5,31.0
+Flins,Sands,Night of the Sky's Unveiling,+20,ATK%,46.6,HP%,9.3,ATK,51.0,DEF%,6.6,Crit DMG,23.3,23.3
+Flins,Goblet,Night of the Sky's Unveiling,+20,ATK%,46.6,HP,598.0,Crit Rate,5.8,HP%,8.2,Crit DMG,13.2,24.8
+Flins,Circlet,Set_15043,+20,Crit Rate,31.1,ER%,6.5,EM,23.0,Crit DMG,20.2,ATK%,15.7,20.2
+ID_10000126,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,DEF,23.0,ATK,29.0,Crit DMG,14.0,Crit Rate,9.3,32.6
+ID_10000126,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,21.0,ER%,4.5,DEF%,5.8,Crit Rate,10.5,42.0
+ID_10000126,Sands,Night of the Sky's Unveiling,+20,DEF%,58.3,Crit Rate,14.8,Crit DMG,13.2,HP%,5.3,EM,16.0,42.8
+ID_10000126,Goblet,Obsidian Codex,+20,DEF%,58.3,ER%,5.2,ATK%,11.7,Crit DMG,18.7,Crit Rate,11.7,42.1
+ID_10000126,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,HP%,9.3,ATK,33.0,HP,538.0,Crit Rate,10.1,20.2

@@ -71,9 +71,9 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 bg-white border border-[var(--line)] rounded-3xl p-8 shadow-[var(--shadow)] relative overflow-hidden">
+                <div className="lg:col-span-2 bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-3xl p-8 shadow-[var(--shadow)] relative overflow-hidden">
                     {loading && (
-                        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center z-20">
+                        <div className="absolute inset-0 bg-[var(--app-bg)]/80 backdrop-blur-sm flex flex-col items-center justify-center z-20">
                             <Loader2 className="animate-spin text-[var(--accent-strong)] mb-2" size={36} />
                             <p className="text-[var(--text-muted)] font-medium">Fetching showcase...</p>
                         </div>
@@ -114,7 +114,7 @@ const Home = () => {
                     </form>
                 </div>
 
-                <div className="bg-white border border-[var(--line)] rounded-3xl p-6 shadow-sm">
+                <div className="bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-3xl p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-4">
                         <Clock size={18} className="text-[var(--accent-strong)]" />
                         <h3 className="text-base font-semibold text-[var(--text-strong)]">Recent scans</h3>

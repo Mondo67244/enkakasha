@@ -119,7 +119,7 @@ const Chat = () => {
         setError(null);
         const apiKey = localStorage.getItem('gemini_key');
         const provider = localStorage.getItem('ai_provider') || 'ollama';
-        
+
         if (provider === 'gemini' && !apiKey) {
             navigate('/');
             return;
@@ -203,7 +203,7 @@ const Chat = () => {
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            <aside className="lg:col-span-4 bg-white border border-[var(--line)] rounded-3xl p-5 shadow-sm">
+            <aside className="lg:col-span-4 bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-3xl p-5 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold text-[var(--text-strong)]">Chat history</h3>
                     <button
@@ -222,7 +222,7 @@ const Chat = () => {
                             key={session.id}
                             type="button"
                             onClick={() => handleSelectSession(session.id)}
-                            className={`w-full text-left px-3 py-3 rounded-2xl border ${activeSessionId === session.id ? 'border-[var(--accent-strong)] bg-[var(--accent-soft)]' : 'border-[var(--line)] bg-white hover:bg-[var(--surface-muted)]'}`}
+                            className={`w-full text-left px-3 py-3 rounded-2xl border ${activeSessionId === session.id ? 'border-[var(--accent-strong)] bg-[var(--accent-soft)]/20 text-[var(--text-strong)]' : 'border-[var(--line)] bg-[var(--surface)] text-[var(--text)] hover:bg-[var(--surface-muted)]'}`}
                         >
                             <p className="text-sm font-semibold text-[var(--text-strong)]">{session.title}</p>
                             <p className="text-xs text-[var(--text-muted)]">{new Date(session.updatedAt).toLocaleString()}</p>
@@ -231,7 +231,7 @@ const Chat = () => {
                 </div>
             </aside>
 
-            <section className="lg:col-span-8 bg-white border border-[var(--line)] rounded-3xl p-6 shadow-sm flex flex-col min-h-[70vh]">
+            <section className="lg:col-span-8 bg-[var(--surface)] backdrop-blur-md border border-[var(--line)] rounded-3xl p-6 shadow-sm flex flex-col min-h-[70vh]">
                 <div className="flex items-center justify-between mb-4">
                     <div>
                         <p className="text-xs uppercase tracking-[0.3em] text-[var(--text-muted)]">Chat mode</p>
@@ -249,14 +249,14 @@ const Chat = () => {
                         <button
                             onClick={exportSessionMarkdown}
                             disabled={!activeSession}
-                            className="text-xs font-medium px-3 py-2 rounded-full border border-[var(--line)] text-[var(--text-strong)] bg-white hover:bg-[var(--surface-muted)] disabled:opacity-50"
+                            className="text-xs font-medium px-3 py-2 rounded-full border border-[var(--line)] text-[var(--text-strong)] bg-[var(--surface)] hover:bg-[var(--surface-muted)] disabled:opacity-50"
                         >
                             Export MD
                         </button>
                         <button
                             onClick={exportSessionJson}
                             disabled={!activeSession}
-                            className="text-xs font-medium px-3 py-2 rounded-full border border-[var(--line)] text-[var(--text-strong)] bg-white hover:bg-[var(--surface-muted)] disabled:opacity-50"
+                            className="text-xs font-medium px-3 py-2 rounded-full border border-[var(--line)] text-[var(--text-strong)] bg-[var(--surface)] hover:bg-[var(--surface-muted)] disabled:opacity-50"
                         >
                             Export JSON
                         </button>
@@ -292,7 +292,7 @@ const Chat = () => {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Ask about your build, stats, or swaps..."
-                        className="flex-1 border border-[var(--line)] bg-white px-4 py-3 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)]"
+                        className="flex-1 border border-[var(--line)] bg-[var(--surface)] px-4 py-3 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] focus:border-[var(--accent-strong)] text-[var(--text-strong)] placeholder-[var(--text-muted)]"
                         onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                     />
                     <button

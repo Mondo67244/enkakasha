@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Nefer,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit DMG,20.2,ATK,33.0,Crit Rate,6.6,DEF,44.0,33.4
+Nefer,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,14.0,DEF,19.0,Crit Rate,6.6,ER%,14.2,27.2
+Nefer,Sands,Night of the Sky's Unveiling,+20,EM,187.0,Crit Rate,14.0,Crit DMG,14.0,ATK%,9.9,ATK,18.0,42.0
+Nefer,Goblet,Emblem of Severed Fate,+20,EM,187.0,Crit Rate,6.6,HP%,11.7,DEF,21.0,Crit DMG,27.2,40.4
+Nefer,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,ER%,14.2,HP,538.0,Crit Rate,6.2,ATK%,5.8,12.4
+Lauma,Flower,Silken Moon's Serenade,+20,HP,4780.0,ATK,37.0,Crit Rate,14.0,Crit DMG,14.0,DEF,19.0,42.0
+Lauma,Plume,Maiden Beloved,+20,ATK,311.0,Crit Rate,15.9,Crit DMG,10.9,DEF%,5.1,HP,269.0,42.7
+Lauma,Sands,Silken Moon's Serenade,+20,EM,187.0,DEF,16.0,Crit DMG,13.2,Crit Rate,14.4,ER%,6.5,42.0
+Lauma,Goblet,Silken Moon's Serenade,+20,EM,187.0,Crit Rate,15.9,Crit DMG,6.2,ATK,29.0,DEF,21.0,38.0
+Lauma,Circlet,Silken Moon's Serenade,+20,Crit DMG,62.2,Crit Rate,10.1,HP,209.0,ER%,10.4,EM,35.0,20.2
+Columbina,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit DMG,22.5,DEF,37.0,Crit Rate,3.9,ER%,11.0,30.3
+Columbina,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,11.7,HP%,5.3,HP,448.0,Crit Rate,12.4,36.5
+Columbina,Sands,Set_15043,+20,HP%,46.6,Crit DMG,30.3,HP,478.0,Crit Rate,3.1,DEF%,7.3,36.5
+Columbina,Goblet,Night of the Sky's Unveiling,+20,HP%,46.6,DEF,32.0,ATK,14.0,Crit DMG,21.0,Crit Rate,7.0,35.0
+Columbina,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,ATK%,17.5,Crit Rate,6.6,HP,299.0,ER%,6.5,13.2
+Nahida,Flower,Deepwood Memories,+20,HP,4780.0,Crit DMG,26.4,ATK%,5.3,Crit Rate,6.2,ATK,16.0,38.8
+Nahida,Plume,Deepwood Memories,+20,ATK,311.0,Crit Rate,10.5,EM,42.0,Crit DMG,14.0,DEF%,5.8,35.0
+Nahida,Sands,Deepwood Memories,+20,EM,187.0,Crit Rate,10.5,HP,538.0,Crit DMG,14.8,ER%,5.2,35.8
+Nahida,Goblet,Crimson Witch of Flames,+20,Dendro DMG%,46.6,HP,269.0,ER%,11.7,Crit DMG,26.4,Crit Rate,3.1,32.6
+Nahida,Circlet,Deepwood Memories,+20,Crit DMG,62.2,ATK,33.0,Crit Rate,6.6,EM,40.0,ATK%,9.9,13.2
+Chasca,Flower,Obsidian Codex,+20,HP,4780.0,Crit DMG,27.2,Crit Rate,7.0,ATK%,5.3,ER%,6.5,41.2
+Chasca,Plume,Obsidian Codex,+20,ATK,311.0,Crit Rate,9.7,DEF,23.0,ATK%,9.3,Crit DMG,21.0,40.4
+Chasca,Sands,Obsidian Codex,+20,ATK%,46.6,DEF,21.0,Crit DMG,11.7,ATK,18.0,Crit Rate,15.6,42.9
+Chasca,Goblet,Thundersoother,+20,ATK%,46.6,HP,239.0,EM,16.0,Crit DMG,30.3,Crit Rate,7.0,44.3
+Chasca,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ATK%,4.7,Crit Rate,10.5,EM,40.0,DEF%,14.6,21.0
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit DMG,28.0,Crit Rate,6.2,ATK%,4.7,DEF,23.0,40.4
+Mavuika,Plume,Obsidian Codex,+20,ATK,311.0,Crit DMG,19.4,HP,299.0,Crit Rate,8.9,ATK%,5.8,37.2
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,DEF,23.0,Crit DMG,7.0,Crit Rate,12.8,EM,37.0,32.6
+Mavuika,Goblet,Long Night's Oath,+20,Pyro DMG%,46.6,Crit DMG,20.2,Crit Rate,9.7,ATK%,5.8,ATK,19.0,39.6
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,ATK%,10.5,Crit Rate,6.2,DEF,23.0,DEF%,24.8,12.4
+Citlali,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ER%,5.8,Crit DMG,23.3,ATK%,8.7,Crit Rate,5.4,34.1
+Citlali,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit Rate,6.2,Crit DMG,13.2,DEF,39.0,EM,40.0,25.6
+Citlali,Sands,Scroll of the Hero of Cinder City,+20,EM,187.0,Crit DMG,7.8,Crit Rate,6.2,ATK,45.0,ER%,11.0,20.2
+Citlali,Goblet,Golden Troupe,+20,EM,187.0,ATK,45.0,Crit DMG,7.0,Crit Rate,10.1,ATK%,4.7,27.2
+Citlali,Circlet,Scroll of the Hero of Cinder City,+20,Crit Rate,31.1,DEF,39.0,ATK%,11.1,ATK,18.0,Crit DMG,26.4,26.4
+Xilonen,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ATK,16.0,Crit DMG,7.8,Crit Rate,12.4,DEF%,14.6,32.6
+Xilonen,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit Rate,3.1,DEF%,19.0,Crit DMG,20.2,HP,299.0,26.4
+Xilonen,Sands,Scroll of the Hero of Cinder City,+20,DEF%,58.3,Crit DMG,11.7,DEF,32.0,Crit Rate,6.2,ATK,35.0,24.1
+Xilonen,Goblet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,ATK,31.0,Crit Rate,11.3,EM,35.0,Crit DMG,13.2,35.8
+Xilonen,Circlet,Scroll of the Hero of Cinder City,+20,DEF%,58.3,ATK%,4.7,Crit Rate,12.4,ATK,53.0,ER%,4.5,24.8
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,Crit Rate,11.3,Crit DMG,14.0,EM,35.0,DEF,16.0,36.6
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,DEF,42.0,ATK%,5.3,Crit Rate,9.7,Crit DMG,19.4,38.8
+Skirk,Sands,Silken Moon's Serenade,+20,ATK%,46.6,DEF,21.0,Crit DMG,20.2,HP,239.0,Crit Rate,8.6,37.4
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,HP,209.0,ER%,11.7,Crit Rate,13.6,Crit DMG,6.2,33.4
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,ATK%,14.6,Crit Rate,6.6,DEF,37.0,ATK,18.0,13.2
+Furina,Flower,Golden Troupe,+20,HP,4780.0,HP%,5.3,ATK%,4.7,Crit Rate,14.8,Crit DMG,17.9,47.5
+Furina,Plume,Shimenawa's Reminiscence,+20,ATK,311.0,HP%,5.8,Crit Rate,14.0,DEF%,5.1,Crit DMG,20.2,48.2
+Furina,Sands,Golden Troupe,+20,HP%,46.6,ER%,6.5,HP,299.0,Crit DMG,14.0,Crit Rate,18.3,50.6
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,ATK,16.0,Crit DMG,20.2,DEF,16.0,Crit Rate,14.4,49.0
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,Crit Rate,12.4,HP%,16.3,ATK,14.0,ATK%,4.1,24.8
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,21.0,Crit Rate,14.4,DEF,19.0,EM,16.0,49.8
+Escoffier,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,Crit DMG,28.0,Crit Rate,10.1,DEF%,7.3,DEF,23.0,48.2
+Escoffier,Sands,Golden Troupe,+20,ATK%,46.6,ER%,5.8,Crit DMG,26.4,Crit Rate,6.2,ATK,14.0,38.8
+Escoffier,Goblet,Golden Troupe,+20,ATK%,46.6,Crit Rate,12.4,Crit DMG,18.7,DEF%,6.6,ER%,5.8,43.5
+Escoffier,Circlet,Golden Troupe,+20,Crit Rate,31.1,ATK%,4.1,HP,299.0,DEF%,13.9,Crit DMG,28.0,28.0
+Shenhe,Flower,Gladiator's Finale,+20,HP,4780.0,Crit Rate,10.9,ER%,5.8,Crit DMG,5.4,ATK%,21.0,27.2
+Shenhe,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit DMG,7.0,ATK%,27.4,Crit Rate,2.7,EM,21.0,12.4
+Shenhe,Sands,Gladiator's Finale,+20,ATK%,46.6,HP%,9.3,Crit DMG,20.2,Crit Rate,6.6,ER%,6.5,33.4
+Shenhe,Goblet,Gladiator's Finale,+20,ATK%,46.6,ATK,31.0,Crit Rate,7.0,Crit DMG,14.0,DEF,35.0,28.0
+Shenhe,Circlet,Fragment of Harmonic Whimsy,+20,ATK%,46.6,ATK,14.0,Crit DMG,27.2,ER%,5.8,Crit Rate,7.4,42.0

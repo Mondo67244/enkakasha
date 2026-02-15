@@ -1,0 +1,49 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,Crit DMG,18.7,EM,19.0,ATK%,10.5,Crit Rate,10.5,39.7
+Keqing,Plume,Brave Heart,+20,ATK,311.0,Crit Rate,7.0,EM,23.0,DEF,19.0,Crit DMG,34.2,48.2
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,Crit DMG,15.5,EM,19.0,Crit Rate,13.2,ATK,31.0,41.9
+Keqing,Goblet,Gladiator's Finale,+20,Electro DMG%,46.6,Crit DMG,14.8,DEF,21.0,HP%,5.8,Crit Rate,17.1,49.0
+Keqing,Circlet,Brave Heart,+20,Crit Rate,31.1,ATK%,5.8,Crit DMG,28.8,ATK,33.0,ER%,10.4,28.8
+Chiori,Flower,Wanderer's Troupe,+20,HP,4780.0,Crit Rate,9.3,Crit DMG,21.0,DEF%,5.8,ATK%,9.9,39.6
+Chiori,Plume,Wanderer's Troupe,+20,ATK,311.0,HP,209.0,Crit DMG,15.5,Crit Rate,13.6,DEF%,10.9,42.7
+Chiori,Sands,Nighttime Whispers in the Echoing Woods,+20,DEF%,58.3,HP,209.0,ATK,18.0,Crit Rate,6.2,Crit DMG,28.0,40.4
+Chiori,Goblet,Wanderer's Troupe,+20,Geo DMG%,46.6,Crit Rate,3.1,Crit DMG,25.6,DEF%,11.7,ATK,19.0,31.8
+Chiori,Circlet,Wanderer's Troupe,+20,Crit Rate,31.1,DEF,39.0,Crit DMG,26.4,DEF%,10.9,ATK,16.0,26.4
+Nahida,Flower,Deepwood Memories,+20,HP,4780.0,Crit DMG,12.4,Crit Rate,5.8,EM,19.0,ER%,16.8,24.0
+Nahida,Plume,Deepwood Memories,+20,ATK,311.0,ER%,11.0,Crit DMG,12.4,Crit Rate,7.8,EM,42.0,28.0
+Nahida,Sands,Deepwood Memories,+20,EM,187.0,HP,239.0,Crit DMG,19.4,Crit Rate,3.5,ER%,18.1,26.4
+Nahida,Goblet,Crimson Witch of Flames,+20,EM,187.0,Crit DMG,12.4,Crit Rate,14.0,HP%,4.1,ER%,11.7,40.4
+Nahida,Circlet,Deepwood Memories,+20,Crit Rate,31.1,EM,37.0,Crit DMG,25.7,HP,299.0,DEF%,7.3,25.7
+Ganyu,Flower,Thundersoother,+20,HP,4780.0,Crit Rate,13.6,Crit DMG,6.2,ER%,11.7,DEF%,7.3,33.4
+Ganyu,Plume,Thundersoother,+20,ATK,311.0,ER%,5.2,ATK%,9.9,Crit DMG,34.2,Crit Rate,3.9,42.0
+Ganyu,Sands,Thundersoother,+20,ATK%,46.6,ATK,31.0,EM,35.0,Crit DMG,21.0,HP,448.0,21.0
+Ganyu,Goblet,Song of Days Past,+20,Cryo DMG%,46.6,Crit Rate,7.0,ATK%,5.8,Crit DMG,21.8,DEF%,12.4,35.8
+Ganyu,Circlet,Thundersoother,+20,Crit Rate,31.1,ATK%,5.8,EM,37.0,HP%,10.5,Crit DMG,21.8,21.8
+Lyney,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,5.8,HP%,8.2,Crit DMG,19.4,HP,209.0,31.0
+Lyney,Goblet,Marechaussee Hunter,+20,Pyro DMG%,46.6,DEF%,11.7,Crit DMG,28.0,HP%,11.7,Crit Rate,3.9,35.8
+Lyney,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,DEF%,19.7,ATK%,5.8,EM,19.0,Crit Rate,14.8,29.6
+Furina,Flower,Golden Troupe,+20,HP,4780.0,DEF%,5.8,Crit Rate,12.8,ER%,10.4,Crit DMG,14.8,40.4
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,29.5,Crit Rate,7.0,EM,19.0,HP%,4.7,43.5
+Furina,Sands,Golden Troupe,+20,ER%,51.8,Crit Rate,10.1,DEF,23.0,EM,47.0,Crit DMG,19.4,39.6
+Furina,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,ATK,18.0,ER%,16.8,Crit DMG,17.9,Crit Rate,7.0,31.9
+Furina,Circlet,Obsidian Codex,+20,Crit Rate,31.1,DEF,21.0,HP%,5.8,Crit DMG,28.0,ER%,11.0,28.0
+Noelle,Flower,Retracing Bolide,+20,HP,4780.0,DEF,23.0,Crit DMG,7.8,Crit Rate,13.6,DEF%,13.1,35.0
+Noelle,Plume,Retracing Bolide,+20,ATK,311.0,Crit DMG,6.2,Crit Rate,5.8,DEF%,16.8,ER%,9.1,17.8
+Noelle,Sands,Retracing Bolide,+20,DEF%,58.3,Crit Rate,7.0,ER%,11.0,Crit DMG,21.0,ATK,35.0,35.0
+Noelle,Goblet,Heart of Depth,+20,Geo DMG%,46.6,DEF,19.0,Crit DMG,24.9,HP,508.0,Crit Rate,7.4,39.7
+Noelle,Circlet,Retracing Bolide,+20,Crit Rate,31.1,EM,40.0,HP,269.0,Crit DMG,27.2,DEF%,6.6,27.2
+Nilou,Flower,Set_15026,+20,HP,4780.0,Crit Rate,5.8,Crit DMG,12.4,EM,63.0,ATK,16.0,24.0
+Nilou,Plume,Pale Flame,+20,ATK,311.0,HP,896.0,EM,56.0,ER%,5.8,HP%,4.7,0.0
+Nilou,Sands,Emblem of Severed Fate,+20,HP%,46.6,ATK,18.0,HP,568.0,Crit Rate,14.0,DEF,21.0,28.0
+Nilou,Goblet,Set_15026,+20,HP%,46.6,Crit Rate,8.6,Crit DMG,12.4,DEF%,5.1,HP,508.0,29.6
+Nilou,Circlet,Pale Flame,+20,HP%,46.6,Crit DMG,13.2,ER%,9.7,ATK,47.0,DEF,21.0,13.2
+Mualani,Flower,Obsidian Codex,+20,HP,4780.0,Crit DMG,7.0,Crit Rate,13.2,ATK,31.0,ATK%,4.7,33.4
+Mualani,Plume,Obsidian Codex,+20,ATK,311.0,Crit Rate,8.9,HP%,4.7,HP,239.0,Crit DMG,19.4,37.2
+Mualani,Sands,Obsidian Codex,+20,HP%,46.6,Crit DMG,27.2,EM,23.0,DEF,37.0,DEF%,13.9,27.2
+Mualani,Goblet,Emblem of Severed Fate,+20,Hydro DMG%,46.6,Crit DMG,20.2,HP%,16.3,EM,19.0,Crit Rate,2.7,25.6
+Mualani,Circlet,Obsidian Codex,+20,Crit DMG,62.2,Crit Rate,3.5,HP%,8.7,ER%,16.8,EM,37.0,7.0
+Tighnari,Flower,Set_15026,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,21.0,DEF,42.0,ATK%,4.7,34.2
+Tighnari,Plume,Set_15026,+20,ATK,311.0,Crit DMG,13.2,ATK%,4.7,HP,239.0,Crit Rate,14.8,42.8
+Tighnari,Sands,Set_15026,+20,EM,187.0,Crit DMG,19.4,ER%,6.5,HP,269.0,Crit Rate,15.2,49.8
+Tighnari,Goblet,Set_15026,+20,Dendro DMG%,46.6,ATK,33.0,HP,299.0,Crit Rate,6.2,Crit DMG,21.0,33.4
+Tighnari,Circlet,Set_15026,+20,Crit DMG,62.2,EM,58.0,Crit Rate,6.2,ATK,33.0,ATK%,9.3,12.4

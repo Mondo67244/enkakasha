@@ -5,12 +5,7 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Instrument Sans', 'system-ui', 'sans-serif'],
-                display: ['Space Grotesk', 'Instrument Sans', 'system-ui', 'sans-serif'],
-            },
-        },
+        extend: {},
     },
     plugins: [],
 }

@@ -1,0 +1,61 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Brave Heart,+20,HP,4780.0,DEF,16.0,Crit Rate,10.9,ATK,18.0,Crit DMG,28.8,50.6
+Keqing,Plume,Obsidian Codex,+20,ATK,311.0,DEF,23.0,Crit Rate,14.4,ATK%,4.7,Crit DMG,21.8,50.6
+Keqing,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,7.8,Crit DMG,35.8,HP%,4.1,ATK,14.0,51.4
+Keqing,Goblet,Brave Heart,+20,Electro DMG%,46.6,Crit Rate,20.6,Crit DMG,7.8,HP,239.0,ER%,5.8,49.0
+Keqing,Circlet,Brave Heart,+20,Crit DMG,62.2,ATK%,5.3,ATK,19.0,Crit Rate,17.9,EM,47.0,35.8
+Yoimiya,Flower,Blizzard Strayer,+20,HP,4780.0,ATK%,5.3,ATK,16.0,Crit DMG,7.8,Crit Rate,17.1,42.0
+Yoimiya,Plume,Blizzard Strayer,+20,ATK,311.0,Crit DMG,14.0,ATK%,19.2,Crit Rate,7.0,HP,239.0,28.0
+Yoimiya,Sands,Blizzard Strayer,+20,ATK%,46.6,Crit Rate,10.1,EM,44.0,Crit DMG,14.8,HP%,4.7,35.0
+Yoimiya,Goblet,Gladiator's Finale,+20,Pyro DMG%,46.6,HP,209.0,Crit DMG,29.5,Crit Rate,7.0,EM,42.0,43.5
+Yoimiya,Circlet,Blizzard Strayer,+20,Crit DMG,62.2,DEF,23.0,Crit Rate,10.5,ATK,51.0,HP,568.0,21.0
+Sangonomiya Kokomi,Flower,Crimson Witch of Flames,+20,HP,4780.0,Crit DMG,7.8,ATK,16.0,ER%,30.5,HP%,11.1,7.8
+Sangonomiya Kokomi,Plume,Crimson Witch of Flames,+20,ATK,311.0,HP,299.0,Crit DMG,7.8,HP%,21.6,ER%,16.8,7.8
+Sangonomiya Kokomi,Sands,Crimson Witch of Flames,+20,HP%,46.6,ER%,18.8,DEF,32.0,EM,40.0,HP,269.0,0.0
+Sangonomiya Kokomi,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,ER%,15.5,Crit Rate,3.9,ATK,16.0,HP%,20.4,7.8
+Sangonomiya Kokomi,Circlet,Crimson Witch of Flames,+20,Healing%,35.9,HP%,16.9,ER%,12.3,EM,61.0,ATK%,4.7,0.0
+Ganyu,Flower,Thundersoother,+20,HP,4780.0,ATK%,14.0,Crit Rate,10.5,Crit DMG,11.7,HP%,4.1,32.7
+Ganyu,Plume,Thundersoother,+20,ATK,311.0,Crit DMG,13.2,ER%,11.7,Crit Rate,8.9,EM,35.0,31.0
+Ganyu,Sands,Thundersoother,+20,ATK%,46.6,Crit DMG,26.4,Crit Rate,9.7,ATK,18.0,HP,269.0,45.8
+Ganyu,Goblet,Blizzard Strayer,+20,Cryo DMG%,46.6,ATK%,15.2,EM,42.0,Crit Rate,6.6,Crit DMG,14.8,28.0
+Ganyu,Circlet,Thundersoother,+20,ATK%,46.6,Crit Rate,10.9,Crit DMG,27.2,HP,239.0,ATK,19.0,49.0
+Lynette,Flower,Blizzard Strayer,+20,HP,4780.0,Crit Rate,7.0,Crit DMG,26.4,ATK,37.0,ATK%,5.8,40.4
+Lynette,Plume,Marechaussee Hunter,+20,ATK,311.0,DEF,21.0,Crit DMG,16.3,Crit Rate,14.0,HP%,5.8,44.3
+Lynette,Sands,Marechaussee Hunter,+20,ATK%,46.6,ATK,16.0,Crit DMG,13.2,Crit Rate,16.7,ER%,6.5,46.6
+Lynette,Goblet,Marechaussee Hunter,+20,Anemo DMG%,46.6,Crit Rate,13.2,Crit DMG,7.0,ATK%,8.7,HP,269.0,33.4
+Lynette,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,ATK%,10.5,DEF%,6.6,Crit Rate,10.1,HP,598.0,20.2
+Furina,Flower,Golden Troupe,+20,HP,4780.0,DEF%,6.6,ER%,12.3,Crit Rate,10.5,Crit DMG,13.2,34.2
+Furina,Plume,Golden Troupe,+20,ATK,311.0,Crit DMG,20.2,ER%,6.5,Crit Rate,12.4,DEF,19.0,45.0
+Furina,Sands,Golden Troupe,+20,HP%,46.6,ER%,11.0,ATK,16.0,Crit DMG,21.8,Crit Rate,7.8,37.4
+Furina,Goblet,Marechaussee Hunter,+20,HP%,46.6,Crit Rate,14.8,ER%,16.8,ATK%,5.3,Crit DMG,6.2,35.8
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,HP%,18.7,ER%,6.5,DEF,21.0,Crit Rate,5.4,10.8
+Chiori,Flower,Wanderer's Troupe,+20,HP,4780.0,Crit DMG,14.0,Crit Rate,15.2,ATK,16.0,ATK%,9.9,44.4
+Chiori,Plume,Wanderer's Troupe,+20,ATK,311.0,Crit DMG,20.2,ATK%,10.5,Crit Rate,10.1,DEF,16.0,40.4
+Chiori,Sands,Wanderer's Troupe,+20,DEF%,58.3,Crit Rate,3.1,Crit DMG,34.2,DEF,21.0,ER%,4.5,40.4
+Chiori,Goblet,Brave Heart,+20,Geo DMG%,46.6,Crit Rate,12.8,Crit DMG,12.4,DEF%,10.2,DEF,23.0,38.0
+Chiori,Circlet,Wanderer's Troupe,+20,Crit DMG,62.2,ATK%,10.5,DEF%,12.4,Crit Rate,12.4,EM,21.0,24.8
+Nilou,Flower,Thundering Fury,+20,HP,4780.0,Crit Rate,7.0,Crit DMG,14.0,HP%,14.6,DEF,16.0,28.0
+Nilou,Plume,Gladiator's Finale,+20,ATK,311.0,Crit Rate,2.7,Crit DMG,7.0,HP%,15.7,ER%,18.1,12.4
+Nilou,Sands,Thundering Fury,+20,HP%,46.6,EM,33.0,Crit DMG,12.4,DEF,21.0,Crit Rate,9.7,31.8
+Nilou,Goblet,Golden Troupe,+20,HP%,46.6,EM,37.0,Crit DMG,13.2,Crit Rate,11.3,HP,508.0,35.8
+Nilou,Circlet,Brave Heart,+20,HP%,46.6,ATK,37.0,ER%,11.0,Crit DMG,6.2,HP,777.0,6.2
+Mualani,Flower,Obsidian Codex,+20,HP,4780.0,HP%,8.7,Crit DMG,20.2,ATK,35.0,Crit Rate,3.9,28.0
+Mualani,Plume,Obsidian Codex,+20,ATK,311.0,ATK%,5.8,EM,37.0,HP%,15.2,Crit DMG,20.2,20.2
+Mualani,Sands,Obsidian Codex,+20,HP%,46.6,ATK%,11.1,HP,448.0,Crit Rate,9.3,DEF,23.0,18.6
+Mualani,Goblet,Obsidian Codex,+20,Hydro DMG%,46.6,DEF,23.0,ATK,18.0,Crit Rate,12.4,HP,837.0,24.8
+Mualani,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,DEF%,6.6,HP%,14.6,EM,37.0,Crit Rate,10.9,21.8
+Citlali,Flower,Scroll of the Hero of Cinder City,+20,HP,4780.0,ATK,16.0,Crit Rate,10.5,EM,61.0,ER%,12.3,21.0
+Citlali,Plume,Scroll of the Hero of Cinder City,+20,ATK,311.0,HP%,5.8,ER%,16.2,HP,687.0,EM,37.0,0.0
+Citlali,Sands,Scroll of the Hero of Cinder City,+20,EM,187.0,ATK,29.0,ATK%,5.3,ER%,5.2,HP%,21.6,0.0
+Citlali,Goblet,Scroll of the Hero of Cinder City,+20,EM,187.0,ATK%,5.3,DEF%,12.4,ATK,51.0,ER%,10.4,0.0
+Citlali,Circlet,Scroll of the Hero of Cinder City,+20,EM,187.0,DEF%,13.1,DEF,35.0,ER%,13.0,HP,837.0,0.0
+Ineffa,Flower,Wanderer's Troupe,+20,HP,4780.0,ATK%,9.9,Crit DMG,24.1,HP%,4.1,Crit Rate,7.8,39.7
+Ineffa,Plume,Thundering Fury,+20,ATK,311.0,DEF,16.0,ATK%,8.7,Crit Rate,12.8,Crit DMG,13.2,38.8
+Ineffa,Sands,Brave Heart,+20,ATK%,46.6,Crit Rate,7.0,HP,269.0,ATK,19.0,Crit DMG,27.2,41.2
+Ineffa,Goblet,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,16.3,Crit DMG,7.8,EM,44.0,ATK,16.0,40.4
+Ineffa,Circlet,Wanderer's Troupe,+20,Crit Rate,31.1,Crit DMG,14.0,ER%,11.0,ATK%,21.0,HP,269.0,14.0
+Columbina,Flower,Wanderer's Troupe,+20,HP,4780.0,HP%,14.0,Crit Rate,3.1,EM,23.0,Crit DMG,28.8,35.0
+Columbina,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,DEF,35.0,Crit DMG,6.2,Crit Rate,2.7,HP%,23.9,11.6
+Columbina,Sands,Night of the Sky's Unveiling,+20,HP%,46.6,Crit Rate,10.1,ATK,18.0,ATK%,8.7,Crit DMG,17.9,38.1
+Columbina,Goblet,Night of the Sky's Unveiling,+20,HP%,46.6,Crit Rate,6.2,ER%,9.7,EM,40.0,DEF%,19.0,12.4
+Columbina,Circlet,Night of the Sky's Unveiling,+20,Crit DMG,62.2,HP%,9.3,Crit Rate,9.7,EM,40.0,ATK,14.0,19.4

@@ -1,0 +1,60 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Thundering Fury,+20,HP,4780.0,DEF%,5.1,ATK%,9.3,Crit Rate,14.0,Crit DMG,13.2,41.2
+Keqing,Plume,Thundering Fury,+20,ATK,311.0,Crit Rate,14.4,ER%,5.2,HP,299.0,Crit DMG,22.5,51.3
+Keqing,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,HP,299.0,Crit Rate,17.9,Crit DMG,13.2,ER%,6.5,49.0
+Keqing,Goblet,Fragment of Harmonic Whimsy,+20,Electro DMG%,46.6,Crit Rate,10.9,Crit DMG,28.0,ER%,5.8,DEF,21.0,49.8
+Keqing,Circlet,Unfinished Reverie,+20,Crit DMG,62.2,ATK%,11.1,EM,19.0,DEF,16.0,Crit Rate,16.3,32.6
+Wanderer,Flower,Desert Pavilion Chronicle,+20,HP,4780.0,DEF,19.0,Crit Rate,6.6,ATK%,9.3,Crit DMG,20.2,33.4
+Wanderer,Plume,Desert Pavilion Chronicle,+20,ATK,311.0,ER%,9.7,Crit DMG,7.0,ATK%,10.5,Crit Rate,12.8,32.6
+Wanderer,Sands,Desert Pavilion Chronicle,+20,ATK%,46.6,DEF,21.0,ER%,6.5,Crit Rate,12.1,Crit DMG,14.8,39.0
+Wanderer,Goblet,Thundering Fury,+20,Anemo DMG%,46.6,Crit DMG,20.2,Crit Rate,5.8,DEF%,13.9,ATK%,10.5,31.8
+Wanderer,Circlet,Desert Pavilion Chronicle,+20,Crit DMG,62.2,Crit Rate,11.7,HP%,5.8,EM,23.0,HP,508.0,23.4
+Nahida,Flower,Set_15026,+20,HP,4780.0,ATK%,4.7,Crit Rate,14.4,Crit DMG,11.7,DEF%,7.3,40.5
+Nahida,Plume,Set_15026,+20,ATK,311.0,EM,42.0,HP,299.0,Crit DMG,17.9,Crit Rate,10.5,38.9
+Nahida,Sands,Set_15026,+20,EM,187.0,HP%,9.9,HP,269.0,Crit DMG,16.3,Crit Rate,7.4,31.1
+Nahida,Goblet,Unfinished Reverie,+20,EM,187.0,ATK%,4.7,Crit DMG,12.4,Crit Rate,7.4,HP,717.0,27.2
+Nahida,Circlet,Set_15026,+20,Crit DMG,62.2,ATK%,14.6,ATK,16.0,Crit Rate,7.0,HP%,8.7,14.0
+Kaedehara Kazuha,Flower,Viridescent Venerer,+20,HP,4780.0,HP%,5.3,ER%,6.5,EM,82.0,Crit DMG,11.7,11.7
+Kaedehara Kazuha,Plume,Viridescent Venerer,+20,ATK,311.0,EM,61.0,HP,478.0,ER%,18.8,HP%,5.8,0.0
+Kaedehara Kazuha,Sands,Viridescent Venerer,+20,EM,187.0,Crit DMG,15.5,DEF,16.0,HP%,11.1,ER%,16.8,15.5
+Kaedehara Kazuha,Goblet,Viridescent Venerer,+20,EM,187.0,HP,209.0,ER%,16.2,Crit Rate,5.8,DEF,39.0,11.6
+Kaedehara Kazuha,Circlet,Deepwood Memories,+20,EM,187.0,ER%,9.7,HP,478.0,Crit DMG,22.5,DEF%,7.3,22.5
+Furina,Flower,Tenacity of the Millelith,+20,HP,4780.0,HP%,5.8,Crit DMG,7.8,Crit Rate,17.9,ATK,14.0,43.6
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP%,4.7,Crit DMG,23.3,Crit Rate,9.3,DEF,16.0,41.9
+Furina,Sands,Golden Troupe,+20,HP%,46.6,DEF,23.0,Crit Rate,6.2,ATK,33.0,Crit DMG,20.2,32.6
+Furina,Goblet,Golden Troupe,+20,HP%,46.6,Crit DMG,14.0,ATK,18.0,Crit Rate,13.2,DEF,39.0,40.4
+Furina,Circlet,Golden Troupe,+20,Crit DMG,62.2,HP%,14.6,HP,239.0,Crit Rate,10.1,DEF,23.0,20.2
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,Crit Rate,11.7,EM,21.0,Crit DMG,12.4,ATK%,11.1,35.8
+Raiden Shogun,Plume,Emblem of Severed Fate,+20,ATK,311.0,EM,21.0,ATK%,16.3,Crit DMG,21.0,DEF,19.0,21.0
+Raiden Shogun,Sands,Emblem of Severed Fate,+20,ER%,51.8,ATK%,9.9,Crit DMG,14.0,HP%,15.8,EM,40.0,14.0
+Raiden Shogun,Goblet,Gladiator's Finale,+20,ATK%,46.6,DEF%,6.6,HP,448.0,Crit Rate,11.3,Crit DMG,20.2,42.8
+Raiden Shogun,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,ATK%,10.5,Crit DMG,12.4,HP,508.0,ATK,33.0,12.4
+Columbina,Flower,Set_15043,+20,HP,4780.0,HP%,10.5,ATK%,4.1,Crit Rate,6.6,Crit DMG,28.0,41.2
+Columbina,Plume,Set_15043,+20,ATK,311.0,HP%,4.7,ER%,11.7,Crit Rate,10.1,Crit DMG,13.2,33.4
+Columbina,Sands,Set_15043,+20,ER%,51.8,HP%,10.5,Crit DMG,7.8,EM,77.0,Crit Rate,3.1,14.0
+Columbina,Goblet,Set_15043,+20,HP%,46.6,DEF%,13.1,Crit Rate,2.7,ATK%,14.6,Crit DMG,20.2,25.6
+Columbina,Circlet,Long Night's Oath,+20,Crit DMG,62.2,ATK%,5.8,ER%,5.8,HP%,19.8,Crit Rate,5.4,10.8
+Wriothesley,Flower,Marechaussee Hunter,+20,HP,4780.0,Crit Rate,3.1,Crit DMG,31.1,ATK%,9.3,EM,21.0,37.3
+Wriothesley,Plume,Marechaussee Hunter,+20,ATK,311.0,Crit DMG,27.2,DEF,19.0,ATK%,15.2,Crit Rate,3.5,34.2
+Wriothesley,Sands,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,7.4,ATK,19.0,Crit DMG,28.8,HP%,4.1,43.6
+Wriothesley,Goblet,Thundering Fury,+20,Cryo DMG%,46.6,Crit DMG,28.0,HP%,8.2,ATK,16.0,Crit Rate,7.4,42.8
+Wriothesley,Circlet,Marechaussee Hunter,+20,Crit DMG,62.2,EM,37.0,ATK,18.0,ATK%,14.6,Crit Rate,8.9,17.8
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,DEF,21.0,ATK%,9.9,Crit DMG,7.0,Crit Rate,14.8,36.6
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit Rate,13.2,DEF%,7.3,Crit DMG,7.8,ATK%,9.3,34.2
+Arlecchino,Goblet,Thundering Fury,+20,Pyro DMG%,46.6,HP%,15.7,Crit Rate,7.8,Crit DMG,21.8,ATK,19.0,37.4
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,DEF%,11.7,Crit Rate,6.2,ATK%,14.6,HP%,4.7,12.4
+Yelan,Flower,Emblem of Severed Fate,+20,HP,4780.0,Crit DMG,12.4,DEF,39.0,Crit Rate,12.8,HP%,4.1,38.0
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,HP%,9.9,Crit DMG,21.0,Crit Rate,5.8,EM,21.0,32.6
+Yelan,Sands,Emblem of Severed Fate,+20,HP%,46.6,Crit Rate,6.2,ATK,33.0,DEF%,7.3,Crit DMG,19.4,31.8
+Yelan,Goblet,Long Night's Oath,+20,Hydro DMG%,46.6,HP%,15.2,DEF%,6.6,Crit DMG,7.0,Crit Rate,10.5,28.0
+Yelan,Circlet,Emblem of Severed Fate,+20,Crit DMG,62.2,HP,299.0,HP%,10.5,Crit Rate,13.2,DEF%,13.1,26.4
+Escoffier,Flower,Golden Troupe,+20,HP,4780.0,Crit DMG,24.1,ER%,4.5,HP%,10.5,Crit Rate,2.7,29.5
+Escoffier,Plume,Golden Troupe,+20,ATK,311.0,DEF,21.0,ATK%,13.4,Crit DMG,26.4,Crit Rate,3.9,34.2
+Escoffier,Sands,Golden Troupe,+20,ER%,51.8,Crit Rate,3.9,Crit DMG,17.9,DEF%,12.4,ATK%,9.3,25.7
+Escoffier,Goblet,Desert Pavilion Chronicle,+20,ATK%,46.6,Crit Rate,7.4,HP,508.0,EM,40.0,Crit DMG,21.8,36.6
+Escoffier,Circlet,Golden Troupe,+20,Crit DMG,62.2,Crit Rate,6.6,HP,508.0,ATK%,15.2,ATK,37.0,13.2
+Skirk,Flower,Finale of the Deep Galleries,+20,HP,4780.0,ER%,6.5,ATK%,5.8,Crit DMG,11.7,Crit Rate,13.6,38.9
+Skirk,Plume,Finale of the Deep Galleries,+20,ATK,311.0,Crit Rate,7.4,ATK%,9.3,Crit DMG,19.4,EM,23.0,34.2
+Skirk,Sands,Marechaussee Hunter,+20,ATK%,46.6,Crit Rate,12.8,ATK,19.0,HP%,9.9,Crit DMG,14.0,39.6
+Skirk,Goblet,Finale of the Deep Galleries,+20,Cryo DMG%,46.6,ATK,29.0,Crit DMG,11.7,Crit Rate,9.3,ATK%,4.1,30.3
+Skirk,Circlet,Finale of the Deep Galleries,+20,Crit DMG,62.2,ER%,11.0,Crit Rate,14.0,ATK%,4.7,HP,269.0,28.0

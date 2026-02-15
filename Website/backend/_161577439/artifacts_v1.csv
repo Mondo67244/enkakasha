@@ -1,0 +1,36 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Furina,Flower,Golden Troupe,+20,HP,4780.0,DEF,16.0,Crit Rate,7.4,Crit DMG,21.0,HP%,14.6,35.8
+Furina,Plume,Golden Troupe,+20,ATK,311.0,HP,209.0,HP%,9.9,Crit DMG,14.0,Crit Rate,14.0,42.0
+Furina,Sands,Golden Troupe,+20,HP%,46.6,HP,239.0,DEF,23.0,Crit DMG,5.4,Crit Rate,21.8,49.0
+Furina,Goblet,Golden Troupe,+20,Hydro DMG%,46.6,Crit Rate,2.7,Crit DMG,35.7,HP%,9.9,ATK%,4.7,41.1
+Furina,Circlet,Marechaussee Hunter,+20,Crit Rate,31.1,Crit DMG,42.0,ATK,16.0,HP,269.0,HP%,5.8,42.0
+Raiden Shogun,Flower,Emblem of Severed Fate,+20,HP,4780.0,ER%,5.8,Crit DMG,21.8,ATK%,9.9,Crit Rate,9.3,40.4
+Raiden Shogun,Plume,Emblem of Severed Fate,+20,ATK,311.0,Crit Rate,17.1,HP,239.0,Crit DMG,14.8,DEF%,5.8,49.0
+Raiden Shogun,Sands,Archaic Petra,+20,ER%,51.8,Crit DMG,18.7,Crit Rate,13.6,ATK,14.0,HP%,5.8,45.9
+Raiden Shogun,Goblet,Emblem of Severed Fate,+20,ATK%,46.6,DEF,23.0,Crit DMG,28.8,ER%,12.3,Crit Rate,7.8,44.4
+Raiden Shogun,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,HP%,9.9,Crit DMG,36.5,ATK,19.0,EM,21.0,36.5
+Columbina,Flower,Night of the Sky's Unveiling,+20,HP,4780.0,Crit Rate,6.6,Crit DMG,18.7,HP%,4.7,DEF,32.0,31.9
+Columbina,Plume,Night of the Sky's Unveiling,+20,ATK,311.0,Crit DMG,21.8,HP,269.0,ER%,12.3,Crit Rate,7.0,35.8
+Columbina,Sands,Night of the Sky's Unveiling,+20,HP%,46.6,Crit Rate,7.4,Crit DMG,12.4,EM,37.0,HP,478.0,27.2
+Columbina,Goblet,Night of the Sky's Unveiling,+20,HP%,46.6,Crit DMG,20.2,ATK,14.0,Crit Rate,11.3,ER%,5.8,42.8
+Columbina,Circlet,Obsidian Codex,+20,Crit DMG,62.2,HP%,14.6,HP,299.0,Crit Rate,3.5,EM,82.0,7.0
+Arlecchino,Flower,Fragment of Harmonic Whimsy,+20,HP,4780.0,DEF%,5.8,Crit DMG,32.6,Crit Rate,6.6,ATK,14.0,45.8
+Arlecchino,Plume,Fragment of Harmonic Whimsy,+20,ATK,311.0,Crit DMG,31.9,DEF,19.0,Crit Rate,3.1,ATK%,9.9,38.1
+Arlecchino,Sands,Fragment of Harmonic Whimsy,+20,ATK%,46.6,DEF%,14.6,Crit Rate,12.4,Crit DMG,6.2,HP%,5.8,31.0
+Arlecchino,Goblet,Noblesse Oblige,+20,Pyro DMG%,46.6,ER%,5.8,ATK,19.0,Crit DMG,13.2,Crit Rate,15.9,45.0
+Arlecchino,Circlet,Fragment of Harmonic Whimsy,+20,Crit DMG,62.2,ATK,14.0,Crit Rate,13.2,ATK%,5.3,EM,40.0,26.4
+Yelan,Flower,Emblem of Severed Fate,+20,HP,4780.0,ER%,5.8,Crit DMG,27.2,HP%,9.9,Crit Rate,2.7,32.6
+Yelan,Plume,Emblem of Severed Fate,+20,ATK,311.0,ER%,14.9,Crit DMG,29.5,HP%,4.7,Crit Rate,3.5,36.5
+Yelan,Sands,Golden Troupe,+20,ER%,51.8,Crit Rate,13.6,DEF,19.0,ATK%,4.7,Crit DMG,14.8,42.0
+Yelan,Goblet,Emblem of Severed Fate,+20,Hydro DMG%,46.6,ATK,16.0,Crit Rate,17.9,HP,239.0,Crit DMG,6.2,42.0
+Yelan,Circlet,Emblem of Severed Fate,+20,Crit Rate,31.1,HP%,14.6,Crit DMG,28.0,HP,239.0,ER%,4.5,28.0
+Citlali,Flower,Instructor,+16,HP,3571.0,EM,35.0,DEF%,15.7,ATK,16.0,DEF,13.0,0.0
+Citlali,Plume,Instructor,+16,ATK,232.0,ER%,13.5,DEF%,4.7,ATK%,4.2,DEF,13.0,0.0
+Citlali,Sands,Golden Troupe,+20,ER%,51.8,Crit Rate,11.7,EM,40.0,Crit DMG,6.2,DEF,65.0,29.6
+Citlali,Goblet,Instructor,+16,EM,139.0,ER%,8.8,HP,359.0,HP%,4.2,Crit DMG,6.2,6.2
+Citlali,Circlet,Instructor,+16,EM,139.0,DEF,33.0,HP,406.0,DEF%,5.3,HP%,4.7,0.0
+Yae Miko,Flower,Golden Troupe,+20,HP,4780.0,Crit Rate,6.2,HP%,4.7,ER%,5.8,Crit DMG,29.5,41.9
+Yae Miko,Plume,Golden Troupe,+20,ATK,311.0,EM,21.0,Crit Rate,15.6,Crit DMG,14.0,DEF%,5.1,45.2
+Yae Miko,Sands,Gladiator's Finale,+20,ATK%,46.6,DEF,21.0,ER%,5.2,Crit DMG,27.2,Crit Rate,10.5,48.2
+Yae Miko,Goblet,Golden Troupe,+20,ATK%,46.6,Crit Rate,10.5,HP,299.0,Crit DMG,18.7,DEF,16.0,39.7
+Yae Miko,Circlet,Golden Troupe,+20,Crit Rate,31.1,Crit DMG,28.8,DEF,63.0,HP%,5.8,ER%,5.8,28.8

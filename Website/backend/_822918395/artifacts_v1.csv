@@ -1,0 +1,16 @@
+Character,Slot,Set,Level,Main_Stat,Main_Value,Sub1,Sub1_Val,Sub2,Sub2_Val,Sub3,Sub3_Val,Sub4,Sub4_Val,Crit_Value
+Keqing,Flower,Heart of Depth,+20,HP,4780.0,DEF,19.0,ATK%,15.7,Crit Rate,13.6,Crit DMG,7.8,35.0
+Keqing,Plume,Blizzard Strayer,+20,ATK,311.0,Crit Rate,10.5,ATK%,5.3,DEF,23.0,Crit DMG,24.9,45.9
+Keqing,Sands,Heart of Depth,+20,ATK%,46.6,Crit DMG,27.2,ATK,16.0,Crit Rate,10.1,EM,16.0,47.4
+Keqing,Goblet,Thundering Fury,+20,Electro DMG%,46.6,ATK%,9.9,ATK,16.0,Crit DMG,14.0,Crit Rate,12.8,39.6
+Keqing,Circlet,Thundering Fury,+20,Crit Rate,31.1,ATK%,20.4,Crit DMG,22.5,EM,16.0,DEF,21.0,22.5
+Columbina,Flower,Set_15043,+20,HP,4780.0,DEF,23.0,Crit Rate,10.9,ATK%,15.7,Crit DMG,7.0,28.8
+Columbina,Plume,Set_15043,+20,ATK,311.0,DEF%,14.6,Crit Rate,6.6,Crit DMG,19.4,HP,239.0,32.6
+Columbina,Sands,Set_15043,+20,HP%,46.6,Crit Rate,14.0,Crit DMG,7.0,ER%,5.2,EM,44.0,35.0
+Columbina,Goblet,Pale Flame,+20,HP%,46.6,ER%,5.8,Crit Rate,12.8,DEF%,12.4,Crit DMG,13.2,38.8
+Columbina,Circlet,Set_15043,+20,Crit DMG,62.2,HP%,9.3,Crit Rate,12.1,ER%,5.2,ATK%,8.2,24.2
+Mavuika,Flower,Obsidian Codex,+20,HP,4780.0,Crit Rate,3.1,ATK,16.0,ATK%,11.7,Crit DMG,38.1,44.3
+Mavuika,Plume,Thundering Fury,+20,ATK,311.0,DEF,42.0,ATK%,5.3,Crit Rate,5.4,Crit DMG,28.0,38.8
+Mavuika,Sands,Obsidian Codex,+20,ATK%,46.6,Crit DMG,21.8,EM,23.0,DEF%,7.3,Crit Rate,13.6,49.0
+Mavuika,Goblet,Obsidian Codex,+20,Pyro DMG%,46.6,Crit Rate,17.5,Crit DMG,7.0,HP%,4.1,ATK%,4.7,42.0
+Mavuika,Circlet,Obsidian Codex,+20,Crit DMG,62.2,EM,33.0,Crit Rate,10.9,ER%,6.5,ATK%,10.5,21.8
